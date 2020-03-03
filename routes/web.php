@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('nemsokara');
 });
 
-Route::get('/login', function () {
-    return view('auth.newlogin');
-});
-
 Route::get('/logout','HomeController@logout');
 
 Route::get('/register', function () {

@@ -1,73 +1,53 @@
-@extends('layouts.app')
+@extends('layout.main')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+        <title>Belépés</title>
+    </head>
+@section('tartalom')
+<div class="container center-xs">
+    
+        <form class="form-signin" method="POST" action="{{ route('login') }}">
+            @csrf
+            <h1 class="h3 mb-3 font-weight-normal">Kérlek Jelentkezz be</h1>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+            {{--  Email   --}}
+            <label for="email" class="sr-only">Email cím</label>
+            <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email cím" autocomplete="email" required autofocus>
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            {{--  Password  --}}
+            <label for="password" class="sr-only">Jelszó</label>
+            <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" alue="{{ old('password') }}" placeholder="Jelszó" autocomplete="password" required autofocus>
+            @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            {{--  checkbox  --}}
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> Emlékezzen rám
+                </label>
             </div>
-        </div>
-    </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Bejelentkezem</button>
+            @if (Route::has('password.request'))
+                <a class="btn btn-link" href="{{ route('password.request') }}">
+                    {{ __('Forgot Your Password?') }}
+                </a>
+            @endif
+
+            <p class="mt-5 mb-3 text-muted">&copy; Ingatlanfox 2016-2020</p>
+        </form>
 </div>
 @endsection
