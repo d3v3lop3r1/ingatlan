@@ -38,7 +38,7 @@ Route::get('/garazsok', 'PagesController@showGarazsok');
 Route::get('/raktarak', 'PagesController@showRaktarak');
 
 
-Route::group(['middleware'=>'web'],function(){
+Route::group(['middleware'=>'auth'],function(){
     Route::resource('/properties', 'PropertyController');
     Route::resource('/agents', 'AgentController');
     Route::resource('/clients', 'ClientController');
@@ -46,7 +46,6 @@ Route::group(['middleware'=>'web'],function(){
     Route::get('/clients/get/{id}', 'AgentController@getClient');
     Route::get('/photos/create/{id}', 'photoController@create');
 });
-
 
 
 Route::get('/properties/lista', 'PropertyController@lista');
