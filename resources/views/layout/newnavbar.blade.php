@@ -66,10 +66,10 @@
                           <li>
                             @if (Auth::check())
                               <span class="text-danger mr-3">Üdvözöljük {{Auth::user()->name}}</span>
-                              <a href="/logout" class="button">Logout</a>
+                              <a href="/logout" class="button">Kilépés</a>
 
                             @else 
-                              <a href="/login" class="button">Login</a>
+                              <a href="/login" class="button">Belépés</a>
                             @endif
                           </li>
                         </ul>
