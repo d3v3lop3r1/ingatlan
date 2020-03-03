@@ -1,0 +1,98 @@
+
+@extends('layout.main-simple')
+
+@section('tartalom')
+
+<br><br>
+<div class="container elso">
+{{-- 
+	<h2>HIRDETÉS FELADÁS ELADÁSNÁL</h2>
+    <ul class="nav nav-tabs" role="tablist" id="tabs">
+        <li role="presentation" class="active"> <a role="tab" data-toggle="tab" href="#lakas">Lakás</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#haz">Ház</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#telek">Telek-Föld</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#garazs">Garázs</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#nyaralo">Nyaraló</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#iroda">Iroda</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#uzlethelyiseg">Üzlethelyiség</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#vendeglatas">Vendéglátás</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#raktar">Raktár</a> </li>
+        <li role="presentation"> <a role="tab" data-toggle="tab" href="#ipari-ingatlan">Ipari</a> </li>
+    </ul>
+	<div class="tab-content">
+ --}}        
+    	{{-- <div class="tab-pane active" role="tabpanel" id="lakas"> --}}
+            @include('admin.forms.lakas-eladas-alapadatok-accordion')
+            @include('admin.forms.lakas-eladas-reszletes-accordion')
+{{--             
+        </div><!-- Tab-pane -->
+        <div class="tab-pane" role="tabpanel" id="haz">
+          @include('\admin.forms.haz-eladas-alapadatok-accordion')
+          @include('\admin.forms.haz-eladas-reszletes-accordion')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="telek">
+                @include('\admin.forms.telek-fold-eladas-alapadatok')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="garazs">
+				@include('\admin.forms.garazs-eladas-alapadatok')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="nyaralo"> 
+				@include('\admin.forms.nyaralo-eladas-alapadatok')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="iroda">
+				@include('\admin.forms.iroda-eladas-alapadatok')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="uzlethelyiseg">
+				@include('\admin.forms.uzlethelyiseg-eladas-alapadatok')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="vendeglatas">
+				@include('\admin.forms.vendeglatas-eladas-alapadatok')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="raktar">
+				@include('\admin.forms.raktar-eladas-alapadatok')
+        </div>
+    	<div class="tab-pane" role="tabpanel" id="ipari-ingatlan">
+				@include('\admin.forms.ipari-eladas-alapadatok')
+        </div>
+	</div>  
+ --}}
+</div>
+@endsection
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+
+        $('select[name="agent_id"]').on('change', function(){
+            var agentId = $(this).val();
+            if(agentId) {
+                $.ajax({
+                    url: '/clients/get/'+agentId,
+                    type:"GET",
+                    dataType:"json",
+/*                     beforeSend: function(){
+                        $('#loader').css("visibility", "visible");
+                    },
+ */
+                    success:function(data) {
+
+                        $('select[name="client_id"]').empty();
+
+                        $.each(data, function(key, value){
+
+                            $('select[name="client_id"]').append('<option value="'+ key +'">' + value + '</option>');
+
+                        });
+                    },
+/*                     complete: function(){
+                        $('#loader').css("visibility", "hidden");
+                    }
+ */                });
+            } else {
+                $('select[name="client_id"]').empty();
+            }
+
+        });
+
+        });
+    </script>
+@endsection

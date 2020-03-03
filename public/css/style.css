@@ -1,0 +1,422 @@
+/* CSS Document */
+/* @media (max-width: 767px){
+	.img-responsive {
+		max-width:50%;
+		min-width:100px;
+		}
+	} */
+body, html {
+	width: 100%;
+	/* font-family: 'Baloo Bhaina', cursive; */
+	margin: 0;
+	padding: 0;
+}
+
+/*                        HEADER                         */
+
+#header-logo img{
+	-webkit-filter: drop-shadow(1px 1px 1px #222 );
+	filter: drop-shadow(1px 1px 1px #222);
+}
+#navbar-row{
+	flex-basis: 100%;
+
+}
+#navbar{
+	margin-left: auto;
+	float: right;
+	text-transform: uppercase;
+	font-size: small  ;
+}
+
+.navbar-container{
+	flex-basis: 100%;
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.navbar a{
+	color: rgb(37, 37, 37);
+}
+
+.carousel form{
+	flex-basis: 100%;
+	padding: 0;
+
+}
+.carousel img{
+	flex-basis: 100%;
+}
+
+
+header{
+	background-color: #FFF;
+}
+
+#header-logo{
+	float: left;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	}
+.dropdown{
+	padding-right: 30px;
+}
+
+.dropdown-menu li{
+	white-space:nowrap;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: small;
+}
+
+.drop-shadow {
+	-webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}
+
+.drop-shadow-light {
+	-webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
+}
+
+
+#bottom-search{
+	/* display: flex; */
+	background-color:rgba(0,0,0,0.6);
+	}
+
+#bottom-search label{
+	color:#fff;
+	}
+
+.admin-menu{
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+	/*                    SHOW OLDAL es BEMUTATO DOBOZ                 */
+
+#ingatlanok-header h1{
+	text-transform: uppercase;
+}
+
+.ingatlan-sor{
+	margin-bottom: 30px;
+}
+
+
+
+.ingatlan-box{
+	width: 320px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.box{
+	flex-basis: 100%;
+}
+			/* Bemutato kockak fejlece */
+.prop-header{
+	position: absolute;
+	width: 100%;
+	top: 5px;
+	z-index: 1000;
+	padding-left: 0;
+	padding-right: 0;
+
+}
+
+.prop-header h5{
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 700;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: rgba(0,0,0, 0.5);
+}
+
+.prop-header h4{
+	text-transform: uppercase;
+	font-size: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: left;
+	color: #ff670f;
+	background-color: rgba(255, 255, 255, 0.849);
+}
+
+
+.prop-header a{
+	color: #ffffff;
+}
+
+			/* Bemutato kockak eladas-berles kijelyese */
+
+/* .prop-type-id{
+	position: absolute;
+	width: 100%;
+	bottom: 5px;
+	z-index: 1000;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.prop-type-id h5{
+	text-transform: uppercase;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #ff670f;
+} */
+
+
+
+			/* Bemutato kockak foto  */
+
+.main-photo{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.main-photo img{
+	min-height: 200px;
+}
+
+.main-details{
+	font-size: small;
+}
+
+.main-price{
+
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #FFF;
+	font-weight: 700;
+	font-size: 20px;
+	background-color: #ff670f ;
+
+
+}
+
+
+
+.kiskockak{
+	white-space: nowrap;
+}
+
+.kiskockak span{
+	font-size: x-small;
+	white-space: nowrap;
+}
+
+
+
+
+/*                                                            */
+
+.h-keret{
+	border:thin solid #999;
+	padding:5px;
+	float:left;
+	width:100%;
+	margin:1px;
+	}
+.h-media{
+	float:left;
+	}
+.h-text{
+	float:left;
+	padding:5px 20px;
+	width:80%;
+	}
+#tabs li{
+	padding: 0 10px 0 10px;
+}	
+#first-main{
+	margin-top:10px;
+	}
+/* .logo-pos{
+	padding-bottom:10px;
+	}
+#top-bar-menu{
+	padding-top:0; 
+	} */
+#map{
+	height:400px;
+	width: 100%;
+	margin-bottom:10px;
+	}
+#uploads{
+	height:200px;
+	text-align:center;
+	}
+.output_image{
+	max-height:50px;
+	margin:3px;
+	border: 1px solid black;
+	border-radius: 4px;
+	}
+.first_image{
+	max-width:600px;
+	max-height:500px;
+	border: 1px solid black;
+	border-radius: 4px;
+	}	
+#first_image_box{
+	border:1px solid black;
+	width:100%px;
+}
+#main_window{
+	padding:10px;
+	}
+#fo_adatok{
+	width:100%;
+	margin:5px 0;
+	}
+.main_detail{
+	padding:5px;
+	border:0 0 0 1px solid gray;
+	margin:10px;
+	border-radius: 4px;
+	}
+.main_header_text{
+	padding:5px;
+	}
+.image_wrap {
+   position: relative;
+   display:inline-block;
+}
+
+.image_wrap .glyphicon {
+   position: absolute;
+   top: 0px;
+   right: 0px;
+   cursor:pointer;
+}
+.upl_image{
+	width:80px;
+	height:80px;
+	margin:2px;
+	display:inline-block;
+	}
+#act-on-upload{
+	margin:10px;
+	}
+#filesarea{
+	bottom:197px;
+	width:800px;
+	position:relative;
+	}
+
+.fotosorozat {
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+}
+.photok_kijelzese{
+	margin: 5px;
+}
+.form_delete{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.form_delete .btn{
+	font-size: 10px;
+	margin: 0;
+	padding: 0 5px;
+}
+
+.form_default{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.lapozas li{
+	margin: 10px;
+	font-size: small;
+}
+
+.blue-text a{
+	color:blue;
+	}
+
+			/*      Index oldal       */
+
+.index-adatok-tabla{
+	font-size: small;
+}
+
+.index-adatok-tabla th{
+	text-transform: uppercase;
+
+}
+
+.index-adatok-tabla tbody th{
+	text-align: end;
+	background-color: rgb(194, 204, 212);
+
+}
+
+.stars{
+	color: tomato !important;
+}
+
+            /*         Footer         */
+	
+footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
+.footerleft { margin-top:50px; padding:0 36px; }
+.logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
+
+.footerleft p { color:#fff; font-size:12px !important; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
+.footerleft p i { width:20px; color:#999;}
+
+
+.paddingtop-bottom {  margin-top:50px;}
+.footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
+.footer-ul li { line-height:29px; font-size:12px;}
+.footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
+.footer-ul i { margin-right:10px;}
+.footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
+
+.social:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ 
+ 
+
+ 
+ .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
+ .icon-ul li { line-height:75px; width:100%; float:left;}
+ .icon { float:left; margin-right:5px;}
+ 
+ 
+ .copyright { min-height:40px; background-color:#000000;}
+ .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
+ .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
+ .post p { font-size:12px; color:#FFF; line-height:20px;}
+ .post p span { display:block; color:#8f8f8f;}
+ .bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
+ .bottom_ul li { float:left; line-height:40px;}
+ .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
+ .bottom_ul li a { color:#FFF;  font-size:12px;}

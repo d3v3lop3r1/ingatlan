@@ -1,0 +1,51 @@
+@charset "utf-8";
+body, html {
+    height: 100%;
+	font-family: 'Lobster', cursive;
+}
+p, h1 {
+	}
+a {
+	text-decoration:none;
+	color:white;
+	}
+.bgimg {
+    background-image: url('/images/backgrounds/architecture-1867187_1920.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+	padding-left:15px;
+	background-color:rgba(102,102,102,0.8);
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+	padding-left:15px;
+	background-color:rgba(102,102,102,0.8);
+}
+
+.middle {
+    position: absolute;
+	padding:25px;
+	background-color:rgba(102,102,102,0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+
