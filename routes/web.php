@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('nemsokara');
 });
+
 Route::get('/login', function () {
-    return view('auth.login');
+    return view('auth.newlogin');
 });
 
 Route::get('/logout','HomeController@logout');
@@ -49,3 +50,7 @@ Route::group(['middleware'=>'auth'],function(){
 
 
 Route::get('/properties/lista', 'PropertyController@lista');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

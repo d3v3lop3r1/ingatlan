@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
-use App\property;
 
 class HomeController extends Controller
 {
@@ -16,29 +15,24 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
         return view('home');
     }
-    public function lakasok()
-    {
-        $lakasok = property::where('type_id','1')->get();
-        return view('pages/lakasok');
-    }
 
+    // Logout
+    
     public function logout()
     {
         Auth::logout();
         return view('home');
     }
-
-
 }
