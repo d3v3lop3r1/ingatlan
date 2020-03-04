@@ -1,6 +1,7 @@
 <?php
 use App\client;
 use App\agent;
+use Carbon\Carbon;
 ?>
 
 @extends('layout.main-simple')
@@ -33,6 +34,7 @@ use App\agent;
                     <th scope="col">Ár</th>
                     <th scope="col">Min. ár</th>
                     <th scope="col">Céges</th>
+                    <th scope="col">Frissítve</th>
                     <th scope="col">Aktív</th>
                     <th scope="col">Kiemelt</th>
                 </tr>
@@ -51,6 +53,12 @@ use App\agent;
                             <td>{{$property->price}}</td>
                             <td>{{$property->min_price}}</td>
                             <td>{{$property->ad_type?'igen':'nem'}}</td>
+                            <td>
+                                <?php
+                                    $dt = Carbon::parse($property->updated_at);
+                                    echo $dt->diffInDays()." napja";
+                                ?>
+                            </td>
                             <td>{{$property->active?'igen':'nem'}}</td>
                             <td>{{$property->kiemelt?'igen':'nem'}}</td>
                         </tr>
