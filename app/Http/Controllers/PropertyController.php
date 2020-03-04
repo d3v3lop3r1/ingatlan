@@ -94,9 +94,10 @@ class PropertyController extends Controller
     public function update(storePropertyRequest $request, property $property)
     {
         $input=$request->all();
-        $output = array_except($input, ['_token', '_method']);
+        // $array = Arr::add(['name' => 'Desk'], 'price', 100);
+        // $output = Arr::except($input, ['_token', '_method']);
         property::where('id', $property->id)
-        ->update($output);
+        ->update($input);
         return redirect('properties');
     }
 

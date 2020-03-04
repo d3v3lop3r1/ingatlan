@@ -24,9 +24,7 @@ use App\property;
     </div>
 </div>
 <br>
-{!! Form::model($property,['method'=>'POST','route'=>['properties.update',$property->id]]) !!}
-    {!! Form::hidden('_method','PATCH')!!}
-
+{!! Form::model($property,['method'=>'PATCH','route'=>['properties.update',$property->id]]) !!}
             <div class="panel-body">
                   <div class="container">
                     <div class="row">
