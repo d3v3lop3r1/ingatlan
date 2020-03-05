@@ -55,7 +55,7 @@ use Intervention\Image\ImageManager;
                                                     break;
                                             }
                                             if ($days < 14){
-                                                echo "<span class='badge badge-secondary'>Új</span>";
+                                                echo "<span class='badge badge-secondary badge-danger'>Új</span>";
                                             }
                                             ?>
                                         </div>
