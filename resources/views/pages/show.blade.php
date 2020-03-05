@@ -28,14 +28,13 @@ use Intervention\Image\ImageManager;
                     } else {
                         $photo_file = "placeholder.png";
                     }
-                    $image = Image::make($photo_file)->resize(300, 200);
 
                     ?>
                     
-                    <div class="col-xs-5 col-sm-4 col-md-4 col-lg-3 col-xl-3 ingatlan-box mb-3">
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 ingatlan-box mb-3">
                             <div class="row">
                                 <div class="col-xs-12 prop-header">
-                                    <h5><a href="index/{{$property->id}}">{{$property->header}}</a></h5>
+                                    <h5><a class="stretched-link" href="index/{{$property->id}}">{{$property->header}}</a></h5>
                                     <div class="row justify-content-between">
                                         <div class="col-md-6 prop-header-alatt-bal start-sm">
                                             <?php
@@ -61,13 +60,13 @@ use Intervention\Image\ImageManager;
                                             ?>
                                         </div>
                                         <div class="col-md-2 prop-header-alatt-jobb">
-                                            <i class="fas fa-camera-retro"></i> {{$photo_count}}
+                                            <i class="fas fa-camera-retro shadow-sm"></i> {{$photo_count}}
                                         </div>
                                     </div>
                                     
                                 </div>
                                 <div class="col-xs-12 main-photo">
-                                    <img class="img-thumbnail" src="{{$photo_file}}" alt="">
+                                    <img class="img-thumbnail img-fluid" src="{{$photo_file}}" alt="">
                                 </div>
                             </div>
 
@@ -115,10 +114,10 @@ use Intervention\Image\ImageManager;
                 
             </div>
         </div>
-        <div class="container-fluid lapozas">
-            <div class="row center-xs">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    {{ $properties->links() }}
+        <div class="container lapozas">
+            <div class="row">
+                <div class="col-xs mx-auto">
+                    <p>{{ $properties->links() }}</p>
                 </div>
             </div>
         </div>
