@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('nemsokara');
 });
-
+Route::get('/demo', function () {
+    return view('demo');
+});
 Route::get('/logout','HomeController@logout');
 
 Route::get('/register', function () {

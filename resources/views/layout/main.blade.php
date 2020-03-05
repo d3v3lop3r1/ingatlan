@@ -12,7 +12,7 @@
     @yield('tartalom')
     @include('layout.footer')
 </body>
-    @include('scripts.script')
     @yield('scripts')
+    @include('scripts.script')
 
 </html>
