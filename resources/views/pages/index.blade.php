@@ -89,6 +89,9 @@ use Carbon\Carbon;
                         <th>Extrák</th>
                         <td colspan="3"></td>
                       </tr>
+                      <tr>
+                        <th colspan="2" class="bg-danger"><h4 class="text-white money">{{$property->price}} Ft</h4></th>
+                      </tr>
 
                       <tr>
                         <td colspan="4"><h4>Leírás</h4></td>

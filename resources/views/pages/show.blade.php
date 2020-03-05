@@ -36,7 +36,7 @@ use Intervention\Image\ImageManager;
                                 <div class="col-xs-12 prop-header">
                                     <h5><a class="stretched-link" href="index/{{$property->id}}">{{$property->header}}</a></h5>
                                     <div class="row justify-content-between">
-                                        <div class="col-md-6 prop-header-alatt-bal start-sm">
+                                        <div class="col-md-6 prop-header-alatt-bal start-md ">
                                             <?php
                                             $dt = Carbon::parse($property->updated_at);
                                             $days=$dt->diffInDays();
@@ -55,18 +55,18 @@ use Intervention\Image\ImageManager;
                                                     break;
                                             }
                                             if ($days < 14){
-                                                echo "<span class='badge badge-secondary badge-danger'>Új</span>";
+                                                echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
                                             }
                                             ?>
                                         </div>
                                         <div class="col-md-2 prop-header-alatt-jobb">
-                                            <i class="fas fa-camera-retro shadow-sm"></i> {{$photo_count}}
+                                            <i class="fas fa-camera-retro"></i> {{$photo_count}}
                                         </div>
                                     </div>
                                     
                                 </div>
                                 <div class="col-xs-12 main-photo">
-                                    <img class="img-thumbnail img-fluid" src="{{$photo_file}}" alt="">
+                                    <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                 </div>
                             </div>
 
