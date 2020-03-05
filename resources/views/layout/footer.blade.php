@@ -2,17 +2,16 @@
 <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-sm-4 footerleft ">
+        <div class="col-md-4 col-sm-4 footerleft">
           <div class="logofooter"> Foxinfo Service Kft</div>
-          <p>Új-gyors-költségkímélő megoldásokat kínálunk fair szolgáltatásokkal, a maga nemében minden bizonnyal 
-          verhetetlenül kedvezőbben. Mert Mi csak azokat a témaköröket választjuk ki, ahol tényleg a legkedvezőbben 
-          és kompetensen jeleskedhetünk. A német és magyar nyelvű weboldalaink segítségével a külföldi kapcsolatokat 
-          szándékozzuk tovább építeni, a felhasználóink számára új lehetőségeket nyújtva.</p>
-          <p><i class="fa fa-map-pin"></i> 7815 Harkány, Damjanich tér 8.</p>
-          <p><i class="fa fa-phone"></i> Telefon (Magyarország) : +36 20 777 2000</p>
-          <p><i class="fa fa-phone"></i> Telefon (Magyarország) : +36 20 422 0000</p>
-          <p><i class="fa fa-envelope"></i> E-mail : info@ingatlanfox.hu</p>
-          
+            <p>Új-gyors-költségkímélő megoldásokat kínálunk fair szolgáltatásokkal, a maga nemében minden bizonnyal 
+            verhetetlenül kedvezőbben. Mert Mi csak azokat a témaköröket választjuk ki, ahol tényleg a legkedvezőbben 
+            és kompetensen jeleskedhetünk. A német és magyar nyelvű weboldalaink segítségével a külföldi kapcsolatokat 
+            szándékozzuk tovább építeni, a felhasználóink számára új lehetőségeket nyújtva.</p>
+            <p><i class="fa fa-map-pin"></i> 7815 Harkány, Damjanich tér 8.</p>
+            <p><i class="fa fa-phone"></i> Telefon (Magyarország) : +36 20 777 2000</p>
+            <p><i class="fa fa-phone"></i> Telefon (Magyarország) : +36 20 422 0000</p>
+            <p><i class="fa fa-envelope"></i> E-mail : info@ingatlanfox.hu</p>
         </div>
         <div class="col-md-2 col-sm-4 paddingtop-bottom">
           <h6 class="heading7">LINKEK</h6>
@@ -43,10 +42,7 @@
         </div>
       </div>
     </div>
-  </footer>
-  <!--footer start from here-->
-  
-  <div class="copyright">
+    <div class="copyright">
     <div class="container">
       <div class="col-md-6">
         <p>© 2017 - All Rights Ingatlanfox</p>
@@ -63,3 +59,6 @@
       </div>
     </div>
   </div>
+  </footer>
+  <!--footer start from here-->
+  

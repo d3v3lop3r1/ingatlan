@@ -123,12 +123,14 @@ p {
 .prop-header{
 	position: absolute;
 	width: 100%;
+	height: 100%;
 	top: 5px;
 	z-index: 1000;
 	padding-left: 0;
 	padding-right: 0;
 
 }
+
 
 .prop-header h5{
 	text-transform: uppercase;
@@ -190,6 +192,7 @@ p {
 	padding-left: 0;
 	padding-right: 0;
 }
+
 
 .main-photo img{
 	min-height: 200px;
@@ -368,6 +371,12 @@ p {
 	text-transform: uppercase;
 
 }
+
+.index-adatok-tabla td{
+	font-weight: 700;
+	padding-left: 10px;
+}
+
 
 .index-adatok-tabla tbody th{
 	text-align: end;

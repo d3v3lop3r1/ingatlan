@@ -1,5 +1,8 @@
 <?php
 use App\photo;
+use Carbon\Carbon;
+use Intervention\Image\ImageManager;
+
 ?>
 @extends('layout.main')
 @section('tartalom')
@@ -25,6 +28,8 @@ use App\photo;
                     } else {
                         $photo_file = "placeholder.png";
                     }
+                    $image = Image::make($photo_file)->resize(300, 200);
+
                     ?>
                     
                     <div class="col-xs-5 col-sm-4 col-md-4 col-lg-3 col-xl-3 ingatlan-box mb-3">
@@ -34,7 +39,13 @@ use App\photo;
                                         <?php
                                         switch($property->type_id){
                                             case 0:
-                                                echo '<h4>Eladó <span class="badge badge-secondary">Új</span></h4>';
+                                                echo '<h4>Eladó';
+                                                $dt = Carbon::parse($property->updated_at);
+                                                $days=$dt->diffInDays();
+                                                if ($days < 14){
+                                                    echo "<span class='badge badge-secondary'>Új</span>";
+                                                }
+                                                echo '</h4>';
                                                 break;
                                             case 1:
                                                 echo '<h4>Eladó cserelehetőséggel</h4>';
@@ -54,7 +65,12 @@ use App\photo;
                                     <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                 </div>
                             </div>
-                            <div class="row center-xs ">
+
+
+                            {{--  Adatok  --}}
+                            
+                            
+                            <div class="row center-xs">
                                 <div class="col-xs-12 main-price border">
                                     <span class="money">{{$property->price}}</span>.- Ft
                                 </div>

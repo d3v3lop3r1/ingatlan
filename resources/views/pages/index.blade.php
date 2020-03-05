@@ -14,7 +14,7 @@ use Carbon\Carbon;
           <div class="row">
 
               {{--  Fenykep oszlop  --}}
-              <div class="col-xs-6" >
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
                 <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
                 <div class="row">
                   @foreach ($photos as $photo)
@@ -26,16 +26,18 @@ use Carbon\Carbon;
               </div>
 
               {{--  Adatok oszlop   --}}
-              <div class="col-xs-6">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                   <table class="table table-light table-sm index-adatok-tabla">
                     <thead class="thead-dark">
                       <tr>
                         <th># {{70000+$property->id}}</th>
-                        <th>{{$property->header}}</th>
+                        <th colspan="3">{{$property->header}}</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <th>Megye</th>
+                        <td>{{$property->region}}</td>
                         <th>Attraktivitás</th>
                         <td >
                           @for ($i = 0; $i < $property->attraktivitas ; $i++)
@@ -44,6 +46,8 @@ use Carbon\Carbon;
                         </td>
                       </tr>
                       <tr>
+                        <th>Város</th>
+                        <td>{{$property->city}}</td>
                         <th>Állapot</th>
                         <td>
                           @for ($i = 0; $i < $property->allapot ; $i++)
@@ -52,42 +56,32 @@ use Carbon\Carbon;
                         </td>
                       </tr>
                       <tr>
+                        <th>Frissítve</th>
+                        <td>
+                          <?php
+                              $dt = Carbon::parse($property->updated_at);
+                              echo $dt->diffInDays()." napja";
+                          ?>
+                        </td>
                         <th>Extrák</th>
                         <td>
                           @for ($i = 0; $i < $property->extrak ; $i++)
                             <i class="fas fa-star stars"></i>
                           @endfor                          
                         </td>
-                      </tr>
-                      <tr>
-                        <th>Megye</th>
-                        <td>{{$property->region}}</td>
-                      </tr>
-                      <tr>
-                        <th>Város</th>
-                        <td>{{$property->city}}</td>
+
                       </tr>
                       <tr>
                         <th>Telek méret</th>
                         <td>{{$property->land_area}}m2</td>
-                      </tr>
-                      <tr>
                         <th>Lakóterőlet</th>
                         <td>{{$property->area}}m2</td>
                       </tr>
                       <tr>
-                        <td colspan="2"><h4>Leírás</h4></td>
+                        <td colspan="4"><h4>Leírás</h4></td>
                       </tr>
                       <tr>
-                        <td colspan="2"><?php echo $property->text; ?></td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">
-                          <?php
-                            $dt = Carbon::parse($property->updated_at);
-                            echo $dt->diffInDays();
-                          ?>
-                        </td>
+                        <td colspan="4"><?php echo $property->text; ?></td>
                       </tr>
                       
                     </tbody>
