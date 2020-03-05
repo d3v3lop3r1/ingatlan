@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\property;
 use App\client;
 use App\agent;
+use Illuminate\Support\Arr;
 
 use App\Http\Requests\storePropertyRequest;
 use Illuminate\Http\Request;
@@ -94,10 +95,9 @@ class PropertyController extends Controller
     public function update(storePropertyRequest $request, property $property)
     {
         $input=$request->all();
-        // $array = Arr::add(['name' => 'Desk'], 'price', 100);
-        // $output = Arr::except($input, ['_token', '_method']);
+        $output = Arr::except($input, ['_token', '_method']);
         property::where('id', $property->id)
-        ->update($input);
+        ->update($output);
         return redirect('properties');
     }
 
