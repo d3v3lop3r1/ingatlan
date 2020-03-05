@@ -73,10 +73,23 @@ use Carbon\Carbon;
                       </tr>
                       <tr>
                         <th>Telek méret</th>
-                        <td>{{$property->land_area}}m2</td>
+                        <td>{{$property->land_area}} m2</td>
                         <th>Lakóterőlet</th>
-                        <td>{{$property->area}}m2</td>
+                        <td>{{$property->area}} m2</td>
                       </tr>
+
+                      <tr>
+                        <th>Szobák száma</th>
+                        <td>{{$property->room_no}} db</td>
+                        <th>Fürdők száma</th>
+                        <td>{{$property->bathroom_no}} db</td>
+                      </tr>
+
+                      <tr>
+                        <th>Extrák</th>
+                        <td colspan="3"></td>
+                      </tr>
+
                       <tr>
                         <td colspan="4"><h4>Leírás</h4></td>
                       </tr>

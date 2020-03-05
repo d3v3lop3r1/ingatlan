@@ -162,6 +162,29 @@ p {
 	color: #ffffff;
 }
 
+.prop-header-alatt-bal{
+	margin-left: 20px;
+	padding: 5px;
+	font-weight: 700;
+	font-size: small;
+	text-transform: uppercase;
+	color: #FFF;
+	background-color: rgba(255, 127, 80, 0.637);
+	overflow: hidden;
+}
+
+.prop-header-alatt-jobb{
+	margin-right: 20px;
+	padding: 5px;
+	font-weight: 700;
+	font-size: small;
+	text-transform: uppercase;
+	justify-content: right;
+	color: #FFF;
+	background-color: rgba(255, 127, 80, 0.637);
+	overflow: hidden;
+}
+
 			/* Bemutato kockak eladas-berles kijelyese */
 
 /* .prop-type-id{
@@ -369,7 +392,7 @@ p {
 
 .index-adatok-tabla th{
 	text-transform: uppercase;
-
+	padding-right: 10px;
 }
 
 .index-adatok-tabla td{

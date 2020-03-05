@@ -20,7 +20,7 @@ use Intervention\Image\ImageManager;
             <div class="row center-xs ingatlan-sor">
                 @foreach ($properties as $property)
                     <?php 
-                    $photo_count = $property->photos->where('is_default','1')->count();
+                    $photo_count = $property->photos->count();
                     if ($photo_count){
                         $photo = $property->photos->where('is_default','1')->first();
                         $photo_file = $photo->file1;
@@ -36,29 +36,34 @@ use Intervention\Image\ImageManager;
                             <div class="row">
                                 <div class="col-xs-12 prop-header">
                                     <h5><a href="index/{{$property->id}}">{{$property->header}}</a></h5>
-                                        <?php
-                                        switch($property->type_id){
-                                            case 0:
-                                                echo '<h4>Eladó';
-                                                $dt = Carbon::parse($property->updated_at);
-                                                $days=$dt->diffInDays();
-                                                if ($days < 14){
-                                                    echo "<span class='badge badge-secondary'>Új</span>";
-                                                }
-                                                echo '</h4>';
-                                                break;
-                                            case 1:
-                                                echo '<h4>Eladó cserelehetőséggel</h4>';
-                                                break;
-                                            case 2:
-                                                echo '<h4>Kiadó eladási opcióval</h4>';
-                                                break;
-                                            case 3:
-                                                echo '<h4>Kiadó</h4>';
-                                                break;
-                                          }
-
-                                        ?>
+                                    <div class="row justify-content-between">
+                                        <div class="col-md-6 prop-header-alatt-bal start-sm">
+                                            <?php
+                                            $dt = Carbon::parse($property->updated_at);
+                                            $days=$dt->diffInDays();
+                                            switch($property->type_id){
+                                                case 0:
+                                                    echo 'Eladó';
+                                                    break;
+                                                case 1:
+                                                    echo 'Eladó cserelehetőséggel';
+                                                    break;
+                                                case 2:
+                                                    echo 'Kiadó eladási opcióval';
+                                                    break;
+                                                case 3:
+                                                    echo 'Kiadó';
+                                                    break;
+                                            }
+                                            if ($days < 14){
+                                                echo "<span class='badge badge-secondary'>Új</span>";
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="col-md-2 prop-header-alatt-jobb">
+                                            <i class="fas fa-camera-retro"></i> {{$photo_count}}
+                                        </div>
+                                    </div>
                                     
                                 </div>
                                 <div class="col-xs-12 main-photo">
