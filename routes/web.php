@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('nemsokara');
 });
+
+Route::get('/main', function () {
+    return view('pages.home');
+});
+
+
 Route::get('/demo', function () {
     return view('demo');
 });

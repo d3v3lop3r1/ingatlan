@@ -1,35 +1,40 @@
 
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-<div id="huf">
-  17000000
-</div>
-<div class="container" id="demo">
-  
-</div>
- 
-</body>
-<script>
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myArr = JSON.parse(this.responseText);
-    var myHuf = myArr.rates.HUF;
-    document.getElementById("demo").innerHTML = myHuf;
-  }
-};
-xmlhttp.open("GET", "https://api.openrates.io/latest", true);
-xmlhttp.send();
-</script>
-
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 46.0727345, lng: 18.232266},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKV7YR9Rs30s1PfDlXiJ8ybbdS3iYMPTo&callback=initMap"
+    async defer></script>
+  </body>
 </html>
-
 
 
