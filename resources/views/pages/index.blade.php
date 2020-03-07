@@ -92,8 +92,8 @@ use Carbon\Carbon;
                         <td colspan="3"></td>
                       </tr>
                       <tr>
-                        <th colspan="2" class="bg-danger"><h4 class="text-white money">{{$property->price}} Ft</h4></th>
-                        <th colspan="2" class="bg-danger"><h4 class="text-white money" id="eur"></h4></th>
+                        <th colspan="2" class="bg-danger"><h5 class="text-white money">{{$property->price}} Ft</h5></th>
+                        <th colspan="2" class="bg-danger"><h5 class="text-white" id="eur"></h5></th>
                       </tr>
 
                       <tr>
@@ -111,15 +111,15 @@ use Carbon\Carbon;
                   <div class="card-header">
                     ÜGYNÖKÜNK
                   </div>
-                  <img src="/uploads/agents/{{$property->photo_id}}" class="card-img-top" alt="...">
+                  <img src="/uploads/agents/{{$property->photo_id}}" class="card-img-top" width="150" alt="{{$property->agents->name}}">
                   <div class="card-body">
-                    <h5 class="card-title">{{agent::where('id',$property->agent_id)->first()->name}}</h5>
+                    <h5 class="card-title">{{$property->agents->name}}</h5>
                     <p class="card-text">Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</p>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Telefon {{$property->agents->tel}}</li>
                     <li class="list-group-item">Email {{$property->agents->email}}</li>
-                    <li class="list-group-item">Egyéb </li>
+                    <li class="list-group-item">Nyelvek Magyar-Német-Spanyol </li>
                   </ul>
                   <div class="card-body">
                     <a href="#" class="card-link">Ügynökünkhöz tartozó ingatlanok</a>
