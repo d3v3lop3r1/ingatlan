@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use File;
 use Illuminate\Http\Request;
 use App\photo;
+use App\agent;
 
 class photoController extends Controller
 {
@@ -36,6 +37,20 @@ class photoController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function createAgentPhoto($agent_id)
+    {
+        $agent=agent::where('id', $agent_id)->first();
+        return view('photos.agents.create_photos', compact('agent', $agent));
+    }
+    
+
+
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -61,6 +76,31 @@ class photoController extends Controller
             $photo->save();
  
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function updateAgentPhoto(Request $request)
+    { 
+            $file=$request->file('file');
+            $filename= time() . $file->getClientOriginalName();
+            $file->move('uploads/agents', $filename); 
+            $agent_id=$request->agent_id;
+            $agent= agent::where('id',$agent_id)->first();
+            $old_photo=$agent->photo;
+            $photo_path='uploads/agents/' . $old_photo;
+            File::delete($photo_path);
+            $agent->photo=$filename;
+            $agent->save();
+            return redirect('agents');
+ 
+    }
+
+
+    
 
     /**
      * Display the specified resource.

@@ -7,7 +7,8 @@
     <table class="table">
             <thead class="thead-dark">
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Fotó</th>
                   <th scope="col">Név</th>
                   <th scope="col">level</th>
                   <th scope="col">Email</th>
@@ -20,6 +21,7 @@
                 @foreach($agents as $agent)
                     <tr>
                         <th scope="row">{{$agent->id}}</th>
+                        <td><a href="/photos/agents/create/{{$agent->id}}">{{$agent->photo?'van':'nincs'}}</a></td>
                         <td><a href="agents/{{$agent->id}}/edit">{{$agent->name}}</a></td>
                         <td>{{$agent->level}}</td>
                         <td>{{$agent->email}}</td>

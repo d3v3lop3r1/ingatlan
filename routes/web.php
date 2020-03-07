@@ -48,6 +48,9 @@ Route::group(['middleware'=>'auth'],function(){
     Route::resource('/agents', 'AgentController');
     Route::resource('/clients', 'ClientController');
     Route::resource('/photos', 'photoController');
+    Route::get('/photos/agents/create/{id}', 'photoController@createAgentPhoto');
+    Route::patch('/photos/agents/update', 'photoController@updateAgentPhoto');
+    
     Route::get('/clients/get/{id}', 'AgentController@getClient');
     Route::get('/photos/create/{id}', 'photoController@create');
 });

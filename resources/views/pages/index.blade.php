@@ -16,6 +16,7 @@ use Carbon\Carbon;
           <div class="row">
 
               {{--  Fenykep oszlop  --}}
+
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" >
                 <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
                 <div class="row">
@@ -28,6 +29,7 @@ use Carbon\Carbon;
               </div>
 
               {{--  Adatok oszlop   --}}
+
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                   <table class="table table-light table-sm index-adatok-tabla">
                     <thead class="thead-dark">
@@ -107,12 +109,15 @@ use Carbon\Carbon;
                     </tbody>
                   </table>
               </div>
+
+                  {{--  Agent oszlop  --}}
+
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 index-agent">
                     <div class="media  mt-1 pt-1 drop-shadow">
-                      <img src="/uploads/agents/{{$property->photo_id}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
+                      <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                       <div class="media-body">
                         <h5 class="mt-0">{{$property->agents->name}}</h5>
-                        <p><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
+                        <p class="pl-1 pr-1"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
                       </div>
                     </div>
                     <div class="card">
