@@ -111,7 +111,7 @@ use Carbon\Carbon;
                       <img src="/uploads/agents/{{$property->photo_id}}" width="64" class="align-self-start mr-3" alt="{{$property->agents->name}}">
                       <div class="media-body">
                         <h5 class="mt-0">{{$property->agents->name}}</h5>
-                        <p class="card-text"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
+                        <p><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
                       </div>
                     </div>
                     <div class="card">
