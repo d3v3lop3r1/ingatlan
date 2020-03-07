@@ -38,7 +38,7 @@ use Carbon\Carbon;
                     </thead>
                     <tbody>
                       <tr>
-                        <th>Megye</th>
+                        <th>Régió</th>
                         <td>{{$property->region}}</td>
                         <th>Attraktivitás</th>
                         <td >
@@ -106,7 +106,7 @@ use Carbon\Carbon;
                     </tbody>
                   </table>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+              <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 index-agent">
                     <div class="media">
                       <img src="/uploads/agents/{{$property->photo_id}}" width="64" class="align-self-start mr-3" alt="{{$property->agents->name}}">
                       <div class="media-body">
@@ -114,7 +114,7 @@ use Carbon\Carbon;
                         <p class="card-text"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
                       </div>
                     </div>
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item"><small>Telefon {{$property->agents->tel}}</small></li>
                         <li class="list-group-item"><small>Email {{$property->agents->email}}</small></li>
