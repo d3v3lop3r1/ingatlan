@@ -16,11 +16,11 @@ use Carbon\Carbon;
           <div class="row">
 
               {{--  Fenykep oszlop  --}}
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" >
                 <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
                 <div class="row">
                   @foreach ($photos as $photo)
-                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                       <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
                     </div>
                   @endforeach
@@ -28,7 +28,7 @@ use Carbon\Carbon;
               </div>
 
               {{--  Adatok oszlop   --}}
-              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                   <table class="table table-light table-sm index-adatok-tabla">
                     <thead class="thead-dark">
                       <tr>
@@ -92,8 +92,9 @@ use Carbon\Carbon;
                         <td colspan="3"></td>
                       </tr>
                       <tr>
-                        <th colspan="2" class="bg-danger"><h5 class="text-white money">{{$property->price}} Ft</h5></th>
-                        <th colspan="2" class="bg-danger"><h5 class="text-white" id="eur"></h5></th>
+                        <th align="right" class="bg-danger pt-2"><h5 class="text-white" >Ár</h5></th>
+                        <th class="bg-danger pt-2 pr-3"><h5 class="text-white" id="eur"></h5></th>
+                        <th class="bg-danger pt-2 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></th>
                       </tr>
 
                       <tr>
@@ -106,9 +107,9 @@ use Carbon\Carbon;
                     </tbody>
                   </table>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 index-agent">
-                    <div class="media">
-                      <img src="/uploads/agents/{{$property->photo_id}}" width="64" class="align-self-start mr-3" alt="{{$property->agents->name}}">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 index-agent">
+                    <div class="media  mt-1 pt-1 drop-shadow">
+                      <img src="/uploads/agents/{{$property->photo_id}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                       <div class="media-body">
                         <h5 class="mt-0">{{$property->agents->name}}</h5>
                         <p><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
@@ -120,7 +121,7 @@ use Carbon\Carbon;
                         <li class="list-group-item"><small>Email {{$property->agents->email}}</small></li>
                         <li class="list-group-item"><small>Nyelvek Magyar-Német-Spanyol</small></li>
                       </ul>
-                  </div>
+                    </div>
               </div>
           </div>
         </div>
