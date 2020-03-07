@@ -244,6 +244,9 @@ p {
 .index-agent{
 	line-height: 15px;
 }
+.index-agent h5{
+	font-size: medium;
+}
 
 .kiskockak{
 	white-space: nowrap;
