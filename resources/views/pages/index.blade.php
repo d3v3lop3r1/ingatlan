@@ -30,7 +30,7 @@ use Carbon\Carbon;
 
               {{--  Adatok oszlop   --}}
 
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
                   <table class="table table-light table-sm index-adatok-tabla">
                     <thead class="thead-dark">
                       <tr>
@@ -116,15 +116,15 @@ use Carbon\Carbon;
                     <div class="media  mt-1 pt-1 drop-shadow">
                       <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                       <div class="media-body">
-                        <h5 class="mt-0">{{$property->agents->name}}</h5>
+                        <h5 class="mt-0"><strong>{{$property->agents->name}}</strong></h5>
                         <p class="pl-1 pr-1"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
                       </div>
                     </div>
                     <div class="card">
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><small>Telefon {{$property->agents->tel}}</small></li>
-                        <li class="list-group-item"><small>Email {{$property->agents->email}}</small></li>
-                        <li class="list-group-item"><small>Nyelvek Magyar-Német-Spanyol</small></li>
+                        <li class="list-group-item"><small><strong><i class="fas fa-phone"></i> Telefon</strong> {{$property->agents->tel}}</small></li>
+                        <li class="list-group-item"><small><strong><i class="far fa-envelope"></i> Email</strong> {{$property->agents->email}}</small></li>
+                        <li class="list-group-item"><small><strong><i class="fas fa-globe"></i> Nyelvek</strong> Magyar-Német-Spanyol</small></li>
                       </ul>
                     </div>
               </div>
