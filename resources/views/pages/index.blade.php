@@ -1,4 +1,6 @@
 <?php
+use App\agent;
+
 use Carbon\Carbon;
 ?>
 @extends('layout.main')
@@ -10,15 +12,15 @@ use Carbon\Carbon;
         $photo_default_file = $photo_default->file1;
         $photo_default_file = "/uploads/" . $photo_default_file;
       ?>
-      <div class="container clearfix" id="first-main">
+      <div class="container-fluid" id="first-main">
           <div class="row">
 
               {{--  Fenykep oszlop  --}}
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
                 <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
                 <div class="row">
                   @foreach ($photos as $photo)
-                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                       <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
                     </div>
                   @endforeach
@@ -26,7 +28,7 @@ use Carbon\Carbon;
               </div>
 
               {{--  Adatok oszlop   --}}
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
                   <table class="table table-light table-sm index-adatok-tabla">
                     <thead class="thead-dark">
                       <tr>
@@ -103,6 +105,27 @@ use Carbon\Carbon;
                       
                     </tbody>
                   </table>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                <div class="card">
+                  <div class="card-header">
+                    ÜGYNÖKÜNK
+                  </div>
+                  <img src="/uploads/agents/{{$property->photo_id}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{agent::where('id',$property->agent_id)->first()->name}}</h5>
+                    <p class="card-text">Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Telefon {{$property->agents->tel}}</li>
+                    <li class="list-group-item">Email {{$property->agents->email}}</li>
+                    <li class="list-group-item">Egyéb </li>
+                  </ul>
+                  <div class="card-body">
+                    <a href="#" class="card-link">Ügynökünkhöz tartozó ingatlanok</a>
+                  </div>
+                </div> 
+               </div>
               </div>
           </div>
       </div>
