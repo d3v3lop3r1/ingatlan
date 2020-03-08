@@ -1,3 +1,6 @@
+<?php
+    use App\property;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +12,7 @@
     @include('layout.modals.reg')  --}}
     @include('layout.newnavbar')
     @include('layout.carousel-main')
+    @include('layout.search')
     @yield('tartalom')
     @include('layout.footer')
 </body>

@@ -41,15 +41,14 @@ body, html {
 	color: rgb(37, 37, 37);
 }
 
-.carousel form{
-	flex-basis: 100%;
-	padding: 0;
-
-}
 .carousel img{
 	flex-basis: 100%;
 }
 
+.carousel-caption{
+	top: 100px;
+	bottom: auto;
+}
 
 header{
 	background-color: #FFF;
@@ -81,6 +80,21 @@ p {
 .drop-shadow-light {
 	-webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
 	box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
+}
+
+.search-container{
+	position: relative;
+	margin-bottom: 70px;
+}
+.search-box{
+	position: absolute;
+	border-radius: 10px;
+	top: -170px;
+	bottom: auto;
+	margin: 0 auto;
+	padding: 15px 15px;
+	background-color: rgba(255, 255, 255, 0.884);
+	z-index: 1001;
 }
 
 
