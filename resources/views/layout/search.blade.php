@@ -10,11 +10,10 @@
 @endphp
 <div class="container search-container">
     <div class="row search-row">
-        <div class="col-xs-12">
-            
-            <div class="form-row  drop-shadow search-box">
-                {!! Form::open(['url'=>'/search', 'method'=>'POST','name'=>'search', 'class'=>'form-inline']); !!}
-                    <div class="col">
+        <div class="col-xs">
+            {!! Form::open(['url'=>'/search', 'method'=>'POST','name'=>'search', 'class'=>'']); !!}
+            <div class="row  drop-shadow search-box center-xs">
+                    <div class="col-auto">
                         {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
                         {!! Form::select('type_id',[
                             0=>'Eladó',
@@ -22,7 +21,7 @@
                             ],null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); 
                         !!}
                     </div>
-                    <div class="col">
+                    <div class="col-auto">
                         {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                         {!! Form::select('list_type',[
                             0=>'Mind',
@@ -41,7 +40,7 @@
                         !!}
                     </div>
 
-                    <div class="col">
+                    <div class="col-auto">
                         {!! Form::label('Hol?',null,['class' => 'search-label', 'for'=>'city']); !!}
 
                         {!! Form::select('city',(['0'=>'Mind']+$cities)
@@ -67,21 +66,30 @@
                         !!}
                     </div>
 
-                    <div class="col">
+                    <div class="col-auto">
                         {!! Form::label('Min. alapterület',null,['class' => 'search-label', 'for'=>'area']); !!}
                         {!! Form::number('area',null,['class' => 'form-control  form-control-sm', 'id'=>'area']); !!}
                     </div>
 
-                    <div class="col">
+                    <div class="col-auto">
                         {!! Form::label('Min. telekterület',null,['class' => 'search-label', 'for'=>'land_area']); !!}
                         {!! Form::number('land_area',null,['class' => 'form-control  form-control-sm', 'id'=>'land_area']); !!}
                     </div>
+                    <div class="col-auto">
+                        {!! Form::label('Min. ár',null,['class' => 'search-label', 'for'=>'price_min']); !!}
+                        {!! Form::number('price_min',null,['class' => 'form-control  form-control-sm', 'id'=>'price_min']); !!}
+                    </div>
 
-                    <div class="col-xs-12">
+                    <div class="col-auto">
+                        {!! Form::label('Max. ár',null,['class' => 'search-label', 'for'=>'price_max']); !!}
+                        {!! Form::number('price_max',null,['class' => 'form-control  form-control-sm', 'id'=>'price_max']); !!}
+                    </div>
+
+                    <div class="col-xs-12 mt-3">
                         <button class="btn btn-primary btn-sm" type="submit" >KERESÉS</button>
                     </div>
-                {!! Form::close() !!}
             </div>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>

@@ -92,19 +92,16 @@ p {
 	flex-basis: 100%;
 	flex-direction: row;
 	position: relative;
-	margin-bottom: 70px;
+	margin-bottom: 20px;
 }
 
 .search-row{
-	width: 100%;
 	flex-direction: row;
 }
 .search-box{
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	position: absolute;
-	top: -80px;
+	position: relative;
+	bottom: 30px;
 	padding: 15px 15px;
 	background-color: rgba(255, 255, 255, 0.884);
 	z-index: 1001;
@@ -115,7 +112,7 @@ p {
 	color: rgb(32, 57, 112);
 }
 
-.search-box #area, #land_area{
+.search-box #area, #land_area, #price_min, #price_max{
 	font-size: small;
 	width: 80px;
 }
