@@ -11,6 +11,7 @@
 <div class="container search-container">
     <div class="row search-row">
         <div class="col-xs-12">
+            
             <div class="form-row  drop-shadow search-box">
                 {!! Form::open(['url'=>'/search', 'method'=>'POST','name'=>'search', 'class'=>'form-inline']); !!}
                     <div class="col">
@@ -22,7 +23,7 @@
                         !!}
                     </div>
                     <div class="col">
-                        {!! Form::label('Típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
+                        {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                         {!! Form::select('list_type',[
                             0=>'Mind',
                             1=>'Lakás',
