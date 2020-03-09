@@ -22,6 +22,22 @@ class PagesController extends Controller
         return view('pages.show', compact('properties'));
     }
 
+
+    public function search(Request  $request)
+    {
+        $properties = property::where([
+            ['active','1'],
+            ['type_id',$request->type_id],
+            ['list_type',$request->list_type],
+            ['city',$request->city],
+            ['room_no','>',$request->room_no],
+
+        ])->paginate(6);
+        return view('pages.show', compact('properties'));
+    }
+
+
+
     public function showHazak()
     {
         $properties=property::hazak()->paginate(12);

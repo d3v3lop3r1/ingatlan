@@ -34,6 +34,7 @@ Route::get('/register', function () {
 
 Route::get('/show', 'PagesController@show');
 Route::get('/home', 'PagesController@home');
+Route::post('/search', 'PagesController@search');
 Route::get('/index/{property}', 'PagesController@index');
 Route::get('/lakasok', 'PagesController@showLakasok');
 Route::get('/hazak', 'PagesController@showHazak');
@@ -51,7 +52,6 @@ Route::group(['middleware'=>'auth'],function(){
     Route::resource('/photos', 'photoController');
     Route::get('/photos/agents/create/{id}', 'photoController@createAgentPhoto');
     Route::patch('/photos/agents/update', 'photoController@updateAgentPhoto');
-    
     Route::get('/clients/get/{id}', 'AgentController@getClient');
     Route::get('/photos/create/{id}', 'photoController@create');
 });

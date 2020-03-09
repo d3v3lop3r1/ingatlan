@@ -2,9 +2,9 @@
 
 @section('tartalom')
 
-      <div class="container" id="first-main">
+      <div class="container">
           <div class="row">
-              <section class="col-sm-4 ">
+              <section class="col-xs-12 col-sm-4">
                    <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
                   <h3><a href="/show">Vásárolna, bérelne ingatlant?</a></h3>
                   <p><strong>ÚJ!</strong> Képeink lapozása közben mindig tudja hol jár az objektumban! <br>
@@ -13,7 +13,7 @@
                      <strong>ÚJ!</strong> Előzetes felmérések, analízisek az eladó ingatlanról, egy jó döntés érdekében.<br>
                   </p>
               </section>
-               <section class="col-sm-4 ">
+               <section class="col-xs-12 col-sm-4 ">
                  <div class="embed-responsive embed-responsive-16by9">
                          <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                 </div>
@@ -26,7 +26,7 @@
                      Hirdetése mintegy 10 magyar-német és holland hirdetőkben jelenhet meg!<br>
                   </p>
               </section>
-               <section class="col-sm-4 ">
+               <section class="col-xs-12 col-sm-4 ">
                   <img class="img-responsive center-block img-thumbnail" src="/images/sample-house/architecture-21805_640.jpg" alt="Ház Eladó">
                   <h3>Eladó ingatlanokról én is tudok! </h3>
                   <p><strong>Legyen ÖN is az ügynökünk!<br>Üzenjen nekünk!</strong>  <br>

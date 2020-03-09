@@ -11,7 +11,7 @@
 <div class="container search-container">
     <div class="row search-row">
         <div class="col-xs">
-            {!! Form::open(['url'=>'/search', 'method'=>'POST','name'=>'search', 'class'=>'']); !!}
+            {!! Form::open(['action'=>'PagesController@search', 'method'=>'POST','name'=>'search', 'class'=>'']); !!}
             <div class="row  drop-shadow search-box center-xs">
                     <div class="col-auto">
                         {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
@@ -24,7 +24,6 @@
                     <div class="col-auto">
                         {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                         {!! Form::select('list_type',[
-                            0=>'Mind',
                             1=>'Lakás',
                             2=>'Ház',
                             3=>'Nyaraló',
@@ -42,10 +41,8 @@
 
                     <div class="col-auto">
                         {!! Form::label('Hol?',null,['class' => 'search-label', 'for'=>'city']); !!}
-
-                        {!! Form::select('city',(['0'=>'Mind']+$cities)
+                        {!! Form::select('city',($cities)
                             ,null, ['class' => 'form-control form-control-sm', 'id'=>'city']);
-                         
                         !!}
                     </div>
                     <div class="col-auto">
