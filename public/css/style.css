@@ -89,6 +89,7 @@ p {
 
 .search-container{
 	display: flex;
+	flex-basis: 100%;
 	flex-direction: row;
 	position: relative;
 	margin-bottom: 70px;
@@ -112,6 +113,11 @@ p {
 .search-box label{
 	font-size: small;
 	color: rgb(32, 57, 112);
+}
+
+.search-box #area{
+	font-size: small;
+	width: 100px;
 }
 
 

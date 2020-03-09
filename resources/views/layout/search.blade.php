@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="col">
-                        {!! Form::label('Lakóterület(m2)',null,['class' => 'search-label', 'for'=>'area']); !!}
+                        {!! Form::label('Min. alapterület',null,['class' => 'search-label', 'for'=>'area']); !!}
                         {!! Form::number('area',null,['class' => 'form-control  form-control-sm', 'id'=>'area']); !!}
                       </div>
 
