@@ -115,9 +115,9 @@ p {
 	color: rgb(32, 57, 112);
 }
 
-.search-box #area{
+.search-box #area, #land_area{
 	font-size: small;
-	width: 100px;
+	width: 80px;
 }
 
 

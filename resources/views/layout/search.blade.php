@@ -70,9 +70,14 @@
                     <div class="col">
                         {!! Form::label('Min. alapterület',null,['class' => 'search-label', 'for'=>'area']); !!}
                         {!! Form::number('area',null,['class' => 'form-control  form-control-sm', 'id'=>'area']); !!}
-                      </div>
+                    </div>
 
                     <div class="col">
+                        {!! Form::label('Min. telekterület',null,['class' => 'search-label', 'for'=>'land_area']); !!}
+                        {!! Form::number('land_area',null,['class' => 'form-control  form-control-sm', 'id'=>'land_area']); !!}
+                    </div>
+
+                    <div class="col-xs-12">
                         <button class="btn btn-primary btn-sm" type="submit" >KERESÉS</button>
                     </div>
                 {!! Form::close() !!}
