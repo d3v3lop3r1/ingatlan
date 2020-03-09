@@ -29,7 +29,7 @@ class PagesController extends Controller
             ['active','1'],
             ['type_id',$request->type_id],
             ['list_type',$request->list_type],
-            ['city',$request->city],
+            ['city','>',$request->city],
             ['room_no','>',$request->room_no],
 
         ])->paginate(6);
