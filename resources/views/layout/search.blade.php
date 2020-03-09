@@ -10,7 +10,6 @@
             <div class="form-row">
                 {!! Form::open(['url'=>'/search', 'method'=>'POST','name'=>'search', 'class'=>'form-inline']); !!}
                     <div class="form-group col-sm-3">
-                        {!! Form::label('Hirdetés típusa',null,['class' => '', 'for'=>'type_id']); !!}
                         {!! Form::select('type_id',[
                             0=>'Eladó',
                             1=>'Eladó cserelehetőséggel',
@@ -21,7 +20,7 @@
                     </div>
 
                     <div class="form-group col-sm-3">
-                        {!! Form::label('Hirdetes kategória',null,['class' => '', 'for'=>'list_type']); !!}
+                        {!! Form::label('Típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                         {!! Form::select('list_type',[
                             0=>'Mind',
                             1=>'Lakás',
@@ -40,19 +39,19 @@
                     </div>
 
                     <div class="form-group col-sm-3">
-                        {!! Form::label('Város',null,['class' => '', 'for'=>'city']); !!}
+                        {!! Form::label('Hol?',null,['class' => 'search-label', 'for'=>'city']); !!}
                         {!! Form::select('city',(['0'=>'Mind']+$cities)
                             ,null, ['class' => 'form-control form-control-sm', 'id'=>'city']);
                          
                         !!}
                     </div>
                     <div class="form-group col-sm-3">
-                        {!! Form::label('Szobák száma',null,['class' => '', 'for'=>'room_no']); !!}
+                        {!! Form::label('Szobák',null,['class' => 'search-label', 'for'=>'room_no']); !!}
                         {!! Form::number('room_no',null,['class' => 'form-control form-control-sm', 'id'=>'room_no']); !!}
                     </div>
 
                     <div class="form-group col-sm-3">
-                        {!! Form::label('Lakóterület(m2)',null,['class' => '', 'for'=>'area']); !!}
+                        {!! Form::label('Lakóterület(m2)',null,['class' => 'search-label', 'for'=>'area']); !!}
                         {!! Form::number('area',null,['class' => 'form-control  form-control-sm', 'id'=>'area']); !!}
                       </div>
 
