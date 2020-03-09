@@ -21,6 +21,7 @@ Route::get('/main', function () {
     return view('pages.home');
 });
 
+Route::get('/home', 'PagesController@show');
 
 Route::get('/demo', function () {
     return view('demo');
@@ -60,4 +61,3 @@ Route::get('/properties/lista', 'PropertyController@lista');
 
 Auth::routes();
 
-Route::get('/home', 'PagesController@show');

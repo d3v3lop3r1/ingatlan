@@ -2,9 +2,9 @@
   {{--  <div class="navbar-container">  --}}
     <div class="row bottom-xs center-xs" id="navbar-row">
         <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" id="header-logo">
-          <a href="/home"><img class="img-fluid" src="/images/logos/ingatlanfox-logo.png"></a>
+          <a href="/main"><img class="img-fluid" src="/images/logos/ingatlanfox-logo.png"></a>
         </div>
-        <div class="col-xs-6 col-sm-10 col-md-10 col-lg-10" id="navbar">
+        <div class="col-xs-6 col-sm-10 col-md-5 col-lg-5" id="navbar">
           <nav class="navbar navbar-expand-lg navbar-light" >
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

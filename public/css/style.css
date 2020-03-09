@@ -19,14 +19,17 @@ body, html {
 	filter: drop-shadow(1px 1px 1px #222);
 }
 #navbar-row{
+	display: block;
 	flex-basis: 100%;
-
+	margin: 10px 0;
 }
 #navbar{
-	margin-left: auto;
+	display: block;
 	float: right;
+	margin-top: 20px;
 	text-transform: uppercase;
 	font-size: small  ;
+
 }
 
 .navbar-container{
@@ -56,6 +59,8 @@ header{
 
 #header-logo{
 	float: left;
+	width: auto;
+	height: auto;
 }
 
 p {
@@ -83,15 +88,15 @@ p {
 }
 
 .search-container{
+	display: flex;
 	position: relative;
 	margin-bottom: 70px;
 }
 .search-box{
+	display: flex;
+	flex-direction: row;
 	position: absolute;
-	border-radius: 10px;
-	top: -170px;
-	bottom: auto;
-	margin: 0 auto;
+	top: -80px;
 	padding: 15px 15px;
 	background-color: rgba(255, 255, 255, 0.884);
 	z-index: 1001;
