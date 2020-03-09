@@ -3,21 +3,24 @@
     $properties = property::all();
     $cities = Arr::pluck($properties,'city','city');
     $cities = Arr::sort($cities);
+    foreach ($cities as $city){
+        $count_city = property::where('city',$city)->count();
+        $cities[$city]= $city . '(' . $count_city . ')';
+    }
 @endphp
 <div class="container search-container">
-    <div class="row">
+    <div class="row search-row">
         <div class="col-xs-12">
             <div class="form-row  drop-shadow search-box">
                 {!! Form::open(['url'=>'/search', 'method'=>'POST','name'=>'search', 'class'=>'form-inline']); !!}
-                    <div class="form-group col-sm-3">
+                    <div class="col">
+                        {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
                         {!! Form::select('type_id',[
                             0=>'Eladó',
                             3=>'Kiadó',
                             ],null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); 
                         !!}
                     </div>
-
-
                     <div class="col">
                         {!! Form::label('Típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                         {!! Form::select('list_type',[
@@ -45,9 +48,22 @@
                          
                         !!}
                     </div>
-                    <div class="col">
+                    <div class="col-auto">
                         {!! Form::label('Szobák',null,['class' => 'search-label', 'for'=>'room_no']); !!}
-                        {!! Form::number('room_no',null,['class' => 'form-control form-control-sm', 'id'=>'room_no']); !!}
+                        {!! Form::select('room_no',[
+                            0=>'Mind',
+                            1=>'1+',
+                            2=>'2+',
+                            3=>'3+',
+                            4=>'4+',
+                            5=>'5+',
+                            6=>'6+',
+                            7=>'7+',
+                            8=>'8+',
+                            9=>'9+',
+                            10=>'10+',
+                            ],null,['class' => 'form-control form-control-sm', 'id'=>'room_no']); 
+                        !!}
                     </div>
 
                     <div class="col">

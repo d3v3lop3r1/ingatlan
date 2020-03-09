@@ -89,17 +89,29 @@ p {
 
 .search-container{
 	display: flex;
+	flex-direction: row;
 	position: relative;
 	margin-bottom: 70px;
+}
+
+.search-row{
+	width: 100%;
+	flex-direction: row;
 }
 .search-box{
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	position: absolute;
 	top: -80px;
 	padding: 15px 15px;
 	background-color: rgba(255, 255, 255, 0.884);
 	z-index: 1001;
+}
+
+.search-box label{
+	font-size: small;
+	color: rgb(32, 57, 112);
 }
 
 
