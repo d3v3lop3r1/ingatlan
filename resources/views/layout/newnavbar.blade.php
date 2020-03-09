@@ -50,7 +50,7 @@
                           </li>
                           <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                            aria-haspopup="true" aria-expanded="false">Szolgáltatások<span class="caret"></span></a> 
+                            aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
                               <li><a href="#">Ingatlanügy-Info</a></li>
