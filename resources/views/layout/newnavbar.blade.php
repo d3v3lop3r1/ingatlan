@@ -19,9 +19,9 @@
                               <li><a href="/show">Összes ingatlan</a></li>
                               <li><a href="/lakasok">Lakás</a></li>
                               <li><a href="/hazak">Ház</a></li>
-                              <li><a href="/irodak">Iroda</a></li>
                               <li><a href="/nyaralok">Nyaraló</a></li>
                               <li><a href="/garazsok">Garázs</a></li>
+                              <li><a href="/irodak">Iroda</a></li>
                               <li><a href="/ipari">Ipari Ingatlan</a></li>
                               <li><a href="/raktarak">Raktár</a></li>
                               <li><a href="/uzlethelyisegek">Üzlethelyiség</a></li>
@@ -37,9 +37,9 @@
                               <li><a href="#"> </a></li>
                               <li><a href="#">Lakás</a></li>
                               <li><a href="#">Ház</a></li>
-                              <li><a href="#">Iroda</a></li>
                               <li><a href="#">Nyaraló</a></li>
                               <li><a href="#">Garázs</a></li>
+                              <li><a href="#">Iroda</a></li>
                               <li><a href="#">Ipari Ingatlan</a></li>
                               <li><a href="#">Raktár</a></li>
                               <li><a href="#">Üzlethelyiség</a></li>

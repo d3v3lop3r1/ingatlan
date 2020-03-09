@@ -94,9 +94,9 @@ use App\agent;
                             {!! Form::select('list_type',[
                                 1=>'Lakás',
                                 2=>'Ház',
-                                3=>'Iroda',
-                                4=>'Nyaraló',
-                                5=>'Garázs',
+                                3=>'Nyaraló',
+                                4=>'Garázs',
+                                5=>'Iroda',
                                 6=>'Ipari',
                                 7=>'Raktár',
                                 8=>'Üzlethelyiség',
