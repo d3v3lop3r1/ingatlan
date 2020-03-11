@@ -17,8 +17,6 @@
                         {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
                         {!! Form::select('type_id',[
                             0=>'Eladó',
-                            1=>'Eladó cserelehetőséggel',
-                            2=>'Kiadó eladási opcióval',
                             3=>'Kiadó',
                         ],null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); 
                         !!}

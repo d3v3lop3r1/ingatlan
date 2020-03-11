@@ -19,7 +19,7 @@ use Intervention\Image\ImageManager;
         <div class="container-fluid">
             <div class="row center-xs ingatlan-sor">
                 @foreach ($properties as $property)
-                    @if (isset($property))
+                    @if (isset($property->id))
                        
                         <?php 
                         $photo_count = $property->photos->count();
