@@ -58,11 +58,11 @@ class PagesController extends Controller
         })
 
         ->when($price_min, function($query, $price_min){ 
-            return $query->where('price_min','>',$price_min);
+            return $query->where('price','>',$price_min);
         })
 
         ->when($price_max, function($query, $price_max){ 
-            return $query->where('price_max','<',$price_max);
+            return $query->where('price','<',$price_max);
         })
 
         
