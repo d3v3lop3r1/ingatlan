@@ -17,13 +17,16 @@
                         {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
                         {!! Form::select('type_id',[
                             0=>'Eladó',
+                            1=>'Eladó cserelehetőséggel',
+                            2=>'Kiadó eladási opcióval',
                             3=>'Kiadó',
-                            ],null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); 
+                        ],null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); 
                         !!}
-                    </div>
+                    </div>1
                     <div class="col-auto">
                         {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                         {!! Form::select('list_type',[
+                            null=>'Mind',
                             1=>'Lakás',
                             2=>'Ház',
                             3=>'Nyaraló',
@@ -41,14 +44,13 @@
 
                     <div class="col-auto">
                         {!! Form::label('Hol?',null,['class' => 'search-label', 'for'=>'city']); !!}
-                        {!! Form::select('city',($cities)
+                        {!! Form::select('city',([null=>'Mind']+$cities)
                             ,null, ['class' => 'form-control form-control-sm', 'id'=>'city']);
                         !!}
                     </div>
                     <div class="col-auto">
                         {!! Form::label('Szobák',null,['class' => 'search-label', 'for'=>'room_no']); !!}
                         {!! Form::select('room_no',[
-                            0=>'Mind',
                             1=>'1+',
                             2=>'2+',
                             3=>'3+',

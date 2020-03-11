@@ -23,16 +23,52 @@ class PagesController extends Controller
     }
 
 
-    public function search(Request  $request)
+    public function search(Request $request)
     {
-        $properties = property::where([
-            ['active','1'],
-            ['type_id',$request->type_id],
-            ['list_type',$request->list_type],
-            ['city','>',$request->city],
-            ['room_no','>',$request->room_no],
+        $type_id = $request->type_id;
+        $list_type = $request->list_type;
+        $city = $request->city;
+        $room_no = $request->room_no;
+        $area = $request->area;
+        $land_area = $request->land_area;
+        $price_min = $request->price_min;
+        $price_max = $request->price_max;
 
-        ])->paginate(6);
+        $properties = property::where('active','1')
+        ->where('type_id',$type_id)
+        
+        ->when($list_type, function($query, $list_type){ 
+            return $query->where('list_type', $list_type);
+        })
+
+        ->when($city, function($query, $city){ 
+            return $query->where('city', $city);
+        })
+
+        ->where('room_no','>',$room_no)
+
+        ->when($area, function($query, $area){ 
+            return $query->where('area','>',$area);
+        })
+
+        ->when($land_area, function($query, $land_area){ 
+            return $query->where('land_area','>',$land_area);
+        })
+
+        ->when($price_min, function($query, $price_min){ 
+            return $query->where('price_min','>',$price_min);
+        })
+
+        ->when($price_max, function($query, $price_max){ 
+            return $query->where('price_max','<',$price_max);
+        })
+
+        
+
+        ->get();
+
+
+        
         return view('pages.show', compact('properties'));
     }
 
