@@ -45,7 +45,9 @@ class PagesController extends Controller
             return $query->where('city', $city);
         })
 
-        ->where('room_no','>',$room_no)
+        ->when($room_no, function($query, $room_no){ 
+            return $query->where('room_no','>',$room_no);
+        })
 
         ->when($area, function($query, $area){ 
             return $query->where('area','>',$area);

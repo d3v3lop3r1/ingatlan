@@ -49,6 +49,7 @@
                     <div class="col-auto">
                         {!! Form::label('Szobák',null,['class' => 'search-label', 'for'=>'room_no']); !!}
                         {!! Form::select('room_no',[
+                            null=>'Mind',
                             1=>'1+',
                             2=>'2+',
                             3=>'3+',
