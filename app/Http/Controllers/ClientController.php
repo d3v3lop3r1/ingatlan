@@ -62,7 +62,6 @@ class ClientController extends Controller
      */
     public function edit(client $client)
     {
-        return $client->id;
         return view('clients.edit', compact('client'));
         
     }
