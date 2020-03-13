@@ -44,7 +44,7 @@ class PagesController extends Controller
         $list_type = $request->list_type;
         switch($list_type){
             case 0:
-                $mutato .= 'MIND/';
+                $mutato .= 'MINDENHOL/';
             break;
             case 1:
                 $mutato .= 'LAKÁS/';

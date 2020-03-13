@@ -13,7 +13,7 @@ use App\property;
                 <div class="row center-xs">
                     <div class="col-xs-12">
                         <h1>Ingatlanok</h1>
-                        <h4>{{$mutato}}</h4>
+                        <h4>{{$mutato}}  TALÁLAT: {{$prop_count}} DB</h4>
                     </div>
                 </div>
             </div>
