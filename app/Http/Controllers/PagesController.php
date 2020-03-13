@@ -15,10 +15,10 @@ class PagesController extends Controller
     {
         return view('pages.home');
     }
-    public function show()
+    public function showing()
     {
-        $properties=property::where('active','1')->paginate(12);
-        // return $properties;
+        $properties=property::where('active','1')->get();
+        //return $properties;
         return view('pages.show', compact('properties'));
     }
 
@@ -78,43 +78,43 @@ class PagesController extends Controller
 
     public function showHazak()
     {
-        $properties=property::hazak()->paginate(12);
-        // return $properties;
+        $properties=property::hazak()->get();
+        //dd($properties);
         return view('pages.show', compact('properties'));
     }
     public function showLakasok()
     {
-        $properties=property::lakasok()->paginate(12);
+        $properties=property::lakasok()->get();
         // return $properties;
         return view('pages.show', compact('properties'));
     }
     public function showIrodak()
     {
-        $properties=property::irodak()->paginate(12);
+        $properties=property::irodak()->get();
         // return $properties;
         return view('pages.show', compact('properties'));
     }
     public function showIpari()
     {
-        $properties=property::ipari()->paginate(12);
+        $properties=property::ipari()->get();
         // return $properties;
         return view('pages.show', compact('properties'));
     }
     public function showNyaralok()
     {
-        $properties=property::nyaralok()->paginate(12);
+        $properties=property::nyaralok()->get();
         // return $properties;
         return view('pages.show', compact('properties'));
     }
     public function showGarazsok()
     {
-        $properties=property::Garazsok()->paginate(12);
+        $properties=property::Garazsok()->get();
         // return $properties;
         return view('pages.show', compact('properties'));
     }
     public function showRaktarak()
     {
-        $properties=property::Raktarak()->paginate(12);
+        $properties=property::Raktarak()->get();
         // return $properties;
         return view('pages.show', compact('properties'));
     }

@@ -2,6 +2,7 @@
 use App\photo;
 use Carbon\Carbon;
 use Intervention\Image\ImageManager;
+use App\property;
 
 ?>
 @extends('layout.main')
@@ -18,13 +19,11 @@ use Intervention\Image\ImageManager;
     <section id="ingatlanok-lista">
         <div class="container-fluid">
             <div class="row center-xs ingatlan-sor">
-                @foreach ($properties as $property)
-                    @if (isset($property->id))
-                       
+                @foreach ($properties as $property)                       
                         <?php 
                         $photo_count = $property->photos->count();
-                        if ($photo_count){
-                            $photo = $property->photos->where('is_default','1')->first();
+                        $photo = $property->photos->where('is_default','1')->first();
+                        if ($photo){
                             $photo_file = $photo->file1;
                             $photo_file = "uploads/" . $photo_file;
                         } else {
@@ -111,10 +110,6 @@ use Intervention\Image\ImageManager;
                                     </div>
                                 </div>                                                   
                         </div>
-                    @else
-                        <h1>Nincs a keresésnek megfelelő találat!</h1>
-
-                    @endif
                 @endforeach
                 
             </div>

@@ -11,7 +11,7 @@ class photo extends Model
         'property_id'
 
     ];
-/*     public function property(){
-        return $this->belongsTo('App\property');
- */
+    public function property(){
+       return $this->belongsTo('App\property');
+    }
 }

@@ -21,7 +21,7 @@ Route::get('/main', function () {
     return view('pages.home');
 });
 
-Route::get('/home', 'PagesController@show');
+//Route::get('/home', 'PagesController@show');
 
 Route::get('/demo', function () {
     return view('demo');
@@ -32,7 +32,7 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
-Route::get('/show', 'PagesController@show');
+Route::get('/show', 'PagesController@showing');
 Route::get('/home', 'PagesController@home');
 Route::post('/search', 'PagesController@search');
 Route::get('/index/{property}', 'PagesController@index');
