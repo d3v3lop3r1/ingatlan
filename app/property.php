@@ -81,6 +81,22 @@ class property extends Model
     {
         return $query->where('active', 1)->where('list_type', 7);
     }
+    public function scopeUzlethelyisegek($query)
+    {
+        return $query->where('active', 1)->where('list_type', 8);
+    }
+    public function scopeTelekfold($query)
+    {
+        return $query->where('active', 1)->where('list_type', 9);
+    }
+    public function scopeVendeglatas($query)
+    {
+        return $query->where('active', 1)->where('list_type', 10);
+    }
+    public function scopeEgyeb($query)
+    {
+        return $query->where('active', 1)->where('list_type', 11);
+    }
     
     
 

@@ -43,6 +43,10 @@ Route::get('/ipari', 'PagesController@showIpari');
 Route::get('/nyaralok', 'PagesController@showNyaralok');
 Route::get('/garazsok', 'PagesController@showGarazsok');
 Route::get('/raktarak', 'PagesController@showRaktarak');
+Route::get('/uzlethelyisegek', 'PagesController@showUzlethelyisegek');
+Route::get('/vendeglatas', 'PagesController@showVendeglatas');
+Route::get('/telekfold', 'PagesController@showTelekfold');
+Route::get('/egyeb', 'PagesController@showEgyeb');
 
 
 Route::group(['middleware'=>'auth'],function(){

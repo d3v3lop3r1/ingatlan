@@ -17,9 +17,9 @@ class PagesController extends Controller
     }
     public function showing()
     {
-        $properties=property::where('active','1')->get();
-        //return $properties;
-        return view('pages.show', compact('properties'));
+        $properties=property::where('active','1');
+        $mutato='ÖSSZES INGATLAN';
+        return view('pages.show', compact('properties', 'mutato'));
     }
 
     public function search(Request $request)
@@ -123,60 +123,83 @@ class PagesController extends Controller
 
         ->when($price_max, function($query, $price_max){ 
             return $query->where('price','<',$price_max);
-        })
+        });
 
+
+        // $properties=$properties->paginate(9);
         
-
-        ->get();
-
-        $prop_count = $properties->count();
-        
-        return view('pages.show', compact('properties', 'mutato', 'prop_count'));
+        return view('pages.show', compact('properties'));
     }
 
 
 
     public function showHazak()
     {
-        $properties=property::hazak()->get();
-        //dd($properties);
-        return view('pages.show', compact('properties'));
+        $properties=property::hazak();
+        $mutato="Házak";
+        return view('pages.show', compact('properties', 'mutato'));
     }
     public function showLakasok()
     {
-        $properties=property::lakasok()->get();
-        // return $properties;
-        return view('pages.show', compact('properties'));
+        $properties=property::lakasok();
+        $mutato="Lakások";
+        return view('pages.show', compact('properties', 'mutato'));
     }
     public function showIrodak()
     {
-        $properties=property::irodak()->get();
-        // return $properties;
-        return view('pages.show', compact('properties'));
+        $properties=property::irodak();
+        $mutato="Irodák";
+        return view('pages.show', compact('properties', 'mutato'));
     }
     public function showIpari()
     {
-        $properties=property::ipari()->get();
-        // return $properties;
-        return view('pages.show', compact('properties'));
+        $properties=property::ipari();
+        $mutato="Ipari ingatlanok";
+        return view('pages.show', compact('properties', 'mutato'));
     }
     public function showNyaralok()
     {
-        $properties=property::nyaralok()->get();
-        // return $properties;
-        return view('pages.show', compact('properties'));
+        $properties=property::nyaralok();
+        $mutato="Nyaralók";
+        return view('pages.show', compact('properties', 'mutato'));
     }
     public function showGarazsok()
     {
-        $properties=property::Garazsok()->get();
-        // return $properties;
-        return view('pages.show', compact('properties'));
+        $properties=property::Garazsok();
+        $mutato="Garázsok";
+        return view('pages.show', compact('properties', 'mutato'));
     }
     public function showRaktarak()
     {
-        $properties=property::Raktarak()->get();
-        // return $properties;
-        return view('pages.show', compact('properties'));
+        $properties=property::Raktarak();
+        $mutato="Raktárak";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+
+    public function showUzlethelyisegek()
+    {
+        $properties=property::Uzlethelyisegek();
+        $mutato="Üzlethelyiségek";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+
+    public function showTelekfold()
+    {
+        $properties=property::Telekfold();
+        $mutato="Telek-Föld";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function showVendeglatas()
+    {
+        $properties=property::Vendeglatas();
+        $mutato="Vendéglátás";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function showEgyeb()
+    {
+        $properties=property::Egyeb();
+        $mutato="Egyéb";
+        return view('pages.show', compact('properties', 'mutato'));
     }
 
 

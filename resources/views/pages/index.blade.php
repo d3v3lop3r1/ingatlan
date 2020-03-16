@@ -31,10 +31,10 @@ use Carbon\Carbon;
               {{--  Adatok oszlop   --}}
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
-                  <table class="table table-light table-sm index-adatok-tabla">
-                    <thead class="thead-dark">
+                  <table class="table table-sm table-bordered index-adatok-tabla">
+                    <thead class="thead-dark pt-3">
                       <tr>
-                        <th># {{70000+$property->id}}</th>
+                        <th>id {{70000+$property->id}}</th>
                         <th colspan="3">{{$property->header}}</th>
                       </tr>
                     </thead>
@@ -94,13 +94,14 @@ use Carbon\Carbon;
                         <td colspan="3"></td>
                       </tr>
                       <tr>
-                        <th align="right" class="bg-danger pt-2"><h5 class="text-white" >Ár</h5></th>
-                        <th class="bg-danger pt-2 pr-3"><h5 class="text-white" id="eur"></h5></th>
-                        <th class="bg-danger pt-2 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></th>
+                        <th align="right" class="bg-danger pt-3"><h5 class="text-white" >Ár</h5></th>
+                        <th class="bg-danger pt-3 pr-3"><h5 class="text-white" id="eur"></h5></th>
+                        <th class="bg-danger pt-3 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></th>
+                        <th class="bg-danger pt-3 pr-3"></th>
                       </tr>
 
                       <tr>
-                        <td colspan="4"><h4>Leírás</h4></td>
+                        <th align="left" colspan="4" bordered><h4>Leírás</h4></th>
                       </tr>
                       <tr>
                         <td colspan="4"><?php echo $property->text; ?></td>
@@ -133,10 +134,9 @@ use Carbon\Carbon;
       </div>
       <div class="container-fluid hide visible-lg visible-md center" >
         <div class="jumbotron" >
-              <h1>EL SZERETNÉ ADNI LAKÁSÁT, HÁZÁT?</h1>
-              <p>Mi nem csak képekkel, de videókkal is prezentáljuk ingatlanját!<br>
-                 1 hirdetésfeladás INGYENES!
-          </p>
+              <h1>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</h1>
+              <h4>Akkor jó helyen jár.</h4>
+              <p>Baranyában, Pécsett, Harkányban, Siklóson s segítségére leszünk!</p>
         </div>
       </div>
       <div class="container" id="map-container">

@@ -7,8 +7,17 @@ use App\property;
 ?>
 @extends('layout.main')
 @section('tartalom')
+    @php
+        $prop_count = $properties->count();
+        if (!isset($mutato)){
+            $mutato='';
+        }
+    @endphp
     @if ($prop_count)
-        <section id="ingatlanok-header">
+    @php
+        $properties=$properties->paginate(9);
+    @endphp
+    <section id="ingatlanok-header">
             <div class="container-fluid">
                 <div class="row center-xs">
                     <div class="col-xs-12">
@@ -37,7 +46,7 @@ use App\property;
                             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 ingatlan-box mb-3">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="index/{{$property->id}}">{{$property->header}}</a></h5>
+                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-md-6 prop-header-alatt-bal start-md ">
                                                     <?php
@@ -119,9 +128,9 @@ use App\property;
             <div class="container lapozas">
                 <div class="row">
                     <div class="col-xs mx-auto">
-                        {{-- <p>
+                        <p>
                             {{ $properties->links() }}
-                        </p> --}}
+                        </p>
                     </div>
                 </div>
             </div>
