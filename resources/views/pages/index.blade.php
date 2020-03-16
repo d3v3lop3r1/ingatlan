@@ -91,17 +91,25 @@ use Carbon\Carbon;
 
                       <tr>
                         <th>Extrák</th>
-                        <td colspan="3"></td>
+                        <td colspan="3">
+                          @if ($property->lift)
+                            <img src="/images/extras_icons/Elevator_icon.png" height="50" alt="">
+                          @endif
+                          @if ($property->aircondition)
+                            <img src="/images/extras_icons/air-conditioner.png" height="50" alt="">
+                          @endif
+                        </td>
                       </tr>
-                      <tr>
+                      <tr  class="table-borderless">
                         <th align="right" class="bg-danger pt-3"><h5 class="text-white" >Ár</h5></th>
                         <th class="bg-danger pt-3 pr-3"><h5 class="text-white" id="eur"></h5></th>
                         <th class="bg-danger pt-3 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></th>
                         <th class="bg-danger pt-3 pr-3"></th>
                       </tr>
 
-                      <tr>
-                        <th align="left" colspan="4" bordered><h4>Leírás</h4></th>
+                      <tr class="table-borderless">
+                        <th class="pt-3"><h4>Leírás</h4></th>
+                        <th colspan="3"><h4></h4></th>
                       </tr>
                       <tr>
                         <td colspan="4"><?php echo $property->text; ?></td>

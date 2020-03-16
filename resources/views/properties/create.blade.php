@@ -520,28 +520,58 @@ use App\agent;
                           <div align="right" class="form-group form-inline">
                               
                             <div class="col-sm-4">
-                              {!! Form::label('Lift ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('lift'); !!}
+                                {!! Form::label('Lift ',null,['class' => 'control-label']); !!}
+                                {!! Form::select('lift',[
+                                  null=>'nincs',
+                                  '1'=>'van',
+                                  ],null,                               
+                                  ['class' => 'form-control']
+                              ); 
+                              !!}
+                              </div>
+                              <div class="col-sm-4">
+                                {!! Form::label('Erkély ',null,['class' => 'control-label']); !!}
+                                {!! Form::select('balcony',[
+                                  null=>'nincs',
+                                  '1'=>'van',
+                                  ],null,                               
+                                  ['class' => 'form-control']
+                              ); 
+                              !!}
+                              </div>
+                          
+                              <div class="col-sm-4">
+                                {!! Form::label('Lékondi ',null,['class' => 'control-label']); !!}
+                                {!! Form::select('aircondition',[
+                                  null=>'nincs',
+                                  '1'=>'van',
+                                  ],null,                               
+                                  ['class' => 'form-control']
+                              ); 
+                              !!}
+                              </div>
                             </div>
-                            <div class="col-sm-4">
-                              {!! Form::label('Erkély ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('balcony'); !!}
+                            <div align="right" class="form-group">
+                                {!! Form::label('Akadálymentesített ',null,['class' => 'control-label']); !!}
+                                {!! Form::select('disabled',[
+                                  null=>'nem',
+                                  '1'=>'igen',
+                                  ],null,                               
+                                  ['class' => 'form-control']
+                              ); 
+                              !!}
                             </div>
-                        
-                            <div class="col-sm-4">
-                              {!! Form::label('Lékondi ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('aircondition'); !!}
+                            <div align="right" class="form-group">
+                                {!! Form::label('Kertkapcsolatos ',null,['class' => 'control-label']); !!}
+                                {!! Form::select('garden',[
+                                  null=>'nem',
+                                  '1'=>'igen',
+                                  ],null,                               
+                                  ['class' => 'form-control']
+                              ); 
+                              !!}
                             </div>
-                          </div>
-                          <div align="right" class="form-group">
-                              {!! Form::label('Akadálymentesített ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('disabled'); !!}
-                          </div>
-                          <div align="right" class="form-group">
-                              {!! Form::label('Kertkapcsolatos ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('garden'); !!}
-                          </div>
-                        </div><!-- Harmadik oszlop vége -->
+                          </div><!-- Harmadik oszlop vége -->
                       </div> <!-- Row -->
                     </div><!-- Container -->
               </div><!-- Panel-body -->

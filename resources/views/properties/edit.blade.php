@@ -346,7 +346,13 @@ use App\property;
 
                         <div class="form-group">
                             {!! Form::label('Céges hirdetés*',null,['class' => 'control-label']); !!}
-                            {!! Form::checkbox('ad_type'); !!}
+                            {!! Form::select('ad_type',[
+                                null=>'nem',
+                                '1'=>'igen',
+                                ],null,                               
+                                ['class' => 'form-control']
+                            ); 
+                            !!}
                         </div>
 
                       </div>
@@ -521,25 +527,55 @@ use App\property;
                               
                             <div class="col-sm-4">
                               {!! Form::label('Lift ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('lift',''); !!}
+                              {!! Form::select('lift',[
+                                null=>'nincs',
+                                '1'=>'van',
+                                ],null,                               
+                                ['class' => 'form-control']
+                            ); 
+                            !!}
                             </div>
                             <div class="col-sm-4">
                               {!! Form::label('Erkély ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('balcony'); !!}
+                              {!! Form::select('balcony',[
+                                null=>'nincs',
+                                '1'=>'van',
+                                ],null,                               
+                                ['class' => 'form-control']
+                            ); 
+                            !!}
                             </div>
                         
                             <div class="col-sm-4">
                               {!! Form::label('Lékondi ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('aircondition'); !!}
+                              {!! Form::select('aircondition',[
+                                null=>'nincs',
+                                '1'=>'van',
+                                ],null,                               
+                                ['class' => 'form-control']
+                            ); 
+                            !!}
                             </div>
                           </div>
                           <div align="right" class="form-group">
                               {!! Form::label('Akadálymentesített ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('disabled'); !!}
+                              {!! Form::select('disabled',[
+                                null=>'nem',
+                                '1'=>'igen',
+                                ],null,                               
+                                ['class' => 'form-control']
+                            ); 
+                            !!}
                           </div>
                           <div align="right" class="form-group">
                               {!! Form::label('Kertkapcsolatos ',null,['class' => 'control-label']); !!}
-                              {!! Form::checkbox('garden'); !!}
+                              {!! Form::select('garden',[
+                                null=>'nem',
+                                '1'=>'igen',
+                                ],null,                               
+                                ['class' => 'form-control']
+                            ); 
+                            !!}
                           </div>
                         </div><!-- Harmadik oszlop vége -->
                       </div> <!-- Row -->
