@@ -98,6 +98,9 @@ use Carbon\Carbon;
                           @if ($property->aircondition)
                             <img src="/images/extras_icons/air-conditioner.png" height="50" alt="">
                           @endif
+                          @if ($property->balcony)
+                            <img src="/images/extras_icons/balcony-icon.png" height="50" alt="">
+                          @endif
                         </td>
                       </tr>
                       <tr  class="table-borderless">
