@@ -101,12 +101,6 @@ use Carbon\Carbon;
                           @if ($property->balcony)
                             <img class="pl-3" src="/images/extras_icons/balcony-icon.png" height="50" alt="">
                           @endif
-                          @if ($property->disabled)
-                            <img class="pl-3" src="/images/extras_icons/icon-disabled.png" height="50" alt="">
-                          @endif
-                          @if ($property->garden)
-                            <img class="pl-3" src="/images/extras_icons/garden-icon.png" height="50" alt="">
-                          @endif
                         </td>
                       </tr>
                       <tr  class="table-borderless">
