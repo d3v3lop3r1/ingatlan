@@ -348,7 +348,13 @@ use App\agent;
 
                         <div class="form-group">
                             {!! Form::label('Céges hirdetés*',null,['class' => 'control-label']); !!}
-                            {!! Form::checkbox('ad_type'); !!}
+                            {!! Form::select('ad_type',[
+                                null=>'nem',
+                                '1'=>'igen',
+                                ],null,                               
+                                ['class' => 'form-control']
+                            ); 
+                            !!}
                         </div>
 
 
