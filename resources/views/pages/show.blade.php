@@ -129,7 +129,7 @@ use App\property;
                 <div class="row">
                     <div class="col-xs mx-auto">
                         <p>
-                            {{ $properties->links() }}
+                            {{ $properties->appends(Request::except('page'))->links() }}
                         </p>
                     </div>
                 </div>

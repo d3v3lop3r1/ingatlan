@@ -51,51 +51,62 @@ class property extends Model
     public function agents(){
         return $this->belongsTo('App\agent','agent_id');
     }
-
+    public function scopeAktiv($query)
+    {
+        return $query->where('active', 1);
+    }
+    public function scopeElado($query)
+    {
+        return $query->where('type_id', 0);
+    }
+    public function scopeKiado($query)
+    {
+        return $query->where('type_id', 3);
+    }
     public function scopeLakasok($query)
     {
-        return $query->where('active', 1)->where('list_type', 1);
+        return $query->Aktiv()->where('list_type', 1);
     }
     
     public function scopeHazak($query)
     {
-        return $query->where('active', 1)->where('list_type', 2);
+        return $query->Aktiv()->where('list_type', 2);
     }
     public function scopeIrodak($query)
     {
-        return $query->where('active', 1)->where('list_type', 3);
+        return $query->Aktiv()->where('list_type', 3);
     }
     public function scopeIpari($query)
     {
-        return $query->where('active', 1)->where('list_type', 4);
+        return $query->Aktiv()->where('list_type', 4);
     }
     public function scopeNyaralok($query)
     {
-        return $query->where('active', 1)->where('list_type', 5);
+        return $query->Aktiv()->where('list_type', 5);
     }
     public function scopeGarazsok($query)
     {
-        return $query->where('active', 1)->where('list_type', 6);
+        return $query->Aktiv()->where('list_type', 6);
     }
     public function scopeRaktarak($query)
     {
-        return $query->where('active', 1)->where('list_type', 7);
+        return $query->Aktiv()->where('list_type', 7);
     }
     public function scopeUzlethelyisegek($query)
     {
-        return $query->where('active', 1)->where('list_type', 8);
+        return $query->Aktiv()->where('list_type', 8);
     }
     public function scopeTelekfold($query)
     {
-        return $query->where('active', 1)->where('list_type', 9);
+        return $query->Aktiv()->where('list_type', 9);
     }
     public function scopeVendeglatas($query)
     {
-        return $query->where('active', 1)->where('list_type', 10);
+        return $query->Aktiv()->where('list_type', 10);
     }
     public function scopeEgyeb($query)
     {
-        return $query->where('active', 1)->where('list_type', 11);
+        return $query->Aktiv()->where('list_type', 11);
     }
     
     

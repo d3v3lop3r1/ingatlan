@@ -34,19 +34,34 @@ Route::get('/register', function () {
 
 Route::get('/show', 'PagesController@showing');
 Route::get('/home', 'PagesController@home');
-Route::post('/search', 'PagesController@search');
+Route::any('/search', 'PagesController@search');
 Route::get('/index/{property}', 'PagesController@index');
-Route::get('/lakasok', 'PagesController@showLakasok');
-Route::get('/hazak', 'PagesController@showHazak');
-Route::get('/irodak', 'PagesController@showIrodak');
-Route::get('/ipari', 'PagesController@showIpari');
-Route::get('/nyaralok', 'PagesController@showNyaralok');
-Route::get('/garazsok', 'PagesController@showGarazsok');
-Route::get('/raktarak', 'PagesController@showRaktarak');
-Route::get('/uzlethelyisegek', 'PagesController@showUzlethelyisegek');
-Route::get('/vendeglatas', 'PagesController@showVendeglatas');
-Route::get('/telekfold', 'PagesController@showTelekfold');
-Route::get('/egyeb', 'PagesController@showEgyeb');
+
+Route::get('/osszes-elado-ingatlan', 'PagesController@eladoOsszes');
+Route::get('/elado-lakasok', 'PagesController@eladoLakasok');
+Route::get('/elado-hazak', 'PagesController@eladoHazak');
+Route::get('/elado-irodak', 'PagesController@eladoIrodak');
+Route::get('/elado-ipari', 'PagesController@eladoIpari');
+Route::get('/elado-nyaralok', 'PagesController@eladoNyaralok');
+Route::get('/elado-garazsok', 'PagesController@eladoGarazsok');
+Route::get('/elado-raktarak', 'PagesController@eladoRaktarak');
+Route::get('/elado-uzlethelyisegek', 'PagesController@eladoUzlethelyisegek');
+Route::get('/elado-vendeglatas', 'PagesController@eladoVendeglatas');
+Route::get('/elado-telek-fold', 'PagesController@eladoTelekfold');
+Route::get('/elado-egyeb', 'PagesController@eladoEgyeb');
+
+Route::get('/osszes-kiado-ingatlan', 'PagesController@kiadoOsszes');
+Route::get('/kiado-lakasok', 'PagesController@kiadoLakasok');
+Route::get('/kiado-hazak', 'PagesController@kiadoHazak');
+Route::get('/kiado-irodak', 'PagesController@kiadoIrodak');
+Route::get('/kiado-ipari', 'PagesController@kiadoIpari');
+Route::get('/kiado-nyaralok', 'PagesController@kiadoNyaralok');
+Route::get('/kiado-garazsok', 'PagesController@kiadoGarazsok');
+Route::get('/kiado-raktarak', 'PagesController@kiadoRaktarak');
+Route::get('/kiado-uzlethelyisegek', 'PagesController@kiadoUzlethelyisegek');
+Route::get('/kiado-vendeglatas', 'PagesController@kiadoVendeglatas');
+Route::get('/kiado-telek-fold', 'PagesController@kiadoTelekfold');
+Route::get('/kiado-egyeb', 'PagesController@kiadoEgyeb');
 
 
 Route::group(['middleware'=>'auth'],function(){

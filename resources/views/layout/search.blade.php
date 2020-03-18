@@ -11,7 +11,7 @@
 <div class="container search-container">
     <div class="row search-row">
         <div class="col-xs">
-            {!! Form::open(['action'=>'PagesController@search', 'method'=>'POST','name'=>'search', 'class'=>'']); !!}
+            {!! Form::open(['action'=>'PagesController@search', 'method'=>'POST', 'class'=>'']); !!}
             <div class="row  drop-shadow search-box center-xs">
                     <div class="col-auto">
                         {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
@@ -72,10 +72,6 @@
                     <div class="col-auto">
                         {!! Form::label('Min. telekterület',null,['class' => 'search-label', 'for'=>'land_area']); !!}
                         {!! Form::number('land_area',null,['class' => 'form-control  form-control-sm', 'id'=>'land_area']); !!}
-                    </div>
-                    <div class="col-auto">
-                        {!! Form::label('Min. ár',null,['class' => 'search-label', 'for'=>'price_min']); !!}
-                        {!! Form::number('price_min',null,['class' => 'form-control  form-control-sm', 'id'=>'price_min']); !!}
                     </div>
 
                     <div class="col-auto">

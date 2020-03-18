@@ -96,7 +96,7 @@ class PagesController extends Controller
 
         $properties = property::where('active','1')
         ->where('type_id',$type_id)
-        
+
         ->when($list_type, function($query, $list_type){ 
             return $query->where('list_type', $list_type);
         })
@@ -117,9 +117,6 @@ class PagesController extends Controller
             return $query->where('land_area','>',$land_area);
         })
 
-        ->when($price_min, function($query, $price_min){ 
-            return $query->where('price','>',$price_min);
-        })
 
         ->when($price_max, function($query, $price_max){ 
             return $query->where('price','<',$price_max);
@@ -128,79 +125,160 @@ class PagesController extends Controller
 
         // $properties=$properties->paginate(9);
         
-        return view('pages.show', compact('properties'));
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+
+    public function eladoOsszes()
+    {
+        $properties=property::elado();
+        $mutato="Eladó ingatlanok";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+
+    public function eladoHazak()
+    {
+        $properties=property::hazak()->elado();
+        $mutato="Eladó házak";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoLakasok()
+    {
+        $properties=property::lakasok()->elado();
+        $mutato="Eladó lakások";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoIrodak()
+    {
+        $properties=property::irodak()->elado();
+        $mutato="Eladó irodák";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoIpari()
+    {
+        $properties=property::ipari()->elado();
+        $mutato="Eladó ipari ingatlanok";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoNyaralok()
+    {
+        $properties=property::nyaralok()->elado();
+        $mutato="Eladó nyaralók";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoGarazsok()
+    {
+        $properties=property::Garazsok()->elado();
+        $mutato="Eladó garázsok";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoRaktarak()
+    {
+        $properties=property::Raktarak()->elado();
+        $mutato="Eladó raktárak";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+
+    public function eladoUzlethelyisegek()
+    {
+        $properties=property::Uzlethelyisegek()->elado();
+        $mutato="Eladó üzlethelyiségek";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+
+    public function eladoTelekfold()
+    {
+        $properties=property::Telekfold()->elado();
+        $mutato="Eladó telek-föld";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoVendeglatas()
+    {
+        $properties=property::Vendeglatas()->elado();
+        $mutato="Eladó vendéglátás";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function eladoEgyeb()
+    {
+        $properties=property::Egyeb()->elado();
+        $mutato="Eladó egyéb";
+        return view('pages.show', compact('properties', 'mutato'));
     }
 
 
 
-    public function showHazak()
+    public function kiadoOsszes()
     {
-        $properties=property::hazak();
-        $mutato="Házak";
+        $properties=property::kiado();
+        $mutato="Kiadó ingatlanok";
         return view('pages.show', compact('properties', 'mutato'));
     }
-    public function showLakasok()
+    public function kiadoHazak()
     {
-        $properties=property::lakasok();
-        $mutato="Lakások";
+        $properties=property::hazak()->kiado();
+        $mutato="Kiadó házak";
         return view('pages.show', compact('properties', 'mutato'));
     }
-    public function showIrodak()
+    public function kiadoLakasok()
     {
-        $properties=property::irodak();
-        $mutato="Irodák";
+        $properties=property::lakasok()->kiado();
+        $mutato="Kiadó lakások";
         return view('pages.show', compact('properties', 'mutato'));
     }
-    public function showIpari()
+    public function kiadoIrodak()
     {
-        $properties=property::ipari();
-        $mutato="Ipari ingatlanok";
+        $properties=property::irodak()->kiado();
+        $mutato="Kiadó irodák";
         return view('pages.show', compact('properties', 'mutato'));
     }
-    public function showNyaralok()
+    public function kiadoIpari()
     {
-        $properties=property::nyaralok();
-        $mutato="Nyaralók";
+        $properties=property::ipari()->kiado();
+        $mutato="Kiadó ipari ingatlanok";
         return view('pages.show', compact('properties', 'mutato'));
     }
-    public function showGarazsok()
+    public function kiadoNyaralok()
     {
-        $properties=property::Garazsok();
-        $mutato="Garázsok";
+        $properties=property::nyaralok()->kiado();
+        $mutato="Kiadó nyaralók";
         return view('pages.show', compact('properties', 'mutato'));
     }
-    public function showRaktarak()
+    public function kiadoGarazsok()
     {
-        $properties=property::Raktarak();
-        $mutato="Raktárak";
+        $properties=property::Garazsok()->kiado();
+        $mutato="Kiadó garázsok";
         return view('pages.show', compact('properties', 'mutato'));
     }
-
-    public function showUzlethelyisegek()
+    public function kiadoRaktarak()
     {
-        $properties=property::Uzlethelyisegek();
-        $mutato="Üzlethelyiségek";
-        return view('pages.show', compact('properties', 'mutato'));
-    }
-
-    public function showTelekfold()
-    {
-        $properties=property::Telekfold();
-        $mutato="Telek-Föld";
-        return view('pages.show', compact('properties', 'mutato'));
-    }
-    public function showVendeglatas()
-    {
-        $properties=property::Vendeglatas();
-        $mutato="Vendéglátás";
-        return view('pages.show', compact('properties', 'mutato'));
-    }
-    public function showEgyeb()
-    {
-        $properties=property::Egyeb();
-        $mutato="Egyéb";
+        $properties=property::Raktarak()->kiado();
+        $mutato="Kiadó raktárak";
         return view('pages.show', compact('properties', 'mutato'));
     }
 
+    public function kiadoUzlethelyisegek()
+    {
+        $properties=property::Uzlethelyisegek()->kiado();
+        $mutato="Kiadó üzlethelyiségek";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+
+    public function kiadoTelekfold()
+    {
+        $properties=property::Telekfold()->kiado();
+        $mutato="Kiadó telek-föld";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function kiadoVendeglatas()
+    {
+        $properties=property::Vendeglatas()->kiado();
+        $mutato="Kiadó vendéglátás";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
+    public function kiadoEgyeb()
+    {
+        $properties=property::Egyeb()->kiado();
+        $mutato="Kiadó egyéb";
+        return view('pages.show', compact('properties', 'mutato'));
+    }
 
 }

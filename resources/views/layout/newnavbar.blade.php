@@ -16,18 +16,18 @@
                             aria-haspopup="true" aria-expanded="false">Eladó ingatlanok<span class="caret"></span></a> 
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
-                              <li><a href="/show">Összes ingatlan</a></li>
-                              <li><a href="/lakasok">Lakás</a></li>
-                              <li><a href="/hazak">Ház</a></li>
-                              <li><a href="/nyaralok">Nyaraló</a></li>
-                              <li><a href="/garazsok">Garázs</a></li>
-                              <li><a href="/irodak">Iroda</a></li>
-                              <li><a href="/ipari">Ipari Ingatlan</a></li>
-                              <li><a href="/raktarak">Raktár</a></li>
-                              <li><a href="/uzlethelyisegek">Üzlethelyiség</a></li>
-                              <li><a href="/telek-fold">Telek-föld</a></li>
-                              <li><a href="/vendeglatas">Vendéglátás</a></li>
-                              <li><a href="/egyeb">Egyéb</a></li>
+                              <li><a href="/osszes-elado-ingatlan">Összes ingatlan</a></li>
+                              <li><a href="/elado-lakasok">Lakás</a></li>
+                              <li><a href="/elado-hazak">Ház</a></li>
+                              <li><a href="/elado-nyaralok">Nyaraló</a></li>
+                              <li><a href="/elado-garazsok">Garázs</a></li>
+                              <li><a href="/elado-irodak">Iroda</a></li>
+                              <li><a href="/elado-ipari">Ipari Ingatlan</a></li>
+                              <li><a href="/elado-raktarak">Raktár</a></li>
+                              <li><a href="/elado-uzlethelyisegek">Üzlethelyiség</a></li>
+                              <li><a href="/elado-telek-fold">Telek-föld</a></li>
+                              <li><a href="/elado-vendeglatas">Vendéglátás</a></li>
+                              <li><a href="/elado-egyeb">Egyéb</a></li>
                             </ul>
                           </li>
                           <li class="dropdown">
@@ -35,17 +35,18 @@
                             aria-haspopup="true" aria-expanded="false">Kiadó ingatlanok<span class="caret"></span></a> 
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
-                              <li><a href="#">Lakás</a></li>
-                              <li><a href="#">Ház</a></li>
-                              <li><a href="#">Nyaraló</a></li>
-                              <li><a href="#">Garázs</a></li>
-                              <li><a href="#">Iroda</a></li>
-                              <li><a href="#">Ipari Ingatlan</a></li>
-                              <li><a href="#">Raktár</a></li>
-                              <li><a href="#">Üzlethelyiség</a></li>
-                              <li><a href="#">Telek-föld</a></li>
-                              <li><a href="#">Vendéglátás</a></li>
-                              <li><a href="#">Egyéb</a></li>
+                              <li><a href="/osszes-kiado-ingatlan">Összes ingatlan</a></li>
+                              <li><a href="/kiado-lakasok">Lakás</a></li>
+                              <li><a href="/kiado-hazak">Ház</a></li>
+                              <li><a href="/kiado-nyaralok">Nyaraló</a></li>
+                              <li><a href="/kiado-garazsok">Garázs</a></li>
+                              <li><a href="/kiado-irodak">Iroda</a></li>
+                              <li><a href="/kiado-ipari">Ipari Ingatlan</a></li>
+                              <li><a href="/kiado-raktarak">Raktár</a></li>
+                              <li><a href="/kiado-uzlethelyisegek">Üzlethelyiség</a></li>
+                              <li><a href="/kiado-telek-fold">Telek-föld</a></li>
+                              <li><a href="/kiado-vendeglatas">Vendéglátás</a></li>
+                              <li><a href="/kiado-egyeb">Egyéb</a></li>
                             </ul>
                           </li>
                           <li class="dropdown">
@@ -53,12 +54,12 @@
                             aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
-                              <li><a href="#">Ingatlanügy-Info</a></li>
+                              <li><a href="#">Jó tudni</a></li>
                               <li><a href="#">Vevőknek-Bérlőknek</a></li>
                               <li><a href="#">Eladóknak-Kiadóknak</a></li>
                               <li><a href="#">Külföldieknek</a></li>
                               <li><a href="#">Ingatlanfox a Gondnok</a></li>
-                              <li><a href="#">Ingatlan takarítása, felújítása</a></li>
+                              <li><a href="#">Felújítások-Átépítések kivitelezése</a></li>
                               <li><i class="fa fa-truck fa-sm"></i><a href="#"> Költözés szervezése</a></li>
                               <li><i class="fa fa-question-circle fa-sm"></i><a href="#"> Segítség a ház körül</a></li>
                             </ul>
