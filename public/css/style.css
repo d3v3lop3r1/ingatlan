@@ -7,7 +7,7 @@
 	} */
 body, html {
 	width: 100%;
-	font-family: 'Baloo Bhaina', cursive; 
+	font-family: 'Roboto', sans-serif; 
 	margin: 0;
 	padding: 0;
 }
@@ -15,8 +15,8 @@ body, html {
 /*                        HEADER                         */
 
 #header-logo img{
-	-webkit-filter: drop-shadow(1px 1px 1px #222 );
-	filter: drop-shadow(1px 1px 1px #222);
+	-webkit-filter: drop-shadow(1px 1px 1px #384233 );
+	filter: drop-shadow(1px 1px 1px #384233);
 }
 #navbar-row{
 	display: block;
@@ -41,7 +41,7 @@ body, html {
 }
 
 .navbar a{
-	color: rgb(37, 37, 37);
+	color:#1D3557;
 }
 
 .carousel img{
@@ -75,6 +75,11 @@ p {
 	padding-left: 10px;
 	padding-right: 10px;
 	font-size: small;
+	color: #8e9687;
+}
+
+.dropdown-menu a{
+	color: #457B9D;
 }
 
 .drop-shadow {
@@ -88,22 +93,23 @@ p {
 }
 
 .search-container{
-	display: flex;
 	flex-basis: 100%;
 	flex-direction: row;
 	position: relative;
-	margin-bottom: 20px;
 }
 
 .search-row{
 	flex-direction: row;
+	flex-basis: 100%;
 }
 .search-box{
 	display: flex;
 	position: relative;
+	font-family: 'Roboto', sans-serif;
+
 	bottom: 40px;
 	padding: 15px 15px;
-	background-color: rgba(51, 67, 133, 0.753);
+	background-color:rgba(29, 53, 87, 0.89);
 	z-index: 1001;
 }
 
@@ -187,7 +193,7 @@ p {
 	margin-left: 5px;
 	margin-right: 5px;
 	float: left;
-	color: #ff670f;
+	color: #E63946;
 	background-color: rgba(255, 255, 255, 0.849);
 }
 
@@ -203,7 +209,7 @@ p {
 	font-size: small;
 	text-transform: uppercase;
 	color: #FFF;
-	background-color: rgba(255, 127, 80, 0.637);
+	background-color: #E63946;
 	overflow: hidden;
 }
 
@@ -217,7 +223,7 @@ p {
 	text-transform: uppercase;
 	justify-content: right;
 	color: #FFF;
-	background-color: rgba(255, 127, 80, 0.637);
+	background-color: #E63946;
 	overflow: hidden;
 }
 
@@ -270,7 +276,7 @@ p {
 	color: #FFF;
 	font-weight: 700;
 	font-size: 20px;
-	background-color: #ff670f ;
+	background-color: #E63946 ;
 
 
 }

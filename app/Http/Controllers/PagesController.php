@@ -24,7 +24,7 @@ class PagesController extends Controller
 
     public function search(Request $request)
     {
-        $mutato='KERESÉS/';
+        $mutato='';
         $type_id = $request->type_id;
         switch($type_id){
             case 0:

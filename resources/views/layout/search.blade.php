@@ -20,7 +20,7 @@
                             3=>'Kiadó',
                         ],null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); 
                         !!}
-                    </div>1
+                    </div>
                     <div class="col-auto">
                         {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                         {!! Form::select('list_type',[

@@ -21,8 +21,7 @@ use App\property;
             <div class="container-fluid">
                 <div class="row center-xs">
                     <div class="col-xs-12">
-                        <h1>Ingatlanok</h1>
-                        <h4>{{$mutato}}  TALÁLAT: {{$prop_count}} DB</h4>
+                        <h4>{{$mutato}} - Ajánlatok száma: {{$prop_count}} </h4>
                     </div>
                 </div>
             </div>
@@ -48,7 +47,7 @@ use App\property;
                                         <div class="col-xs-12 prop-header">
                                             <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header}}</a></h5>
                                             <div class="row justify-content-between">
-                                                <div class="col-md-6 prop-header-alatt-bal start-md ">
+                                                <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php
                                                     $dt = Carbon::parse($property->updated_at);
                                                     $days=$dt->diffInDays();
