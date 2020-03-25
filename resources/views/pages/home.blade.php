@@ -1,7 +1,6 @@
 @php
 use App\photo;
 use Carbon\Carbon;
-use Intervention\Image\ImageManager;
 use App\property;
 
 @endphp
@@ -25,7 +24,7 @@ use App\property;
 
                     ?>
                     
-                    <div class="col-xs-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
                             <div class="row">
                                 <div class="col-xs-12 prop-header">
                                     <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header}}</a></h5>
@@ -53,7 +52,7 @@ use App\property;
                                             }
                                             ?>
                                         </div>
-                                        <div class="col-md-2 prop-header-alatt-jobb">
+                                        <div class="col-xs-2 col-md-2 prop-header-alatt-jobb">
                                             <i class="fas fa-camera-retro"></i> {{$photo_count}}
                                         </div>
                                     </div>
@@ -106,7 +105,15 @@ use App\property;
             @endforeach
             
           </div>
-          <div class="row">
+
+          <div class="container hide visible-lg visible-md" >
+            <div class="jumbotron" >
+              <h1>KÜLFÖLDÖN VAN? NEM  ÉR RÁ?</h1>
+              <p class="lead"> Ingatlanfox a baranya megyei Gondnok, háza felügyelője, megvédi tulajdonát!</p>
+            </div>
+          </div>
+          
+              <div class="row">
               <section class="col-xs-12 col-sm-4">
                    <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
                   <h3 class="mt-2">Ön is ingatlantulajdonos?</h3>
