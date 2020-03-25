@@ -106,13 +106,12 @@ use App\property;
             
           </div>
 
-          <div class="container hide visible-lg visible-md" >
-            <div class="jumbotron" >
-              <h1>KÜLFÖLDÖN VAN? NEM  ÉR RÁ?</h1>
-              <p class="lead"> Ingatlanfox a baranya megyei Gondnok, háza felügyelője, megvédi tulajdonát!</p>
-            </div>
+          <div class="jumbotron" >
+            <h1>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</h1>
+            <h4>Akkor jó helyen jár.</h4>
+            <p>Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
           </div>
-          
+        
               <div class="row">
               <section class="col-xs-12 col-sm-4">
                    <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
@@ -133,10 +132,9 @@ use App\property;
                     <li>Földhivatalnál, intézménynél is eljárunk az Ön érdekében</li>
                     <li>Tanácsadás Adó-/Illetéktérítések-/Tulajdonjog bejegyzésével kapcsolatban, és más hivataloknál, intézményeknél</li>
                   </ul>
-
-                  
               </section>
-               <section class="col-xs-12 col-sm-4 ">
+
+              <section class="col-xs-12 col-sm-4 ">
                  <div class="embed-responsive embed-responsive-16by9">
                          <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                 </div>
@@ -149,14 +147,43 @@ use App\property;
                      Hirdetése mintegy 10 magyar-német és holland hirdetőkben jelenhet meg!<br>
                   </p>
               </section>
-               <section class="col-xs-12 col-sm-4 ">
-                  <img class="img-responsive center-block img-thumbnail" src="/images/sample-house/architecture-21805_640.jpg" alt="Ház Eladó">
-                  <h3>Eladó ingatlanokról én is tudok! </h3>
-                  <p><strong>Legyen ÖN is az ügynökünk!<br>Üzenjen nekünk!</strong>  <br>
-                      Privátügynökként, alkalmanként, jutalékos megbízás, igen érdekel, <br>
-                      Engem érdekelne az álláslehetőség az Ingatlanfox Ügynöki Partnereként! 
-              </p>
-              </section>
+
+
+              <section class="col-xs-12 col-sm-4 ">
+                <img class="img-responsive center-block img-thumbnail" src="/images/sample-house/architecture-21805_640.jpg" alt="Ház Eladó">
+                <h4>Ingatlant venne?<br>
+                  ingatlant bérelne?</h4>
+                  <ul>
+                    <li>Személyesen kapcsolatfelvétel,
+                    baráti tanácsadás az Ön érdekében</li>
+                    <li>Kíséret Ingatlanszemlékre,
+                    földhivatalba, Exposé, stb.</li>
+                    <li>Német-magyar tolmács más
+                    anyanyelvű eladók-kiadók esetén</li>
+                    <li>Előszerződés írása, megállapodások
+                    hitelesítése ügyvédnél</li>
+                    <li>Ingatlanvétel után is segítünk mint
+                    Gondnoka a távollétében</li>
+                    <li>Felújításokat is vállal Projektfox
+                    építkező brigádunk</li>
+                  </ul>                  
+                  <h4>HITELFELVÉTEL?</h4>
+                  <p>
+                    Intézkedünk hogy a legjobb ajánlatot
+                    kapja! Szakemberünkkel felveszi a
+                    kapcsolatot aki kikeresi Önnek is az
+                    aktuálisan legjobbat!
+                  </p> 
+                  <h4>CSOK?</h4>   
+                  <p>
+                    Olyan térségban választ ingatlant
+                    ahol a Magyar kormány átvállalja az
+                    ingatlan teljes költségét? Kérdezzen
+                    bennünket, szakemberünk akkor is
+                    fog tud segíteni ha a listánkban nem
+                    talált megfelelőt!
+                  </p>
+            </section>
           </div>
       </div>
       <div class="container hide visible-lg visible-md" >

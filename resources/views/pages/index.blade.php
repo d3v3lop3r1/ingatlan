@@ -132,6 +132,8 @@ use Carbon\Carbon;
                   {{--  Agent oszlop  --}}
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 index-agent">
+                <div class="row">
+                  <div class="col-xs-12">
                     <div class="media  mt-1 pt-1 drop-shadow">
                       <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                       <div class="media-body">
@@ -146,6 +148,43 @@ use Carbon\Carbon;
                         <li class="list-group-item"><small><strong><i class="fas fa-globe"></i> Nyelvek</strong> Magyar-Német-Spanyol</small></li>
                       </ul>
                     </div>
+                  </div>
+                  <div class="col-xs-12 pt-3">
+                    <h4>Ingatlant venne?<br>
+                    ingatlant bérelne?</h4>
+                    <ul>
+                      <li>Személyesen kapcsolatfelvétel,
+                      baráti tanácsadás az Ön érdekében</li>
+                      <li>Kíséret Ingatlanszemlékre,
+                      földhivatalba, Exposé, stb.</li>
+                      <li>Német-magyar tolmács más
+                      anyanyelvű eladók-kiadók esetén</li>
+                      <li>Előszerződés írása, megállapodások
+                      hitelesítése ügyvédnél</li>
+                      <li>Ingatlanvétel után is segítünk mint
+                      Gondnoka a távollétében</li>
+                      <li>Felújításokat is vállal Projektfox
+                      építkező brigádunk</li>
+                    </ul>                  
+                    <h4>HITELFELVÉTEL?</h4>
+                    <p>
+                      Intézkedünk hogy a legjobb ajánlatot
+                      kapja! Szakemberünkkel felveszi a
+                      kapcsolatot aki kikeresi Önnek is az
+                      aktuálisan legjobbat!
+                    </p> 
+                    <h4>CSOK?</h4>   
+                    <p>
+                      Olyan térségban választ ingatlant
+                      ahol a Magyar kormány átvállalja az
+                      ingatlan teljes költségét? Kérdezzen
+                      bennünket, szakemberünk akkor is
+                      fog tud segíteni ha a listánkban nem
+                      talált megfelelőt!
+                    </p>
+                      
+                  </div>
+                </div>
               </div>
           </div>
         </div>
@@ -154,7 +193,7 @@ use Carbon\Carbon;
         <div class="jumbotron" >
               <h1>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</h1>
               <h4>Akkor jó helyen jár.</h4>
-              <p>Baranyában, Pécsett, Harkányban, Siklóson s segítségére leszünk!</p>
+              <p>Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
         </div>
       </div>
       <div class="container" id="map-container">
