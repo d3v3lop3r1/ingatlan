@@ -54,7 +54,7 @@
                             aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
-                              <li><a href="#">Jó tudni</a></li>
+                              <li><a href="/jo-tudni">Jó tudni</a></li>
                               <li><a href="#">Eladóknak-Kiadóknak</a></li>
                               <li><a href="#">Külföldieknek</a></li>
                               <li><a href="/vevoknek-berloknek">Vevőknek-Bérlőknek</a></li>

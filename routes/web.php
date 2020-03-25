@@ -24,6 +24,9 @@ Route::get('/demo', function () {
     return view('demo');
 });
 
+Route::get('/jo-tudni', function () {
+    return view('info.jo-tudni');
+});
 Route::get('/vevoknek-berloknek', function () {
     return view('info.tajekoztato');
 });
