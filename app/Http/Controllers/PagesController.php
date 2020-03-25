@@ -13,7 +13,8 @@ class PagesController extends Controller
     }
     public function home()
     {
-        return view('pages.home');
+        $properties=property::Aktiv()->Kiemelt()->inRandomOrder()->limit(3)->get();
+        return view('pages.home',compact('properties'));
     }
     public function showing()
     {
