@@ -134,30 +134,12 @@ use App\property;
                   </ul>
               </section>
 
-              <section class="col-xs-12 col-sm-4 ">
-                <div class="embed-responsive embed-responsive-16by9">
-                         <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
-                </div>
-                <h4>
-                  INGATLANT VÁSÁROLNA?
-                </h4>
-                <p>
-                  Mielőtt döntést hoz
-                  informálódjon körültekintően!
-                  Erre is van konceptusunk Önnek!
-                  Segítünk, bárkié is az ajánlat
-                  Velünk nem fog
-                  Zsákbamacskát…      
-                </p>
-                        
-              </section>
-
 
               <section class="col-xs-12 col-sm-4 ">
                 <img class="img-responsive center-block img-thumbnail" src="/images/sample-house/architecture-21805_640.jpg" alt="Ház Eladó">
-                <h4>Ingatlant venne?<br>
+                <h4 class="mt-2">Ingatlant venne?<br>
                   ingatlant bérelne?</h4>
-                  <ul>
+                  <ul class="">
                     <li>Személyesen kapcsolatfelvétel,
                     baráti tanácsadás az Ön érdekében</li>
                     <li>Kíséret Ingatlanszemlékre,
@@ -188,6 +170,24 @@ use App\property;
                     talált megfelelőt!
                   </p>
             </section>
+              <section class="col-xs-12 col-sm-4 ">
+                <div class="embed-responsive embed-responsive-16by9">
+                         <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
+                </div>
+                <h4 class="mt-2">
+                  INGATLANT VÁSÁROLNA?
+                </h4>
+                <p>
+                  Mielőtt döntést hoz
+                  informálódjon körültekintően!
+                  Erre is van konceptusunk Önnek!
+                  Segítünk, bárkié is az ajánlat
+                  Velünk nem fog
+                  Zsákbamacskát…      
+                </p>
+                        
+              </section>
+
           </div>
       </div>
       <div class="container hide visible-lg visible-md" >
