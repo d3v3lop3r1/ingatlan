@@ -55,6 +55,11 @@ class property extends Model
     {
         return $query->where('active', 1);
     }
+    public function scopeKiemelt($query)
+    {
+        return $query->where('kiemelt', 1);
+    }
+    
     public function scopeElado($query)
     {
         return $query->where('type_id', 0);

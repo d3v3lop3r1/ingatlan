@@ -1,17 +1,133 @@
+@php
+use App\photo;
+use Carbon\Carbon;
+use Intervention\Image\ImageManager;
+use App\property;
+
+@endphp
 @extends('layout.main')
 
 @section('tartalom')
 
       <div class="container">
+        <h1 class="text-uppercase">kiemelt ajánlataink</h1>
+         <div class="row center-xs ingatlan-sor">
+            @foreach ($properties as $property)                       
+                    <?php 
+                    $photo_count = $property->photos->count();
+                    $photo = $property->photos->where('is_default','1')->first();
+                    if ($photo){
+                        $photo_file = $photo->file1;
+                        $photo_file = "uploads/" . $photo_file;
+                    } else {
+                        $photo_file = "placeholder.png";
+                    }
+
+                    ?>
+                    
+                    <div class="col-xs-4">
+                            <div class="row">
+                                <div class="col-xs-12 prop-header">
+                                    <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header}}</a></h5>
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto prop-header-alatt-bal start-xs ">
+                                            <?php
+                                            $dt = Carbon::parse($property->updated_at);
+                                            $days=$dt->diffInDays();
+                                            switch($property->type_id){
+                                                case 0:
+                                                    echo 'Eladó';
+                                                    break;
+                                                case 1:
+                                                    echo 'Eladó cserelehetőséggel';
+                                                    break;
+                                                case 2:
+                                                    echo 'Kiadó eladási opcióval';
+                                                    break;
+                                                case 3:
+                                                    echo 'Kiadó';
+                                                    break;
+                                            }
+                                            if ($days < 14){
+                                                echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="col-md-2 prop-header-alatt-jobb">
+                                            <i class="fas fa-camera-retro"></i> {{$photo_count}}
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-xs-12 main-photo">
+                                    <img class="img-thumbnail" src="{{$photo_file}}" alt="">
+                                </div>
+                            </div>
+
+
+                            {{--  Adatok  --}}
+                            
+                            
+                            <div class="row center-xs">
+                                <div class="col-xs-12 main-price border">
+                                    <span class="money">{{$property->price}}</span>.- Ft
+                                </div>
+                                <div class="col-xs-12 main-details">
+                                    <div class="row kiskockak center-xs border">
+                                        <div class="col xs-4">
+                                            <i class="fa fa-ruler fa-xl"></i><span> Terület:</span><br>
+                                            @if ($property->land_area)
+                                                {{$property->land_area}}m2
+                                            @else
+                                                -
+                                            @endif
+                                        </div>
+                                        <div class="col xs-4">
+                                            <i class="fas fa-expand-alt fa-xl"></i><span> Lakótér:</span><br>
+                                            @if ($property->area)
+                                                {{$property->area}}m2
+                                            @else
+                                                -
+                                            @endif
+                                        </div>
+                                        <div class="col xs-4">
+                                            <i class="fas fa-th-large fa-xl"></i><span> Szobák:</span><br>
+                                            @if ($property->room_no)
+                                                {{$property->room_no}}
+                                            @else
+                                                -
+                                            @endif
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>                                                   
+                    </div>
+            @endforeach
+            
+          </div>
           <div class="row">
               <section class="col-xs-12 col-sm-4">
                    <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
-                  <h3><a href="/show">Vásárolna, bérelne ingatlant?</a></h3>
-                  <p><strong>ÚJ!</strong> Képeink lapozása közben mindig tudja hol jár az objektumban! <br>
-                     <strong>ÚJ!</strong> Nincs titkolózás, láthatja pontosan hol van, milyen a megközelítése az ingatlannak!<br>
-                     <strong>ÚJ!</strong> Ezentúl ritkábban fog feleslegesen és csalódottan háznézésekkel időt pocsékolni…<br>
-                     <strong>ÚJ!</strong> Előzetes felmérések, analízisek az eladó ingatlanról, egy jó döntés érdekében.<br>
-                  </p>
+                  <h3 class="mt-2">Ön is ingatlantulajdonos?</h3>
+                  <p class="text-uppercase text-info">
+                    <strong>Ingatlanát megnyerő profillal mutatjuk be<br> 
+                    2 nyelven<br>
+                    3 országban<br>
+                    4+ ingatlanportálon is<br>
+                    a mielőbbi siker érdekében!</strong>
+                  </p> 
+                  <ul class="">
+                    <li>Teljes körű ingyenes tájékoztatás</li>
+                    <li>Ingatlanszemlékre való kíséret</li>
+                    <li>Fordítások, tolmácsolások  német-magyar nyelven érdeklődőknek</li>
+                    <li>Adás- vételi Foglaló, vagy  Előszerződés, szerződések tervezése</li>
+                    <li>Megállapodások hitelesítése ügyvéd közreműködésével</li>
+                    <li>Földhivatalnál, intézménynél is eljárunk az Ön érdekében</li>
+                    <li>Tanácsadás Adó-/Illetéktérítések-/Tulajdonjog bejegyzésével kapcsolatban, és más hivataloknál, intézményeknél</li>
+                  </ul>
+
+                  
               </section>
                <section class="col-xs-12 col-sm-4 ">
                  <div class="embed-responsive embed-responsive-16by9">
@@ -38,10 +154,8 @@
       </div>
       <div class="container hide visible-lg visible-md" >
         <div class="jumbotron" >
-              <h1>EL SZERETNÉ ADNI LAKÁSÁT, HÁZÁT?</h1>
-              <p>Mi nem csak képekkel, de videókkal is prezentáljuk ingatlanját!<br>
-                 1 hirdetésfeladás INGYENES!
-          </p>
+          <h1>KÜLFÖLDÖN VAN? NEM  ÉR RÁ?</h1>
+          <p class="lead"> Ingatlanfox a baranya megyei Gondnok, háza felügyelője, megvédi tulajdonát!</p>
         </div>
       </div>
       <div class="container" id="map-container">
