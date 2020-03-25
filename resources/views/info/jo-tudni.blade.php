@@ -4,18 +4,18 @@
 <div class="container">
     <h1>Jó tudni</h1>
     <ul class="list-group">
-        <a href="https://hitelnet.hu/csok-otthonteremtesi-kedvezmeny/comment-page-2/" class="list-group-item list-group-item-action">Családi Otthonteremtési Kedvezmény (CSOK) feltételek 2019-ben</a>
-        <a href="https://hitelnet.hu/lakashitel/csok-melle-melyik-a-legkedvezobb-hitel/" class="list-group-item list-group-item-action">CSOK mellé melyik a legkedvezőbb hitel?</a>
-        <a href="https://hitelnet.hu/hitelkalkulator/" class="list-group-item list-group-item-action">Hitelkalkulátor</a>
-        <a href="https://hitelnet.hu/hitelkalkulator/lakashitel/" class="list-group-item list-group-item-action">Lakáshitel-kalkulátor</a>
-        <a href="https://hitelnet.hu/hitelkalkulator/szabad-felhasznalasu-jelzaloghitel/" class="list-group-item list-group-item-action">Jelzáloghitel-kalkulátor</a>
+        <a target="_blank" href="https://hitelnet.hu/csok-otthonteremtesi-kedvezmeny/comment-page-2/" class="list-group-item list-group-item-action">Családi Otthonteremtési Kedvezmény (CSOK) feltételek 2019-ben</a>
+        <a target="_blank" href="https://hitelnet.hu/lakashitel/csok-melle-melyik-a-legkedvezobb-hitel/" class="list-group-item list-group-item-action">CSOK mellé melyik a legkedvezőbb hitel?</a>
+        <a target="_blank" href="https://hitelnet.hu/hitelkalkulator/" class="list-group-item list-group-item-action">Hitelkalkulátor</a>
+        <a target="_blank" href="https://hitelnet.hu/hitelkalkulator/lakashitel/" class="list-group-item list-group-item-action">Lakáshitel-kalkulátor</a>
+        <a target="_blank" href="https://hitelnet.hu/hitelkalkulator/szabad-felhasznalasu-jelzaloghitel/" class="list-group-item list-group-item-action">Jelzáloghitel-kalkulátor</a>
     </ul>
 
     <h4 class="mt-3">Mennyi az a hektár?</h4>
     <p>A hektár mértékegységet elterjedten használják a mezőgazdaságban, az erdőgazdálkodásban és a várostervezésben.</p>
         <ul class="list-group">
-            <a href="https://convertlive.com/hu/u/konvert%C3%A1l%C3%A1s/hekt%C3%A1r/to/n%C3%A9gyzetm%C3%A9ter" class="list-group-item list-group-item-action">1 ha = 10 000 m² = 104 m² = 0,01 km²</a>
-            <a href="https://www.ksh.hu/docs/hun/agrar/gszo2013/teruletatszamitasi_segedlet.pdf" class="list-group-item list-group-item-action">A Központi Statisztikai Hivatal segédlete területszámításhoz</a>
+            <a target="_blank" href="https://convertlive.com/hu/u/konvert%C3%A1l%C3%A1s/hekt%C3%A1r/to/n%C3%A9gyzetm%C3%A9ter" class="list-group-item list-group-item-action">1 ha = 10 000 m² = 104 m² = 0,01 km²</a>
+            <a target="_blank" href="https://www.ksh.hu/docs/hun/agrar/gszo2013/teruletatszamitasi_segedlet.pdf" class="list-group-item list-group-item-action">A Központi Statisztikai Hivatal segédlete területszámításhoz</a>
         </ul>
 
 
