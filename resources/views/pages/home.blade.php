@@ -135,17 +135,21 @@ use App\property;
               </section>
 
               <section class="col-xs-12 col-sm-4 ">
-                 <div class="embed-responsive embed-responsive-16by9">
+                <div class="embed-responsive embed-responsive-16by9">
                          <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                 </div>
-                <h3>El szeretné adni ingatlanát?</h3>
-                  <p>Transzparencia, lokalizálási lehetőség a képek és infók alapján<br>
-                     Minőségi nagyfelbonbontású meggyőző képek<br>
-                     Videófelvétel az ingatlanról<br>
-                     Professzionális prezentáció drónok bevetésével nagyméretű ingatlanok bemutatásánál!<br>
-                     Hirdetési német nyelven is megjelenhet a kétnyelvű portálunkon<br>
-                     Hirdetése mintegy 10 magyar-német és holland hirdetőkben jelenhet meg!<br>
-                  </p>
+                <h4>
+                  INGATLANT VÁSÁROLNA?
+                </h4>
+                <p>
+                  Mielőtt döntést hoz
+                  informálódjon körültekintően!
+                  Erre is van konceptusunk Önnek!
+                  Segítünk, bárkié is az ajánlat
+                  Velünk nem fog
+                  Zsákbamacskát…      
+                </p>
+                        
               </section>
 
 

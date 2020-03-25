@@ -23,6 +23,11 @@ Route::get('/', function () {
 Route::get('/demo', function () {
     return view('demo');
 });
+
+Route::get('/vevoknek-berloknek', function () {
+    return view('info.tajekoztato');
+});
+
 Route::get('/logout','HomeController@logout');
 
 Route::get('/register', function () {

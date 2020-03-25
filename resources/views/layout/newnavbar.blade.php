@@ -2,7 +2,7 @@
   {{--  <div class="navbar-container">  --}}
     <div class="row bottom-xs center-xs" id="navbar-row">
         <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2" id="header-logo">
-          <a href="/main"><img class="img-fluid" src="/images/logos/ingatlanfox-logo.png"></a>
+          <a href="/home"><img class="img-fluid" src="/images/logos/ingatlanfox-logo.png"></a>
         </div>
         <div class="col-xs-6 col-sm-10 col-md-6 col-lg-6" id="navbar">
           <nav class="navbar navbar-expand-lg navbar-light" >
@@ -55,7 +55,7 @@
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
                               <li><a href="#">Jó tudni</a></li>
-                              <li><a href="#">Vevőknek-Bérlőknek</a></li>
+                              <li><a href="/vevoknek-berloknek">Vevőknek-Bérlőknek</a></li>
                               <li><a href="#">Eladóknak-Kiadóknak</a></li>
                               <li><a href="#">Külföldieknek</a></li>
                               <li><a href="#">Ingatlanfox a Gondnok</a></li>
