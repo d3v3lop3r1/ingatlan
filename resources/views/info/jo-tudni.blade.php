@@ -9,7 +9,6 @@
         <a href="https://hitelnet.hu/hitelkalkulator/" class="list-group-item list-group-item-action">Hitelkalkulátor</a>
         <a href="https://hitelnet.hu/hitelkalkulator/lakashitel/" class="list-group-item list-group-item-action">Lakáshitel-kalkulátor</a>
         <a href="https://hitelnet.hu/hitelkalkulator/szabad-felhasznalasu-jelzaloghitel/" class="list-group-item list-group-item-action">Jelzáloghitel-kalkulátor</a>
-        <a href="" class="list-group-item list-group-item-action"></a>
     </ul>
 
     <h4 class="mt-3">Mennyi az a hektár?</h4>
