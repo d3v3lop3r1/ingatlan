@@ -116,8 +116,8 @@ use App\property;
               <section class="col-xs-12 col-sm-4">
                    <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
                   <h3 class="mt-2">Ön is ingatlantulajdonos?</h3>
+                  <h4>Ingatlanát megnyerő profillal mutatjuk be</h4> 
                   <p class="text-uppercase text-info">
-                    <strong>Ingatlanát megnyerő profillal mutatjuk be<br> 
                     2 nyelven<br>
                     3 országban<br>
                     4+ ingatlanportálon is<br>
@@ -175,17 +175,23 @@ use App\property;
                          <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                 </div>
                 <h4 class="mt-2">
-                  INGATLANT VÁSÁROLNA?
+                  Önnek is van információja 
+                  eladandó, 
+                  kiadandó 
+                  ingatlanok felől?
                 </h4>
                 <p>
-                  Mielőtt döntést hoz
-                  informálódjon körültekintően!
-                  Erre is van konceptusunk Önnek!
-                  Segítünk, bárkié is az ajánlat
-                  Velünk nem fog
-                  Zsákbamacskát…      
-                </p>
-                        
+                  akkor egy
+                  jövedelmező kereseti
+                  lehetőséget biztosíthatunk Önnek is!
+                  
+                  Legyen Ön is Alkalmi Ügynökünk –
+                  Ingatlanfox* Agent
+                  
+                  Jelentkezzen 
+                  az egyedülálló 
+                  lehetőségre
+                </p> 
               </section>
 
           </div>
