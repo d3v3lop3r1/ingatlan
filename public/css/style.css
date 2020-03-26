@@ -93,14 +93,12 @@ p {
 }
 
 .search-container{
-	flex-basis: 100%;
 	flex-direction: row;
 	position: relative;
 }
 
 .search-row{
 	flex-direction: row;
-	flex-basis: 100%;
 }
 .search-box{
 	display: flex;
