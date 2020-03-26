@@ -154,7 +154,7 @@ use App\property;
                             <li>Felújításokat is vállal Projektfox
                             építkező brigádunk</li>
                         </ul>                  
-                        <h4>HITELFELVÉTEL?</h4>
+                        <h4>Hitelfelvétel?</h4>
                         <p>
                             Intézkedünk hogy a legjobb ajánlatot
                             kapja! Szakemberünkkel felveszi a
