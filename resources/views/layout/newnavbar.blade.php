@@ -54,11 +54,11 @@
                             aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
-                              <li><a href="/jo-tudni">Jó tudni</a></li>
-                              <li><a href="#">Tulajdonosoknak</a></li>
-                              <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek">Vevőknek-Bérlőknek</a></li>
-                              <li><a href="#">Ingatlanfox a Gondnok</a></li>
-                              <li><a href="#">Felújítások-Átépítések kivitelezése</a></li>
+                              <li><i class="fas fa-info"></i><a href="/jo-tudni"> Jó tudni</a></li>
+                              <li><i class="fas fa-home"></i><a href="#"> Tulajdonosoknak</a></li>
+                              <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek"> Vevőknek-Bérlőknek</a></li>
+                              <li><i class="fas fa-tools"></i><a href="#"> Ingatlanfox a Gondnok</a></li>
+                              <li><i class="fas fa-hammer"></i><a href="#"> Felújítások-Átépítések kivitelezése</a></li>
                               <li><i class="fa fa-truck fa-sm"></i><a href="#"> Költözés szervezése</a></li>
                               <li><i class="fa fa-question-circle fa-sm"></i><a href="#"> Segítség a ház körül</a></li>
                             </ul>
