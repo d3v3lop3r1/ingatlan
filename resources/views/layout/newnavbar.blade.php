@@ -55,9 +55,8 @@
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
                               <li><a href="/jo-tudni">Jó tudni</a></li>
-                              <li><a href="#">Eladóknak-Kiadóknak</a></li>
-                              <li><a href="#">Külföldieknek</a></li>
-                              <li><a href="/vevoknek-berloknek">Vevőknek-Bérlőknek</a></li>
+                              <li><a href="#">Tulajdonosoknak</a></li>
+                              <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek">Vevőknek-Bérlőknek</a></li>
                               <li><a href="#">Ingatlanfox a Gondnok</a></li>
                               <li><a href="#">Felújítások-Átépítések kivitelezése</a></li>
                               <li><i class="fa fa-truck fa-sm"></i><a href="#"> Költözés szervezése</a></li>
