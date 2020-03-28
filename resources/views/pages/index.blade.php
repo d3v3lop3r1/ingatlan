@@ -11,6 +11,7 @@ use Carbon\Carbon;
         $photos = $property->photos->where('is_default',null)->all();
         $photo_default_file = $photo_default->file1;
         $photo_default_file = "/uploads/" . $photo_default_file;
+        
       ?>
       <div class="container-fluid" id="first-main">
           <div class="row">
@@ -118,7 +119,26 @@ use Carbon\Carbon;
                       </tr>
 
                       <tr class="table-borderless">
-                        <th class="pt-3"><h4>Leírás</h4></th>
+                        <th class="pt-3">
+                          <h4>
+                            @php
+                            switch($property->type_id){
+                              case 0:
+                                  echo 'Eladó';
+                                  break;
+                              case 1:
+                                  echo 'Eladó cserelehetőséggel';
+                                  break;
+                              case 2:
+                                  echo 'Kiadó eladási opcióval';
+                                  break;
+                              case 3:
+                                  echo 'Kiadó';
+                                  break;
+                            }
+                            @endphp
+                          </h4>
+                        </th>
                         <th colspan="3"><h4></h4></th>
                       </tr>
                       <tr>
