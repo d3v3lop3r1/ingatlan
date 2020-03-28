@@ -11,6 +11,56 @@ use Carbon\Carbon;
         $photos = $property->photos->where('is_default',null)->all();
         $photo_default_file = $photo_default->file1;
         $photo_default_file = "/uploads/" . $photo_default_file;
+        switch($property->type_id){
+          case 0:
+              $type = 'Eladó';
+              break;
+          case 1:
+              $type = 'Eladó cserelehetőséggel';
+              break;
+          case 2:
+              $type = 'Kiadó eladási opcióval';
+              break;
+          case 3:
+              $type = 'Kiadó';
+              break;
+        }
+
+        switch($property->list_type){
+          case 1:
+            $listType = 'Lakás';
+              break;
+          case 2:
+            $listType = 'Ház';
+          break;
+          case 3:
+            $listType = 'Nyaraló';
+          break;
+          case 4:
+            $listType = 'Garázs';
+          break;
+          case 5:
+            $listType = 'Iroda';
+          break;
+          case 6:
+            $listType = 'Ipari';
+          break;
+          case 7:
+            $listType = 'Raktár';
+          break;
+          case 8:
+            $listType = 'Üzlethelyiség';
+          break;
+          case 9:
+            $listType = 'Telek-föld';
+          break;
+          case 10:
+            $listType = 'Vendéglátás';
+          break;
+          case 11:
+            $listType = 'Egyéb';
+          break;
+        }
         
       ?>
       <div class="container-fluid" id="first-main">
@@ -89,6 +139,18 @@ use Carbon\Carbon;
                         <th>Fürdők száma</th>
                         <td>{{$property->bathroom_no}} db</td>
                       </tr>
+                      <tr>
+                        <th>Állapot</th>
+                        <td>{{$property->condition}}</td>
+                        <th>Fűtés</th>
+                        <td>{{$property->heating}}</td>
+                      </tr>
+                      <tr>
+                        <th>Kilátás</th>
+                        <td>{{$property->look}}</td>
+                        <th>Tájolás</th>
+                        <td>{{$property->orientation}}</td>
+                      </tr>
 
                       <tr>
                         <th>Extrák</th>
@@ -118,28 +180,12 @@ use Carbon\Carbon;
                         <th class="bg-danger pt-3 pr-3"></th>
                       </tr>
 
-                      <tr class="table-borderless">
-                        <th class="pt-3">
+                      <tr class="table-borderless" align="center">
+                        <th class="pt-3" colspan="4">
                           <h4>
-                            @php
-                            switch($property->type_id){
-                              case 0:
-                                  echo 'Eladó';
-                                  break;
-                              case 1:
-                                  echo 'Eladó cserelehetőséggel';
-                                  break;
-                              case 2:
-                                  echo 'Kiadó eladási opcióval';
-                                  break;
-                              case 3:
-                                  echo 'Kiadó';
-                                  break;
-                            }
-                            @endphp
+                            {{$type}} - {{$listType}} - {{$property->city}}
                           </h4>
                         </th>
-                        <th colspan="3"><h4></h4></th>
                       </tr>
                       <tr>
                         <td colspan="4"><?php echo $property->text; ?></td>
