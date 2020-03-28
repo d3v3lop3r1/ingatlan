@@ -216,7 +216,15 @@ use Carbon\Carbon;
                     </div>
                   </div>
                   <div class="col-xs-12 pt-3">
-                    <h4>Ingatlant venne?<br>
+                    <div class="w3-card-4 w3-padding w3-margin-bottom w3-small">
+                      <h6><span class="w3-text-theme">Hirdetés helye a térképen:</span></h6>
+                      <iframe
+                        frameborder="0" style="border:0; width:100%; height:300px;"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBrdH7bXJbDwNHSyPVwWIoyIeTdiUbWP_c
+                        &q={{$property->city,$property->street}}" allowfullscreen > 
+                      </iframe>
+                    </div>
+                                  <h4>Ingatlant venne?<br>
                     ingatlant bérelne?</h4>
                     <ul>
                       <li>Személyesen kapcsolatfelvétel,
