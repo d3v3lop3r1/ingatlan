@@ -6,7 +6,7 @@
         <p><strong>Mikor lehet Önnek is szüksége Gondnokra, házmesterre?</strong></p>
         <p><strong>Privátnak – Vállalkozásnak egyaránt</strong></p>
         <div class="media">
-            <img src="/images/for-texts/felujitas-367402_640.jpg" alt="Felujitasok" width="200">
+            <img src="/images/for-texts/plumbing-840835_640.jpg" alt="Felujitasok" width="300">
             <div class="media-body">
                 <ul>
                     <li>Külföldön dolgozik, vagy az ingatlantól távol él – így valakinek felügyelnie kell ingatlanára, adminisztrációját, ügyviteleit, javítgatásokat elvégezni</li>    
