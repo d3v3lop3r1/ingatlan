@@ -5,7 +5,7 @@
                 <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920.jpg" alt="Ingatlanfox megoldások">
+              <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x600.jpg" alt="Ingatlanfox megoldások">
               <div class="carousel-caption">
                 <h1 drop-shadow><strong>INGATLANFOX PROFESSZIONÁLIS MEGOLDÁSOK</strong></h1>
                 <p>Megtaláljuk önnek a legjobb megoldást ingatlanja eladásához!</p>
