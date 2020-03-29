@@ -55,12 +55,12 @@
                             <ul class="dropdown-menu">
                               <li><a href="#"> </a></li>
                               <li><i class="fas fa-info"></i><a href="/jo-tudni"> Jó tudni</a></li>
-                              <li><i class="fas fa-home"></i><a href=""> Tulajdonosoknak</a></li>
+                              <li><i class="fas fa-home"></i><a href="/tulajdonosoknak"> Tulajdonosoknak</a></li>
                               <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek"> Vevőknek-Bérlőknek</a></li>
                               <li><i class="fas fa-tools"></i><a href="/ingatlanfox-a-gondnok"> Ingatlanfox a Gondnok</a></li>
-                              <li><i class="fas fa-hammer"></i><a href="#"> Felújítások-Átépítések kivitelezése</a></li>
-                              <li><i class="fa fa-truck fa-sm"></i><a href="#"> Költözés szervezése</a></li>
-                              <li><i class="fa fa-question-circle fa-sm"></i><a href="#"> Segítség a ház körül</a></li>
+                              <li><i class="fas fa-hammer"></i><a href="/felujitasok-atepitesek-kivitelezes"> Felújítások-Átépítések kivitelezése</a></li>
+                              <li><i class="fa fa-truck fa-sm"></i><a href="/koltozes-szervezese"> Költözés szervezése</a></li>
+                              <li><i class="fa fa-question-circle fa-sm"></i><a href="/segitseg-a-haz-korul"> Segítség a ház körül</a></li>
                             </ul>
                           </li>
                           <li>
