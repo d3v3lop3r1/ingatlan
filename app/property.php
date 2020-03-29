@@ -59,6 +59,10 @@ class property extends Model
     {
         return $query->where('kiemelt', 1);
     }
+    public function scopeCheap($query)
+    {
+        return $query->orderBy('price');
+    }
     
     public function scopeElado($query)
     {

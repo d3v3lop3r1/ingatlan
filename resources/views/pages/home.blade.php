@@ -10,8 +10,33 @@ use App\property;
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col d-none d-lg-block mt-5">
-                  hello  
+            <div class="col d-none d-lg-block">
+                <div class="p-2">
+                    <h4>Eladó olcsóbb lakások</h4>
+                    <div class="list-group">
+                        @foreach ($prop_elado_lakasok_cheap as $prop)
+                            <a href="/index/{{$prop->id}}" class="list-group-item list-group-item-action">
+                                <span class="badge badge-warning">{{$prop->city}}</span><br>
+                                {{$prop->header}}<br>
+                                <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                            </a>
+                            
+                        @endforeach
+                    </div>            
+                </div>   
+                <div class="p-2 mt-2">
+                    <h4>Eladó olcsóbb házak</h4>
+                    <div class="list-group">
+                        @foreach ($prop_elado_hazak_cheap as $prop)
+                            <a href="/index/{{$prop->id}}" class="list-group-item list-group-item-action">
+                                <span class="badge badge-warning">{{$prop->city}}</span><br>
+                                {{$prop->header}}<br>
+                                <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                            </a>
+                        
+                        @endforeach
+                    </div>
+                </div>                 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h1 class="text-uppercase">kiemelt ajánlataink</h1>
@@ -206,7 +231,7 @@ use App\property;
                     <div id="map" class="container"></div>
                 </div>
             </div> 
-            <div class="col d-none d-lg-block mt-5 center-xs">
+            <div class="col d-none d-lg-block center-xs">
                 <h4>Lakáshitel-kalkulátor</h4>
                 <iframe id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>            
 
