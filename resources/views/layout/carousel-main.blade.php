@@ -5,10 +5,17 @@
                 <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x600.jpg" alt="Ingatlanfox megoldások">
+              <img class="d-block w-100" src="/images/backgrounds/new/kitchen-1543493_1920x600.jpg" alt="Ingatlanfox megoldások">
               <div class="carousel-caption">
                 <h1 class="text-shadow"><strong>INGATLANFOX PROFESSZIONÁLIS MEGOLDÁSOK</strong></h1>
                 <p>Megtaláljuk önnek a legjobb megoldást ingatlanja eladásához!</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x600.jpg" alt="Ingatlanfox megoldások">
+              <div class="carousel-caption">
+                <h1 class="text-shadow"><strong>KÜLFÖLDÖN VAN? NEM ÉR RÁ?</strong></h1>
+                <p>Ingatlanfox a baranya megyei Gondnok, háza felügyelője, megvédi tulajdonát!</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -24,9 +31,10 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="/images/backgrounds/new/apartment-lounge-3147892_1920x600.jpg" alt="Transzparens eladások">
+              <img class="d-block w-100" src="/images/backgrounds/new/apartment-lounge-3147892_1920x600.jpg" alt="VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?">
               <div class="carousel-caption">
                 <h1 class="text-shadow"><strong>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</strong></h1>
+                <p>Akkor jó helyen jár. Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
               </div>
             </div>
           </div>
