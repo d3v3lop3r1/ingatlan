@@ -181,11 +181,12 @@ use Carbon\Carbon;
                       </tr>
 
                       <tr class="table-borderless" align="center">
-                        <th class="pt-3" colspan="4">
+                        <th class="pt-3 justify-content-center" colspan="2">
                           <h4>
                             {{$type}} - {{$listType}} - {{$property->city}}
                           </h4>
                         </th>
+                        <th colspan="2"></th>
                       </tr>
                       <tr>
                         <td colspan="4"><?php echo $property->text; ?></td>

@@ -24,5 +24,10 @@
         <h4>
             …Ne hibázzon, segítünk akkor is ha nem a mi listánkból választott ajánlatot!    
         </h4>
+        <hr>
+        <h4>LAKÁSHOZ JUTHATOK FIZETÉS NÉLKÜL INGYEN IS?</h4> 
+        <p> Igen, és az Ingatlanfox-csapatunk támogatni fog hogy minél előbb beköltözhess az általad választott településen, a kiszemelt házba! Hol választhatok magamnak egy kedves otthont?</p>
+        <p> Itt a "falusi CSOK" településlistája: <a href="https://hitelforum.hu/ezekre-a-telepulesekre-koltozhetsz-ingyen-juliustol-a-kormany-fizet-mindent-itt-a-teljes-telepules-lista/?fbclid=IwAR1E5y5VpFHq9BINF5vifah-JK2SYQC4WDV54Ip5jSLTSjjeBdf3g9ROKXc"> LINK</a></p>
+        <iframe id="csok-map-big" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1qH4VJVp5xs6vaKHyEHwmKth3kFMj4AP9&ll=46.19367658681184%2C18.40386481697169&z=10" allowfullscreen ></iframe>
     </div>
 @endsection

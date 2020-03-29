@@ -20,6 +20,11 @@ iframe{
 #csok-map{
 	height: 300px;
 }
+#csok-map-big{
+	width: 100%;
+	height: 500px;
+}
+
 #hitel-kalk{
 	height: 800px;
 }
