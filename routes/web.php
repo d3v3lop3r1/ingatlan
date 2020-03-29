@@ -31,6 +31,9 @@ Route::get('/vevoknek-berloknek', function () {
     return view('info.vevoknek-berloknek');
 });
 
+Route::get('/ingatlanfox-a-gondnok', function () {
+    return view('info.ingatlanfox-a-gondnok');
+});
 Route::get('/logout','HomeController@logout');
 
 Route::get('/register', function () {
