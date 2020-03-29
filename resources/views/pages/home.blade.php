@@ -11,34 +11,36 @@ use App\property;
     <div class="container-fluid">
         <div class="row">
             <div class="col d-none d-lg-block">
-                <h4 class="center-xs">Eladó olcsóbb lakások</h4>
-                            @foreach ($prop_elado_lakasok_cheap as $prop)
-                                <div class="media shadow-sm p-2 mt-1">
-                                    @php
-                                        $photo_count = $prop->photos->count();
-                                        $photo = $prop->photos->where('is_default','1')->first();
-                                        if ($photo){
-                                            $photo_file = $photo->file1;
-                                            $photo_file = "uploads/" . $photo_file;
-                                        } else {
-                                            $photo_file = "uploads/placeholder.png";
-                                        }
-                                    @endphp
-                                    <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
-                                    <div class="media-body">
-                                        <a href="/index/{{$prop->id}}" class="">
-                                            <span class="badge badge-warning">{{$prop->city}}</span><br>
-                                            {{$prop->header}}<br>
-                                            <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
-                                        </a>
-                                
-                                    </div>
-                                </div>            
-                            @endforeach
-                <div class="p-2 mt-2">
-                    <h4>Eladó olcsóbb házak</h4>
+                <div>
+                    <h4 class="center-xs">Eladó olcsóbb lakások</h4>
+                                @foreach ($prop_elado_lakasok_cheap as $prop)
+                                    <div class="media shadow-sm p-1 mt-1">
+                                        @php
+                                            $photo_count = $prop->photos->count();
+                                            $photo = $prop->photos->where('is_default','1')->first();
+                                            if ($photo){
+                                                $photo_file = $photo->file1;
+                                                $photo_file = "uploads/" . $photo_file;
+                                            } else {
+                                                $photo_file = "uploads/placeholder.png";
+                                            }
+                                        @endphp
+                                        <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
+                                        <div class="media-body">
+                                            <a href="/index/{{$prop->id}}" class="">
+                                                <span class="badge badge-warning">{{$prop->city}}</span><br>
+                                                {{$prop->header}}<br>
+                                                <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                            </a>
+                                    
+                                        </div>
+                                    </div>            
+                                @endforeach
+                </div>
+                <div class=" mt-2">
+                    <h4 class="center-xs">Eladó olcsóbb házak</h4>
                     @foreach ($prop_elado_hazak_cheap as $prop)
-                        <div class="media shadow-sm p-2 mt-1">
+                        <div class="media shadow-sm p-1 mt-1">
                             @php
                                 $photo_count = $prop->photos->count();
                                 $photo = $prop->photos->where('is_default','1')->first();
@@ -63,7 +65,7 @@ use App\property;
                 </div>                 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                <h1 class="text-uppercase">kiemelt ajánlataink</h1>
+                <h1 class="text-uppercase center-xs">kiemelt ajánlataink</h1>
                 <div class="row center-xs ingatlan-sor">
                     @foreach ($properties as $property)                       
                             <?php 

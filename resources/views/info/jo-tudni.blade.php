@@ -3,6 +3,40 @@
 @section('tartalom')
 <div class="container">
     <h1>Jó tudni</h1>
+
+
+    <h4>MI AZ A PACI ÉRTÉK?</h4>
+    <p>    
+        Piaci érték= Kereslet/Kínálat+ing.Állapot+Frekventáltság függvénye. Az ingatlan piaci értéke a hivatalos értékbecslés időpontjában, amit főként a kereslet-kínálat, 
+        az ingatlan állapota és elhelyezkedése határoz meg.
+    </p>
+
+
+    <h4>MI AZ A FORGALMI ÉRTÉK?</h4>
+    <p>
+        Forgalmi érték= A forgalmi érték összege megegyezik azzal az összeggel, amennyiért az értékbecslés pillanatában az ingatlan várhatóan értékesíthető. A becslés fajtája 
+        lehet hozzávetőleges (ami nem ad pontos adatokat ugyan csak kb-értéket), vagy egy értékbecslő által már sszakszerűen kiszámított forgalmi érték (mely költséges volta révén 
+        ritkán áll rendelkezésre).
+    </p>
+
+
+    <h4>MIÉRT FONTOS AZ ÉRTÉKBECSLÉS SORÁN A PIACI- ÉS FORGALMI ÉRTÉK?</h4>
+    <p>
+        Az ingatlan forgalmi, vagy piaci értéke adja azt az összeget amennyiért az ingatlant adott időpontban értékesíteni lehet. A forgalmi értéket alapvetően az ingatlan 
+        paraméterei (például az ingatlan elhelyezkedése, szerkezete, állapota) és az ingatlanpiaci kereslet-kínálat határozza meg. A banki hitelezési gyakorlatban az értékbecslő 
+        gyakran a tényleges vételár alá teszi a piaci értéket.
+    </p>
+    
+    <h4>Értékbecslés</h4>
+    <p>
+        A jelzáloghitel ügyintézése során minden esetben megtörténik az értékbecslés, amit a bank rendel meg. Az értékbecslés a során az általad fedezetként felkínált ingatlan 
+        forgalmi, vagyis a reális eladási értékét állapítja meg a bank, ami azért nagyon fontos, mert behatárolja, hogy mekkora hitelt kaphatsz. A független értékbecslő számos 
+        paramétert (például az ingatlan elhelyezkedése, szerkezete, állapota) figyelembe vesz, és ezek alapján készíti el a becslését az ingatlan piaci értékére.
+    </p>
+    
+    <h4>MINDEN A LAKÁSHITELEK FELŐL</h4>
+    <a href="https://jobbtudni.bankmonitor.hu/wiki/Kateg%C3%B3ria:Lak%C3%A1shitel">https://jobbtudni.bankmonitor.hu/wiki/Kateg%C3%B3ria:Lak%C3%A1shitel</a>
+        
     <ul class="list-group">
         <a target="_blank" href="https://hitelnet.hu/csok/" class="list-group-item ">Családi Otthonteremtési Kedvezmény (CSOK) feltételek 2019-ben</a>
         <a target="_blank" href="https://hitelnet.hu/lakashitel/csok-melle-melyik-a-legkedvezobb-hitel/" class="list-group-item ">CSOK mellé melyik a legkedvezőbb hitel?</a>
