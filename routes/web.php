@@ -28,7 +28,7 @@ Route::get('/jo-tudni', function () {
     return view('info.jo-tudni');
 });
 Route::get('/vevoknek-berloknek', function () {
-    return view('info.tajekoztato');
+    return view('info.vevoknek-berloknek');
 });
 
 Route::get('/logout','HomeController@logout');

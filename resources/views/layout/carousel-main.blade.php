@@ -7,20 +7,26 @@
             <div class="carousel-item active">
               <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x600.jpg" alt="Ingatlanfox megoldások">
               <div class="carousel-caption">
-                <h1 drop-shadow><strong>INGATLANFOX PROFESSZIONÁLIS MEGOLDÁSOK</strong></h1>
+                <h1 class="text-shadow"><strong>INGATLANFOX PROFESSZIONÁLIS MEGOLDÁSOK</strong></h1>
                 <p>Megtaláljuk önnek a legjobb megoldást ingatlanja eladásához!</p>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/building-1841299_1920.jpg" alt="Megbízható partner">
               <div class="carousel-caption">
-                <h1 drop-shadow><strong>INGATLANFOX A MEGBÍZHATÓ PARTNER</strong></h1>
+                <h1 class="text-shadow"><strong>INGATLANFOX A MEGBÍZHATÓ PARTNER</strong></h1>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/home-1746518_1920.jpg" alt="Transzparens eladások">
               <div class="carousel-caption">
-                <h1 drop-shadow><strong>TRANSZPARENS ELADÁSOK</strong></h1>
+                <h1 class="text-shadow"><strong>TRANSZPARENS ELADÁSOK</strong></h1>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/backgrounds/new/apartment-lounge-3147892_1920x600.jpg" alt="Transzparens eladások">
+              <div class="carousel-caption">
+                <h1 class="text-shadow"><strong>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</strong></h1>
               </div>
             </div>
           </div>

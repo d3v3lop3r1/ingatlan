@@ -11,6 +11,10 @@ body, html {
 	margin: 0;
 	padding: 0;
 }
+
+h1{
+	font-weight: 200;
+}
 iframe{
 	width: 100%;
 	padding: 0;
@@ -104,6 +108,9 @@ p {
 .drop-shadow {
 	-webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
 	box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}
+.text-shadow{
+	text-shadow: 1px 1px 1px #111111;
 }
 
 .drop-shadow-light {

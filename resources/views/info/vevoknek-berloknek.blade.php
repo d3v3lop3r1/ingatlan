@@ -25,6 +25,14 @@
             …Ne hibázzon, segítünk akkor is ha nem a mi listánkból választott ajánlatot!    
         </h4>
         <hr>
+
+        <h4>TELEKVÁSÁRLÁSI HITEL KALKULÁTOR</h4>
+        
+        <a href="https://hitelnet.hu/hitelkalkulator/telekvasarlas/"> <strong>LINK</strong></a>
+        
+
+
+        <hr>
         <h4>LAKÁSHOZ JUTHATOK FIZETÉS NÉLKÜL INGYEN IS?</h4> 
         <p> Igen, és az Ingatlanfox-csapatunk támogatni fog hogy minél előbb beköltözhess az általad választott településen, a kiszemelt házba! Hol választhatok magamnak egy kedves otthont?</p>
         <p> Itt a "falusi CSOK" településlistája: <a href="https://hitelforum.hu/ezekre-a-telepulesekre-koltozhetsz-ingyen-juliustol-a-kormany-fizet-mindent-itt-a-teljes-telepules-lista/?fbclid=IwAR1E5y5VpFHq9BINF5vifah-JK2SYQC4WDV54Ip5jSLTSjjeBdf3g9ROKXc"> LINK</a></p>

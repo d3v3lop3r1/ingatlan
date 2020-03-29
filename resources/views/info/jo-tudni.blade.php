@@ -3,14 +3,14 @@
 @section('tartalom')
 <div class="container">
     <h1>Jó tudni</h1>
-
+    <hr>
 
     <h4>MI AZ A PACI ÉRTÉK?</h4>
     <p>    
         Piaci érték= Kereslet/Kínálat+ing.Állapot+Frekventáltság függvénye. Az ingatlan piaci értéke a hivatalos értékbecslés időpontjában, amit főként a kereslet-kínálat, 
         az ingatlan állapota és elhelyezkedése határoz meg.
     </p>
-
+    <hr>
 
     <h4>MI AZ A FORGALMI ÉRTÉK?</h4>
     <p>
@@ -18,7 +18,7 @@
         lehet hozzávetőleges (ami nem ad pontos adatokat ugyan csak kb-értéket), vagy egy értékbecslő által már sszakszerűen kiszámított forgalmi érték (mely költséges volta révén 
         ritkán áll rendelkezésre).
     </p>
-
+    <hr>
 
     <h4>MIÉRT FONTOS AZ ÉRTÉKBECSLÉS SORÁN A PIACI- ÉS FORGALMI ÉRTÉK?</h4>
     <p>
@@ -26,17 +26,40 @@
         paraméterei (például az ingatlan elhelyezkedése, szerkezete, állapota) és az ingatlanpiaci kereslet-kínálat határozza meg. A banki hitelezési gyakorlatban az értékbecslő 
         gyakran a tényleges vételár alá teszi a piaci értéket.
     </p>
-    
+    <hr>
     <h4>Értékbecslés</h4>
     <p>
         A jelzáloghitel ügyintézése során minden esetben megtörténik az értékbecslés, amit a bank rendel meg. Az értékbecslés a során az általad fedezetként felkínált ingatlan 
         forgalmi, vagyis a reális eladási értékét állapítja meg a bank, ami azért nagyon fontos, mert behatárolja, hogy mekkora hitelt kaphatsz. A független értékbecslő számos 
         paramétert (például az ingatlan elhelyezkedése, szerkezete, állapota) figyelembe vesz, és ezek alapján készíti el a becslését az ingatlan piaci értékére.
     </p>
+    <hr>
+    <h4>Hasznos alapterület fogalma</h4>
+    <p>
+        A hasznos alapterület az országos településrendezési és építési követelményekről szóló 253/1997. (XII. 20.) Kormányrendelet szerint számított helyiségek hasznos alapterületének összege, melyek a lakáson belül közvetlenül megközelíthetők.
+        Hasznos alapterület: a lakáson belül közvetlenül megközelíthető, következő helyiségek − az országos településrendezési és építési követelményekről szóló 253/1997. (XII. 20.) Kormányrendelet (a továbbiakban: OTÉK) szerint számított –
+        hasznos alapterületek nevezett listája:
+    </p>
     
+    <ul>
+        <li>előszoba, közlekedő</li>
+        <li>nappali</li>
+        <li>hálószoba</li>
+        <li>étkező</li>
+        <li>konyha, étkezőkonyha</li>
+        <li>fürdőszoba</li>
+        <li>WC</li>
+        <li>kamra, tároló</li>
+        <li>gardrób</li>
+        <li>mosókonyha</li>
+        <li>kazánhelyiség</li>
+        <li>egyéb fűthető helyiség, ide nem értve a gépjárműtárolót és a pinceszinti helyisége</li>
+    </ul>
+    <strong>HA ÉPÍTKEZNI AKAR EZEKET TUDNIA KELL</strong>   
+    <hr>  
     <h4>MINDEN A LAKÁSHITELEK FELŐL</h4>
-    <a href="https://jobbtudni.bankmonitor.hu/wiki/Kateg%C3%B3ria:Lak%C3%A1shitel">https://jobbtudni.bankmonitor.hu/wiki/Kateg%C3%B3ria:Lak%C3%A1shitel</a>
-        
+    <a href="https://jobbtudni.bankmonitor.hu/wiki/Kateg%C3%B3ria:Lak%C3%A1shitel"><strong>LINK</strong></a>
+      <hr>  
     <ul class="list-group">
         <a target="_blank" href="https://hitelnet.hu/csok/" class="list-group-item ">Családi Otthonteremtési Kedvezmény (CSOK) feltételek 2019-ben</a>
         <a target="_blank" href="https://hitelnet.hu/lakashitel/csok-melle-melyik-a-legkedvezobb-hitel/" class="list-group-item ">CSOK mellé melyik a legkedvezőbb hitel?</a>
@@ -44,7 +67,7 @@
         <a target="_blank" href="https://hitelnet.hu/hitelkalkulator/lakashitel/" class="list-group-item ">Lakáshitel-kalkulátor</a>
         <a target="_blank" href="https://hitelnet.hu/hitelkalkulator/szabad-felhasznalasu-jelzaloghitel/" class="list-group-item ">Jelzáloghitel-kalkulátor</a>
     </ul>
-
+    <hr>
     <h4 class="mt-3">Mennyi az a hektár?</h4>
     <p>A hektár mértékegységet elterjedten használják a mezőgazdaságban, az erdőgazdálkodásban és a várostervezésben.</p>
         <ul class="list-group">
@@ -52,7 +75,7 @@
             <a target="_blank" href="https://www.ksh.hu/docs/hun/agrar/gszo2013/teruletatszamitasi_segedlet.pdf" class="list-group-item ">A Központi Statisztikai Hivatal segédlete területszámításhoz</a>
         </ul>
 
-
+    <hr>
     <h4 class="mt-3">Mennyi az a négyszögöl?</h4>  
     <p>
         Köztudottan manapság már csak a négyzetméter és hektár megadás a hivatalos, de még mindig felfedezhetünk itt-ott négyszögöl-megadásokat a telkek nagyságát jelölve. 
@@ -67,7 +90,7 @@
             2.	magyar hold: csak szántóföldeknél alkalmazott mérték 1200 négyszögöl = 4315,5 m² <br>
 
         </p> 
-
+    <hr>
     <h4 class="mt-3">Átlagárak 2018/2019</h4>
     <ul class="list-group">
         <li class="list-group-item">PÉCS panell-lakások, Átlagár 230.000 Ft/m², legkisebb ár 105.000 Ft/m²</li>
@@ -76,8 +99,7 @@
         <li class="list-group-item">PÉCS sorházak lakóingatlan része, Átlagár 181.000 Ft/m², legkisebb ár 128.000 Ft/m²</li>
         <li class="list-group-item">PÉCS ALBÉRLET, Átlagár 1.768 Ft/m², legkisebb ár 972 Ft/m²</li>
     </ul>
-    <p class="text-info">Tendenciák= frekventált városréeszekben erősen emelkedő árak, de másutt is!</p>
-
+    <hr>
     <ul class="list-group">
         <li class="list-group-item">HARKÁNY panell-lakások, Átlagár 114.900 Ft/m², nincs infó</li>
         <li class="list-group-item">HARKÁNY tégla-lakások, Átlagár 228.000 Ft/m², legkisebb ár 206.000 Ft/m²</li>
@@ -85,10 +107,7 @@
         <li class="list-group-item">HARKÁNY sorházak lakóingatlan része, Átlagár 140.000 Ft/m², legkisebb ár 130.000 Ft/m²</li>
         <li class="list-group-item">HARKÁNY ALBÉRLET, Átlagár 588 Ft/m², nincs infó ( a statisztika főként idény jellegű ingatlanokra értendő)</li>
     </ul>
-    <p class="text-info">
-        Tendeciák= stagnálva, kivéve a frekventált körzetben tapasztalható emelkedő árak.
-    </p>
-
+    <hr>
       
     <ul class="list-group">
         <li class="list-group-item">SIKLÓS lakóingatlanok Átlagára 141.000 Ft/m², legkisebb ár 81.000 Ft/m²</li>
