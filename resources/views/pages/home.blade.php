@@ -11,31 +11,55 @@ use App\property;
     <div class="container-fluid">
         <div class="row">
             <div class="col d-none d-lg-block">
-                <div class="p-2">
-                    <h4>Eladó olcsóbb lakások</h4>
-                    <div class="list-group">
-                        @foreach ($prop_elado_lakasok_cheap as $prop)
-                            <a href="/index/{{$prop->id}}" class="list-group-item list-group-item-action">
-                                <span class="badge badge-warning">{{$prop->city}}</span><br>
-                                {{$prop->header}}<br>
-                                <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
-                            </a>
-                            
-                        @endforeach
-                    </div>            
-                </div>   
+                <h4 class="center-xs">Eladó olcsóbb lakások</h4>
+                            @foreach ($prop_elado_lakasok_cheap as $prop)
+                                <div class="media shadow-sm p-2 mt-1">
+                                    @php
+                                        $photo_count = $prop->photos->count();
+                                        $photo = $prop->photos->where('is_default','1')->first();
+                                        if ($photo){
+                                            $photo_file = $photo->file1;
+                                            $photo_file = "uploads/" . $photo_file;
+                                        } else {
+                                            $photo_file = "uploads/placeholder.png";
+                                        }
+                                    @endphp
+                                    <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
+                                    <div class="media-body">
+                                        <a href="/index/{{$prop->id}}" class="">
+                                            <span class="badge badge-warning">{{$prop->city}}</span><br>
+                                            {{$prop->header}}<br>
+                                            <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                        </a>
+                                
+                                    </div>
+                                </div>            
+                            @endforeach
                 <div class="p-2 mt-2">
                     <h4>Eladó olcsóbb házak</h4>
-                    <div class="list-group">
-                        @foreach ($prop_elado_hazak_cheap as $prop)
-                            <a href="/index/{{$prop->id}}" class="list-group-item list-group-item-action">
-                                <span class="badge badge-warning">{{$prop->city}}</span><br>
-                                {{$prop->header}}<br>
-                                <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
-                            </a>
+                    @foreach ($prop_elado_hazak_cheap as $prop)
+                        <div class="media shadow-sm p-2 mt-1">
+                            @php
+                                $photo_count = $prop->photos->count();
+                                $photo = $prop->photos->where('is_default','1')->first();
+                                if ($photo){
+                                    $photo_file = $photo->file1;
+                                    $photo_file = "uploads/" . $photo_file;
+                                } else {
+                                    $photo_file = "uploads/placeholder.png";
+                                }
+                            @endphp
+                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
+                            <div class="media-body">
+                                <a href="/index/{{$prop->id}}" class="">
+                                    <span class="badge badge-warning">{{$prop->city}}</span><br>
+                                    {{$prop->header}}<br>
+                                    <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                </a>
                         
-                        @endforeach
-                    </div>
+                            </div>
+                        </div>            
+                    @endforeach
                 </div>                 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">

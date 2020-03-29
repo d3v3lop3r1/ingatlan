@@ -63,10 +63,13 @@ iframe{
 .carousel img{
 	flex-basis: 100%;
 }
+.carousel-banner{
+	height: 500px;
+	overflow: hidden;
+}
 
 .carousel-caption{
 	top: 100px;
-	bottom: auto;
 }
 
 header{

@@ -14,4 +14,8 @@ class photo extends Model
     public function property(){
        return $this->belongsTo('App\property');
     }
+    public function scopeDefault($query)
+    {
+        return $query->where('is_default', 1);
+    }
 }

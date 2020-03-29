@@ -37,7 +37,7 @@ use App\property;
                                 $photo_file = $photo->file1;
                                 $photo_file = "uploads/" . $photo_file;
                             } else {
-                                $photo_file = "placeholder.png";
+                                $photo_file = "uploads/placeholder.png";
                             }
 
                             ?>
