@@ -393,71 +393,87 @@
         végintézkedése alapján, a törvényes öröklés szabályaitól eltérően lehet a hagyaték - így a
         hagyatékba tartozó ingatlan - jogi sorsát rendezni.    
     </p>
+    <h4>Öröklési, ajándékozási illeték</h4>
+    <p>
+        Ingatlan (lakás kivételével) öröklése, ajándékozása esetén az illetéket az ingatlan tiszta
+        értéke után kell megfizetni. Az illetéket kiszabás alapján az örökös/megajándékozott fizeti
+        meg pénzben.
+    </p>
+    <h4>Széljegy</h4>
+    <p>
+        A tulajdoni lapon feltüntetett széljegy a bejegyzés, átvezetés, feljegyzés iránti ingatlan-
+        nyilvántartási eljárás megindítását tanúsítja.
+    </p>
+    <h4>Tájékoztatási kötelezettség</h4>
+    <p>
+        Az eladó köteles a vevőt tájékoztatni az ingatlan minden lényeges tulajdonságáról, az
+        ingatlanra vonatkozó jogokról és terhekről, és az ingatlannal kapcsolatos fontos
+        körülményekről. Köteles továbbá az ilyen tényekre, körülményekre vonatkozó okiratokat
+        átadni. Az eladó viseli az átadással, valamint az ingatlan-nyilvántartásban feltüntetett állapot
+        rendezésével (pl. az elhunyt személy haszonélvezeti jogának törlése) kapcsolatos
+        költségeket.
+    </p>
+    <h4>Tehermentesítés</h4>
+    <p>
+        Itt a leggyakrabban előforduló terheket említjük meg. Arra kell figyelni, hogy mindig
+        gondosan és lehetőleg szakértői segítséggel nézze át a vevő a tulajdoni lapot, mert minden
+        egyes bejegyzés feletti elsiklás milliókban mérhető károkat okozhat.
+        A vevőt a tulajdonjog átruházásáért és tehermentességéért szavatosság terheli, és ennek
+        megfelelően a vevő egyebek mellett tehermentesítést követelhet, az eladó költségére
+        tehermentesítheti az ingatlant, elállhat a szerződéstől vagy kártérítést követelhet. Ez azonban
+        nem jelent teljes biztonságot, ha vita alakul ki, lehet, hogy csak hosszas bírósági eljárást
+        követően születik megoldás.
+        A bíróság előtt a vevőnek kell bizonyítania azt, hogy ő nem tudott a korlátozásról, teherről,
+        ráadásul addig nem tud teljes biztonsággal nekilátni az ingatlannal kapcsolatos tervei
+        megvalósításának, amíg folyik az eljárás.
+        Az ingatlan-nyilvántartásban szereplő terhek lehetnek különösen:
+        <ol>
+            <li>haszonélvezeti jog</li>
+            <li>jelzálogjog (önálló zálogjog, ideértve az átalakításos önálló zálogjogot is)</li>
+            <li>elidegenítési és terhelési tilalom, valamint</li>
+            <li>elő- és visszavásárlási, vételi, valamint eladási jog</li>
+            <li>telki szolgalmi jog, végrehajtási jog, bányaszolgalmi jog stb.</li>
+        </ol>
+    </p>
     
+    <h4>Telki szolgalom</h4>
+    <p>
+        Telki szolgalom alapján valamely ingatlan mindenkori birtokosa más ingatlanát
+        meghatározott terjedelemben használhatja
+    </p>
+    <h4>Tisztaérték</h4>
+    <p>
+        Az örökség és az ajándék tiszta értéke a megszerzett - illetékfizetési kötelezettség alá eső -
+        vagyon csökkentett forgalmi értéke. A tiszta érték kiszámításánál a megszerzett vagyon
+        forgalmi értékéből le kell vonni a hagyatékot terhelő tartozást, illetőleg az ajándékot terhelő
+        adósság és az egyéb teher értékének egy-egy örökösre, illetőleg megajándékozottra eső
+        részét.
+    </p>
+    <h4>Tulajdonjog fenntartása</h4>
+    <p>
+        Az eladó tulajdonjogát írásban, a vételár teljes kiegyenlítéséig fenntarthatja. A vételárhátralék
+        megfizetésével egyidejűleg az eladó köteles - külön nyilatkozattal - a vevő
+        tulajdonszerzéséhez hozzájárulni.
+    </p>
+    <h4>Vagyoni értékű jog</h4>
+    <p>
+        Vagyoni értékű jognak tekinthetők a pénzben kifejezhető értékkel bíró jogok. ( tartós
+        földhasználat, haszonélvezeti, használati jog, bérleti jog, telki szolgalom, üdülőhasználati jog)
+    </p>
+    <h4>Visszterhes vagyonátruházási illeték ingatlannál</h4>
+    <p>
+        Az illetéket a megszerzett vagyon terhekkel nem csökkentett forgalmi értéke, tartási,
+        életjáradéki, vagy öröklési szerződés alapján történő vagyonszerzés esetén pedig a
+        megszerzett vagyon forgalmi értéke után kell kiszabás alapján pénzzel megfizetni. Ingatlan
+        (lakás, egyéb ingatlan) megszerzés esetén ingatlanonként 1 milliárd forintig 4%, a forgalmi
+        érték ezt meghaladó része után 2%, de ingatlanonként legfeljebb 200 millió forint. Ingatlan
+        (lakás, egyéb ingatlan) résztulajdonának szerzése esetén az 1 milliárd forintnak a szerzett
+        tulajdoni hányaddal arányos összegére kell alkalmazni a 4%-os illetéket, illetve az
+        ingatlanonként legfeljebb 200 millió forintot a tulajdoni hányad arányában kell figyelembe
+        venni.
+    </p>
     
-    
-    Öröklési, ajándékozási illeték
-    Ingatlan (lakás kivételével) öröklése, ajándékozása esetén az illetéket az ingatlan tiszta
-    értéke után kell megfizetni. Az illetéket kiszabás alapján az örökös/megajándékozott fizeti
-    meg pénzben.
-    Széljegy
-    A tulajdoni lapon feltüntetett széljegy a bejegyzés, átvezetés, feljegyzés iránti ingatlan-
-    nyilvántartási eljárás megindítását tanúsítja.
-    Tájékoztatási kötelezettség
-    Az eladó köteles a vevőt tájékoztatni az ingatlan minden lényeges tulajdonságáról, az
-    ingatlanra vonatkozó jogokról és terhekről, és az ingatlannal kapcsolatos fontos
-    körülményekről. Köteles továbbá az ilyen tényekre, körülményekre vonatkozó okiratokat
-    átadni. Az eladó viseli az átadással, valamint az ingatlan-nyilvántartásban feltüntetett állapot
-    rendezésével (pl. az elhunyt személy haszonélvezeti jogának törlése) kapcsolatos
-    költségeket.
-    Tehermentesítés
-    Itt a leggyakrabban előforduló terheket említjük meg. Arra kell figyelni, hogy mindig
-    gondosan és lehetőleg szakértői segítséggel nézze át a vevő a tulajdoni lapot, mert minden
-    egyes bejegyzés feletti elsiklás milliókban mérhető károkat okozhat.
-    A vevőt a tulajdonjog átruházásáért és tehermentességéért szavatosság terheli, és ennek
-    megfelelően a vevő egyebek mellett tehermentesítést követelhet, az eladó költségére
-    tehermentesítheti az ingatlant, elállhat a szerződéstől vagy kártérítést követelhet. Ez azonban
-    nem jelent teljes biztonságot, ha vita alakul ki, lehet, hogy csak hosszas bírósági eljárást
-    követően születik megoldás.
-    A bíróság előtt a vevőnek kell bizonyítania azt, hogy ő nem tudott a korlátozásról, teherről,
-    ráadásul addig nem tud teljes biztonsággal nekilátni az ingatlannal kapcsolatos tervei
-    megvalósításának, amíg folyik az eljárás.
-    Az ingatlan-nyilvántartásban szereplő terhek lehetnek különösen:
-    1. haszonélvezeti jog,
-    2. jelzálogjog (önálló zálogjog, ideértve az átalakításos önálló zálogjogot is),
-    3. elidegenítési és terhelési tilalom, valamint
-    4. elő- és visszavásárlási, vételi, valamint eladási jog,
-    5. telki szolgalmi jog, végrehajtási jog, bányaszolgalmi jog stb.
-    
-    Telki szolgalom
-    Telki szolgalom alapján valamely ingatlan mindenkori birtokosa más ingatlanát
-    meghatározott terjedelemben használhatja
-    Tisztaérték
-    Az örökség és az ajándék tiszta értéke a megszerzett - illetékfizetési kötelezettség alá eső -
-    vagyon csökkentett forgalmi értéke. A tiszta érték kiszámításánál a megszerzett vagyon
-    forgalmi értékéből le kell vonni a hagyatékot terhelő tartozást, illetőleg az ajándékot terhelő
-    adósság és az egyéb teher értékének egy-egy örökösre, illetőleg megajándékozottra eső
-    részét.
-    Tulajdonjog fenntartása
-    Az eladó tulajdonjogát írásban, a vételár teljes kiegyenlítéséig fenntarthatja. A vételárhátralék
-    megfizetésével egyidejűleg az eladó köteles - külön nyilatkozattal - a vevő
-    tulajdonszerzéséhez hozzájárulni.
-    
-    Vagyoni értékű jog
-    Vagyoni értékű jognak tekinthetők a pénzben kifejezhető értékkel bíró jogok. ( tartós
-    földhasználat, haszonélvezeti, használati jog, bérleti jog, telki szolgalom, üdülőhasználati jog)
-    Visszterhes vagyonátruházási illeték ingatlannál
-    Az illetéket a megszerzett vagyon terhekkel nem csökkentett forgalmi értéke, tartási,
-    életjáradéki, vagy öröklési szerződés alapján történő vagyonszerzés esetén pedig a
-    megszerzett vagyon forgalmi értéke után kell kiszabás alapján pénzzel megfizetni. Ingatlan
-    (lakás, egyéb ingatlan) megszerzés esetén ingatlanonként 1 milliárd forintig 4%, a forgalmi
-    érték ezt meghaladó része után 2%, de ingatlanonként legfeljebb 200 millió forint. Ingatlan
-    (lakás, egyéb ingatlan) résztulajdonának szerzése esetén az 1 milliárd forintnak a szerzett
-    tulajdoni hányaddal arányos összegére kell alkalmazni a 4%-os illetéket, illetve az
-    ingatlanonként legfeljebb 200 millió forintot a tulajdoni hányad arányában kell figyelembe
-    venni.
-    Még több infót szeretnék? Akkor kattintson itt a webcímre:
-    https://ugyintezes.magyarorszag.hu/ugyek/410001/420002/Ingatlan20091202.html#paragr11    
+    <h4>Még több infót szeretnék? Akkor kattintson a  <a href="https://ugyintezes.magyarorszag.hu/ugyek/410001/420002/Ingatlan20091202.html#paragr11">LINKRE</a></h4>
 </div>
 @endsection
 
