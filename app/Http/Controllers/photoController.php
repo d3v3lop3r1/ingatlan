@@ -67,7 +67,7 @@ class photoController extends Controller
             }
             $file=$request->file('file');
             $filename= time() . $file->getClientOriginalName();
-            $file->move('uploads', $filename); 
+            $file->move('/uploads', $filename); 
 
             $photo = new Photo;
             $photo->file1=$filename;
@@ -87,11 +87,11 @@ class photoController extends Controller
     { 
             $file=$request->file('file');
             $filename= time() . $file->getClientOriginalName();
-            $file->move('uploads/agents', $filename); 
+            $file->move('/uploads/agents', $filename); 
             $agent_id=$request->agent_id;
             $agent= agent::where('id',$agent_id)->first();
             $old_photo=$agent->photo;
-            $photo_path='uploads/agents/' . $old_photo;
+            $photo_path='/uploads/agents/' . $old_photo;
             File::delete($photo_path);
             $agent->photo=$filename;
             $agent->save();
