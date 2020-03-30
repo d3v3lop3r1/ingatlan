@@ -473,7 +473,7 @@
         venni.
     </p>
     
-    <h4>Még több infót szeretnék? Akkor kattintson a  <a href="https://ugyintezes.magyarorszag.hu/ugyek/410001/420002/Ingatlan20091202.html#paragr11">LINKRE</a></h4>
+    <h4>Még több infót szeretne? Akkor kattintson a  <a href="https://ugyintezes.magyarorszag.hu/ugyek/410001/420002/Ingatlan20091202.html#paragr11">LINKRE</a></h4>
 </div>
 @endsection
 
