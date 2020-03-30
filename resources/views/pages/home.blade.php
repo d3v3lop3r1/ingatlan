@@ -11,34 +11,34 @@ use App\property;
     <div class="container-fluid">
         <div class="row">
             <div class="col d-none d-lg-block">
-                <div>
-                    <h4 class="center-xs">Eladó olcsóbb lakások</h4>
-                                @foreach ($prop_elado_lakasok_cheap as $prop)
-                                    <div class="media shadow-sm p-1 mt-1">
-                                        @php
-                                            $photo_count = $prop->photos->count();
-                                            $photo = $prop->photos->where('is_default','1')->first();
-                                            if ($photo){
-                                                $photo_file = $photo->file1;
-                                                $photo_file = "uploads/" . $photo_file;
-                                            } else {
-                                                $photo_file = "uploads/placeholder.png";
-                                            }
-                                        @endphp
-                                        <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
-                                        <div class="media-body">
-                                            <a href="/index/{{$prop->id}}" class="">
-                                                <span class="badge badge-warning">{{$prop->city}}</span><br>
-                                                {{$prop->header}}<br>
-                                                <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
-                                            </a>
-                                    
-                                        </div>
-                                    </div>            
-                                @endforeach
+                <div class="card">
+                    <h4 class="center-xs card-header">Eladó olcsóbb lakások</h4>
+                    @foreach ($prop_elado_lakasok_cheap as $prop)
+                        <div class="media shadow-sm p-1 mt-1">
+                            @php
+                                $photo_count = $prop->photos->count();
+                                $photo = $prop->photos->where('is_default','1')->first();
+                                if ($photo){
+                                    $photo_file = $photo->file1;
+                                    $photo_file = "uploads/" . $photo_file;
+                                } else {
+                                    $photo_file = "uploads/placeholder.png";
+                                }
+                            @endphp
+                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
+                            <div class="media-body">
+                                <a href="/index/{{$prop->id}}" class="list-group-item-action">
+                                    <span class="badge badge-info">{{$prop->city}}</span><br>
+                                    {{$prop->header}}<br>
+                                    <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                </a>
+                        
+                            </div>
+                        </div>            
+                    @endforeach
                 </div>
-                <div class=" mt-2">
-                    <h4 class="center-xs">Eladó olcsóbb házak</h4>
+                <div class="card mt-2">
+                    <h4 class="card-header center-xs">Eladó olcsóbb házak</h4>
                     @foreach ($prop_elado_hazak_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -53,8 +53,8 @@ use App\property;
                             @endphp
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
                             <div class="media-body">
-                                <a href="/index/{{$prop->id}}" class="">
-                                    <span class="badge badge-warning">{{$prop->city}}</span><br>
+                                <a href="/index/{{$prop->id}}" class="list-group-item-action">
+                                    <span class="badge badge-info">{{$prop->city}}</span><br>
                                     {{$prop->header}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
@@ -258,11 +258,13 @@ use App\property;
                 </div>
             </div> 
             <div class="col d-none d-lg-block center-xs">
-                <h4>Lakáshitel-kalkulátor</h4>
-                <iframe id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>            
+                <div class="card">
+                    <h4 class="card-header">Lakáshitel-kalkulátor</h4>
+                    <iframe id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>            
 
-                <h4>CSOK településlista</h4>
-                <iframe id="csok-map" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1qH4VJVp5xs6vaKHyEHwmKth3kFMj4AP9&ll=46.19367658681184%2C18.40386481697169&z=10" allowfullscreen ></iframe>
+                    <h4>CSOK településlista</h4>
+                    <iframe id="csok-map" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1qH4VJVp5xs6vaKHyEHwmKth3kFMj4AP9&ll=46.19367658681184%2C18.40386481697169&z=10" allowfullscreen ></iframe>
+                </div>
 
             </div>
             </div>   
