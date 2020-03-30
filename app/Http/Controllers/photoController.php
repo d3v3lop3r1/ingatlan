@@ -78,7 +78,7 @@ class photoController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created photos in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
