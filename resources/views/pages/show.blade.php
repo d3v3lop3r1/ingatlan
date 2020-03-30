@@ -35,9 +35,9 @@ use App\property;
                             $photo = $property->photos->where('is_default','1')->first();
                             if ($photo){
                                 $photo_file = $photo->file1;
-                                $photo_file = "uploads/" . $photo_file;
+                                $photo_file = "/uploads/" . $photo_file;
                             } else {
-                                $photo_file = "uploads/placeholder.png";
+                                $photo_file = "/uploads/placeholder.png";
                             }
 
                             ?>
