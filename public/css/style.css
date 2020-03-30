@@ -128,10 +128,10 @@ p {
 	display: flex;
 	position: relative;
 	font-family: 'Roboto', sans-serif;
-
 	bottom: 40px;
 	padding: 15px 15px;
-	background-color:rgba(29, 53, 87, 0.89);
+	margin: auto;
+	background-color:rgba(25, 120, 110, 0.7);
 	z-index: 1001;
 }
 
@@ -202,7 +202,7 @@ p {
 	padding-bottom: 5px;
 	margin-left: 5px;
 	margin-right: 5px;
-	background-color: rgba(0,0,0, 0.5);
+	background-color: rgba(25, 120, 110, 0.7);
 }
 
 .prop-header h4{
@@ -298,11 +298,13 @@ p {
 	color: #FFF;
 	font-weight: 700;
 	font-size: 20px;
-	background-color: #E63946 ;
+	background-color: rgba(50, 150, 120, 1) ;
 
 
 }
-
+.index-price td{
+	background-color: rgba(50, 150, 120, 1) ;
+}
 .index-agent{
 	line-height: 15px;
 	margin-bottom: 20px;

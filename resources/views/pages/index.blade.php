@@ -173,11 +173,11 @@ use Carbon\Carbon;
 
                         </td>
                       </tr>
-                      <tr  class="table-borderless">
-                        <th align="right" class="bg-danger pt-3"><h5 class="text-white" >Ár</h5></th>
-                        <th class="bg-danger pt-3 pr-3"><h5 class="text-white" id="eur"></h5></th>
-                        <th class="bg-danger pt-3 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></th>
-                        <th class="bg-danger pt-3 pr-3"></th>
+                      <tr  class="table-borderless index-price">
+                        <td align="right" class=" pt-3"><h5 class="text-white" >Ár</h5></td>
+                        <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
+                        <td class=" pt-3 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></td>
+                        <td class=" pt-3 pr-3"></th>
                       </tr>
 
                       <tr class="table-borderless" align="center">

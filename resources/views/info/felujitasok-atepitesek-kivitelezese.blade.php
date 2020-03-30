@@ -8,7 +8,7 @@
             NAGYTAKARÍTÁS JAVÍTGATÁSOKKAL MINDIG okvetlenül ajánlott. Mik ezek? Már
             évek óta itt-ott tornyosuló, támaszkodó vicek-vacak a ház körül, ami az embernek
             már fel sem tűnik megszokásból… Ezek jelenléte az ingatlanszemléken, a fotókon
-            jelentős mértékben kérdőjelezi miért akar ennyit-annyit a tulajdonosa, ha nem is szert
+            jelentős mértékben kérdőjelezi miért akar ennyit-annyit a tulajdonosa, ha látszólag nem is szeret
             itt lakni? Invesztíció ezért? Pár napos munka összefogva a családdal és kész.
             A kisebb hibák-sérülések-elöregedések megszüntetése egy gyorsabb eladást
             eredményezhet! Mik ezek? Például néhány cserépigazítás a tetőn, szegeléssel-

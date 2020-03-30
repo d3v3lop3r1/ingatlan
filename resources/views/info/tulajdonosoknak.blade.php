@@ -41,10 +41,10 @@
         <h3>Miért kellhet nekem az Ingatlanfox segítsége?</h3>
         <h4>Miért van több esélye ingatlana értékesítésére velünk?</h4>
         <p>
-            Ingatlanát nam csak az Ingatlanfox oldalain hírdetjük, hanem más magyar és külföldi
-            portálokon is hírdetjük attraktív bemutatással. Magyar és német aljkú érdeklődőit
+            Ingatlanát nam csak az Ingatlanfox oldalain, hanem más magyar és külföldi
+            portálokon is hírdetjük attraktív bemutatással. Magyar és német ajkú érdeklődőit
             anyanyelvén világosítjuk fel. Német ingatlanügynöki partnerünk révén is folyamatosan
-            érkenek érdeklődők, akik Baranya megyében szeretnének ingatlanrt vásárolni.
+            érkeznek érdeklődők, akik Baranya megyében szeretnének ingatlant vásárolni.
             A külföldi ingatlanportálokról jelentkezőket, illetve a német anyanyelvű érdeklődőket az
             Ingatlanfox ügynökei informálják, kérésükre az Ön ingatlana Exposéját, Steakholder
             analízisét elkészítik, átadják, egy meggyőzőbb bemutatás érdekében. Ingatlanszemléket
