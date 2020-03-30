@@ -457,7 +457,7 @@
     ingatlanonként legfeljebb 200 millió forintot a tulajdoni hányad arányában kell figyelembe
     venni.
     Még több infót szeretnék? Akkor kattintson itt a webcímre:
-    https://ugyintezes.magyarorszag.hu/ugyek/410001/420002/Ingatlan20091202.html#paragr11    </div>
+    https://ugyintezes.magyarorszag.hu/ugyek/410001/420002/Ingatlan20091202.html#paragr11    
 </div>
 @endsection
 
