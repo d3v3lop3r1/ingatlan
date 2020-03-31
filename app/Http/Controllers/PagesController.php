@@ -27,6 +27,7 @@ class PagesController extends Controller
 
     public function search(Request $request)
     {
+        dd($request);
         $mutato='';
         $type_id = $request->type_id;
         switch($type_id){
