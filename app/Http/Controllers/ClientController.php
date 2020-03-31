@@ -1,12 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
+use App\Http\Requests\storeClient;
 use App\client;
 use App\agent;
-use App\Http\Requests\storeClient;
 
-use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
