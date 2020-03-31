@@ -68,7 +68,19 @@
                               
                                 @if (Auth::check())
                                   @if (Auth::user()->email=='csernus@foxinfo.hu'||Auth::user()->email=='sztarovics@foxinfo.hu' )
-                                    <li class="nav-item mr-2"><a href="/properties">Admin</a></li>
+                                    <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                                      aria-haspopup="true" aria-expanded="false">ADMIN<span class="caret"></span></a> 
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#"> </a></li>
+                                        <li><a href="/properties"> Ingatlan lista</a></li>
+                                        <li><a href="/properties/create"> Új ingatlan</a></li>
+                                        <li><a href="/agents"> Ügynök lista</a></li>
+                                        <li><a href="/agents/create"> Új ügynök</a></li>
+                                        <li><a href="/clients"> Kliens lista</a></li>
+                                        <li><a href="/clients/create"> Új kliens</a></li>
+                                      </ul>
+                                    </li>
                                   @endif
                                     <li class="nav-item">
                                     <span class="text-primary navbar-user-name mr-3">Üdv {{Auth::user()->name}}</span>

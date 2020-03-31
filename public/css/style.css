@@ -135,7 +135,7 @@ p {
 	bottom: 40px;
 	padding: 15px 15px;
 	margin: auto;
-	background-color:rgba(25, 120, 110, 0.7);
+	background-color:rgba(25, 85, 120, 0.7);
 	z-index: 1001;
 }
 
@@ -206,7 +206,7 @@ p {
 	padding-bottom: 5px;
 	margin-left: 5px;
 	margin-right: 5px;
-	background-color: rgba(25, 120, 110, 0.7);
+	background-color: rgba(25, 85, 110, 0.7);
 }
 
 .prop-header h4{
@@ -302,12 +302,12 @@ p {
 	color: #FFF;
 	font-weight: 700;
 	font-size: 20px;
-	background-color: rgba(50, 150, 120, 1) ;
+	background-color: rgba(50, 85, 120, 1) ;
 
 
 }
 .index-price td{
-	background-color: rgba(50, 150, 120, 1) ;
+	background-color: rgba(50, 85, 120, 1) ;
 }
 .index-agent{
 	line-height: 15px;
@@ -318,6 +318,9 @@ p {
 }
 .index-text{
 	font-family: 'Roboto', sans-serif;
+}
+.card{
+	line-height: normal;
 }
 .kiskockak{
 	white-space: nowrap;

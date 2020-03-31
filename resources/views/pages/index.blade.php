@@ -176,47 +176,66 @@ $room_height=config('property.room_height.hu');
                     </div>
                   </div>
                   <div class="col-xs-12 pt-3">
-                    <div class="w3-card-4 w3-padding w3-margin-bottom w3-small">
-                      <h6><span class="w3-text-theme">Hirdetés helye a térképen:</span></h6>
-                      <iframe
-                        frameborder="0" style="border:0; width:100%; height:300px;"
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBrdH7bXJbDwNHSyPVwWIoyIeTdiUbWP_c
-                        &q={{$property->city}}%2C%20{{$property->street}}" allowfullscreen > 
-                      </iframe>
+                    <div class="card w3-padding w3-margin-bottom w3-small">
+                      <div class="card-header">
+                        <h4>Hirdetés helye a térképen:</span></h4>
+                      </div>
+                      <div class="card-body">
+                        <iframe
+                          frameborder="0" style="border:0; width:100%; height:300px;"
+                          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBrdH7bXJbDwNHSyPVwWIoyIeTdiUbWP_c
+                          &q={{$property->city}}%2C%20{{$property->street}}" allowfullscreen > 
+                        </iframe>
+                      </div>
                     </div>
-                                  <h4>Ingatlant venne?<br>
-                    ingatlant bérelne?</h4>
-                    <ul>
-                      <li>Személyesen kapcsolatfelvétel,
-                      baráti tanácsadás az Ön érdekében</li>
-                      <li>Kíséret Ingatlanszemlékre,
-                      földhivatalba, Exposé, stb.</li>
-                      <li>Német-magyar tolmács más
-                      anyanyelvű eladók-kiadók esetén</li>
-                      <li>Előszerződés írása, megállapodások
-                      hitelesítése ügyvédnél</li>
-                      <li>Ingatlanvétel után is segítünk mint
-                      Gondnoka a távollétében</li>
-                      <li>Felújításokat is vállal Projektfox
-                      építkező brigádunk</li>
-                    </ul>                  
-                    <h4>HITELFELVÉTEL?</h4>
-                    <p>
-                      Intézkedünk hogy a legjobb ajánlatot
-                      kapja! Szakemberünkkel felveszi a
-                      kapcsolatot aki kikeresi Önnek is az
-                      aktuálisan legjobbat!
-                    </p> 
-                    <h4>CSOK?</h4>   
-                    <p>
-                      Olyan térségban választ ingatlant
-                      ahol a Magyar kormány átvállalja az
-                      ingatlan teljes költségét? Kérdezzen
-                      bennünket, szakemberünk akkor is
-                      fog tud segíteni ha a listánkban nem
-                      talált megfelelőt!
-                    </p>
-                      
+                  </div>  
+                  <div class="col-xs-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Ingatlant venne? Ingatlant bérelne?</h4>
+                      </div>
+                      <div class="card-body">
+                        <ul>
+                          <li>Személyesen kapcsolatfelvétel,
+                          baráti tanácsadás az Ön érdekében</li>
+                          <li>Kíséret Ingatlanszemlékre,
+                          földhivatalba, Exposé, stb.</li>
+                          <li>Német-magyar tolmács más
+                          anyanyelvű eladók-kiadók esetén</li>
+                          <li>Előszerződés írása, megállapodások
+                          hitelesítése ügyvédnél</li>
+                          <li>Ingatlanvétel után is segítünk mint
+                          Gondnoka a távollétében</li>
+                          <li>Felújításokat is vállal Projektfox
+                          építkező brigádunk</li>
+                        </ul>  
+                      </div>
+                      <div class="card-header">
+                          <h4>HITELFELVÉTEL?</h4>
+                      </div>
+                      <div class="card-body">
+                        <p>
+                          Intézkedünk hogy a legjobb ajánlatot
+                          kapja! Szakemberünkkel felveszi a
+                          kapcsolatot aki kikeresi Önnek is az
+                          aktuálisan legjobbat!
+                        </p> 
+                      </div>
+                      <div class="card-header">
+                        <h4>CSOK?</h4>   
+                      </div>
+                      <div class="card-body">
+                          <p>
+                          Olyan térségban választ ingatlant
+                          ahol a Magyar kormány átvállalja az
+                          ingatlan teljes költségét? Kérdezzen
+                          bennünket, szakemberünk akkor is
+                          fog tud segíteni ha a listánkban nem
+                          talált megfelelőt!
+                        </p>
+                      </div>
+                      </div>
+                    </div>  
                   </div>
                 </div>
               </div>
