@@ -53,7 +53,7 @@ $room_height=config('property.room_height.hu');
 
                         <div class="form-group">
                             {!! Form::label('Kliens',null,['class' => 'control-label']); !!}
-                            {!! Form::select('client_id',['0'=>'--Válassz ügynököt--'],null,['class' => 'form-control']); !!}
+                            {!! Form::select('client_id',['0'=>'--Válassz ügynököt--'],null,['class' => 'form-control','require']); !!}
                         </div>
 
                         {{-- Aktív --}}
