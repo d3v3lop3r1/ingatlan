@@ -5,7 +5,7 @@
                 <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="/images/backgrounds/architecture.jpg" alt="Ingatlanfox megoldások">
+              <img class="d-block w-100" src="/images/backgrounds/new/architecture1920x500.jpg" alt="Ingatlanfox megoldások">
               <div class="carousel-caption">
                 <h1 class="text-shadow"><strong>INGATLANFOX PROFESSZIONÁLIS SZOLGÁLTATÁSOK</strong></h1>
               </div>
