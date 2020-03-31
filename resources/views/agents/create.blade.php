@@ -12,6 +12,10 @@
             {!! Form::label('Név*',null,['class' => 'control-label']); !!}
             {!! Form::text('name',null,['class' => 'form-control', 'placeholder'=>'Írd be a nevet...']); !!}
         </div>
+        <div class="form-group">
+            {!! Form::label('Beszélt nyelvek*',null,['class' => 'control-label']); !!}
+            {!! Form::text('languages',null,['class' => 'form-control', 'placeholder'=>'Írd be a beszélt nyelveket...']); !!}
+        </div>
 
         {{-- Szint --}}
 
@@ -48,7 +52,6 @@
             {!! Form::number('provision','0',['class' => 'form-control']); !!}
         </div>
 
-        {!! Form::hidden('photo','/')!!}
 
         {!!Form::submit('Mentés',['class'=>'btn btn-primary mt-2']);!!}
     {!! Form::close() !!}

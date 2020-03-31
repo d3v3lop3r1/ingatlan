@@ -21,7 +21,7 @@ class CreateAgentsTable extends Migration
             $table->string('tel');
             $table->string('email')->unique();
             $table->tinyInteger('provision');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->string('languages');
             $table->timestamps();
         });

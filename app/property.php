@@ -14,8 +14,8 @@ class property extends Model
         'ad_type',
         'subtype',
         'type_id',
-        'header',
-        'text',
+        'header_hun',
+        'text_hun',
         'country',
         'region',
         'city',
@@ -66,11 +66,11 @@ class property extends Model
     
     public function scopeElado($query)
     {
-        return $query->where('type_id', 0);
+        return $query->where('type_id', 1);
     }
     public function scopeKiado($query)
     {
-        return $query->where('type_id', 3);
+        return $query->where('type_id', 2);
     }
     public function scopeLakasok($query)
     {

@@ -4,36 +4,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Demo</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
   </head>
   <body>
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 46.0727345, lng: 18.232266},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKV7YR9Rs30s1PfDlXiJ8ybbdS3iYMPTo&callback=initMap"
-    async defer></script>
+    <div>
+      @php
+        $type_id=config('property.type_id.hu');
+        $list_type=config('property.list_type.hu');
+        $subtype=config('property.subtype.hu');
+        $region= config('property.region.hu');                      
+        $floors=config('property.floors.de');
+        $condition=config('property..hu');
+        $heating=config('property.heating.hu');
+        $parking=config('property.parking.hu');
+        $comfort=config('property.comfort.hu');
+        $room_height=config('property.room_height.hu');
+      @endphp
+      {!! Form::open(['url'=>'/properties', 'method'=>'POST','name'=>'lakas_eladas']) !!}
+      
+      {!! Form::select('floors', $floors, null, ['class'=>'form-control']) !!}
+
+      
+      {!! Form::submit('mehet', ['class'=>'btn btn-submit']) !!}
+      
+      
+      {!! Form::close() !!}
+      
+    </div>
   </body>
 </html>
 

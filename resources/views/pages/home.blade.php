@@ -20,16 +20,16 @@ use App\property;
                                 $photo = $prop->photos->where('is_default','1')->first();
                                 if ($photo){
                                     $photo_file = $photo->file1;
-                                    $photo_file = "uploads/" . $photo_file;
+                                    $photo_file = "/uploads/" . $photo_file;
                                 } else {
-                                    $photo_file = "uploads/placeholder.png";
+                                    $photo_file = "/uploads/placeholder.png";
                                 }
                             @endphp
-                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
+                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="fotó" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="badge badge-info">{{$prop->city}}</span><br>
-                                    {{$prop->header}}<br>
+                                    {{$prop->header_hun}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
                         
@@ -51,7 +51,7 @@ use App\property;
                                     $photo_file = "uploads/placeholder.png";
                                 }
                             @endphp
-                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header}}" width="50" height="50">
+                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_hun}}" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="badge badge-info">{{$prop->city}}</span><br>
@@ -73,9 +73,9 @@ use App\property;
                             $photo = $property->photos->where('is_default','1')->first();
                             if ($photo){
                                 $photo_file = $photo->file1;
-                                $photo_file = "uploads/" . $photo_file;
+                                $photo_file = "/uploads/" . $photo_file;
                             } else {
-                                $photo_file = "uploads/placeholder.png";
+                                $photo_file = "/uploads/placeholder.png";
                             }
 
                             ?>
@@ -83,23 +83,23 @@ use App\property;
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header}}</a></h5>
+                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_hun}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php
                                                     $dt = Carbon::parse($property->updated_at);
                                                     $days=$dt->diffInDays();
                                                     switch($property->type_id){
-                                                        case 0:
+                                                        case 1:
                                                             echo 'Eladó';
                                                             break;
-                                                        case 1:
+                                                        case 2:
                                                             echo 'Eladó cserelehetőséggel';
                                                             break;
-                                                        case 2:
+                                                        case 3:
                                                             echo 'Kiadó eladási opcióval';
                                                             break;
-                                                        case 3:
+                                                        case 4:
                                                             echo 'Kiadó';
                                                             break;
                                                     }

@@ -1,68 +1,145 @@
-<?php
+@php
 use App\agent;
-
 use Carbon\Carbon;
-?>
+
+$type_id=[
+    1=>'Eladó',
+    2=>'Kiadó'];
+$list_type=[
+    1=>'Lakás',
+    2=>'Ház',
+    3=>'Nyaraló',
+    4=>'Garázs',
+    5=>'Iroda',
+    6=>'Ipari',
+    7=>'Raktár',
+    8=>'Üzlethelyiség',
+    9=>'Telek-föld',
+    10=>'Vendéglátás',
+    11=>'Egyéb'
+    ];
+$subtype=[
+    0=>'nem releváns',
+    1=>'Tégla',
+    2=>'Panel',
+    3=>'Csúsztatott zsalus',
+    4=>'Családi ház',
+    5=>'Ikerház',
+    6=>'Sorház',
+    7=>'Házrész',
+    8=>'Tanya',
+    9=>'Könnyűszerkezetes',
+    10=>'Zártkert',
+    11=>'Szántóföld',
+    12=>'Pince',
+    13=>'Közöshasználatú',
+    14=>'Egyéb'
+    ];
+$region=[
+    1=>'Bács-Kiskun',
+    2=>'Baranya',
+    3=>'Békés',
+    4=>'Borsod-Abaúj-Zemplén',
+    5=>'Csongrád',
+    6=>'Fejér',
+    7=>'Győr-Moson-Sopron',
+    8=>'Hajdú-Bihar',
+    9=>'Jász-Nagykun-Szolnok',
+    10=>'Komárom-Esztergom',
+    11=>'Nógrád',
+    12=>'Pest',
+    13=>'Somogy',
+    14=>'Szabolcs-Szatmár-Bereg',
+    15=>'Tolna',
+    16=>'Vas',
+    17=>'Veszprém',
+    18=>'Zala'];                                
+
+$floors=[
+    0=>'nem releváns',
+    1=>'szuterén',
+    2=>'földszinti',
+    3=>'félemeleti',
+    4=>'1. emeleti',
+    5=>'2. emeleti',
+    6=>'3. emeleti',
+    7=>'4. emeleti',
+    8=>'5. emeleti',
+    9=>'6. emeleti',
+    10=>'7. emeleti',
+    11=>'8. emeleti',
+    12=>'9. emeleti',
+    13=>'10. emeleti',
+    14=>'10 felett'];
+
+$condition=[
+    0=>'nem releváns',
+    1=>'kitűnő állapotú',
+    2=>'új építésű',
+    3=>'újszerű',
+    4=>'felújított',
+    5=>'részben felújítva',
+    6=>'jó állapotú',
+    7=>'közepes állapotú',
+    8=>'felújítandó',
+    9=>'azonnal beköltözhető',
+    ];
+    
+$heating=[
+    0=>'nem releváns',
+    1=>'gáz(cirko)',
+    2=>'gáz(konvektor)',
+    3=>'gáz(héra)',
+    4=>'távfűtés',
+    5=>'távfűtés egyedi méréssel',
+    6=>'elektromos',
+    7=>'házközponti',
+    8=>'házközponti egyedi méréssel',
+    9=>'fan-coil',
+    10=>'geotermikus',
+    11=>'cserépkályha',
+    12=>'kandalló',
+    13=>'egyéb'
+    ];
+
+$parking=[
+    0=>'nem releváns',
+    1=>'garázs - az árban',
+    2=>'garázs - megvehető',
+    3=>'kültéri - az árban',
+    4=>'kültéri - megvehető',
+    5=>'utcán - ingyenes',
+    6=>'utcán - fizetős',
+    7=>'teremgarázs - az árban',
+    8=>'teremgarázs - megevhető',
+    9=>'parkolás az udvarban'
+    ];
+
+$comfort=[
+    0=>'nem releváns',
+    1=>'luxus',
+    2=>'duplakomfortos',
+    3=>'összkömfortos',
+    4=>'komfortos',
+    5=>'félkomfortos',
+    6=>'komfort nélküli'
+    ];
+
+$room_height=[
+    0=>'nem releváns',
+    1=>'3m-nél alacsonyabb',
+    2=>'3m-nél magasabb'
+    ];   
+@endphp
 @extends('layout.main')
 
 @section('tartalom')
-      <?php
+      @php
         $photo_default = $property->photos->where('is_default','1')->first();
         $photos = $property->photos->where('is_default',null)->all();
         $photo_default_file = $photo_default->file1;
         $photo_default_file = "/uploads/" . $photo_default_file;
-        switch($property->type_id){
-          case 0:
-              $type = 'Eladó';
-              break;
-          case 1:
-              $type = 'Eladó cserelehetőséggel';
-              break;
-          case 2:
-              $type = 'Kiadó eladási opcióval';
-              break;
-          case 3:
-              $type = 'Kiadó';
-              break;
-        }
-
-        switch($property->list_type){
-          case 1:
-            $listType = 'Lakás';
-              break;
-          case 2:
-            $listType = 'Ház';
-          break;
-          case 3:
-            $listType = 'Nyaraló';
-          break;
-          case 4:
-            $listType = 'Garázs';
-          break;
-          case 5:
-            $listType = 'Iroda';
-          break;
-          case 6:
-            $listType = 'Ipari';
-          break;
-          case 7:
-            $listType = 'Raktár';
-          break;
-          case 8:
-            $listType = 'Üzlethelyiség';
-          break;
-          case 9:
-            $listType = 'Telek-föld';
-          break;
-          case 10:
-            $listType = 'Vendéglátás';
-          break;
-          case 11:
-            $listType = 'Egyéb';
-          break;
-        }
-        
-      ?>
+      @endphp
       <div class="container-fluid" id="first-main">
           <div class="row">
 
@@ -86,13 +163,13 @@ use Carbon\Carbon;
                     <thead class="thead-dark pt-3">
                       <tr>
                         <th>id {{70000+$property->id}}</th>
-                        <th colspan="3">{{$property->header}}</th>
+                        <th colspan="3">{{$property->header_hun}}</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <th>Régió</th>
-                        <td>{{$property->region}}</td>
+                        <td>{{$region[$property->region]}}</td>
                         <th>Attraktivitás</th>
                         <td >
                           @for ($i = 0; $i < $property->attraktivitas ; $i++)
@@ -141,9 +218,9 @@ use Carbon\Carbon;
                       </tr>
                       <tr>
                         <th>Állapot</th>
-                        <td>{{$property->condition}}</td>
+                        <td>{{$condition[$property->condition]}}</td>
                         <th>Fűtés</th>
-                        <td>{{$property->heating}}</td>
+                        <td>{{$heating[$property->heating]}}</td>
                       </tr>
                       <tr>
                         <th>Kilátás</th>
@@ -183,13 +260,13 @@ use Carbon\Carbon;
                       <tr class="table-borderless" align="center">
                         <th class="pt-3 justify-content-center" colspan="2">
                           <h4>
-                            {{$type}} - {{$listType}} - {{$property->city}}
+                            {{$type_id[$property->type_id]}} - {{$list_type[$property->list_type]}} - {{$property->city}}
                           </h4>
                         </th>
                         <th colspan="2"></th>
                       </tr>
                       <tr>
-                        <td colspan="4"><?php echo $property->text; ?></td>
+                        <td colspan="4"><?php echo $property->text_hun; ?></td>
                       </tr>
                       
                     </tbody>

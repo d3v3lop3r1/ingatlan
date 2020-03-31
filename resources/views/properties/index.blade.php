@@ -45,7 +45,7 @@ use Carbon\Carbon;
                         <tr>
                             <th scope="row">{{$property->id}}</th>
                             <td><a href="/photos/create/{{$property->id}}">{{count($property->photos)}} db</a></td>
-                            <td><a href="/properties/{{$property->id}}/edit">{{$property->header}}</a></td>
+                            <td><a href="/properties/{{$property->id}}/edit">{{$property->header_hun}}</a></td>
                             <td>{{agent::where('id',$property->agent_id)->first()->name}}</td>
                             <td>{{client::where('id',$property->client_id)->first()->name}}</td>
                             <td>{{$property->city}}</td>

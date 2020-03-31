@@ -38,6 +38,7 @@ class AgentController extends Controller
      */
     public function store(storeAgent $request)
     {
+        
         agent::create($request->all());
         return redirect('agents');
     }

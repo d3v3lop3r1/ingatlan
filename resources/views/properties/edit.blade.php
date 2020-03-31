@@ -1,8 +1,60 @@
-<?php
+@php
 use App\client;
 use App\agent;
 use App\property;
-?>
+$type_id=config('property.type_id.hu');
+$list_type=config('property.list_type.hu');
+$subtype=config('property.subtype.hu');
+$region= config('property.region.hu');                      
+$floors=config('property.floors.hu');
+$condition=config('property.condition.hu');
+    
+$heating=[
+    0=>'nem releváns',
+    1=>'gáz(cirko)',
+    2=>'gáz(konvektor)',
+    3=>'gáz(héra)',
+    4=>'távfűtés',
+    5=>'távfűtés egyedi méréssel',
+    6=>'elektromos',
+    7=>'házközponti',
+    8=>'házközponti egyedi méréssel',
+    9=>'fan-coil',
+    10=>'geotermikus',
+    11=>'cserépkályha',
+    12=>'kandalló',
+    13=>'egyéb'
+    ];
+
+$parking=[
+    0=>'nem releváns',
+    1=>'garázs - az árban',
+    2=>'garázs - megvehető',
+    3=>'kültéri - az árban',
+    4=>'kültéri - megvehető',
+    5=>'utcán - ingyenes',
+    6=>'utcán - fizetős',
+    7=>'teremgarázs - az árban',
+    8=>'teremgarázs - megevhető',
+    9=>'parkolás az udvarban'
+    ];
+
+$comfort=[
+    0=>'nem releváns',
+    1=>'luxus',
+    2=>'duplakomfortos',
+    3=>'összkömfortos',
+    4=>'komfortos',
+    5=>'félkomfortos',
+    6=>'komfort nélküli'
+    ];
+
+$room_height=[
+    0=>'nem releváns',
+    1=>'3m-nél alacsonyabb',
+    2=>'3m-nél magasabb'
+    ];
+@endphp
 
 @extends('layout.main-simple')
 
@@ -52,41 +104,21 @@ use App\property;
                         
                         <div class="form-group">
                             {!! Form::label('Aktív',null,['class' => 'control-label']); !!}
-                            {!! Form::select('active',[
-                                '1'=>'igen',
-                                null=>'nem',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
-                                
+                            {!! Form::select('active',[true=>'igen',false=>'nem'],null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Kiemelt --}}
                         
                         <div class="form-group">
                             {!! Form::label('Kiemelt',null,['class' => 'control-label']); !!}
-                            {!! Form::select('kiemelt',[
-                                '1'=>'igen',
-                                null=>'nem',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
-                                
+                            {!! Form::select('kiemelt',[true=>'igen',false=>'nem'],null,['class' => 'form-control']); !!}
                         </div>
 
                                                 {{--  Hirdetés tipusa  --}}
 
                         <div class="form-group">
                             {!! Form::label('Hirdetés típusa*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('type_id',[
-                                0=>'Eladó',
-                                1=>'Eladó cserelehetőséggel',
-                                2=>'Kiadó eladási opcióval',
-                                3=>'Kiadó',
-                                ],null,['class' => 'form-control']); 
-                            !!}
+                            {!! Form::select('type_id',$type_id,null,['class' => 'form-control']);!!} 
                         </div>
 
 
@@ -94,51 +126,29 @@ use App\property;
 
                         <div class="form-group">
                             {!! Form::label('Ingatlan típusa*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('list_type',[
-                                1=>'Lakás',
-                                2=>'Ház',
-                                3=>'Nyaraló',
-                                4=>'Garázs',
-                                5=>'Iroda',
-                                6=>'Ipari',
-                                7=>'Raktár',
-                                8=>'Üzlethelyiség',
-                                9=>'Telek-föld',
-                                10=>'Vendéglátás',
-                                11=>'Egyéb',
-                                ],null,['class' => 'form-control']); 
-                            !!}
+                            {!! Form::select('list_type',$list_type,null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Ingatlan altípusa --}}
 
                         <div class="form-group">
                             {!! Form::label('Ingatlan altípusa*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('subtype',[
-                                null=>'nem releváns',
-                                'Tégla'=>'Tégla',
-                                'Panel'=>'Panel',
-                                'Csúsztatott zsalus'=>'Csúsztatott zsalus',
-                                'Családi ház'=>'Családi ház',
-                                'Ikerház'=>'Ikerház',
-                                'Sorház'=>'Sorház',
-                                'Házrész'=>'Házrész',
-                                'Tanya'=>'Tanya',
-                                'Könnyűszerkezetes'=>'Könnyűszerkezetes',
-                                'Zártkert'=>'Zártkert',
-                                'Szántóföld'=>'Szántóföld',
-                                'Pince'=>'Pince',
-                                'Közöshasználatú'=>'Közöshasználatú',
-                                'Egyéb'=>'Egyéb',
-                                ],null,['class' => 'form-control']); 
-                            !!}
+                            {!! Form::select('subtype',$subtype,null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Header --}}
 
                         <div class="form-group">
-                            {!! Form::label('Hirdetés fejléce*',null,['class' => 'control-label']); !!}
-                            {!! Form::text('header',$property->header,['class' => 'form-control']); !!}
+                            {!! Form::label('Hirdetés fejléce*(Magyar)',null,['class' => 'control-label']); !!}
+                            {!! Form::text('header_hun',$property->header_hun,['class' => 'form-control']); !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('Hirdetés fejléce*(Deutch)',null,['class' => 'control-label']); !!}
+                            {!! Form::text('header_de',$property->header_de,['class' => 'form-control']); !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('Hirdetés fejléce*(English)',null,['class' => 'control-label']); !!}
+                            {!! Form::text('header_en',$property->header_en,['class' => 'form-control']); !!}
                         </div>
 
 
@@ -149,35 +159,14 @@ use App\property;
 
                         {{-- Country --}}
 
-                        {!! Form::hidden('country','Maygarország')!!}
+                        {!! Form::hidden('country','Magyarország'); !!}
 
 
                         {{-- Megye --}}
 
                         <div class="form-group">
                                 {!! Form::label('Megye*',null,['class' => 'control-label']); !!}
-                                {!! Form::select('region',[
-                                    'Bács-Kiskun'=>'Bács-Kiskun',
-                                    'Baranya'=>'Baranya',
-                                    'Békés'=>'Békés',
-                                    'Borsod-Abaúj-Zemplén'=>'Borsod-Abaúj-Zemplén',
-                                    'Csongrád'=>'Csongrád',
-                                    'Fejér'=>'Fejér',
-                                    'Győr-Moson-Sopron'=>'Győr-Moson-Sopron',
-                                    'Hajdú-Bihar'=>'Hajdú-Bihar',
-                                    'Jász-Nagykun-Szolnok'=>'Jász-Nagykun-Szolnok',
-                                    'Komárom-Esztergom'=>'Komárom-Esztergom',
-                                    'Nógrád'=>'Nógrád',
-                                    'Pest'=>'Pest',
-                                    'Somogy'=>'Somogy',
-                                    'Szabolcs-Szatmár-Bereg'=>'Szabolcs-Szatmár-Bereg',
-                                    'Tolna'=>'Tolna',
-                                    'Vas'=>'Vas',
-                                    'Veszprém'=>'Veszprém',
-                                    'Zala'=>'Zala'],'Baranya',                                
-                                    ['class' => 'form-control']
-                                ); 
-                                !!}
+                                {!! Form::select('region',$region,null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Helység --}}
@@ -210,6 +199,14 @@ use App\property;
                         <div class="form-group">
                             {!! Form::label('Minimum eladási ár(Ft)*',null,['class' => 'control-label']); !!}
                             {!! Form::number('min_price',null,['class' => 'form-control', 'placeholder'=>'Add meg a minimum árat...']); !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('Akciós ár(Ft)*',null,['class' => 'control-label']); !!}
+                            {!! Form::number('act_price',null,['class' => 'form-control', 'placeholder'=>'Add meg a minimum árat...']); !!}
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('Minimum depozit(Ft)*',null,['class' => 'control-label']); !!}
+                            {!! Form::number('deposit',null,['class' => 'form-control', 'placeholder'=>'Add meg a minimum árat...']); !!}
                         </div>
     
                         {{-- Attraktivitás --}}
@@ -245,26 +242,8 @@ use App\property;
 
                         <div class="form-group">
                                 {!! Form::label('Ha emeleti*',null,['class' => 'control-label']); !!}
-                                {!! Form::select('floors',[
-                                    null=>'nem releváns',
-                                    'szuterén'=>'szuterén',
-                                    'földszinti'=>'földszinti',
-                                    'félemeleti'=>'félemeleti',
-                                    '1'=>'1',
-                                    '2'=>'2',
-                                    '3'=>'3',
-                                    '4'=>'4',
-                                    '5'=>'5',
-                                    '6'=>'6',
-                                    '7'=>'7',
-                                    '8'=>'8',
-                                    '9'=>'9',
-                                    '10'=>'10',
-                                    '10 felett'=>'10 felett'],null,                               
-                                    ['class' => 'form-control']
-                                ); 
-                                !!}
-                            </div>
+                                {!! Form::select('floors',$floors,null,['class' => 'form-control']); !!}                               
+                        </div>
     
     
                         {{-- Szobák száma --}}
@@ -299,60 +278,21 @@ use App\property;
 
                         <div class="form-group">
                             {!! Form::label('Állapot*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('condition',[
-                                null=>'nem releváns',
-                                'kitűnő állapotú'=>'kitűnő állapotú',
-                                'új építésű'=>'új építésű',
-                                'újszerű'=>'újszerű',
-                                'felújított'=>'felújított',
-                                'részben felújítva'=>'részben felújítva',
-                                'jó állapotú'=>'jó állapotú',
-                                'közepes állapotú'=>'közepes állapotú',
-                                'felújítandó'=>'felújítandó',
-                                'azonnal beköltözhető'=>'azonnal beköltözhető',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
+                            {!! Form::select('condition',$condition,null,['class' => 'form-control']); !!}                              
                         </div>
 
                         {{-- Fűtés --}}
 
                         <div class="form-group">
                             {!! Form::label('Fűtés*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('heating',[
-                                null=>'nem releváns',
-                                'gáz(cirko)'=>'gáz(cirko)',
-                                'gáz(konvektor)'=>'gáz(konvektor)',
-                                'gáz(héra)'=>'gáz(héra)',
-                                'távfűtés'=>'távfűtés',
-                                'távfűtés egyedi méréssel'=>'távfűtés egyedi méréssel',
-                                'elektromos'=>'elektromos',
-                                'házközponti'=>'házközponti',
-                                'házközponti egyedi méréssel'=>'házközponti egyedi méréssel',
-                                'fan-coil'=>'fan-coil',
-                                'geotermikus'=>'geotermikus',
-                                'cserépkályha'=>'cserépkályha',
-                                'kandalló'=>'kandalló',
-                                'egyéb'=>'egyéb'
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
-                                
+                            {!! Form::select('heating',$heating,null,['class' => 'form-control']); !!}                               
                         </div>
 
                         {{-- Céges hirdetés --}}
 
                         <div class="form-group">
                             {!! Form::label('Céges hirdetés*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('ad_type',[
-                                null=>'nem',
-                                '1'=>'igen',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
+                            {!! Form::select('ad_type',[false=>'nem',true=>'igen',],null,['class' => 'form-control']); !!}
                         </div>
 
                       </div>
@@ -368,8 +308,20 @@ use App\property;
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group">
-                                {!! Form::label('Ingatlan egyéb leírása*',null,['class' => 'control-label']); !!}
-                                {!! Form::textarea('text',null,['class' => 'form-control', 'rows'=>'5', 'placeholder'=>'Írd ide a leírást...']); !!}
+                                {!! Form::label('Ingatlan leírása*(Magyar)',null,['class' => 'control-label']); !!}
+                                {!! Form::textarea('text_hun',null,['class' => 'form-control', 'rows'=>'5', 'placeholder'=>'Írd ide a leírást...']); !!}
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                {!! Form::label('Ingatlan leírása*(Deutch)',null,['class' => 'control-label']); !!}
+                                {!! Form::textarea('text_de',null,['class' => 'form-control', 'rows'=>'5', 'placeholder'=>'Írd ide a leírást...']); !!}
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                {!! Form::label('Ingatlan egyéb leírása*(English)',null,['class' => 'control-label']); !!}
+                                {!! Form::textarea('text_en',null,['class' => 'form-control', 'rows'=>'5', 'placeholder'=>'Írd ide a leírást...']); !!}
                             </div>
                         </div>
                     </div>
@@ -383,83 +335,19 @@ use App\property;
                         <!-- Első oszlop  -->
                         
                         <div class="col-lg-3 col-md-3">
-  
-                          {{-- Kilátás --}}
+
+                          <!-- Parkolás -->
+
                           <div class="form-group">
-                              {!! Form::label('Kilátás',null,['class' => 'control-label']); !!}
-                              {!! Form::select('look',[
-                                null=>'nem releváns',
-                                  'udvari'=>'udvari',
-                                  'utcai'=>'utcai',
-                                  'panorámás'=>'panorámás',
-                                  'kertre néző'=>'kertre néző'],  null,                              
-                                  ['class' => 'form-control']
-                              ); 
-                              !!}
-                                      
-                          </div>
-      
-  
-                          {{-- Tájolás --}}
-  
-                          <div class="form-group">
-                              {!! Form::label('Tájolás',null,['class' => 'control-label']); !!}
-                              {!! Form::select('orientation',[
-                                    null=>'nem releváns',
-                                  'észak'=>'észak',
-                                  'északkelet'=>'északkelet',
-                                  'kelet'=>'kelet',
-                                  'délkelet'=>'délkelet',
-                                  'dél'=>'dél',
-                                  'délnyugat'=>'délnyugat',
-                                  'nyugat'=>'nyugat',
-                                  'délkelet'=>'délkelet',
-                                  'északnyugat'=>'északnyugat'
-                                  ], null, 
-                                  ['class' => 'form-control']
-                              ); 
-                              !!}
-                          </div>
-  
-                          {{-- Parkolás --}}
-  
-                          <div class="form-group">
-  
                               {!! Form::label('Parkolás',null,['class' => 'control-label']); !!}
-                              {!! Form::select('parking',[
-                                null=>'nem releváns',
-                                  'garázs - az árban'=>'garázs - az árban',
-                                  'garázs - megvehető'=>'garázs - megvehető',
-                                  'kültéri - az árban'=>'kültéri - az árban',
-                                  'kültéri - megvehető'=>'kültéri - megvehető',
-                                  'utcán - ingyenes'=>'utcán - ingyenes',
-                                  'utcán - fizetős'=>'utcán - fizetős',
-                                  'teremgarázs - az árban'=>'teremgarázs - az árban',
-                                  'teremgarázs - megevhető'=>'teremgarázs - megevhető',
-                                  'parkolás az udvarban'=>'parkolás az udvarban'
-                                  ], null,
-                                  ['class' => 'form-control']
-                              ); 
-                              !!}
-  
+                              {!! Form::select('parking',$parking,null,['class' => 'form-control']); !!}
                           </div>
   
-                          {{-- Komfort fokozat --}}
+                          <!-- Komfort fokozat -->
   
                           <div class="form-group">
                               {!! Form::label('Komfort fokozat',null,['class' => 'control-label']); !!}
-                              {!! Form::select('comfort',[
-                                null=>'nem releváns',
-                                  'luxus'=>'luxus',
-                                  'duplakomfortos'=>'duplakomfortos',
-                                  'összkömfortos'=>'összkömfortos',
-                                  'komfortos'=>'komfortos',
-                                  'félkomfortos'=>'félkomfortos',
-                                  'komfort nélküli'=>'komfort nélküli'
-                                  ],null,
-                                  ['class' => 'form-control']
-                              ); 
-                              !!}
+                              {!! Form::select('comfort',$comfort,null,['class' => 'form-control']); !!}
                           </div>
                         </div><!-- elso oszlop vége -->
                         
@@ -467,37 +355,12 @@ use App\property;
                       
                         <div class="col-lg-3 col-md-3">
   
-                          {{-- Tetőtér --}}
-  
-                          <div class="form-group">
-                              {!! Form::label('Tetőtér',null,['class' => 'control-label']); !!}
-                              {!! Form::select('attic',[
-                                null=>'nem releváns',
-                                  'tetőtéri'=>'tetőtéri',
-                                  'nem tetőtéri'=>'nem tetőtéri',
-                                  'legfelső emelet, nem tetőtéri'=>'legfelső emelet, nem tetőtéri',
-                                  'zárószint'=>'zárószint',
-                                  'penthouse'=>'penthouse',
-                                  'egyéb'=>'egyéb'
-                                  ],null,
-                                  ['class' => 'form-control']
-                              ); 
-                              !!}
-                          </div>
   
                           {{-- Belmagasság --}}
   
                           <div class="form-group">
                               {!! Form::label('Belmagasság',null,['class' => 'control-label']); !!}
-                              {!! Form::select('room_height',[
-                                null=>'nem releváns',
-                                  '3m-nél alacsonyabb'=>'3m-nél alacsonyabb',
-                                  '3m-nél magasabb'=>'3m-nél magasabb'
-                                  ],null,
-                                  ['class' => 'form-control']
-                              ); 
-                              !!}
-                                  
+                              {!! Form::select('room_height',$room_height,null,['class' => 'form-control']); !!}
                           </div>
   
                           {{-- Fürdők száma --}}
@@ -520,71 +383,41 @@ use App\property;
                         <!-- Harmadik oszlop -->
   
                         <div class="col-lg-3 col-md-3">
-  
-  
-  
                           <div align="right" class="form-group form-inline">
-                              
                             <div class="col-sm-4">
                               {!! Form::label('Lift ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('lift',[
-                                null=>'nincs',
-                                '1'=>'van',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
+                              {!! Form::select('lift',[false=>'nincs',true=>'van'],null,['class' => 'form-control'] ); !!}
                             </div>
                             <div class="col-sm-4">
-                              {!! Form::label('Erkély ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('balcony',[
-                                null=>'nincs',
-                                '1'=>'van',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
-                            </div>
-                        
-                            <div class="col-sm-4">
+                                {!! Form::label('Erkély ',null,['class' => 'control-label']); !!}
+                                {!! Form::select('balcony',[false=>'nincs',true=>'van'],null,['class' => 'form-control']); !!}
+                              </div>
+                              <div class="col-sm-4">
+                                {!! Form::label('Terasz ',null,['class' => 'control-label']); !!}
+                                {!! Form::select('terrace',[false=>'nincs',true=>'van'],null,['class' => 'form-control']); !!}
+                              </div>
+                                <div class="col-sm-4">
                               {!! Form::label('Lékondi ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('aircondition',[
-                                null=>'nincs',
-                                '1'=>'van',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
+                              {!! Form::select('aircondition',[false=>'nincs',true=>'van'],null,['class' => 'form-control']); !!}
                             </div>
                           </div>
                           <div align="right" class="form-group">
                               {!! Form::label('Akadálymentesített ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('disabled',[
-                                null=>'nem',
-                                '1'=>'igen',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
+                              {!! Form::select('disabled',[false=>'nem',true=>'igen'],null,['class' => 'form-control']); !!}
                           </div>
                           <div align="right" class="form-group">
                               {!! Form::label('Kertkapcsolatos ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('garden',[
-                                null=>'nem',
-                                '1'=>'igen',
-                                ],null,                               
-                                ['class' => 'form-control']
-                            ); 
-                            !!}
+                              {!! Form::select('garden',[false=>'nem',true=>'igen'],null,['class' => 'form-control']); !!}
                           </div>
                         </div><!-- Harmadik oszlop vége -->
                       </div> <!-- Row -->
                     </div><!-- Container -->
               </div><!-- Panel-body -->
-  <div align="center">
-      <button class="btn btn-primary mb-5" type="submit" >MENTÉS</button>
-  </div>
-  </form>
+    <div align="center">
+        {!! Form::submit('MENTÉS', ['class'=>"btn btn-primary mb-5"]) !!}
+    </div>
+{!! Form::close() !!}
+  
 
 @endsection
 @section('scripts')

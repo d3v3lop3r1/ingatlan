@@ -9,6 +9,7 @@ class agent extends Model
    protected $fillable = [
     'level',
     'name',
+    'languages',
     'address',
     'tel',
     'email',

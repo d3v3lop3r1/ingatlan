@@ -29,7 +29,8 @@ class storeAgent extends FormRequest
             'email'=>'unique:agents|required',
             'tel'=>'required',
             'address'=>'required|max:100',
-            'provision'=>'required'
+            'provision'=>'required',
+            'languages'=>'required'
         ];
     }
 }
