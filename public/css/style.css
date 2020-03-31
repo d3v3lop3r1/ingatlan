@@ -43,6 +43,15 @@ iframe{
 	flex-basis: 100%;
 	margin: 10px 0;
 }
+.navbar{
+	float: right;
+}
+.navbar-icons{
+	float: right;
+}
+.navbar-user-name{
+	white-space: nowrap;
+}
 #navbar{
 	display: block;
 	float: right;
@@ -66,8 +75,6 @@ iframe{
 
 .carousel img{
 	flex-basis: 100%;
-}
-.carousel-banner{
 }
 
 .carousel-caption{
