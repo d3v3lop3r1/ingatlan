@@ -87,10 +87,15 @@ $room_height=[
                         {{-- Ügynök kiválasztása  --}}
 
                         <div class="form-group">
+                            {!! Form::label('Ügynök',null,['class' => 'control-label']); !!}
+                            {!! Form::select('agent_id',agent::pluck('name','id'),null,['placeholder'=>'--Válassz ügynököt--','class' => 'form-control','require']); !!}
+                        </div>
+
+                        {{-- <div class="form-group">
                             {!! Form::label('Ügynök:',null,['class' => 'control-label']); !!}
                             {{agent::where('id',$property->agent_id)->first()->name}}
                             {!! Form::hidden('agent_id',$property->agent_id)!!}
-                        </div>
+                        </div> --}}
 
                         {{-- Kliens kiválasztása  --}}
 
