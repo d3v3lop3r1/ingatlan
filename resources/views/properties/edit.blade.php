@@ -8,52 +8,10 @@ $subtype=config('property.subtype.hu');
 $region= config('property.region.hu');                      
 $floors=config('property.floors.hu');
 $condition=config('property.condition.hu');
-    
-$heating=[
-    0=>'nem releváns',
-    1=>'gáz(cirko)',
-    2=>'gáz(konvektor)',
-    3=>'gáz(héra)',
-    4=>'távfűtés',
-    5=>'távfűtés egyedi méréssel',
-    6=>'elektromos',
-    7=>'házközponti',
-    8=>'házközponti egyedi méréssel',
-    9=>'fan-coil',
-    10=>'geotermikus',
-    11=>'cserépkályha',
-    12=>'kandalló',
-    13=>'egyéb'
-    ];
-
-$parking=[
-    0=>'nem releváns',
-    1=>'garázs - az árban',
-    2=>'garázs - megvehető',
-    3=>'kültéri - az árban',
-    4=>'kültéri - megvehető',
-    5=>'utcán - ingyenes',
-    6=>'utcán - fizetős',
-    7=>'teremgarázs - az árban',
-    8=>'teremgarázs - megevhető',
-    9=>'parkolás az udvarban'
-    ];
-
-$comfort=[
-    0=>'nem releváns',
-    1=>'luxus',
-    2=>'duplakomfortos',
-    3=>'összkömfortos',
-    4=>'komfortos',
-    5=>'félkomfortos',
-    6=>'komfort nélküli'
-    ];
-
-$room_height=[
-    0=>'nem releváns',
-    1=>'3m-nél alacsonyabb',
-    2=>'3m-nél magasabb'
-    ];
+$heating=config('property.heating.hu');
+$parking=config('property.parking.hu');
+$comfort=config('property.comfort.hu');
+$room_height=config('property.room_height.hu');
 @endphp
 
 @extends('layout.main-simple')
@@ -218,21 +176,21 @@ $room_height=[
                         
                         <div class="form-group">
                             {!! Form::label('Attraktivitás',null,['class' => 'control-label']); !!}
-                            {!! Form::number('attraktivitas',null,['class' => 'form-control', 'placeholder'=>'Attraktivitás értéke (1-5)']); !!}
+                            {!! Form::number('attraktivitas',null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Állapot --}}
                         
                         <div class="form-group">
                             {!! Form::label('Állapot',null,['class' => 'control-label']); !!}
-                            {!! Form::number('allapot',null,['class' => 'form-control', 'placeholder'=>'Állapot értéke (1-5)']); !!}
+                            {!! Form::number('allapot',null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Extrák --}}
                         
                         <div class="form-group">
                             {!! Form::label('Extrák',null,['class' => 'control-label']); !!}
-                            {!! Form::number('extrak',null,['class' => 'form-control', 'placeholder'=>'Extrák értéke (1-5)']); !!}
+                            {!! Form::number('extrak',null,['class' => 'form-control']); !!}
                         </div>
 
 

@@ -63,11 +63,13 @@
                               <li><i class="fa fa-question-circle fa-sm"></i><a href="/segitseg-a-haz-korul"> Segítség a ház körül</a></li>
                             </ul>
                           </li>
-                          <li>
+                          
                             @if (Auth::check())
-                              <span class="text-danger mr-3">Üdvözöljük {{Auth::user()->name}}</span>
-                              <a href="/logout" class="button">Kilépés</a>
-
+                              @if (Auth::user()->email=='csernus@foxinfo.hu')
+                                <li><a href="/properties">Admin </a></li>
+                              @endif
+                                <span class="text-danger mr-3">Üdvözlünk {{Auth::user()->name}}</span>
+                                <a href="/logout" class="button">Kilépés</a>
                             @else 
                               <a href="/login" class="button">Belépés</a>
                             @endif
