@@ -67,14 +67,14 @@ $room_height=config('property.room_height.hu');
                         
                         <div class="form-group">
                             {!! Form::label('Aktív',null,['class' => 'control-label']); !!}
-                            {!! Form::select('active',[true=>'igen',false=>'nem'],null,['class' => 'form-control']); !!}
+                            {!! Form::select('active',['1'=>'igen',null=>'nem'],null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Kiemelt --}}
                         
                         <div class="form-group">
                             {!! Form::label('Kiemelt',null,['class' => 'control-label']); !!}
-                            {!! Form::select('kiemelt',[true=>'igen',false=>'nem'],null,['class' => 'form-control']); !!}
+                            {!! Form::select('kiemelt',['1'=>'igen',null=>'nem'],null,['class' => 'form-control']); !!}
                         </div>
 
                                                 {{--  Hirdetés tipusa  --}}
@@ -255,7 +255,7 @@ $room_height=config('property.room_height.hu');
 
                         <div class="form-group">
                             {!! Form::label('Céges hirdetés*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('ad_type',[false=>'nem',true=>'igen',],null,['class' => 'form-control']); !!}
+                            {!! Form::select('ad_type',['1'=>'igen',null=>'nem'],null,['class' => 'form-control']); !!}
                         </div>
 
                       </div>
@@ -349,28 +349,28 @@ $room_height=config('property.room_height.hu');
                           <div align="right" class="form-group form-inline">
                             <div class="col-sm-4">
                               {!! Form::label('Lift ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('lift',[false=>'nincs',true=>'van'],null,['class' => 'form-control'] ); !!}
+                              {!! Form::select('lift',[null=>'nincs','1'=>'van'],null,['class' => 'form-control'] ); !!}
                             </div>
                             <div class="col-sm-4">
                                 {!! Form::label('Erkély ',null,['class' => 'control-label']); !!}
-                                {!! Form::select('balcony',[false=>'nincs',true=>'van'],null,['class' => 'form-control']); !!}
+                                {!! Form::select('balcony',[null=>'nincs','1'=>'van'],null,['class' => 'form-control']); !!}
                               </div>
                               <div class="col-sm-4">
                                 {!! Form::label('Terasz ',null,['class' => 'control-label']); !!}
-                                {!! Form::select('terrace',[false=>'nincs',true=>'van'],null,['class' => 'form-control']); !!}
+                                {!! Form::select('terrace',[null=>'nincs','1'=>'van'],null,['class' => 'form-control']); !!}
                               </div>
                                 <div class="col-sm-4">
                               {!! Form::label('Lékondi ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('aircondition',[false=>'nincs',true=>'van'],null,['class' => 'form-control']); !!}
+                              {!! Form::select('aircondition',[null=>'nincs','1'=>'van'],null,['class' => 'form-control']); !!}
                             </div>
                           </div>
                           <div align="right" class="form-group">
                               {!! Form::label('Akadálymentesített ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('disabled',[false=>'nem',true=>'igen'],null,['class' => 'form-control']); !!}
+                              {!! Form::select('disabled',[null=>'nem','1'=>'igen'],null,['class' => 'form-control']); !!}
                           </div>
                           <div align="right" class="form-group">
                               {!! Form::label('Kertkapcsolatos ',null,['class' => 'control-label']); !!}
-                              {!! Form::select('garden',[false=>'nem',true=>'igen'],null,['class' => 'form-control']); !!}
+                              {!! Form::select('garden',[null=>'nem','1'=>'igen'],null,['class' => 'form-control']); !!}
                           </div>
                         </div><!-- Harmadik oszlop vége -->
                       </div> <!-- Row -->
