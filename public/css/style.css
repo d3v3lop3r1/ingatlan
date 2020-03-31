@@ -135,7 +135,7 @@ p {
 	bottom: 40px;
 	padding: 15px 15px;
 	margin: auto;
-	background-color:rgba(25, 85, 120, 0.7);
+	background-color:rgba(25, 85, 120, 0.8);
 	z-index: 1001;
 }
 
@@ -321,6 +321,10 @@ p {
 }
 .card{
 	line-height: normal;
+}
+.card-header{
+	background-color: rgba(50, 85, 120, 1) ;
+	color: white;
 }
 .kiskockak{
 	white-space: nowrap;
