@@ -148,7 +148,7 @@ $room_height=config('property.room_height.hu');
                         <th colspan="2"></th>
                       </tr>
                       <tr>
-                        <td colspan="4"><span class="index-text">{{$property->text_hun}}</span> </td>
+                        <td colspan="4"><span class="index-text"><?php echo $property->text_hun ?></span> </td>
                       </tr>
                       
                     </tbody>
