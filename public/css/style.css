@@ -312,7 +312,9 @@ p {
 .index-agent h5{
 	font-size: medium;
 }
-
+.index-text{
+	font-family: 'Roboto', sans-serif;
+}
 .kiskockak{
 	white-space: nowrap;
 }
