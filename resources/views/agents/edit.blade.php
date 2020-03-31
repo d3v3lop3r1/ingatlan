@@ -38,6 +38,13 @@
             {!! Form::text('tel',null,['class' => 'form-control', 'placeholder'=>'Írd be a telefonszámot...']); !!}
         </div>
 
+        {{-- Telefon --}}
+        
+        <div class="form-group">
+            {!! Form::label('Telefon*',null,['class' => 'control-label']); !!}
+            {!! Form::text('tel2',null,['class' => 'form-control', 'placeholder'=>'Írd be a telefonszámot...']); !!}
+        </div>
+
         {{-- Cím --}}
 
         <div class="form-group">

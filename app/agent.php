@@ -12,6 +12,7 @@ class agent extends Model
     'languages',
     'address',
     'tel',
+    'tel2',
     'email',
     'provision',
     'photo'

@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-use App\Http\Requests\storeClient;
+use App\Http\Requests\StoreClient;
 use Illuminate\Http\Request;
 use App\client;
 use App\agent;
@@ -35,7 +35,7 @@ class ClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(storeClient $request)
+    public function store(StoreClient $request)
     {
         client::create($request->all());
         return redirect('clients');
