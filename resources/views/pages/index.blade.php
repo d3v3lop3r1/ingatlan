@@ -104,12 +104,6 @@ $room_height=config('property.room_height.hu');
                         <th>Fűtés</th>
                         <td>{{$heating[$property->heating]}}</td>
                       </tr>
-                      <tr>
-                        <th>Kilátás</th>
-                        <td>{{$property->look}}</td>
-                        <th>Tájolás</th>
-                        <td>{{$property->orientation}}</td>
-                      </tr>
 
                       <tr>
                         <th>Extrák</th>
