@@ -7,7 +7,17 @@
         $count_city = property::where('city',$city)->count();
         $cities[$city]= $city . '(' . $count_city . ')';
     }
-@endphp
+    $type_id=config('property.type_id.hu');
+    $list_type=config('property.list_type.hu');
+    $subtype=config('property.subtype.hu');
+    $region= config('property.region.hu');                      
+    $floors=config('property.floors.hu');
+    $condition=config('property.condition.hu');
+    $heating=config('property.heating.hu');
+    $parking=config('property.parking.hu');
+    $comfort=config('property.comfort.hu');
+    $room_height=config('property.room_height.hu');
+    @endphp
 <div class="container">
     <div class="row drop-shadow search-box center-xs">
         <div class="col-auto">
@@ -15,29 +25,11 @@
                 <div class="row center-xs">
                         <div class="col-auto">
                             {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
-                            {!! Form::select('type_id',[
-                                0=>'Eladó',
-                                3=>'Kiadó',
-                            ],null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); 
-                            !!}
+                            {!! Form::select('type_id',$type_id,null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!} 
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
-                            {!! Form::select('list_type',[
-                                null=>'Mind',
-                                1=>'Lakás',
-                                2=>'Ház',
-                                3=>'Nyaraló',
-                                4=>'Garázs',
-                                5=>'Iroda',
-                                6=>'Ipari',
-                                7=>'Raktár',
-                                8=>'Üzlethelyiség',
-                                9=>'Telek-föld',
-                                10=>'Vendéglátás',
-                                11=>'Egyéb',
-                                ],null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); 
-                            !!}
+                            {!! Form::select('list_type',$list_type,null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!} 
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Hol?',null,['class' => 'search-label', 'for'=>'city']); !!}
