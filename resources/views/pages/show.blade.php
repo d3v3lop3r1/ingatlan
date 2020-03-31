@@ -3,7 +3,7 @@ use App\photo;
 use Carbon\Carbon;
 use Intervention\Image\ImageManager;
 use App\property;
-
+$type_id=config('property.type_id.hu');
 ?>
 @extends('layout.main')
 @section('tartalom')
@@ -45,26 +45,13 @@ use App\property;
                             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 ingatlan-box mb-3">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header}}</a></h5>
+                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_hun}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php
                                                     $dt = Carbon::parse($property->updated_at);
                                                     $days=$dt->diffInDays();
-                                                    switch($property->type_id){
-                                                        case 0:
-                                                            echo 'Eladó';
-                                                            break;
-                                                        case 1:
-                                                            echo 'Eladó cserelehetőséggel';
-                                                            break;
-                                                        case 2:
-                                                            echo 'Kiadó eladási opcióval';
-                                                            break;
-                                                        case 3:
-                                                            echo 'Kiadó';
-                                                            break;
-                                                    }
+                                                    echo $type_id[$property->type_id];
                                                     if ($days < 14){
                                                         echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
                                                     }
