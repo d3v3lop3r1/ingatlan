@@ -53,7 +53,7 @@ $type_id=config('property.type_id.de');
                                                     $days=$dt->diffInDays();
                                                     echo $type_id[$property->type_id];
                                                     if ($days < 14){
-                                                        echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
+                                                        echo "<span class='badge badge-secondary badge-danger ml-2'>Neu</span>";
                                                     }
                                                     ?>
                                                 </div>
