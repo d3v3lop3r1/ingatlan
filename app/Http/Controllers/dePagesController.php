@@ -15,9 +15,7 @@ class dePagesController extends Controller
     {
         $properties=property::Aktiv()->Kiemelt()->inRandomOrder()->limit(3)->get();
         $prop_elado_lakasok_cheap=property::select(['id','header_de','price','city','updated_at'])->Aktiv()->Elado()->Lakasok()->Cheap()->limit(5)->get();
-        dd($prop_elado_lakasok_cheap);
         $prop_elado_hazak_cheap  =property::select(['id','header_de','price','city','updated_at'])->Aktiv()->Elado()->Hazak()  ->Cheap()->limit(5)->get();
-        dd($prop_elado_hazak_cheap);
         return view('de_pages.home',compact('properties','prop_elado_lakasok_cheap','prop_elado_hazak_cheap'));
     }
     public function showing()
