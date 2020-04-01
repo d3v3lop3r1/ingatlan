@@ -21,7 +21,7 @@
 <div class="container">
     <div class="row drop-shadow search-box center-xs">
         <div class="col-auto">
-                {!! Form::open(['action'=>'PagesController@search', 'method'=>'POST', 'class'=>'']); !!}
+                {!! Form::open(['action'=>'dePagesController@search', 'method'=>'POST', 'class'=>'']); !!}
                 <div class="row center-xs">
                         <div class="col-auto">
                             {!! Form::label('Kaufen/Mieten',null,['class' => 'search-label', 'for'=>'type_id']); !!}
