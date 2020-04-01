@@ -12,7 +12,7 @@ $type_id=config('property.type_id.de');
         <div class="row">
             <div class="col d-none d-lg-block">
                 <div class="card">
-                    <h4 class="center-xs card-header">Eladó olcsóbb lakások</h4>
+                    <h4 class="center-xs card-header">Günstigere Häuser zum Verkauf</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -38,7 +38,7 @@ $type_id=config('property.type_id.de');
                     @endforeach
                 </div>
                 <div class="card mt-2">
-                    <h4 class="card-header center-xs">Eladó olcsóbb házak</h4>
+                    <h4 class="card-header center-xs">Billigere Häuser zum Verkauf</h4>
                     @foreach ($prop_elado_hazak_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -65,7 +65,7 @@ $type_id=config('property.type_id.de');
                 </div>                 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                <h1 class="text-uppercase center-xs">kiemelt ajánlataink</h1>
+                <h1 class="text-uppercase center-xs">Unsere Sonderangebote</h1>
                 <div class="row center-xs ingatlan-sor">
                     @foreach ($properties as $property)                       
                             <?php 
@@ -83,7 +83,7 @@ $type_id=config('property.type_id.de');
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_de}}</a></h5>
+                                            <h5><a class="stretched-link" href="/de/index/{{$property->id}}">{{$property->header_de}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php

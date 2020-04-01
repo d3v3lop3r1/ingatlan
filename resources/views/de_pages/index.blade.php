@@ -45,14 +45,14 @@ $room_height=config('property.room_height.de');
                     <thead class="thead-dark pt-3">
                       <tr>
                         <th>id {{70000+$property->id}}</th>
-                        <th colspan="3">{{$property->header_hun}}</th>
+                        <th colspan="3">{{$property->header_de}}</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th>Régió</th>
+                        <th>Region</th>
                         <td>{{$region[$property->region]}}</td>
-                        <th>Attraktivitás</th>
+                        <th>Atraktivität</th>
                         <td >
                           @for ($i = 0; $i < $property->attraktivitas ; $i++)
                             <i class="fas fa-star stars"></i>
@@ -60,9 +60,9 @@ $room_height=config('property.room_height.de');
                         </td>
                       </tr>
                       <tr>
-                        <th>Város</th>
+                        <th>Stadt</th>
                         <td>{{$property->city}}</td>
-                        <th>Állapot</th>
+                        <th>Zustand</th>
                         <td>
                           @for ($i = 0; $i < $property->allapot ; $i++)
                             <i class="fas fa-star stars"></i>
@@ -70,14 +70,14 @@ $room_height=config('property.room_height.de');
                         </td>
                       </tr>
                       <tr>
-                        <th>Frissítve</th>
+                        <th>letztes Update</th>
                         <td>
                           <?php
                               $dt = Carbon::parse($property->updated_at);
-                              echo $dt->diffInDays()." napja";
+                              echo "Vor " . $dt->diffInDays()." Tag(en)";
                           ?>
                         </td>
-                        <th>Extrák</th>
+                        <th>Extras</th>
                         <td>
                           @for ($i = 0; $i < $property->extrak ; $i++)
                             <i class="fas fa-star stars"></i>
@@ -86,27 +86,27 @@ $room_height=config('property.room_height.de');
 
                       </tr>
                       <tr>
-                        <th>Telek méret</th>
+                        <th>Größe der Grundstück</th>
                         <td>{{$property->land_area}} m2</td>
-                        <th>Lakóterőlet</th>
+                        <th>Größe des Wohnfläche</th>
                         <td>{{$property->area}} m2</td>
                       </tr>
 
                       <tr>
-                        <th>Szobák száma</th>
-                        <td>{{$property->room_no}} db</td>
-                        <th>Fürdők száma</th>
-                        <td>{{$property->bathroom_no}} db</td>
+                        <th>Zahl der Zimmer</th>
+                        <td>{{$property->room_no}}</td>
+                        <th>Zahl der Badezimmer</th>
+                        <td>{{$property->bathroom_no}}</td>
                       </tr>
                       <tr>
-                        <th>Állapot</th>
+                        <th>Zustand</th>
                         <td>{{$condition[$property->condition]}}</td>
-                        <th>Fűtés</th>
+                        <th>Heizung</th>
                         <td>{{$heating[$property->heating]}}</td>
                       </tr>
 
                       <tr>
-                        <th>Extrák</th>
+                        <th>Extras</th>
                         <td colspan="3">
                           @if ($property->lift)
                             <img class="pl-3" src="/images/extras_icons/Elevator_icon.png" height="50" alt="">
@@ -127,7 +127,7 @@ $room_height=config('property.room_height.de');
                         </td>
                       </tr>
                       <tr  class="table-borderless index-price">
-                        <td align="right" class=" pt-3"><h5 class="text-white" >Ár</h5></td>
+                        <td align="right" class=" pt-3"><h5 class="text-white" >Preis</h5></td>
                         <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
                         <td class=" pt-3 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></td>
                         <td class=" pt-3 pr-3"></th>
@@ -142,7 +142,7 @@ $room_height=config('property.room_height.de');
                         <th colspan="2"></th>
                       </tr>
                       <tr>
-                        <td colspan="4"><span class="index-text"><?php echo $property->text_hun ?></span> </td>
+                        <td colspan="4"><span class="index-text"><?php echo $property->text_de ?></span> </td>
                       </tr>
                       
                     </tbody>
@@ -158,7 +158,9 @@ $room_height=config('property.room_height.de');
                       <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                       <div class="media-body">
                         <h5 class="mt-0"><strong>{{$property->agents->name}}</strong></h5>
-                        <p class="pl-1 pr-1"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
+                        <p class="pl-1 pr-1"><small>Sollten Sie Fragen haben, bitte nehmen Sie den Kontakt mit unseren Agent auf.
+                          Falls Sie kein ungarisch Sprechen, dann melden Sie sich bitte bei Herrn Sztarovics <br>
+                          0049-1578-400 1214 oder 0036-20-777 2000 <br> er hilft Sie weiter.</small></p>
                       </div>
                     </div>
                     <div class="card">
