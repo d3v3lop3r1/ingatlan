@@ -31,11 +31,11 @@ class dePagesController extends Controller
 
         $type_ids=config('property.type_id.de');
         $type_id = $request->type_id;
-        $mutato .= $type_ids[$type_id];
+        $mutato .= $type_ids[$type_id] . '-';
 
         $list_types=config('property.list_type.de');
         $list_type = $request->list_type;
-        $mutato .= $list_types[$list_type];
+        $mutato .= $list_types[$list_type] ;
 
         $city = $request->city;
         if ($city){
