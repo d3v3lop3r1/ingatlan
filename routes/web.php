@@ -100,3 +100,8 @@ Route::get('/properties/lista', 'PropertyController@lista');
 
 Auth::routes();
 
+Route::prefix('de')->group(function () {
+    Route::get('users', function () {
+        return 'hello';
+    });
+});
