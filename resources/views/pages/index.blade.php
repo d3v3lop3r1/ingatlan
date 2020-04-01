@@ -186,7 +186,7 @@ $room_height=config('property.room_height.hu');
                   <div class="col-xs-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4>Ingatlant venne? Ingatlant bérelne?</h4>
+                        <h4>Ingatlant venne?<br> Ingatlant bérelne?</h4>
                       </div>
                       <div class="card-body">
                         <ul>
@@ -205,7 +205,7 @@ $room_height=config('property.room_height.hu');
                         </ul>  
                       </div>
                       <div class="card-header">
-                          <h4>HITELFELVÉTEL?</h4>
+                          <h4>Hitelfelvétel?</h4>
                       </div>
                       <div class="card-body">
                         <p>
