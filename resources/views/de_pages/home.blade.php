@@ -29,7 +29,7 @@ use App\property;
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="badge badge-info">{{$prop->city}}</span><br>
-                                    {{$prop->header_hun}}<br>
+                                    {{$prop->header_de}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
                         
@@ -51,7 +51,7 @@ use App\property;
                                     $photo_file = "uploads/placeholder.png";
                                 }
                             @endphp
-                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_hun}}" width="50" height="50">
+                            <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_de}}" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="badge badge-info">{{$prop->city}}</span><br>
