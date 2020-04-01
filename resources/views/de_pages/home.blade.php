@@ -156,22 +156,22 @@ $type_id=config('property.type_id.de');
                 <div class="row">
                     <section class="col-xs-12 col-sm-4">
                         <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
-                        <h3 class="mt-2">Ön is ingatlantulajdonos?</h3>
-                        <h4>Ingatlanát megnyerő profillal mutatjuk be</h4> 
+                        <h3 class="mt-2">Sind Sie auch ein Immobilienbesitzer?</h3>
+                        <h4>Ihre Immobilie wird mit einem Gewinnerprofil präsentiert</h4> 
                         <p class="text-uppercase text-info">
-                            2 nyelven<br>
-                            3 országban<br>
-                            4+ ingatlanportálon is<br>
-                            a mielőbbi siker érdekében!</strong>
+                            2 Sprachen<br>
+                            3 Länder<br>
+                            4+ Immobilienportal<br>
+                            für den Erfolg so schnell wie möglich!</strong>
                         </p> 
                         <ul class="">
-                            <li>Teljes körű ingyenes tájékoztatás</li>
-                            <li>Ingatlanszemlékre való kíséret</li>
-                            <li>Fordítások, tolmácsolások  német-magyar nyelven érdeklődőknek</li>
-                            <li>Adás- vételi Foglaló, vagy  Előszerződés, szerződések tervezése</li>
-                            <li>Megállapodások hitelesítése ügyvéd közreműködésével</li>
-                            <li>Földhivatalnál, intézménynél is eljárunk az Ön érdekében</li>
-                            <li>Tanácsadás Adó-/Illetéktérítések-/Tulajdonjog bejegyzésével kapcsolatban, és más hivataloknál, intézményeknél</li>
+                            <li>Vollständige kostenlose Informationen</li>
+                            <li>Immobilien Escort</li>
+                            <li>Übersetzungen, Dolmetschen für Deutsch-Ungarisch Interessierte</li>
+                            <li>Planung von Kauf- und Kaufverträgen oder Vorverträgen</li>
+                            <li>Authentifizierung von Vereinbarungen mit Unterstützung eines Anwalts</li>
+                            <li>Wir handeln auch in Ihrem Grundbuchamt zu Ihrem Vorteil</li>
+                            <li>Beratung bei der Registrierung von Steuer- / Gebührenerstattungen / Eigentumsrechten sowie bei anderen Ämtern und Institutionen</li>
                         </ul>
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
@@ -191,40 +191,33 @@ $type_id=config('property.type_id.de');
                                 <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                         </div>
                         <h4 class="mt-2">
-                        Önnek is van információja 
-                        eladandó, 
-                        kiadandó 
-                        ingatlanok felől?
+                            Sie haben auch Informationen verkauft werden, ausgestellt werden Immobilien?
                         </h4>
                         <p>
-                        akkor egy
-                        jövedelmező kereseti
-                        lehetőséget biztosíthatunk Önnek is!
-                        
-                        Legyen Ön is Alkalmi Ügynökünk –
-                        Ingatlanfox* Agent
-                        
-                        Jelentkezzen 
-                        az egyedülálló 
-                        lehetőségre
+                            dann eins lukratives Ergebnis Wir können Ihnen die Möglichkeit geben!
+                        </p>
+                        <p>
+                            Werden Sie unser Gelegenheitsagent - Ingatlanox * Agent
+                        </p>
+                        Einloggen! Es ist einzigartig Gelegenheit
                         </p> 
                     </section>
                 </div>
                 <div class="jumbotron  hide visible-lg visible-md" >
-                    <h1>KÜLFÖLDÖN VAN? NEM  ÉR RÁ?</h1>
-                    <p class="lead"> Ingatlanfox a baranya megyei Gondnok, háza felügyelője, megvédi tulajdonát!</p>
+                    <h1>IST EIN AUSLÄNDISCHES LAND? TUT ES NICHT?</h1>
+                    <p class="lead"> Ingatlanox ist ein Hausmeister aus Baranya County. Ihr Hausverwalter schützt Ihr Eigentum!</p>
                 </div>
                 <div class="container" id="map-container">
-                    <h3>Hirdetéseink a térképen</h3>
+                    <h3>Unsere Anzeigen auf der Karte</h3>
                     <div id="map" class="container"></div>
                 </div>
             </div> 
             <div class="col d-none d-lg-block center-xs">
                 <div class="card">
-                    <h4 class="card-header">Lakáshitel-kalkulátor</h4>
+                    <h4 class="card-header">Home Loan Calculator</h4>
                     <iframe class="mt-2" id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>            
 
-                    <h4>CSOK településlista</h4>
+                    <h4>CSOK Ortsliste</h4>
                     <iframe id="csok-map" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1qH4VJVp5xs6vaKHyEHwmKth3kFMj4AP9&ll=46.19367658681184%2C18.40386481697169&z=10" allowfullscreen ></iframe>
                 </div>
 
