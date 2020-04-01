@@ -37,18 +37,18 @@
                                 aria-haspopup="true" aria-expanded="false">Mieten<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><a href="/osszes-kiado-ingatlan">Összes ingatlan</a></li>
-                                  <li><a href="/kiado-lakasok">Wohnung</a></li>
-                                  <li><a href="/kiado-hazak">Haus</a></li>
-                                  <li><a href="/kiado-nyaralok">Ferienobjekte</a></li>
-                                  <li><a href="/kiado-garazsok">Garage</a></li>
-                                  <li><a href="/kiado-irodak">Büro</a></li>
-                                  <li><a href="/kiado-ipari">Gewerbeimmobilien</a></li>
-                                  <li><a href="/kiado-raktarak">Lager-Lagerhalle</a></li>
-                                  <li><a href="/kiado-uzlethelyisegek">Verkaufslokal</a></li>
-                                  <li><a href="/kiado-telek-fold">Grundstück-Land</a></li>
-                                  <li><a href="/kiado-vendeglatas">Gastronomoie-Hotel</a></li>
-                                  <li><a href="/kiado-egyeb">Sonstiges</a></li>
+                                  <li><a href="">Összes ingatlan</a></li>
+                                  <li><a href="">Wohnung</a></li>
+                                  <li><a href="">Haus</a></li>
+                                  <li><a href="">Ferienobjekte</a></li>
+                                  <li><a href="">Garage</a></li>
+                                  <li><a href="">Büro</a></li>
+                                  <li><a href="">Gewerbeimmobilien</a></li>
+                                  <li><a href="">Lager-Lagerhalle</a></li>
+                                  <li><a href="">Verkaufslokal</a></li>
+                                  <li><a href="">Grundstück-Land</a></li>
+                                  <li><a href="s">Gastronomoie-Hotel</a></li>
+                                  <li><a href="">Sonstiges</a></li>
                                 </ul>
                               </li>
                               <li class="dropdown">
@@ -56,12 +56,12 @@
                                 aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><i class="fas fa-info"></i><a href="/jo-tudni"> Wissenwertes</a></li>
-                                  <li><i class="fas fa-home"></i><a href="/tulajdonosoknak"> Für Eigentümer</a></li>
-                                  <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek"> Für Kaufer-Mieter</a></li>
-                                  <li><i class="fas fa-tools"></i><a href="/ingatlanfox-a-gondnok"> Hausverwaltung</a></li>
-                                  <li><i class="fas fa-hammer"></i><a href="/felujitasok-atepitesek-kivitelezese"> Renovieren-Umbauen</a></li>
-                                  <li><i class="fa fa-question-circle fa-sm"></i><a href="/segitseg-a-haz-korul"> Hilfe rund um Haus</a></li>
+                                  <li><i class="fas fa-info"></i><a href=""> Wissenwertes</a></li>
+                                  <li><i class="fas fa-home"></i><a href=""> Für Eigentümer</a></li>
+                                  <li><i class="fas fa-money-bill-wave"></i><a href=""> Für Kaufer-Mieter</a></li>
+                                  <li><i class="fas fa-tools"></i><a href=""> Hausverwaltung</a></li>
+                                  <li><i class="fas fa-hammer"></i><a href=""> Renovieren-Umbauen</a></li>
+                                  <li><i class="fa fa-question-circle fa-sm"></i><a href=""> Hilfe rund um Haus</a></li>
                                 </ul>
                               </li>
                               
