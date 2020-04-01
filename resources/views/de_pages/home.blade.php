@@ -55,7 +55,7 @@ use App\property;
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="badge badge-info">{{$prop->city}}</span><br>
-                                    {{$prop->header}}<br>
+                                    {{$prop->header_de}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
                         
