@@ -149,9 +149,9 @@ $type_id=config('property.type_id.de');
                     
                 </div>
                 <div class="jumbotron" >
-                    <h1>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</h1>
-                    <h4>Akkor jó helyen jár.</h4>
-                    <p>Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
+                    <h1>WÜRDEN SIE IN DÉLDUNÁNTÚL EIN EIGENTUM KAUFEN ODER MIETEN?</h1>
+                    <h4>Dann sind Sie hier richtig.</h4>
+                    <p>Wir helfen Ihnen auch in Baranya, Pécs, Harkány und Siklós!</p>
                 </div>
                 <div class="row">
                     <section class="col-xs-12 col-sm-4">
@@ -176,38 +176,15 @@ $type_id=config('property.type_id.de');
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
                         <img class="img-responsive center-block img-thumbnail" src="/images/sample-house/architecture-21805_640.jpg" alt="Ház Eladó">
-                        <h4 class="mt-2">Ingatlant venne?<br>
-                        ingatlant bérelne?</h4>
+                        <h4 class="mt-2">Würden Sie eine Immobilie kaufen?<br> Würden Sie eine Immobilie mieten?</h4>
                         <ul class="">
-                            <li>Személyesen kapcsolatfelvétel,
-                            baráti tanácsadás az Ön érdekében</li>
-                            <li>Kíséret Ingatlanszemlékre,
-                            földhivatalba, Exposé, stb.</li>
-                            <li>Német-magyar tolmács más
-                            anyanyelvű eladók-kiadók esetén</li>
-                            <li>Előszerződés írása, megállapodások
-                            hitelesítése ügyvédnél</li>
-                            <li>Ingatlanvétel után is segítünk mint
-                            Gondnoka a távollétében</li>
-                            <li>Felújításokat is vállal Projektfox
-                            építkező brigádunk</li>
-                        </ul>                  
-                        <h4>Hitelfelvétel?</h4>
-                        <p>
-                            Intézkedünk hogy a legjobb ajánlatot
-                            kapja! Szakemberünkkel felveszi a
-                            kapcsolatot aki kikeresi Önnek is az
-                            aktuálisan legjobbat!
-                        </p> 
-                        <h4>CSOK?</h4>   
-                        <p>
-                            Olyan térségban választ ingatlant
-                            ahol a Magyar kormány átvállalja az
-                            ingatlan teljes költségét? Kérdezzen
-                            bennünket, szakemberünk akkor is
-                            fog tud segíteni ha a listánkban nem
-                            talált megfelelőt!
-                        </p>
+                            <li>Persönlicher Kontakt, freundliche Beratung zu Ihrem Vorteil</li>
+                            <li>Eskorte zur Immobilieninspektion, zum Grundbuchamt, zum Exposé usw.</li>
+                            <li>Deutsch-ungarischer Dolmetscher für Verkäufer und Verleger in anderen Muttersprachen</li>
+                            <li>Schreiben eines Vorvertrags, Bescheinigung von Vereinbarungen mit einem Anwalt</li>
+                            <li>Wir helfen Ihnen als Hausmeister in Ihrer Abwesenheit auch nach dem Kauf einer Immobilie/li>
+                            <li>Unser Projektfox-Bauteam führt ebenfalls Renovierungsarbeiten durch</li>
+                          </ul>                  
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
                         <div class="embed-responsive embed-responsive-16by9">
