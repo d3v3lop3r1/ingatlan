@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>Ingatlanfox a transzparens ingatlanügynök</title>
-<script src="https://cdn.tiny.cloud/1/wm31sok6mex7izbsv8rxfnu38eit5ojpg9rqi0kspuez4rlz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/p6m8lhexspx7dmy6l8rqm29mvnlrn9xabxoswnh5uu7l3nfk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
         selector:'textarea',
