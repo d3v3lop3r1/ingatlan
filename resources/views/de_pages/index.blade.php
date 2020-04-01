@@ -174,7 +174,7 @@ $room_height=config('property.room_height.de');
                   <div class="col-xs-12 pt-3">
                     <div class="card w3-padding w3-margin-bottom w3-small">
                       <div class="card-header">
-                        <h4>Hirdetés helye a térképen:</span></h4>
+                        <h4>Anzeigenposition auf der Karte:</span></h4>
                       </div>
                       <div class="card-body">
                         <iframe
@@ -188,47 +188,28 @@ $room_height=config('property.room_height.de');
                   <div class="col-xs-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4>Ingatlant venne?<br> Ingatlant bérelne?</h4>
+                        <h4>Würden Sie eine Immobilie kaufen?<br> Würden Sie eine Immobilie mieten?</h4>
                       </div>
                       <div class="card-body">
                         <ul>
-                          <li>Személyesen kapcsolatfelvétel,
-                          baráti tanácsadás az Ön érdekében</li>
-                          <li>Kíséret Ingatlanszemlékre,
-                          földhivatalba, Exposé, stb.</li>
-                          <li>Német-magyar tolmács más
-                          anyanyelvű eladók-kiadók esetén</li>
-                          <li>Előszerződés írása, megállapodások
-                          hitelesítése ügyvédnél</li>
-                          <li>Ingatlanvétel után is segítünk mint
-                          Gondnoka a távollétében</li>
-                          <li>Felújításokat is vállal Projektfox
-                          építkező brigádunk</li>
+                          <li>Persönlicher Kontakt, freundliche Beratung zu Ihrem Vorteil</li>
+                          <li>Eskorte zur Immobilieninspektion, zum Grundbuchamt, zum Exposé usw.</li>
+                          <li>Deutsch-ungarischer Dolmetscher für Verkäufer und Verleger in anderen Muttersprachen</li>
+                          <li>Schreiben eines Vorvertrags, Bescheinigung von Vereinbarungen mit einem Anwalt</li>
+                          <li>Wir helfen Ihnen als Hausmeister in Ihrer Abwesenheit auch nach dem Kauf einer Immobilie/li>
+                          <li>Unser Projektfox-Bauteam führt ebenfalls Renovierungsarbeiten durch</li>
                         </ul>  
                       </div>
                       <div class="card-header">
-                          <h4>Hitelfelvétel?</h4>
+                          <h4>Borgen?</h4>
                       </div>
                       <div class="card-body">
                         <p>
-                          Intézkedünk hogy a legjobb ajánlatot
-                          kapja! Szakemberünkkel felveszi a
-                          kapcsolatot aki kikeresi Önnek is az
-                          aktuálisan legjobbat!
+                          Wir machen das beste Angebot
+                          bekommt! Unser Spezialist holt das ab
+                          Kontakt, der auch Sie sucht
+                          derzeit das beste!
                         </p> 
-                      </div>
-                      <div class="card-header">
-                        <h4>CSOK?</h4>   
-                      </div>
-                      <div class="card-body">
-                          <p>
-                          Olyan térségban választ ingatlant
-                          ahol a Magyar kormány átvállalja az
-                          ingatlan teljes költségét? Kérdezzen
-                          bennünket, szakemberünk akkor is
-                          fog tud segíteni ha a listánkban nem
-                          talált megfelelőt!
-                        </p>
                       </div>
                       </div>
                     </div>  
@@ -240,13 +221,13 @@ $room_height=config('property.room_height.de');
       </div>
       <div class="container-fluid hide visible-lg visible-md center" >
         <div class="jumbotron" >
-              <h1>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</h1>
-              <h4>Akkor jó helyen jár.</h4>
-              <p>Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
+              <h1>WÜRDEN SIE IN DÉLDUNÁNTÚL EIN EIGENTUM KAUFEN ODER MIETEN?</h1>
+              <h4>Dann sind Sie hier richtig.</h4>
+              <p>Wir helfen Ihnen auch in Baranya, Pécs, Harkány und Siklós!</p>
         </div>
       </div>
       <div class="container" id="map-container">
-          <h3>Hirdetéseink a térképen</h3>
+          <h3>Unsere Anzeigen auf der Karte</h3>
           <div id="map" class="container"></div>
       </div>
 @endsection
