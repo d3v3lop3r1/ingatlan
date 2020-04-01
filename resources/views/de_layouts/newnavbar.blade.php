@@ -65,34 +65,36 @@
                                 </ul>
                               </li>
                               
-                                @if (Auth::check())
-                                  @if (Auth::user()->email=='csernus@foxinfo.hu'||Auth::user()->email=='sztarovics@foxinfo.hu' )
-                                    <li class="dropdown">
-                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                      aria-haspopup="true" aria-expanded="false">ADMIN<span class="caret"></span></a> 
-                                      <ul class="dropdown-menu">
-                                        <li><a href="#"> </a></li>
-                                        <li><a href="/properties"> Ingatlan lista</a></li>
-                                        <li><a href="/properties/create"> Új ingatlan</a></li>
-                                        <li><a href="/agents"> Ügynök lista</a></li>
-                                        <li><a href="/agents/create"> Új ügynök</a></li>
-                                        <li><a href="/clients"> Kliens lista</a></li>
-                                        <li><a href="/clients/create"> Új kliens</a></li>
-                                      </ul>
-                                    </li>
-                                  @endif
-                                    <li class="nav-item">
-                                    <span class="text-primary navbar-user-name mr-3">Hello {{Auth::user()->name}}</span>
-                                    </li>
-                                    <li class="nav-item">
-                                    <a class="" href="/logout" class="button">Logout</a>
-                                    </li>
-                                @else 
-                                    <li class="nav-item">
-                                      <a href="/login" class="button">Login</a>
-                                    </li>
+                              @if (Auth::check())
+                                @if (Auth::user()->email=='csernus@foxinfo.hu'||Auth::user()->email=='sztarovics@foxinfo.hu' )
+                                  <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                                    aria-haspopup="true" aria-expanded="false">ADMIN<span class="caret"></span></a> 
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#"> </a></li>
+                                      <li><a href="/properties"> Ingatlan lista</a></li>
+                                      <li><a href="/properties/create"> Új ingatlan</a></li>
+                                      <li><a href="/agents"> Ügynök lista</a></li>
+                                      <li><a href="/agents/create"> Új ügynök</a></li>
+                                      <li><a href="/clients"> Kliens lista</a></li>
+                                      <li><a href="/clients/create"> Új kliens</a></li>
+                                    </ul>
+                                  </li>
                                 @endif
-                              </li>
+                                  <li class="nav-item">
+                                  <span class="text-primary navbar-user-name mr-3">Hello {{Auth::user()->name}}</span>
+                                  </li>
+                                  <li class="nav-item">
+                                  <a class="" href="/logout" class="button">Logout</a>
+                                  </li>
+                              @else 
+                                  <li class="nav-item">
+                                    <a href="/login" class="button">Login</a>
+                                  </li>
+                              @endif
+                                  <li class="nav-item">
+                                    <a  href="/home" class="ml-2"> HU </a>
+                                  </li>
                             </ul>
                 </div>
               </div>

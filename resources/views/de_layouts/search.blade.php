@@ -28,7 +28,7 @@
                             {!! Form::select('type_id',$type_id,null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!} 
                         </div>
                         <div class="col-auto">
-                            {!! Form::label('Art',null,['class' => 'search-label', 'for'=>'list_type']); !!}
+                            {!! Form::label('Art der Immobilie',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                             {!! Form::select('list_type',$list_type,null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!} 
                         </div>
                         <div class="col-auto">

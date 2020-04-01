@@ -83,17 +83,20 @@
                                     </li>
                                   @endif
                                     <li class="nav-item">
-                                    <span class="text-primary navbar-user-name mr-3">Üdv {{Auth::user()->name}}</span>
+                                      <span class="text-primary navbar-user-name mr-3"> Üdv {{Auth::user()->name}}</span>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="" href="/logout" class="button">Kilépés</a>
+                                      <a href="/logout" class=""> Kilépés </a>
                                     </li>
                                 @else 
                                     <li class="nav-item">
-                                      <a href="/login" class="button">Belépés</a>
+                                      <a href="/login" class=""> Belépés </a>
                                     </li>
                                 @endif
-                              </li>
+                                <li class="nav-item">
+                                  <a  href="/de/home" class="ml-2"> DE </a>
+                                </li>
+
                             </ul>
                 </div>
               </div>
