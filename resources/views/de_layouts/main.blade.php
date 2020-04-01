@@ -2,17 +2,15 @@
     use App\property;
 ?>
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="de">
 <head>
     @include('layout.head')
     @yield('styles')
 </head>
 <body>
-    {{--  @include('layout.modals.login')
-    @include('layout.modals.reg')  --}}
-    @include('layout.newnavbar')
-    @include('layout.carousel-main')
-    @include('layout.search')
+    @include('de_layouts.newnavbar')
+    @include('de_layouts.carousel-main')
+    @include('de_layouts.search')
     @yield('tartalom')
     @include('layout.footer')
 </body>

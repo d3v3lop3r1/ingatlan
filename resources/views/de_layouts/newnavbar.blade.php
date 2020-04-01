@@ -2,7 +2,7 @@
   {{--  <div class="navbar-container">  --}}
     <div class="row" id="navbar-row">
         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2" id="header-logo">
-          <a href="/home"><img class="img-fluid" src="/images/logos/ingatlanfox-logo.png"></a>
+          <a href="/de/home"><img class="img-fluid" src="/images/logos/ingatlanfox-logo.png"></a>
         </div>
         <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6 " id="navbar">
           <div class="row">
@@ -15,40 +15,40 @@
                       <ul class="navbar-nav text-warning">
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                aria-haspopup="true" aria-expanded="false">Eladó ingatlanok<span class="caret"></span></a> 
+                                aria-haspopup="true" aria-expanded="false">Kaufen<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><a href="/osszes-elado-ingatlan">Összes ingatlan</a></li>
-                                  <li><a href="/elado-lakasok">Lakás</a></li>
-                                  <li><a href="/elado-hazak">Ház</a></li>
-                                  <li><a href="/elado-nyaralok">Nyaraló</a></li>
-                                  <li><a href="/elado-garazsok">Garázs</a></li>
-                                  <li><a href="/elado-irodak">Iroda</a></li>
-                                  <li><a href="/elado-ipari">Ipari Ingatlan</a></li>
-                                  <li><a href="/elado-raktarak">Raktár</a></li>
-                                  <li><a href="/elado-uzlethelyisegek">Üzlethelyiség</a></li>
-                                  <li><a href="/elado-telek-fold">Telek-föld</a></li>
-                                  <li><a href="/elado-vendeglatas">Vendéglátás</a></li>
-                                  <li><a href="/elado-egyeb">Egyéb</a></li>
+                                  <li><a href="">Alle</a></li>
+                                  <li><a href="">Wohnung</a></li>
+                                  <li><a href="">Haus</a></li>
+                                  <li><a href="">Ferienobjekte</a></li>
+                                  <li><a href="">Garage</a></li>
+                                  <li><a href=""></a>Büro</li>
+                                  <li><a href="">Gewerbeimmobilien</a></li>
+                                  <li><a href="">Lager-Lagerhalle</a></li>
+                                  <li><a href="">Verkaufslokal</a></li>
+                                  <li><a href="">Grundstück-Land</a></li>
+                                  <li><a href="">Gastronomoie-Hotel</a></li>
+                                  <li><a href="">Sonstiges</a></li>
                                 </ul>
                               </li>
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                aria-haspopup="true" aria-expanded="false">Kiadó ingatlanok<span class="caret"></span></a> 
+                                aria-haspopup="true" aria-expanded="false">Mieten<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
                                   <li><a href="/osszes-kiado-ingatlan">Összes ingatlan</a></li>
-                                  <li><a href="/kiado-lakasok">Lakás</a></li>
-                                  <li><a href="/kiado-hazak">Ház</a></li>
-                                  <li><a href="/kiado-nyaralok">Nyaraló</a></li>
-                                  <li><a href="/kiado-garazsok">Garázs</a></li>
-                                  <li><a href="/kiado-irodak">Iroda</a></li>
-                                  <li><a href="/kiado-ipari">Ipari Ingatlan</a></li>
-                                  <li><a href="/kiado-raktarak">Raktár</a></li>
-                                  <li><a href="/kiado-uzlethelyisegek">Üzlethelyiség</a></li>
-                                  <li><a href="/kiado-telek-fold">Telek-föld</a></li>
-                                  <li><a href="/kiado-vendeglatas">Vendéglátás</a></li>
-                                  <li><a href="/kiado-egyeb">Egyéb</a></li>
+                                  <li><a href="/kiado-lakasok">Wohnung</a></li>
+                                  <li><a href="/kiado-hazak">Haus</a></li>
+                                  <li><a href="/kiado-nyaralok">Ferienobjekte</a></li>
+                                  <li><a href="/kiado-garazsok">Garage</a></li>
+                                  <li><a href="/kiado-irodak">Büro</a></li>
+                                  <li><a href="/kiado-ipari">Gewerbeimmobilien</a></li>
+                                  <li><a href="/kiado-raktarak">Lager-Lagerhalle</a></li>
+                                  <li><a href="/kiado-uzlethelyisegek">Verkaufslokal</a></li>
+                                  <li><a href="/kiado-telek-fold">Grundstück-Land</a></li>
+                                  <li><a href="/kiado-vendeglatas">Gastronomoie-Hotel</a></li>
+                                  <li><a href="/kiado-egyeb">Sonstiges</a></li>
                                 </ul>
                               </li>
                               <li class="dropdown">
@@ -56,13 +56,12 @@
                                 aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><i class="fas fa-info"></i><a href="/jo-tudni"> Jó tudni</a></li>
-                                  <li><i class="fas fa-home"></i><a href="/tulajdonosoknak"> Tulajdonosoknak</a></li>
-                                  <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek"> Vevőknek-Bérlőknek</a></li>
-                                  <li><i class="fas fa-tools"></i><a href="/ingatlanfox-a-gondnok"> Ingatlanfox a Gondnok</a></li>
-                                  <li><i class="fas fa-hammer"></i><a href="/felujitasok-atepitesek-kivitelezese"> Felújítások-Átépítések</a></li>
-                                  {{--  <li><i class="fa fa-truck fa-sm"></i><a href="/koltozes-szervezese"> Költözés szervezése</a></li>  --}}
-                                  <li><i class="fa fa-question-circle fa-sm"></i><a href="/segitseg-a-haz-korul"> Segítség a ház körül</a></li>
+                                  <li><i class="fas fa-info"></i><a href="/jo-tudni"> Wissenwertes</a></li>
+                                  <li><i class="fas fa-home"></i><a href="/tulajdonosoknak"> Für Eigentümer</a></li>
+                                  <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek"> Für Kaufer-Mieter</a></li>
+                                  <li><i class="fas fa-tools"></i><a href="/ingatlanfox-a-gondnok"> Hausverwaltung</a></li>
+                                  <li><i class="fas fa-hammer"></i><a href="/felujitasok-atepitesek-kivitelezese"> Renovieren-Umbauen</a></li>
+                                  <li><i class="fa fa-question-circle fa-sm"></i><a href="/segitseg-a-haz-korul"> Hilfe rund um Haus</a></li>
                                 </ul>
                               </li>
                               
@@ -83,14 +82,14 @@
                                     </li>
                                   @endif
                                     <li class="nav-item">
-                                    <span class="text-primary navbar-user-name mr-3">Üdv {{Auth::user()->name}}</span>
+                                    <span class="text-primary navbar-user-name mr-3">Hello {{Auth::user()->name}}</span>
                                     </li>
                                     <li class="nav-item">
-                                    <a class="" href="/logout" class="button">Kilépés</a>
+                                    <a class="" href="/logout" class="button">Logout</a>
                                     </li>
                                 @else 
                                     <li class="nav-item">
-                                      <a href="/login" class="button">Belépés</a>
+                                      <a href="/login" class="button">Login</a>
                                     </li>
                                 @endif
                               </li>

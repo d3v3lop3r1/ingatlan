@@ -45,6 +45,7 @@ iframe{
 }
 .navbar{
 	float: right;
+	margin-right: 60px;
 }
 .navbar-user-name{
 	white-space: nowrap;
@@ -94,6 +95,7 @@ p {
 .dropdown{
 	padding-right: 30px;
 }
+
 
 .dropdown-menu li{
 	white-space:nowrap;

@@ -101,7 +101,11 @@ Route::get('/properties/lista', 'PropertyController@lista');
 Auth::routes();
 
 Route::prefix('de')->group(function () {
-    Route::get('users', function () {
-        return 'hello';
+    Route::get('home', function () {
+        return view('de_pages.temp');
+    });   
+    Route::get('/show', 'dePagesController@showing');
+    Route::get('/home', 'dePagesController@home');
+    Route::any('/search', 'dePagesController@search');
+    Route::get('/index/{property}', 'dePagesController@index');
     });
-});

@@ -1,0 +1,63 @@
+FORDÍTÁSOK A FőMenüben:
+ELADÓ IMMOBILIEN = KAUFANGEBOTE
+ÖSSZES INGATLAN - 0- ALLE
+LAKÁS - 1- WOHNUNG
+HÁZ - 2- HAUS
+NYARALÓ - 3- FERIENOBJEKTE
+GARÁZS - 4- GARAGE
+IRODA - 5- BÜRO
+IPARI INGATLAN - 6- GEWERBEIMMOBILIEN
+RAKTÁR - 7- LAGER, LAGERHALLE
+ÜZLETHELYISÉG - 8- VERKAUFSLOKAL
+TELEK-FÖLD - 9- GRUNDSTÜCK, LAND
+VENDÉGLÁTÁS -10- GASTRONOMIE, HOTEL
+SONSTIGES -11- SONSTIGES
+KIADÓ INGATLANOK = MIETOBJEKTE
+ugyanaz mint az eladóknál…
+INFO = INFO
+JÓ TUDNI - 1- WISSENSWERTES
+TULAJDONOSOKNAK - 2- FÜR EIGENTÜMER
+VEVŐKNEK-BÉRLŐKNEK - 3- FÜR KAUFER &amp; MIETER
+INGATLANFOX A GONDNOK - 4- HAUSVERWALTUNG
+FELÚJÍTÁSOK-ÁTÉPÍTÉSEK… - 5- RENOVIEREN-UMBAUEN
+SEGÍTSÉG A HÁZ KÖRÜL - 6- HILFE RUND UMS HAUS
+____________________________________________________________________________________________
+FORDÍTÁSOK A keresőben:
+Eladó/Kiadó = Kaufen/Mieten
+Eladó - 1- Kaufen (vásárolni)
+Kiadó - 2- Mieten (bérelni)
+Ingatlan típus = ugyanazok amiket fent a Menüben vannak
+Mind - 0- Alle
+LAKÁS - 1- Wohnung
+és így tovább…
+Hol? = Wo?
+Mind - 0- Alle
+Szobák = Zimmer
+Mind - 0- Alle
+
+Min. Lakóterület/m2 Min. Telekterület m2 Max. Ár Ft.
+ab Wohnfläche/m2 ab Grundstück/m2 Preis bis/Ft
+KERESÉS
+SUCHE STARTEN
+
+Részletes keresés
+Weitere Suchoptionen
+
+FORDÍTÁSOK az Ügynök mezőjében…
+Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.
+= Sollten Sie Fragen haben, bitte nehmen Sie den Kontakt mit unseren Agent auf.
+Falls Sie kein ungarisch Sprechen, dann melden Sie sich bitte bei Herrn Sztarovics
+0049-1578-400 1214 oder 0036-20-777 2000 er hilft Sie weiter.
+Nyelvek…. Sprachen Ungarisch-Deutsch-Espanol
+Hirdetés helye a térképen = Maps – Lage der Immobilie
+benne a térképben/ Nagyobb térkép megtekintése = Karte vergrößern
+A szűkítések fordításai:
+Régió = Region Város = Stadt Frissítve = Letzte Aktualisierung ….Tage
+Telek méret = Größe der Grundstück Szobák száma = Zahl der Zimmer (nem kell a db oda!!!)
+Állapot = Zustand Kilátás = Aussicht Extrák = Extras
+Attraktivitás = Atraktivität Minőség = Qualität Extrák = Extras
+Lakóterület = Wohneinheit Fürdők száma = Zahl der Badezimmer (nem kell a db oda!!!)
+Fűtés = Heizung Tájolás = Orientierung
+
+_______________________________________________________
+Árajánlat = Preisangebot (és javítani a számjelzést= mint az Euronál 350.000,00 Ft )

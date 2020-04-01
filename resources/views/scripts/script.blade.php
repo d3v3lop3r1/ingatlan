@@ -4,6 +4,11 @@
 <script src="/js/lightbox.js"></script>
 
 <script>
+tinymce.init({
+    selector:'textarea',
+    font_formats: 'Roboto, sans-serif'
+});
+    
 {{--  Money format  --}}
 $('.money').simpleMoneyFormat();
 
