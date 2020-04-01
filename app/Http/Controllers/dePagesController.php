@@ -27,14 +27,13 @@ class dePagesController extends Controller
 
     public function search(Request $request)
     {
-        dd($request);
         $mutato='';
 
-        $type_ids=config('property.type_id.hu');
+        $type_ids=config('property.type_id.de');
         $type_id = $request->type_id;
         $mutato .= $type_ids[$type_id];
 
-        $list_types=config('property.list_type.hu');
+        $list_types=config('property.list_type.de');
         $list_type = $request->list_type;
         $mutato .= $list_types[$list_type];
 
@@ -45,7 +44,7 @@ class dePagesController extends Controller
 
         $room_no = $request->room_no;
         if ($room_no){
-            $mutato .= 'SZOBÁK SZÁMA-' . $room_no . '+/';
+            $mutato .= 'ANZAHL DER ZIMMER-' . $room_no . '+/';
         }
 
         $area = $request->area;
@@ -89,14 +88,14 @@ class dePagesController extends Controller
     public function eladoOsszes()
     {
         $properties=property::elado();
-        $mutato="Eladó ingatlanok";
+        $mutato="Immobilien zu verkaufen";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
 
     public function eladoHazak()
     {
         $properties=property::hazak()->elado();
-        $mutato="Eladó házak";
+        $mutato="Häuser zum Verkauf";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
     public function eladoLakasok()
@@ -108,57 +107,57 @@ class dePagesController extends Controller
     public function eladoIrodak()
     {
         $properties=property::irodak()->elado();
-        $mutato="Eladó irodák";
+        $mutato="Büros zum Verkauf";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
     public function eladoIpari()
     {
         $properties=property::ipari()->elado();
-        $mutato="Eladó ipari ingatlanok";
+        $mutato="Gewerbeimmobilien zu verkaufen";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
     public function eladoNyaralok()
     {
         $properties=property::nyaralok()->elado();
-        $mutato="Eladó nyaralók";
+        $mutato="Ferienhäuser zu verkaufen";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
     public function eladoGarazsok()
     {
         $properties=property::Garazsok()->elado();
-        $mutato="Eladó garázsok";
+        $mutato="Garagen zu verkaufen";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
     public function eladoRaktarak()
     {
         $properties=property::Raktarak()->elado();
-        $mutato="Eladó raktárak";
+        $mutato="Lager zum Verkauf";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
 
     public function eladoUzlethelyisegek()
     {
         $properties=property::Uzlethelyisegek()->elado();
-        $mutato="Eladó üzlethelyiségek";
+        $mutato="Räumlichkeiten zum Verkauf";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
 
     public function eladoTelekfold()
     {
         $properties=property::Telekfold()->elado();
-        $mutato="Eladó telek-föld";
+        $mutato="Land zum Verkauf";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
     public function eladoVendeglatas()
     {
         $properties=property::Vendeglatas()->elado();
-        $mutato="Eladó vendéglátás";
+        $mutato="Gastronomie, HOTEL zu verkauf";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
     public function eladoEgyeb()
     {
         $properties=property::Egyeb()->elado();
-        $mutato="Eladó egyéb";
+        $mutato="Sonstiges zu verkaufen";
         return view('de_pages.show', compact('properties', 'mutato'));
     }
 
