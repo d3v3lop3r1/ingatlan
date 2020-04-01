@@ -3,7 +3,7 @@ use App\photo;
 use Carbon\Carbon;
 use Intervention\Image\ImageManager;
 use App\property;
-$type_id=config('property.type_id.hu');
+$type_id=config('property.type_id.de');
 ?>
 @extends('de_layouts.main')
 @section('tartalom')
@@ -21,7 +21,7 @@ $type_id=config('property.type_id.hu');
             <div class="container-fluid">
                 <div class="row center-xs">
                     <div class="col-xs-12">
-                        <h4>{{$mutato}} - Ajánlatok száma: {{$prop_count}} </h4>
+                        <h4>{{$mutato}} - Anzahl der Angebote: {{$prop_count}} </h4>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@ $type_id=config('property.type_id.hu');
                             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 ingatlan-box mb-3">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_hun}}</a></h5>
+                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_de}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php
@@ -79,7 +79,7 @@ $type_id=config('property.type_id.hu');
                                         <div class="col-xs-12 main-details">
                                             <div class="row kiskockak center-xs border">
                                                 <div class="col xs-4">
-                                                    <i class="fa fa-ruler fa-xl"></i><span> Terület:</span><br>
+                                                    <i class="fa fa-ruler fa-xl"></i><span> Grundstück:</span><br>
                                                     @if ($property->land_area)
                                                         {{$property->land_area}}m2
                                                     @else
@@ -87,7 +87,7 @@ $type_id=config('property.type_id.hu');
                                                     @endif
                                                 </div>
                                                 <div class="col xs-4">
-                                                    <i class="fas fa-expand-alt fa-xl"></i><span> Lakótér:</span><br>
+                                                    <i class="fas fa-expand-alt fa-xl"></i><span> Wohnfläche:</span><br>
                                                     @if ($property->area)
                                                         {{$property->area}}m2
                                                     @else
@@ -95,7 +95,7 @@ $type_id=config('property.type_id.hu');
                                                     @endif
                                                 </div>
                                                 <div class="col xs-4">
-                                                    <i class="fas fa-th-large fa-xl"></i><span> Szobák:</span><br>
+                                                    <i class="fas fa-th-large fa-xl"></i><span> Zimmer:</span><br>
                                                     @if ($property->room_no)
                                                         {{$property->room_no}}
                                                     @else
@@ -125,7 +125,7 @@ $type_id=config('property.type_id.hu');
         <div class="container-fluid">
             <div class="row center-xs">
                 <div class="col-xs-12">
-                    <h3 class="text-danger">SAJNOS NINCS A KERESÉSNEK MEGFELELŐ INGATLAN!</h3>
+                    <h3 class="text-danger">ENTSCHULDIGUNG KEIN IMMOBILIEN FÜR DIE SUCHE!</h3>
                 </div>
             </div>
         </div>

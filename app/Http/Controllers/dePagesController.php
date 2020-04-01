@@ -21,12 +21,13 @@ class dePagesController extends Controller
     public function showing()
     {
         $properties=property::where('active','1');
-        $mutato='ÖSSZES INGATLAN';
+        $mutato='Alle Immobilien';
         return view('de_pages.show', compact('properties', 'mutato'));
     }
 
     public function search(Request $request)
     {
+        dd($request);
         $mutato='';
 
         $type_ids=config('property.type_id.hu');
