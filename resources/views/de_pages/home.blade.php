@@ -2,7 +2,7 @@
 use App\photo;
 use Carbon\Carbon;
 use App\property;
-
+$type_id=config('property.type_id.de');
 @endphp
 @extends('de_layouts.main')
 
@@ -83,28 +83,15 @@ use App\property;
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_hun}}</a></h5>
+                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_de}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php
                                                     $dt = Carbon::parse($property->updated_at);
                                                     $days=$dt->diffInDays();
-                                                    switch($property->type_id){
-                                                        case 1:
-                                                            echo 'Eladó';
-                                                            break;
-                                                        case 2:
-                                                            echo 'Eladó cserelehetőséggel';
-                                                            break;
-                                                        case 3:
-                                                            echo 'Kiadó eladási opcióval';
-                                                            break;
-                                                        case 4:
-                                                            echo 'Kiadó';
-                                                            break;
-                                                    }
+                                                    echo $type_id[$property->type_id];
                                                     if ($days < 14){
-                                                        echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
+                                                        echo "<span class='badge badge-secondary badge-danger ml-2'>Neu</span>";
                                                     }
                                                     ?>
                                                 </div>
@@ -130,7 +117,7 @@ use App\property;
                                         <div class="col-xs-12 main-details">
                                             <div class="row kiskockak center-xs border">
                                                 <div class="col xs-4">
-                                                    <i class="fa fa-ruler fa-xl"></i><span> Terület:</span><br>
+                                                    <i class="fa fa-ruler fa-xl"></i><span> Grundstück:</span><br>
                                                     @if ($property->land_area)
                                                         {{$property->land_area}}m2
                                                     @else
@@ -138,7 +125,7 @@ use App\property;
                                                     @endif
                                                 </div>
                                                 <div class="col xs-4">
-                                                    <i class="fas fa-expand-alt fa-xl"></i><span> Lakótér:</span><br>
+                                                    <i class="fas fa-expand-alt fa-xl"></i><span> Wohnfläche:</span><br>
                                                     @if ($property->area)
                                                         {{$property->area}}m2
                                                     @else
@@ -146,7 +133,7 @@ use App\property;
                                                     @endif
                                                 </div>
                                                 <div class="col xs-4">
-                                                    <i class="fas fa-th-large fa-xl"></i><span> Szobák:</span><br>
+                                                    <i class="fas fa-th-large fa-xl"></i><span> Zimmer:</span><br>
                                                     @if ($property->room_no)
                                                         {{$property->room_no}}
                                                     @else
