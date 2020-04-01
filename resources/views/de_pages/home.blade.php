@@ -12,7 +12,7 @@ $type_id=config('property.type_id.de');
         <div class="row">
             <div class="col d-none d-lg-block">
                 <div class="card">
-                    <h4 class="center-xs card-header">Günstigere Häuser zum Verkauf</h4>
+                    <h4 class="center-xs card-header">Günstigere Wohnungen zum Verkauf</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
