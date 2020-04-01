@@ -7,7 +7,12 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>Ingatlanfox a transzparens ingatlanügynök</title>
 <script src="https://cdn.tiny.cloud/1/wm31sok6mex7izbsv8rxfnu38eit5ojpg9rqi0kspuez4rlz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-</script>
+<script>
+    tinymce.init({
+        selector:'textarea',
+        font_formats: 'Roboto, sans-serif'
+    });
+</script> 
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="/css/flexboxgrid.css">
 <link rel="stylesheet" type="text/css" href="/css/all.css">
