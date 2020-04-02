@@ -2,6 +2,7 @@
 <script src="/js/bootstrap.js"></script>
 <script src="/js/simple.money.format.js"></script>
 <script src="/js/lightbox.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
 tinymce.init({
