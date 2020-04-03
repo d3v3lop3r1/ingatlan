@@ -9,13 +9,14 @@
 tinymce.init({
     selector:'textarea',
     font_formats: 'Roboto, sans-serif',
-    plugins: "template table lists fullscreen hr link preview print casechange",
+    plugins: "template table lists fullscreen hr link preview print casechange visualblocks",
     menubar: "file insert table ",
     toolbar1: "template|fontselect forecolor fontsizeselect|alignleft aligncenter alignright| table bullist", 
-    toolbar2: "fullscreen hr link preview print casechange undo redo",
-    fontsize_formats: '12px 16px',
+    toolbar2: "undo redo fullscreen hr h1 h2 link preview print casechange visualblocks",
+    fontsize_formats: '10px 12px 14px 16px',
+    invalid_styles: 'font-family',
+    block_formats: 'Paragraph=p; Header 1=h1; Header 2=h2; Header 3=h3; Header 4=h4',
     color_map: [
-    "000000", "Black",
     "808080", "Gray",
     "FFFFFF", "White",
     "FF0000", "Red",
@@ -23,7 +24,7 @@ tinymce.init({
     "008000", "Green",
     "0000FF", "Blue"
     ],
-    visual_table_class: 'tinymce-table-class',
+    content_css : '/css/myLayoutTynimce.css',
     forced_root_block : 'p',
     language: 'hu_HU',
     language_url : '/tinymce/languages/hu_HU.js',

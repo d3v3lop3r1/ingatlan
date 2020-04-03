@@ -5,9 +5,18 @@
 		min-width:100px;
 		}
 	} */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+
+* {
+    font-family: Roboto, sans-serif;
+    color: rgb(80, 80, 80);
+}
+
+
 body, html {
 	width: 100%;
 	font-family: 'Roboto', sans-serif; 
+	font-weight: 300;
 	margin: 0;
 	padding: 0;
 }
