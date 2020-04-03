@@ -94,7 +94,7 @@
                                     </li>
                                 @endif
                                 <li class="nav-item">
-                                  <a  href="/de/home" class="ml-2"> DE </a>
+                                  <a  href="/de/home" class="ml-2"><img src="/icons/Flags/germany-flag-icon-32.png" alt=""></a>
                                 </li>
 
                             </ul>

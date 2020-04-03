@@ -93,7 +93,7 @@
                                   </li>
                               @endif
                                   <li class="nav-item">
-                                    <a  href="/home" class="ml-2"> HU </a>
+                                    <a  href="/home" class="ml-2"><img src="/icons/Flags/hungary-flag-icon-32.png" alt=""></a>
                                   </li>
                             </ul>
                 </div>
