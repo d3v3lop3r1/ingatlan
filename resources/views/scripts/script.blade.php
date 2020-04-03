@@ -9,10 +9,14 @@
 tinymce.init({
     selector:'textarea',
     font_formats: 'Roboto, sans-serif',
-    plugins: "template",
-    menubar: "insert",
-    toolbar: "template",
-    templates: "/templates/templates.php"
+    plugins: "template table lists fullscreen hr link preview print casechange",
+    menubar: "insert table file",
+    toolbar1: "fontselect forecolor fontsizeselect|alignleft aligncenter alignright|template table bullist", 
+    toolbar2: "fullscreen hr link preview print casechange undo redo",
+    fontsize_formats: '12px 16px',
+    height: 400,
+    templates: "/templates/templates.php",
+
 
 });
     
