@@ -2,7 +2,7 @@
 use App\photo;
 use Carbon\Carbon;
 use App\property;
-
+$type_id=config('property.type_id.hu');
 @endphp
 @extends('layout.main')
 
@@ -86,23 +86,11 @@ use App\property;
                                             <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_hun}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
+                                                    
                                                     <?php
+                                                    echo ($type_id[$property->type_id]);
                                                     $dt = Carbon::parse($property->updated_at);
                                                     $days=$dt->diffInDays();
-                                                    switch($property->type_id){
-                                                        case 1:
-                                                            echo 'Eladó';
-                                                            break;
-                                                        case 2:
-                                                            echo 'Eladó cserelehetőséggel';
-                                                            break;
-                                                        case 3:
-                                                            echo 'Kiadó eladási opcióval';
-                                                            break;
-                                                        case 4:
-                                                            echo 'Kiadó';
-                                                            break;
-                                                    }
                                                     if ($days < 14){
                                                         echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
                                                     }
@@ -115,6 +103,9 @@ use App\property;
                                             
                                         </div>
                                         <div class="col-xs-12 main-photo">
+                                            <div class="col prop-header-alul-jobb">
+                                            Id:IFX{{70000 + $property->id}}
+                                            </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                         </div>
                                     </div>
