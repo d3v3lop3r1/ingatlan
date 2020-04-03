@@ -259,12 +259,10 @@ p {
 	position: absolute;
 	bottom: 100px;
 	left: 5px;
-	margin-right: 20px;
 	padding: 5px;
 	font-weight: 700;
 	font-size: small;
 	text-transform: uppercase;
-	justify-content: right;
 	color: #FFF;
 	background-color: rgba(25, 85, 110, 0.7);
 	overflow: hidden;

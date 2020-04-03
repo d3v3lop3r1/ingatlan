@@ -37,7 +37,7 @@
                                 aria-haspopup="true" aria-expanded="false">Mieten<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><a href="">Összes ingatlan</a></li>
+                                  <li><a href="">Alle</a></li>
                                   <li><a href="">Wohnung</a></li>
                                   <li><a href="">Haus</a></li>
                                   <li><a href="">Ferienobjekte</a></li>

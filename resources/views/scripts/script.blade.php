@@ -5,16 +5,25 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
+
 tinymce.init({
     selector:'textarea',
-    font_formats: 'Roboto, sans-serif'
+    font_formats: 'Roboto, sans-serif',
+    plugins: "template",
+    menubar: "insert",
+    toolbar: "template",
+    templates: "/templates/templates.php"
+
 });
     
 {{--  Money format  --}}
 $('.money').simpleMoneyFormat();
 
 
-        {{--  var customLabel = {
+
+// Google Map
+/* 
+        var customLabel = {
           berles: {
             label: 'B'
           },
@@ -84,7 +93,7 @@ $('.money').simpleMoneyFormat();
           request.send(null);
         }
       
-        function doNothing() {}  --}}
+        function doNothing() {} */
       </script>
       {{--  <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwZb4aGUFbjvzC39haEzjtH9XlA0djZsE&callback=initMap">
