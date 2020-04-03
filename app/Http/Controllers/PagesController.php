@@ -31,11 +31,15 @@ class PagesController extends Controller
 
         $type_ids=config('property.type_id.hu');
         $type_id = $request->type_id;
-        $mutato .= $type_ids[$type_id];
+        if ($type_id) {
+            $mutato .= $type_ids[$type_id];
+        }
 
         $list_types=config('property.list_type.hu');
         $list_type = $request->list_type;
-        $mutato .= $list_types[$list_type];
+        if ($list_type) {
+            $mutato .= $list_types[$list_type];
+        }
 
         $city = $request->city;
         if ($city){
@@ -53,8 +57,9 @@ class PagesController extends Controller
         $price_max = $request->price_max;
 
         $properties = property::where('active','1')
-        ->where('type_id',$type_id)
-
+        ->when($type_id, function($query, $type_id){ 
+            return $query->where('type_id', $type_id);
+        })
         ->when($list_type, function($query, $list_type){ 
             return $query->where('list_type', $list_type);
         })
