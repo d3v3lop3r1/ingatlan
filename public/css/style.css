@@ -21,6 +21,11 @@ iframe{
 	margin: 0;
 	border: none;
 }
+
+.tinymce-table-class table{
+	display: none;
+	border: none;
+}
 #csok-map{
 	height: 300px;
 }
