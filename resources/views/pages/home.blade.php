@@ -104,7 +104,7 @@ $type_id=config('property.type_id.hu');
                                         </div>
                                         <div class="col-xs-12 main-photo">
                                             <div class="col prop-header-alul-jobb">
-                                            Id:IFX{{70000 + $property->id}}
+                                            Hirdetés szám:IFX{{70000 + $property->id}}
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                         </div>
