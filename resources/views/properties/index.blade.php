@@ -1,8 +1,12 @@
-<?php
+@php
 use App\client;
 use App\agent;
 use Carbon\Carbon;
-?>
+$type_id=config('property.type_id.hu');
+$list_type=config('property.list_type.hu');
+    
+@endphp
+
 
 @extends('layout.main-simple')
 
@@ -26,6 +30,8 @@ use Carbon\Carbon;
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Képek</th>
+                    <th scope="col">E/K</th>
+                    <th scope="col">Ing.Típus</th>
                     <th scope="col">Fejléc</th>
                     <th scope="col">Ügynök</th>
                     <th scope="col">Kliens</th>
@@ -45,6 +51,8 @@ use Carbon\Carbon;
                         <tr>
                             <th scope="row">{{$property->id}}<a href="/index/{{$property->id}}"> hu </a><a href="/de/index/{{$property->id}}"> de </a></th>
                             <td><a href="/photos/create/{{$property->id}}">{{count($property->photos)}} db</a></td>
+                            <td>{{$type_id[$property->type_id]}}</td>
+                            <td>{{$list_type[$property->list_type]}}</td>
                             <td><a href="/properties/{{$property->id}}/edit">{{$property->header_hun}}</a></td>
                             <td>{{agent::where('id',$property->agent_id)->first()->name}}</td>
                             <td>{{client::where('id',$property->client_id)->first()->name}}</td>
