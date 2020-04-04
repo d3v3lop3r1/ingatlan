@@ -5,6 +5,8 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
+{{--  Money format  --}}
+$('.money').simpleMoneyFormat();
 
 tinymce.init({
     selector:'textarea',
@@ -17,14 +19,14 @@ tinymce.init({
     invalid_styles: 'font-family',
     block_formats: 'Paragraph=p; Header 1=h1; Header 2=h2; Header 3=h3; Header 4=h4',
     color_map: [
-    "000000", "Black"  
+    "000000", "Black",
     "808080", "Gray",
     "FFFFFF", "White",
     "FF0000", "Red",
     "FFFF00", "Yellow",
     "008000", "Green",
     "0000FF", "Blue"
-    ],
+  ],    
     content_css : '/css/myLayoutTynimce.css',
     forced_root_block : 'p',
     language: 'hu_HU',
@@ -35,8 +37,6 @@ tinymce.init({
 
 });
     
-{{--  Money format  --}}
-$('.money').simpleMoneyFormat();
 
 
 

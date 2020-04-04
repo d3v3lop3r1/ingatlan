@@ -46,9 +46,9 @@ $type_id=config('property.type_id.hu');
                                 $photo = $prop->photos->where('is_default','1')->first();
                                 if ($photo){
                                     $photo_file = $photo->file1;
-                                    $photo_file = "uploads/" . $photo_file;
+                                    $photo_file = "/uploads/" . $photo_file;
                                 } else {
-                                    $photo_file = "uploads/placeholder.png";
+                                    $photo_file = "/uploads/placeholder.png";
                                 }
                             @endphp
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_hun}}" width="50" height="50">
