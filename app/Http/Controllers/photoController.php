@@ -85,7 +85,9 @@ class photoController extends Controller
      */
     public function updateAgentPhoto(Request $request)
     { 
+        if ($request->file('file')->isValid()) {    
             $file=$request->file('file');
+            $url=$request->url;
             $filename= time() . $file->getClientOriginalName();
             $file->move('./uploads/agents', $filename); 
             $agent_id=$request->agent_id;
@@ -95,7 +97,8 @@ class photoController extends Controller
             File::delete($photo_path);
             $agent->photo=$filename;
             $agent->save();
-            return redirect('agents');
+            //return redirect('agents');
+        }    
  
     }
 

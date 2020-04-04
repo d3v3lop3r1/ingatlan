@@ -24,6 +24,9 @@ Route::get('/demo', function () {
     return view('demo');
 });
 
+
+//                INFO OLDALAK
+
 Route::get('/jo-tudni', function () {
     return view('info.jo-tudni');
 });
@@ -44,13 +47,15 @@ Route::get('/koltozes-szervezese', function () {
 });
 
 
-
+//                 ADMIN BELÉPÉS-KILÉPÉS
 
 Route::get('/logout','HomeController@logout');
 
 Route::get('/register', function () {
     return view('auth.register');
 });
+
+//                  PageController
 
 Route::get('/show', 'PagesController@showing');
 Route::get('/home', 'PagesController@home');
@@ -70,6 +75,8 @@ Route::get('/elado-vendeglatas', 'PagesController@eladoVendeglatas');
 Route::get('/elado-telek-fold', 'PagesController@eladoTelekfold');
 Route::get('/elado-egyeb', 'PagesController@eladoEgyeb');
 
+//                     Menü LINKEK
+
 Route::get('/osszes-kiado-ingatlan', 'PagesController@kiadoOsszes');
 Route::get('/kiado-lakasok', 'PagesController@kiadoLakasok');
 Route::get('/kiado-hazak', 'PagesController@kiadoHazak');
@@ -83,7 +90,7 @@ Route::get('/kiado-vendeglatas', 'PagesController@kiadoVendeglatas');
 Route::get('/kiado-telek-fold', 'PagesController@kiadoTelekfold');
 Route::get('/kiado-egyeb', 'PagesController@kiadoEgyeb');
 
-
+//                   ADMIN FELÜLET
 Route::group(['middleware'=>'auth'],function(){
     Route::resource('/properties', 'PropertyController');
     Route::resource('/agents', 'AgentController');
@@ -95,17 +102,24 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/photos/create/{id}', 'photoController@create');
 });
 
-
-Route::get('/properties/lista', 'PropertyController@lista');
-
 Auth::routes();
+
+//                   NÉMET OLDALAK
 
 Route::prefix('de')->group(function () {
     Route::get('home', function () {
         return view('de_pages.temp');
-    });   
+    });
+    
+    //              dePagesController
+
     Route::get('/show', 'dePagesController@showing');
     Route::get('/home', 'dePagesController@home');
     Route::any('/search', 'dePagesController@search');
     Route::get('/index/{property}', 'dePagesController@index');
-    });
+
+    //              deINFO OLDALAK
+    
+
+
+});

@@ -105,9 +105,11 @@ class PagesController extends Controller
     }
     public function eladoLakasok()
     {
-        $properties=property::lakasok()->elado();
-        $mutato="Eladó lakások";
-        return view('pages.show', compact('properties', 'mutato'));
+        // $properties=property::lakasok()->elado();
+        // $mutato="Eladó lakások";
+        // return view('pages.show', compact('properties', 'mutato'));
+
+        
     }
     public function eladoIrodak()
     {
