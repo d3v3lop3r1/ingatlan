@@ -12,7 +12,7 @@ $type_id=config('property.type_id.de');
         <div class="row">
             <div class="col d-none d-lg-block">
                 <div class="card">
-                    <h4 class="center-xs card-header">Günstigere Wohnungen zum Verkauf</h4>
+                    <h4 class="center-xs card-header">Bezahlbare Wohnungen für Alle</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -32,13 +32,13 @@ $type_id=config('property.type_id.de');
                                     {{$prop->header_de}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
-                        
+
                             </div>
-                        </div>            
+                        </div>
                     @endforeach
                 </div>
                 <div class="card mt-2">
-                    <h4 class="card-header center-xs">Billigere Häuser zum Verkauf</h4>
+                    <h4 class="card-header center-xs">Erschwingliche Häuser in Südungarn</h4>
                     @foreach ($prop_elado_hazak_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -58,17 +58,17 @@ $type_id=config('property.type_id.de');
                                     {{$prop->header_de}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
-                        
+
                             </div>
-                        </div>            
+                        </div>
                     @endforeach
-                </div>                 
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                <h1 class="text-uppercase center-xs">Unsere Sonderangebote</h1>
+                <h1 class="text-uppercase center-xs">SONDERANGEBOTE</h1>
                 <div class="row center-xs ingatlan-sor">
-                    @foreach ($properties as $property)                       
-                            <?php 
+                    @foreach ($properties as $property)
+                            <?php
                             $photo_count = $property->photos->count();
                             $photo = $property->photos->where('is_default','1')->first();
                             if ($photo){
@@ -79,17 +79,18 @@ $type_id=config('property.type_id.de');
                             }
 
                             ?>
-                            
+
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
                                             <h5><a class="stretched-link" href="/de/index/{{$property->id}}">{{$property->header_de}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
+
                                                     <?php
+                                                    echo ($type_id[$property->type_id]);
                                                     $dt = Carbon::parse($property->updated_at);
                                                     $days=$dt->diffInDays();
-                                                    echo $type_id[$property->type_id];
                                                     if ($days < 14){
                                                         echo "<span class='badge badge-secondary badge-danger ml-2'>Neu</span>";
                                                     }
@@ -99,7 +100,7 @@ $type_id=config('property.type_id.de');
                                                     <i class="fas fa-camera-retro"></i> {{$photo_count}}
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="col-xs-12 main-photo">
                                             <div class="row">
@@ -113,8 +114,8 @@ $type_id=config('property.type_id.de');
 
 
                                     {{--  Adatok  --}}
-                                    
-                                    
+
+
                                     <div class="row center-xs">
                                         <div class="col-xs-12 main-price border">
                                             <span class="money">{{$property->price}}</span>.- Ft
@@ -146,88 +147,118 @@ $type_id=config('property.type_id.de');
                                                     @endif
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                    </div>                                                   
+                                    </div>
                             </div>
                     @endforeach
-                    
+
                 </div>
                 <div class="jumbotron" >
-                    <h1>WÜRDEN SIE IN DÉLDUNÁNTÚL EIN EIGENTUM KAUFEN ODER MIETEN?</h1>
-                    <h4>Dann sind Sie hier richtig.</h4>
-                    <p>Wir helfen Ihnen auch in Baranya, Pécs, Harkány und Siklós!</p>
+                    <h1>Hier sind Sie richtig wenn</h1>
+                    <h4>Sie suchen auch ein schönes Heim in Südungarn, oder wollen Ihr Eigenheim verkaufen-vermieten?</h4>
+                    <p>Lassen Sie uns helfen die passenden Immobilie zu finden in unserem herrlichen Mediterran Ecke in Südwesten von Ungarn.</p>
                 </div>
                 <div class="row">
                     <section class="col-xs-12 col-sm-4">
                         <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
-                        <h3 class="mt-2">Sind Sie auch ein Immobilienbesitzer?</h3>
-                        <h4>Ihre Immobilie wird mit einem Gewinnerprofil präsentiert</h4> 
+                        <h3 class="mt-2">Haben Sie in Ungarn Immobilie?</h3>
+                        <h4>Wenn Sie verkaufen oder vermieten wollen, überlassen Sie es uns, denn unsere vorgemerkten Interessenten, sowie grenüberschreitenden Inserate sprechen für sich</h4>
                         <p class="text-uppercase text-info">
-                            2 Sprachen<br>
-                            3 Länder<br>
-                            4+ Immobilienportal<br>
-                            für den Erfolg so schnell wie möglich!</strong>
-                        </p> 
+                            in 2 Sprachen<br>
+                            in 3+ Länder<br>
+                            in 4+ Immobilienportalen<br>
+                            für die erfolgreiche Vermarktung</strong>
+                        </p>
                         <ul class="">
-                            <li>Vollständige kostenlose Informationen</li>
-                            <li>Immobilien Escort</li>
-                            <li>Übersetzungen, Dolmetschen für Deutsch-Ungarisch Interessierte</li>
-                            <li>Planung von Kauf- und Kaufverträgen oder Vorverträgen</li>
-                            <li>Authentifizierung von Vereinbarungen mit Unterstützung eines Anwalts</li>
-                            <li>Wir handeln auch in Ihrem Grundbuchamt zu Ihrem Vorteil</li>
-                            <li>Beratung bei der Registrierung von Steuer- / Gebührenerstattungen / Eigentumsrechten sowie bei anderen Ämtern und Institutionen</li>
+                            <li>Beratung, Vermessung Ihrer Immobilie</li>
+                            <li>Ablichtungen, Videoaufnahmen mit Drohnen</li>
+                            <li>Zweisprachige Exposé, Steakholder Analyse bei Bedarf</li>
+                            <li>Helfer bei Immobilienbesichtigungen, Ratgeber</li>
+                            <li>Wir überwinden alle Sprachbarriere, Dolmetschen</li>
+                            <li>Für Sie erledigen wir alle Behördengänge</li>
+                            <li>Wir nehmen Ihre Anliegen ernst auch während Ihrer Abwesenheit</li>
                         </ul>
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
                         <img class="img-responsive center-block img-thumbnail" src="/images/sample-house/architecture-21805_640.jpg" alt="Ház Eladó">
-                        <h4 class="mt-2">Würden Sie eine Immobilie kaufen?<br> Würden Sie eine Immobilie mieten?</h4>
+                        <h4 class="mt-2">Haus kaufen in Südungarn?<br>
+                        Wohnung mieten in Südungarn?</h4>
                         <ul class="">
-                            <li>Persönlicher Kontakt, freundliche Beratung zu Ihrem Vorteil</li>
-                            <li>Eskorte zur Immobilieninspektion, zum Grundbuchamt, zum Exposé usw.</li>
-                            <li>Deutsch-ungarischer Dolmetscher für Verkäufer und Verleger in anderen Muttersprachen</li>
-                            <li>Schreiben eines Vorvertrags, Bescheinigung von Vereinbarungen mit einem Anwalt</li>
-                            <li>Wir helfen Ihnen als Hausmeister in Ihrer Abwesenheit auch nach dem Kauf einer Immobilie/li>
-                            <li>Unser Projektfox-Bauteam führt ebenfalls Renovierungsarbeiten durch</li>
-                          </ul>                  
+                            <li>Mit Rat- und Tat vermessen wir Ihr Bedarf,
+                            begleiten wir bei Besichtigungen, Dolmetschen wenn nötig</li>
+                            <li>Bei Miet- oder Kaufverträge verfassen wir Vorvertrage in 2 Sprachen auch
+                            un helfen mit Analysen und Rat bei Ihrer Entscheidung</li>
+                            <li>Sollten Sie anderweitig die passende Immobilie gefunden haben, fragen Sie uns denn
+                            wir helfen gern als Schirmherr, als Dolmetscher und Verteidiger Ihrer Interesse!</li>
+                            <li>Behördengänge erledigen wir auch für Sie,
+                            deutsch-ungarisch sprechenden Notar/Anwälte kennen wir auch hier</li>
+                            <li>Beauftragen Sie uns eventuell als Ihr vertraunswürdige Hausverwalter
+                            der während Ihrer Abwesenheit um Alles kümmert, administriert</li>
+                            <li>Unsere Projekftox Division baut, renoviert, repariert, und ist in der Lage
+                            nach jahrelangen Erfahrungen auch größere Umbauten zu übernehmen</li>
+                        </ul>
+                        <h4>Kaufen mit Kreditaufnahme in Ungarn?</h4>
+                        <p>
+                            Ja, es ist möglich.
+                            Dafür haben wir auch einen kompetenten Fachmann
+                            der Sie hilft günstigeres Angebot zu finden,
+                            und geht mit bei der Behördengangen in Pécser-Raum
+                        </p>
+                        <h4>CSOK? Falusi CSOK?</h4>
+                        <p>
+                            Diese supergünstige Kreditaufnahmen
+                            können nur ungarische Mitbürger in Anspruch nehmen.
+                            Die sogennannte "Falusi CSOK" sogar nur für junge Familie
+                            mit x Kinder die bereit sind langfristig in den
+                            s.g. verlassene Dörfer auch wohnen. Die Staat übernimmt 100% vom Kaufpreis.
+                            Für Sie als Verkäufer könnte das auch hilfreich sein...
+                        </p>
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
                         <div class="embed-responsive embed-responsive-16by9">
                                 <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                         </div>
                         <h4 class="mt-2">
-                            Sie haben auch Informationen verkauft werden, ausgestellt werden Immobilien?
+                        Haben Sie auch Informationen
+                        wer-wo will in Südungarn
+                        verkaufen oder vermieten,
+                        kaufen oder mieten?
                         </h4>
                         <p>
-                            dann eins lukratives Ergebnis Wir können Ihnen die Möglichkeit geben!
+                        Wenn Sie wissen, bitte anrufen!
+                        Angenommen, Sie sind um etwas
+                        Zuverdienst nicht abgeneigt?
+
+                        Gerne notieren wir Sie auch bald
+                        als Info-Agent unseres Teams!
+
+
+                        Ruefen Sie an 0049-1578-400 1214
+                        Herr Sztarovics oder Frau Speck
                         </p>
-                        <p>
-                            Werden Sie unser Gelegenheitsagent - Ingatlanox * Agent
-                        </p>
-                        Einloggen! Es ist einzigartig Gelegenheit
-                        </p> 
                     </section>
                 </div>
                 <div class="jumbotron  hide visible-lg visible-md" >
-                    <h1>IST EIN AUSLÄNDISCHES LAND? TUT ES NICHT?</h1>
-                    <p class="lead"> Ingatlanox ist ein Hausmeister aus Baranya County. Ihr Hausverwalter schützt Ihr Eigentum!</p>
+                    <h1>KEINER DER SICH UM IHR HAUS KÜMMERT? VERTRAUENSVOLLER HAUSVERWALTER?</h1>
+                    <p class="lead"> Unser Hausverwaltung Komplett-Service erledigt in Baranya für Sie Alle arbeiten wie Sie im Auftrag erteilen.</p>
                 </div>
                 <div class="container" id="map-container">
-                    <h3>Unsere Anzeigen auf der Karte</h3>
+                    <h3>Anzeigen auf Landkarte</h3>
                     <div id="map" class="container"></div>
                 </div>
-            </div> 
+            </div>
             <div class="col d-none d-lg-block center-xs">
                 <div class="card">
-                    <h4 class="card-header">Home Loan Calculator</h4>
-                    <iframe class="mt-2" id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>            
+                    <h4 class="card-header">Kalkulator Finanzierung</h4>
+                    <iframe class="mt-2" id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>
 
-                    <h4>CSOK Ortsliste</h4>
+                    <h4>CSOK-Liste</h4>
                     <iframe id="csok-map" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1qH4VJVp5xs6vaKHyEHwmKth3kFMj4AP9&ll=46.19367658681184%2C18.40386481697169&z=10" allowfullscreen ></iframe>
                 </div>
 
             </div>
-            </div>   
-        </div>    
-    </div> 
+            </div>
+        </div>
+    </div>
 @endsection
