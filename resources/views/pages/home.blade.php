@@ -12,7 +12,7 @@ $type_id=config('property.type_id.hu');
         <div class="row">
             <div class="col d-none d-lg-block">
                 <div class="card">
-                    <h4 class="center-xs card-header">Eladó olcsóbb lakások</h4>
+                    <h4 class="center-xs card-header">Kiszemelt olcsó lakások</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -38,7 +38,7 @@ $type_id=config('property.type_id.hu');
                     @endforeach
                 </div>
                 <div class="card mt-2">
-                    <h4 class="card-header center-xs">Eladó olcsóbb házak</h4>
+                    <h4 class="card-header center-xs">Eladó házak most olcsóbban</h4>
                     @foreach ($prop_elado_hazak_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -46,16 +46,16 @@ $type_id=config('property.type_id.hu');
                                 $photo = $prop->photos->where('is_default','1')->first();
                                 if ($photo){
                                     $photo_file = $photo->file1;
-                                    $photo_file = "/uploads/" . $photo_file;
+                                    $photo_file = "uploads/" . $photo_file;
                                 } else {
-                                    $photo_file = "/uploads/placeholder.png";
+                                    $photo_file = "uploads/placeholder.png";
                                 }
                             @endphp
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_hun}}" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="badge badge-info">{{$prop->city}}</span><br>
-                                    {{$prop->header}}<br>
+                                    {{$prop->header_hun}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
                         
@@ -103,10 +103,8 @@ $type_id=config('property.type_id.hu');
                                             
                                         </div>
                                         <div class="col-xs-12 main-photo">
-                                            <div class="row">
-                                                <div class="col-auto prop-header-alul-jobb">
-                                                Hirdetés szám : IFX{{110000 + $property->id}}
-                                                </div>
+                                            <div class="col prop-header-alul-jobb">
+                                            Hirdetés szám : IFX{{70000 + $property->id}}
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                         </div>
@@ -155,29 +153,29 @@ $type_id=config('property.type_id.hu');
                     
                 </div>
                 <div class="jumbotron" >
-                    <h1>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</h1>
-                    <h4>Akkor jó helyen jár.</h4>
-                    <p>Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
+                    <h1>ITT JÓ HELYEN JÁR</h1>
+                    <h4>ha ingatlant keres, vagy eladná-bérbeadná ingatlanát a napfényes Baranyánkban.</h4>
+                    <p>Mi itthon vagyunk itt, segítünk, közbenjárunk, kapcsolatot teremtünk a határon túlról érkezettekkel is a siker érdekében.</p>
                 </div>
                 <div class="row">
                     <section class="col-xs-12 col-sm-4">
                         <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
-                        <h3 class="mt-2">Ön is ingatlantulajdonos?</h3>
-                        <h4>Ingatlanát megnyerő profillal mutatjuk be</h4> 
+                        <h3 class="mt-2">Eladná-Kiadná ingatlanát?</h3>
+                        <h4>Ha ránk bízza ingatlana bemutatását, akkor a profi márketinges hadjáratunkkal gyorsan értékesítjük! Hogyan-hol prezentálunk?</h4> 
                         <p class="text-uppercase text-info">
                             2 nyelven<br>
-                            3 országban<br>
-                            4+ ingatlanportálon is<br>
-                            a mielőbbi siker érdekében!</strong>
+                            3+ országban<br>
+                            4+ ingatlanportálokon is<br>
+                            az Ön sikere érdekében!</strong>
                         </p> 
                         <ul class="">
-                            <li>Teljes körű ingyenes tájékoztatás</li>
-                            <li>Ingatlanszemlékre való kíséret</li>
-                            <li>Fordítások, tolmácsolások  német-magyar nyelven érdeklődőknek</li>
-                            <li>Adás- vételi Foglaló, vagy  Előszerződés, szerződések tervezése</li>
-                            <li>Megállapodások hitelesítése ügyvéd közreműködésével</li>
-                            <li>Földhivatalnál, intézménynél is eljárunk az Ön érdekében</li>
-                            <li>Tanácsadás Adó-/Illetéktérítések-/Tulajdonjog bejegyzésével kapcsolatban, és más hivataloknál, intézményeknél</li>
+                            <li>Tanácsadás, ingatlana felmérése</li>
+                            <li>Fotózás-videózás-ha kell drón bevetésével</li>
+                            <l1>Többnyelvű Exposé, és Steakholder analízis kérésre</li>
+                            <li>Aktív ingatlanszemlék, tanácsadás mindkét félnek</li>
+                            <li>Külföldi érdeklődőknél tolmácsolunk</li>
+                            <li>Földhivatalban, irodákban intézzük a hivatalosakat</li>
+                            <li>Ha távol- vagy külföldön van, eljárunk érdekében!</li>
                         </ul>
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
@@ -185,18 +183,18 @@ $type_id=config('property.type_id.hu');
                         <h4 class="mt-2">Ingatlant venne?<br>
                         ingatlant bérelne?</h4>
                         <ul class="">
-                            <li>Személyesen kapcsolatfelvétel,
-                            baráti tanácsadás az Ön érdekében</li>
-                            <li>Kíséret Ingatlanszemlékre,
-                            földhivatalba, Exposé, stb.</li>
-                            <li>Német-magyar tolmács más
-                            anyanyelvű eladók-kiadók esetén</li>
+                            <li>Tanácsadás, igényeinek felmérése,
+                            ingatlanszemlékre való kíséret</li>
+                            <li>Adás-vétel vagy bérleti megálapodásnál előszerződést szerkesztünk,
+                            transzparensen elemzünk, tanácsolunk döntéséhez</li>
+                            <li>Ha máshol is talált volna ingatlant, de
+                            szüksége lenne tanácsadóra-tolmácsra, segíteni fogunk, hívjon!</li>
                             <li>Előszerződés írása, megállapodások
                             hitelesítése ügyvédnél</li>
-                            <li>Ingatlanvétel után is segítünk mint
-                            Gondnoka a távollétében</li>
-                            <li>Felújításokat is vállal Projektfox
-                            építkező brigádunk</li>
+                            <li>Gondnoki tevékenys is a szolgáltatásaink egyike,
+                            távollétében óvjuk, javítjuk, adminisztráljuk tulajdonát kérésére</li>
+                            <li>Projektfox építő brigádunk többéves tapasztalatai
+                            megbízásokat vállal akár nagyobb átépítésekre, renoválásokra!</li>
                         </ul>                  
                         <h4>Hitelfelvétel?</h4>
                         <p>
@@ -240,8 +238,8 @@ $type_id=config('property.type_id.hu');
                     </section>
                 </div>
                 <div class="jumbotron  hide visible-lg visible-md" >
-                    <h1>KÜLFÖLDÖN VAN? NEM  ÉR RÁ?</h1>
-                    <p class="lead"> Ingatlanfox a baranya megyei Gondnok, háza felügyelője, megvédi tulajdonát!</p>
+                    <h1>NINCS AKI VIGYÁZNA INGATLANÁRA? KÜLFÖLDÖN VAN?</h1>
+                    <p class="lead"> Baranyában gondoki ügyeletet vállalunk, megóvjuk, javítgatjuk ha kell, a történésekről informáljuk.</p>
                 </div>
                 <div class="container" id="map-container">
                     <h3>Hirdetéseink a térképen</h3>
