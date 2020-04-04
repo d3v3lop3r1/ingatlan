@@ -9,7 +9,6 @@
 
 * {
     font-family: Roboto, sans-serif;
-    color: rgb(80, 80, 80);
 }
 
 
@@ -357,6 +356,10 @@ p {
 }
 .card-header{
 	background-color: rgba(50, 85, 120, 1) ;
+	color: white;
+}
+
+.card-header h4{
 	color: white;
 }
 .kiskockak{
