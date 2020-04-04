@@ -25,11 +25,11 @@
                 <div class="row center-xs">
                         <div class="col-auto">
                             {!! Form::label('Kaufen/Mieten',null,['class' => 'search-label', 'for'=>'type_id']); !!}
-                            {!! Form::select('type_id',$type_id,null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!} 
+                            {!! Form::select('type_id',([null=>'Alle']+$type_id),null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!} 
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Art der Immobilie',null,['class' => 'search-label', 'for'=>'list_type']); !!}
-                            {!! Form::select('list_type',$list_type,null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!} 
+                            {!! Form::select('list_type',([null=>'Alle']+$list_type),null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!} 
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Wo?',null,['class' => 'search-label', 'for'=>'city']); !!}
