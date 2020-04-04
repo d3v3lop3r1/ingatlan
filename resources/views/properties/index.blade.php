@@ -43,7 +43,7 @@ use Carbon\Carbon;
                 @if($properties)
                     @foreach($properties as $property)
                         <tr>
-                            <th scope="row">{{$property->id}}</th>
+                            <th scope="row">{{$property->id}}<a href="/index/{{$property->id}}"> hu </a><a href="/de/index/{{$property->id}}"> de </a></th>
                             <td><a href="/photos/create/{{$property->id}}">{{count($property->photos)}} db</a></td>
                             <td><a href="/properties/{{$property->id}}/edit">{{$property->header_hun}}</a></td>
                             <td>{{agent::where('id',$property->agent_id)->first()->name}}</td>
