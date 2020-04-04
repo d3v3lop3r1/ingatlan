@@ -12,11 +12,12 @@ tinymce.init({
     plugins: "template table lists fullscreen hr link preview print casechange visualblocks",
     menubar: "file insert table ",
     toolbar1: "template|fontselect forecolor fontsizeselect|alignleft aligncenter alignright| table bullist", 
-    toolbar2: "undo redo fullscreen hr h1 h2 link preview print casechange visualblocks",
-    fontsize_formats: '10px 12px 14px 16px',
+    toolbar2: "undo redo fullscreen preview hr|h1 h2 h3 h4|link print casechange visualblocks",
+    fontsize_formats: '10px 12px 14px 16px 18px 20px 22px 24px',
     invalid_styles: 'font-family',
     block_formats: 'Paragraph=p; Header 1=h1; Header 2=h2; Header 3=h3; Header 4=h4',
     color_map: [
+    "000000", "Black"  
     "808080", "Gray",
     "FFFFFF", "White",
     "FF0000", "Red",
