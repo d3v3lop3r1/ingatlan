@@ -56,12 +56,12 @@
                                 aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><i class="fas fa-info"></i><a href=""> Wissenwertes</a></li>
-                                  <li><i class="fas fa-home"></i><a href=""> Für Eigentümer</a></li>
-                                  <li><i class="fas fa-money-bill-wave"></i><a href=""> Für Kaufer-Mieter</a></li>
-                                  <li><i class="fas fa-tools"></i><a href=""> Hausverwaltung</a></li>
-                                  <li><i class="fas fa-hammer"></i><a href=""> Renovieren-Umbauen</a></li>
-                                  <li><i class="fa fa-question-circle fa-sm"></i><a href=""> Hilfe rund um Haus</a></li>
+                                  <li><i class="fas fa-info"></i><a href="/de/wissenwertes"> Wissenwertes</a></li>
+                                  <li><i class="fas fa-home"></i><a href="/de/fur-eigentumer"> Für Eigentümer</a></li>
+                                  <li><i class="fas fa-money-bill-wave"></i><a href="/de/fur-kaufer-mieter"> Für Kaufer-Mieter</a></li>
+                                  <li><i class="fas fa-tools"></i><a href="/de/hausverwaltung"> Hausverwaltung</a></li>
+                                  <li><i class="fas fa-hammer"></i><a href="/de/renovieren-umbauen"> Renovieren-Umbauen</a></li>
+                                  <li><i class="fa fa-question-circle fa-sm"></i><a href="/de/hilfe-rund-um-haus"> Hilfe rund um Haus</a></li>
                                 </ul>
                               </li>
                               

@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 //Route::get('/home', 'PagesController@show');
 
-Route::get('/demo', function () {
+Route::get('/demo', function (Request $request) {
     return view('info.temp');
 });
 
@@ -113,6 +113,10 @@ Route::prefix('de')->group(function () {
     Route::get('/showing', function (Request $request) {
         return view('de_pages.show',compact('request'));
     });
+    Route::get('/wissenwertes', function (Request $request) {
+        return view('de_info.wissenwertes');
+    });
+    
         //              dePagesController
 
     Route::get('/show', 'dePagesController@showing');
