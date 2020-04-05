@@ -123,6 +123,9 @@ $room_height=config('property.room_height.hu');
                           @if ($property->garden)
                             <img class="pl-3" src="/images/extras_icons/garden-icon.png" data-toggle="tooltip" data-placement="top" title="Az ingatlanhoz kert tartozik" height="50" alt="">
                           @endif
+                          @if ($property->terrace)
+                            <img class="pl-3" src="/images/extras_icons/terrace-icon.png" data-toggle="tooltip" data-placement="top" title="Az ingatlanhoz terasz tartozik" height="50" alt="">
+                          @endif
 
                         </td>
                       </tr>
