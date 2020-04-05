@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/showing', function (Request $request) {
+    return view('show',compact('request'));
+});
 
 Route::get('/', function () {
     return view('nemsokara');
@@ -21,7 +24,7 @@ Route::get('/', function () {
 //Route::get('/home', 'PagesController@show');
 
 Route::get('/demo', function () {
-    return view('demo');
+    return view('info.temp');
 });
 
 
@@ -107,11 +110,10 @@ Auth::routes();
 //                   NÉMET OLDALAK
 
 Route::prefix('de')->group(function () {
-    Route::get('home', function () {
-        return view('de_pages.temp');
+    Route::get('/showing', function (Request $request) {
+        return view('de_pages.show',compact('request'));
     });
-    
-    //              dePagesController
+        //              dePagesController
 
     Route::get('/show', 'dePagesController@showing');
     Route::get('/home', 'dePagesController@home');
@@ -119,7 +121,7 @@ Route::prefix('de')->group(function () {
     Route::get('/index/{property}', 'dePagesController@index');
 
     //              deINFO OLDALAK
-    
+
 
 
 });

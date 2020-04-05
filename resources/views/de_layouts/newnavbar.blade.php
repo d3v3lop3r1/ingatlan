@@ -18,18 +18,18 @@
                                 aria-haspopup="true" aria-expanded="false">Kaufen<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><a href="">Alle</a></li>
-                                  <li><a href="">Wohnung</a></li>
-                                  <li><a href="">Haus</a></li>
-                                  <li><a href="">Ferienobjekte</a></li>
-                                  <li><a href="">Garage</a></li>
-                                  <li><a href=""></a>Büro</li>
-                                  <li><a href="">Gewerbeimmobilien</a></li>
-                                  <li><a href="">Lager-Lagerhalle</a></li>
-                                  <li><a href="">Verkaufslokal</a></li>
-                                  <li><a href="">Grundstück-Land</a></li>
-                                  <li><a href="">Gastronomoie-Hotel</a></li>
-                                  <li><a href="">Sonstiges</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'zeiger' => 'Alle']); ?>">Alle</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 1,'zeiger' => 'Wohnung']); ?>">Wohnung</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 2,'zeiger' => 'Haus']); ?>">Haus</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 3,'zeiger' => 'Ferienobjekte']); ?>">Ferienobjekte</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 4,'zeiger' => 'Garage']); ?>">Garage</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 5,'zeiger' => 'Büro']); ?>">Büro</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 6,'zeiger' => 'Gewerbeimmobilien']); ?>">Gewerbeimmobilien</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 7,'zeiger' => 'Lager-Lagerhalle']); ?>">Lager-Lagerhalle</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 8,'zeiger' => 'Verkaufslokal']); ?>">Verkaufslokal</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 9,'zeiger' => 'Grundstück-Land']); ?>">Grundstück-Land</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 10,'zeiger' => 'Gastronomoie-Hotel']); ?>">Gastronomoie-Hotel</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'list_type' => 11,'zeiger' => 'Sonstiges']); ?>">Sonstiges</a></li>
                                 </ul>
                               </li>
                               <li class="dropdown">
@@ -37,18 +37,18 @@
                                 aria-haspopup="true" aria-expanded="false">Mieten<span class="caret"></span></a> 
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><a href="">Alle</a></li>
-                                  <li><a href="">Wohnung</a></li>
-                                  <li><a href="">Haus</a></li>
-                                  <li><a href="">Ferienobjekte</a></li>
-                                  <li><a href="">Garage</a></li>
-                                  <li><a href="">Büro</a></li>
-                                  <li><a href="">Gewerbeimmobilien</a></li>
-                                  <li><a href="">Lager-Lagerhalle</a></li>
-                                  <li><a href="">Verkaufslokal</a></li>
-                                  <li><a href="">Grundstück-Land</a></li>
-                                  <li><a href="s">Gastronomoie-Hotel</a></li>
-                                  <li><a href="">Sonstiges</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'zeiger' => 'Alle']); ?>">Alle</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 1,'zeiger' => 'Wohnung']); ?>">Wohnung</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 2,'zeiger' => 'Haus']); ?>">Haus</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 3,'zeiger' => 'Ferienobjekte']); ?>">Ferienobjekte</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 4,'zeiger' => 'Garage']); ?>">Garage</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 5,'zeiger' => 'Büro']); ?>">Büro</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 6,'zeiger' => 'Gewerbeimmobilien']); ?>">Gewerbeimmobilien</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 7,'zeiger' => 'Lager-Lagerhalle']); ?>">Lager-Lagerhalle</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 8,'zeiger' => 'Verkaufslokal']); ?>">Verkaufslokal</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 9,'zeiger' => 'Grundstück-Land']); ?>">Grundstück-Land</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 10,'zeiger' => 'Gastronomoie-Hotel']); ?>">Gastronomoie-Hotel</a></li>
+                                  <li><a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'list_type' => 11,'zeiger' => 'Sonstiges']); ?>">Sonstiges</a></li>
                                 </ul>
                               </li>
                               <li class="dropdown">
