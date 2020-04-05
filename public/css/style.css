@@ -346,6 +346,11 @@ p {
 .index-text{
 	font-family: 'Roboto', sans-serif;
 }
+.tooltip{
+	padding: 10px;
+	background-color: darkgrey;
+	color: white;
+}
 .card{
 	line-height: normal;
 }

@@ -109,22 +109,22 @@ $room_height=config('property.room_height.hu');
                         <th>Extrák</th>
                         <td colspan="3">
                           @if ($property->lift)
-                            <img class="pl-3" src="/images/extras_icons/Elevator_icon.png" data-toggle="tooltip" data-placement="top" title="Az ingatlanban lift található" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/Elevator_icon.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban lift található" height="50" alt="">
                           @endif
                           @if ($property->aircondition)
-                            <img class="pl-3" src="/images/extras_icons/air-conditioner.png" data-toggle="tooltip" data-placement="top" title="Az ingatlanban légkondícionáló található" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/air-conditioner.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban légkondícionáló található" height="50" alt="">
                           @endif
                           @if ($property->balcony)
-                            <img class="pl-3" src="/images/extras_icons/balcony-icon-new.png" data-toggle="tooltip" data-placement="top" title="Az ingatlanban erkély található" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/balcony-icon-new.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban erkély található" height="50" alt="">
                           @endif
                           @if ($property->disabled)
-                            <img class="pl-3" src="/images/extras_icons/icon-disabled.png" data-toggle="tooltip" data-placement="top" title="Az ingatlan akadálymentesített" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/icon-disabled.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlan akadálymentesített" height="50" alt="">
                           @endif
                           @if ($property->garden)
-                            <img class="pl-3" src="/images/extras_icons/garden-icon-new.png" data-toggle="tooltip" data-placement="top" title="Az ingatlanhoz kert tartozik" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/garden-icon-new.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanhoz kert tartozik" height="50" alt="">
                           @endif
                           @if ($property->terrace)
-                            <img class="pl-3" src="/images/extras_icons/terrace-icon.png" data-toggle="tooltip" data-placement="top" title="Az ingatlanhoz terasz tartozik" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/terrace-icon.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanhoz terasz tartozik" height="50" alt="">
                           @endif
 
                         </td>
