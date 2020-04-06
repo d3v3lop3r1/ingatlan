@@ -41,19 +41,20 @@ $room_height=config('property.room_height.hu');
               {{--  Adatok oszlop   --}}
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
+                <div class="">
                   <table class="table table-sm table-bordered index-adatok-tabla">
                     <thead class="thead-dark pt-3">
                       <tr>
-                        <th>id {{70000+$property->id}}</th>
-                        <th colspan="3">{{$property->header_hun}}</th>
+                        <th scope="col">id {{70000+$property->id}}</th>
+                        <th  scope="col" colspan="3">{{$property->header_hun}}</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr  scope="row">
                         <th>Régió</th>
                         <td>{{$region[$property->region]}}</td>
                         <th>Attraktivitás</th>
-                        <td >
+                        <td class="index-stars">
                           @for ($i = 0; $i < $property->attraktivitas ; $i++)
                             <i class="fas fa-star stars"></i>
                           @endfor                          
@@ -63,7 +64,7 @@ $room_height=config('property.room_height.hu');
                         <th>Város</th>
                         <td>{{$property->city}}</td>
                         <th>Állapot</th>
-                        <td>
+                        <td class="index-stars">
                           @for ($i = 0; $i < $property->allapot ; $i++)
                             <i class="fas fa-star stars"></i>
                           @endfor                          
@@ -78,7 +79,7 @@ $room_height=config('property.room_height.hu');
                           ?>
                         </td>
                         <th>Extrák</th>
-                        <td>
+                        <td class="index-stars">
                           @for ($i = 0; $i < $property->extrak ; $i++)
                             <i class="fas fa-star stars"></i>
                           @endfor                          
@@ -132,13 +133,13 @@ $room_height=config('property.room_height.hu');
                       <tr  class="table-borderless index-price">
                         <td align="right" class=" pt-3"><h5 class="text-white" >Ár</h5></td>
                         <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
-                        <td class=" pt-3 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></td>
+                        <td class=" pt-3 pr-3"><h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
                         <td class=" pt-3 pr-3"></th>
                       </tr>
 
                       <tr class="table-borderless" align="center">
                         <th class="pt-3 justify-content-center" colspan="2">
-                          <h4>
+                          <h4 class="index_mutato">
                             {{$type_id[$property->type_id]}} - {{$list_type[$property->list_type]}} - {{$property->city}}
                           </h4>
                         </th>
@@ -150,6 +151,7 @@ $room_height=config('property.room_height.hu');
                       
                     </tbody>
                   </table>
+                </div>  
               </div>
 
                   {{--  Agent oszlop  --}}

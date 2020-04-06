@@ -332,24 +332,6 @@ p {
 
 
 }
-.index-price td{
-	background-color: rgba(50, 85, 120, 1) ;
-}
-.index-agent{
-	line-height: 15px;
-	margin-bottom: 20px;
-}
-.index-agent h5{
-	font-size: medium;
-}
-.index-text{
-	font-family: 'Roboto', sans-serif;
-}
-.tooltip{
-	padding: 10px;
-	background-color: darkgrey;
-	color: white;
-}
 .card{
 	line-height: normal;
 }
@@ -516,10 +498,30 @@ p {
 	background-color: rgb(194, 204, 212);
 
 }
-
-.stars{
+.index-price td{
+	background-color: rgba(50, 85, 120, 1) ;
+	white-space: nowrap;
+}
+.index-agent{
+	line-height: 15px;
+	margin-bottom: 20px;
+}
+.index-agent h5{
+	font-size: medium;
+}
+.index-text{
+	font-family: 'Roboto', sans-serif;
+}
+.index-stars{
+	white-space: nowrap;
 	color: tomato !important;
 }
+.index_mutato{
+	white-space: nowrap;
+}
+.tooltip{
+}
+
 
             /*         Footer         */
 	
