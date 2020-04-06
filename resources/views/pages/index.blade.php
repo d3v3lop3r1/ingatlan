@@ -31,7 +31,7 @@ $room_height=config('property.room_height.hu');
                 <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
                 <div class="row">
                   @foreach ($photos as $photo)
-                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 mt-1">
                       <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
                     </div>
                   @endforeach
