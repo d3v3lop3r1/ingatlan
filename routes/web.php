@@ -113,8 +113,11 @@ Route::prefix('de')->group(function () {
     Route::get('/showing', function (Request $request) {
         return view('de_pages.show',compact('request'));
     });
-    Route::get('/wissenwertes', function (Request $request) {
+    Route::get('/wissenwertes', function () {
         return view('de_info.wissenwertes');
+    });
+    Route::get('/renovieren-umbauen', function () {
+        return view('de_info.renovieren-umbauen');
     });
     
         //              dePagesController
