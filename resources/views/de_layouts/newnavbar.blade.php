@@ -58,7 +58,7 @@
                                   <li><a href="#"> </a></li>
                                   <li><i class="fas fa-info"></i><a href="/de/wissenwertes"> Wissenwertes</a></li>
                                   <li><i class="fas fa-home"></i><a href="/de/fur-eigentumer"> Für Eigentümer</a></li>
-                                  <li><i class="fas fa-money-bill-wave"></i><a href="/de/fur-kaufer-mieter"> Für Kaufer-Mieter</a></li>
+                                  <li><i class="fas fa-money-bill-wave"></i><a href="/de/fur-kaufer-und-mieter"> Für Kaufer-Mieter</a></li>
                                   <li><i class="fas fa-tools"></i><a href="/de/hausverwaltung"> Hausverwaltung</a></li>
                                   <li><i class="fas fa-hammer"></i><a href="/de/renovieren-umbauen"> Renovieren-Umbauen</a></li>
                                   <li><i class="fa fa-question-circle fa-sm"></i><a href="/de/hilfe-rund-um-haus"> Hilfe rund um Haus</a></li>

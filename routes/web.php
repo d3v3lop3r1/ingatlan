@@ -113,12 +113,6 @@ Route::prefix('de')->group(function () {
     Route::get('/showing', function (Request $request) {
         return view('de_pages.show',compact('request'));
     });
-    Route::get('/wissenwertes', function () {
-        return view('de_info.wissenwertes');
-    });
-    Route::get('/renovieren-umbauen', function () {
-        return view('de_info.renovieren-umbauen');
-    });
     
         //              dePagesController
 
@@ -129,6 +123,18 @@ Route::prefix('de')->group(function () {
 
     //              deINFO OLDALAK
 
-
-
+    Route::get('/wissenwertes', function () {
+        return view('de_info.wissenwertes');
+    });
+    Route::get('/renovieren-umbauen', function () {
+        return view('de_info.renovieren-umbauen');
+    });
+    Route::get('/fur-eigentumer', function () {
+        return view('de_info.fur-eigentumer');
+    });
+    Route::get('/fur-kaufer-und-mieter', function () {
+        return view('de_info.fur-kaufer-und-mieter');
+    });
+    
+    
 });
