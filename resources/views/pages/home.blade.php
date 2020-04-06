@@ -3,6 +3,9 @@ use App\photo;
 use Carbon\Carbon;
 use App\property;
 $type_id=config('property.type_id.hu');
+$list_type=config('property.list_type.hu');
+$subtype=config('property.subtype.hu');
+$region= config('property.region.hu');                      
 @endphp
 @extends('layout.main')
 
@@ -28,7 +31,7 @@ $type_id=config('property.type_id.hu');
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="fotó" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
-                                    <span class="badge badge-info">{{$prop->city}}</span><br>
+                                    <span class="badge badge-info">{{$region[$prop->region]}} - {{$prop->city}}</span><br>
                                     {{$prop->header_hun}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
@@ -54,7 +57,7 @@ $type_id=config('property.type_id.hu');
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_hun}}" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
-                                    <span class="badge badge-info">{{$prop->city}}</span><br>
+                                    <span class="badge badge-info">{{$region[$prop->region]}} - {{$prop->city}}</span><br>
                                     {{$prop->header_hun}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
@@ -104,7 +107,7 @@ $type_id=config('property.type_id.hu');
                                         </div>
                                         <div class="col-xs-12 main-photo">
                                             <div class="col-auto prop-header-alul-jobb">
-                                            ID:{{1100 + $property->id}}
+                                            ID:{{1100 + $property->id}} - {{$type_id[$property->type_id]}} {{$list_type[$property->list_type]}} {{$region[$property->region]}}
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                         </div>

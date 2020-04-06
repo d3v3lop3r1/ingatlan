@@ -4,6 +4,10 @@ use Carbon\Carbon;
 use Intervention\Image\ImageManager;
 use App\property;
 $type_id=config('property.type_id.hu');
+$list_type=config('property.list_type.hu');
+$subtype=config('property.subtype.hu');
+$region= config('property.region.hu');                      
+
 ?>
 @extends('layout.main')
 @section('tartalom')
@@ -67,7 +71,7 @@ $type_id=config('property.type_id.hu');
                                         <div class="col-xs-12 main-photo">
                                             <div class="row">
                                                 <div class="col-auto prop-header-alul-jobb">
-                                                ID:{{1100 + $property->id}}
+                                                ID:{{1100 + $property->id}} - {{$type_id[$property->type_id]}} {{$list_type[$property->list_type]}} {{$region[$property->region]}}
                                                 </div>
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">

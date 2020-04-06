@@ -1,5 +1,4 @@
 /* CSS Document */
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
 
 * {
@@ -205,8 +204,6 @@ p {
 	padding-right: 0;
 
 }
-
-
 .prop-header h5{
 	text-transform: uppercase;
 	font-size: 15px;
@@ -217,7 +214,6 @@ p {
 	margin-right: 5px;
 	background-color: rgba(25, 85, 110, 0.7);
 }
-
 .prop-header h4{
 	text-transform: uppercase;
 	font-size: 15px;
@@ -237,9 +233,49 @@ p {
 	color: #ffffff;
 }
 
+/*       New Header  */
+.prop-header-new{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 20px;
+	z-index: 1000;
+	padding-left: 0;
+	padding-right: 0;
+
+}
+.prop-header-new h5{
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 700;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: rgba(25, 85, 110, 0.7);
+}
+
+.prop-header-new h4{
+	text-transform: uppercase;
+	font-size: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: left;
+	color: #E63946;
+	background-color: rgba(255, 255, 255, 0.849);	
+}
+	
+.prop-header-new a{
+	color: #ffffff;
+}
+
 .prop-header-alatt-bal{
 	margin-left: 20px;
-	padding: 5px;
+	padding: 5px 15px;
 	font-weight: 700;
 	font-size: small;
 	text-transform: uppercase;
@@ -252,7 +288,7 @@ p {
 
 .prop-header-alatt-jobb{
 	margin-right: 20px;
-	padding: 5px;
+	padding: 5px 15px;
 	font-weight: 700;
 	font-size: small;
 	text-transform: uppercase;
@@ -518,8 +554,6 @@ p {
 }
 .index_mutato{
 	white-space: nowrap;
-}
-.tooltip{
 }
 
 
