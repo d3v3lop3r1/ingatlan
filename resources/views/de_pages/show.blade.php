@@ -21,7 +21,9 @@ $type_id=config('property.type_id.de');
             <div class="container-fluid">
                 <div class="row center-xs">
                     <div class="col-xs-12">
-                        <h4>{{$mutato}} - Anzahl der Angebote: {{$prop_count}} </h4>
+                        <h4>{{$mutato}}</h4> 
+                        <h4>Anzahl der Angebote:</h4> 
+                        <h4><span class="badge badge-primary">{{$prop_count}}</span>{{$prop_count}}</h4> 
                     </div>
                 </div>
             </div>

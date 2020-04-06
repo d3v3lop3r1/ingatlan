@@ -38,22 +38,22 @@ class dePagesController extends Controller
         $type_ids=config('property.type_id.de');
         $type_id = $request->type_id;
         if ($type_id) {
-            $mutato .= $type_ids[$type_id];
+            $mutato .= $type_ids[$type_id] . '-';
         }
 
         $list_types=config('property.list_type.de');
         $list_type = $request->list_type;
         if ($list_type) {
-            $mutato .= $list_types[$list_type];
+            $mutato .= $list_types[$list_type] . '-';
         }
         $city = $request->city;
         if ($city){
-            $mutato .= strtoupper($city) . '/';
+            $mutato .= $city . '-';
         }
 
         $room_no = $request->room_no;
         if ($room_no){
-            $mutato .= 'ANZAHL DER ZIMMER-' . $room_no . '+/';
+            $mutato .= 'anzahl der Zimmer min.:' . $room_no . '-';
         }
 
         $area = $request->area;

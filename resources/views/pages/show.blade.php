@@ -21,7 +21,8 @@ $type_id=config('property.type_id.hu');
             <div class="container-fluid">
                 <div class="row center-xs">
                     <div class="col-xs-12">
-                        <h4>{{$mutato}} - Ajánlatok száma: {{$prop_count}} </h4>
+                        <h4>{{$mutato}}</h4>
+                        <h4>Ajánlatok száma: <span class="badge badge-primary">{{$prop_count}}</span> </h4>
                     </div>
                 </div>
             </div>
