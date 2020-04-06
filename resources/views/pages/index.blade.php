@@ -45,7 +45,7 @@ $room_height=config('property.room_height.hu');
                   <table class="table table-sm table-bordered index-adatok-tabla">
                     <thead class="thead-dark pt-3">
                       <tr>
-                        <th scope="col"> IFX{{70000+$property->id}}</th>
+                        <th scope="col"> ID:{{1100+$property->id}}</th>
                         <th  scope="col" colspan="3">{{$property->header_hun}}</th>
                       </tr>
                     </thead>

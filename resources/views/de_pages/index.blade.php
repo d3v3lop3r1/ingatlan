@@ -44,7 +44,7 @@ $room_height=config('property.room_height.de');
                   <table class="table table-sm table-bordered index-adatok-tabla">
                     <thead class="thead-dark pt-3">
                       <tr>
-                        <th>id {{70000+$property->id}}</th>
+                        <th>ID:{{1100+$property->id}}</th>
                         <th colspan="3">{{$property->header_de}}</th>
                       </tr>
                     </thead>
