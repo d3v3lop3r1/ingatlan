@@ -17,7 +17,7 @@ $region= config('property.region.hu');
                 <div class="card">
                     <h4 class="center-xs card-header">Kiszemelt olcsó lakások</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
-                        <div class="media shadow-sm p-1 mt-1">
+                        <div class="media shadow-sm p-1 mt-1 mb-1">
                             @php
                                 $photo_count = $prop->photos->count();
                                 $photo = $prop->photos->where('is_default','1')->first();
@@ -29,7 +29,7 @@ $region= config('property.region.hu');
                                 }
                             @endphp
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="fotó" width="50" height="50">
-                            <div class="media-body">
+                            <div class="media-body home-media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="badge badge-info">{{$region[$prop->region]}} - {{$prop->city}}</span><br>
                                     {{$prop->header_hun}}<br>
@@ -43,7 +43,7 @@ $region= config('property.region.hu');
                 <div class="card mt-2">
                     <h4 class="card-header center-xs">Eladó házak most olcsóbban</h4>
                     @foreach ($prop_elado_hazak_cheap as $prop)
-                        <div class="media shadow-sm p-1 mt-1">
+                        <div class="media shadow-sm p-1 mt-1 mb-1">
                             @php
                                 $photo_count = $prop->photos->count();
                                 $photo = $prop->photos->where('is_default','1')->first();
@@ -55,10 +55,12 @@ $region= config('property.region.hu');
                                 }
                             @endphp
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_hun}}" width="50" height="50">
-                            <div class="media-body">
+                            <div class="media-body home-media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
-                                    <span class="badge badge-info">{{$region[$prop->region]}} - {{$prop->city}}</span><br>
-                                    {{$prop->header_hun}}<br>
+                                    <span class="badge badge-info">
+                                        {{$region[$prop->region]}} - {{$prop->city}}
+                                    </span><br>
+                                    <span class="mt-1">{{$prop->header_hun}}</span><br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
                         

@@ -403,6 +403,9 @@ p {
 .h-media{
 	float:left;
 	}
+.home-media-body{
+	line-height: 20px;
+}
 .h-text{
 	float:left;
 	padding:5px 20px;
