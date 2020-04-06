@@ -105,7 +105,7 @@ $type_id=config('property.type_id.de');
                                         <div class="col-xs-12 main-photo">
                                             <div class="row">
                                                 <div class="col-auto prop-header-alul-jobb">
-                                                    ID{{1100 + $property->id}}
+                                                    ID:{{1100 + $property->id}}
                                                 </div>
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
