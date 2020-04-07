@@ -13,7 +13,7 @@
         Bei Fehlberechnungen laufen Sie die Gefahr Ihr Preisangebot zu billeg oder zu teuer zu setzen.
         Wegen mangelnde Sprachkenntnisse zwischen Ihnen und Ihrem Käufer entstehen Konflikte.
         Bis Sie Ihr Anwesen verkauft haben könnten Sie 10-20 oder mehr Besichtigungen auch anhalten.
-        Ersparen Sie sich All diese lästige Unannähmlichkeiten
+        Ersparen Sie sich All diese lästige Unannähmlichkeiten.
 
     </p>
     <p>
@@ -35,8 +35,9 @@
     <h4>Könnte ich aus den Repräsentanten von Ingatlanfox selber auswählen?</h4>
     <p>
         Ja, allerdings nicht Alle Repräsentanten sprechen ausreichend deutsch.
-        Die in der Zentrale immer, also wählen Sie am Anfang entweder 0049-1578-4001214<strong>oder Mobil in Ungarn</strong>0036-20-7772000<strong></strong>  illetve
-        0036-20-7772000 Frau Speck oder Herr Sztarovics informieren Sie gern<strong></strong>
+        Die in der Zentrale immer, also wählen Sie am Anfang entweder <br>
+        0049-1578-4001214, Mobil in Ungarn 0036-20-7772000  oder
+        0036-20-7772000 Frau Speck oder Herr Sztarovics informieren Sie gern.
     </p>
 </div>
 @endsection

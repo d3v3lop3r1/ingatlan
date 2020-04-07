@@ -7,9 +7,9 @@
             Az Ön ajánlatából egy karakteresen megnyerőe bemutatást faragunk
             fotózás-videózás-drónozás anyagának feldolgozásával.
             Értesítjük előjegyzésben lévő érdeklődőinket, partnereinket,
-            ajánlatunkat hírdetjük
-            2 nyelven
-            3 országban
+            ajánlatunkat hírdetjük <br>
+            2 nyelven <br>
+            3 országban <br>
             4-5 ingatlanportálon, az Ön érdekében, egy gyors értékesítésért
         </p>
         <h4>
