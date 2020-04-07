@@ -57,7 +57,6 @@ class PropertyController extends Controller
        // $prop_id=$request->id;
        //return view('admin.photos.create_photos')->with('prop_id');
        $input=$request->all();
-       dd($input);
        property::create($input);
        return redirect('properties');
 
