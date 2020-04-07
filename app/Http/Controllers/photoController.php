@@ -165,7 +165,7 @@ class photoController extends Controller
     public function destroy($id)
     {
         $photo_to_delete = photo::where('id', $id, 100)->first();
-        $photo_path='uploads/' . $photo_to_delete->file1;
+        $photo_path='/uploads/' . $photo_to_delete->file1;
         File::delete($photo_path);
         photo::where('id', $id, 100)->first()->delete();
         return redirect('properties');

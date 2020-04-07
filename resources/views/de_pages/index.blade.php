@@ -44,7 +44,7 @@ $room_height=config('property.room_height.de');
                   <table class="table table-sm table-bordered index-adatok-tabla">
                     <thead class="pt-3">
                       <tr>
-                        <th>ID:{{1100+$property->id}}</th>
+                        <th>ID:1100{{$property->id}}</th>
                         <th colspan="3">{{$property->header_de}}</th>
                       </tr>
                     </thead>
@@ -70,7 +70,7 @@ $room_height=config('property.room_height.de');
                         </td>
                       </tr>
                       <tr>
-                        <th>letztes Update</th>
+                        <th>Letztes Update</th>
                         <td>
                           <?php
                               $dt = Carbon::parse($property->updated_at);

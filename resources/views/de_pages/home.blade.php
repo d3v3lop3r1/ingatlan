@@ -3,6 +3,10 @@ use App\photo;
 use Carbon\Carbon;
 use App\property;
 $type_id=config('property.type_id.de');
+$list_type=config('property.list_type.de');
+$subtype=config('property.subtype.de');
+$region= config('property.region.de');
+
 @endphp
 @extends('de_layouts.main')
 
@@ -105,7 +109,7 @@ $type_id=config('property.type_id.de');
                                         <div class="col-xs-12 main-photo">
                                             <div class="row">
                                                 <div class="col-auto prop-header-alul-jobb">
-                                                    ID:{{1100 + $property->id}}
+                                                    ID:1100{{$property->id}} - {{$list_type[$property->list_type]}} {{$type_id[$property->type_id]}} {{$region[$property->region]}}
                                                 </div>
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">

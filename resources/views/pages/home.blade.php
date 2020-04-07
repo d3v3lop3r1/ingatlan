@@ -5,7 +5,7 @@ use App\property;
 $type_id=config('property.type_id.hu');
 $list_type=config('property.list_type.hu');
 $subtype=config('property.subtype.hu');
-$region= config('property.region.hu');                      
+$region= config('property.region.hu');
 @endphp
 @extends('layout.main')
 
@@ -35,9 +35,9 @@ $region= config('property.region.hu');
                                     {{$prop->header_hun}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
-                        
+
                             </div>
-                        </div>            
+                        </div>
                     @endforeach
                 </div>
                 <div class="card mt-2">
@@ -63,17 +63,17 @@ $region= config('property.region.hu');
                                     <span class="mt-1">{{$prop->header_hun}}</span><br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
-                        
+
                             </div>
-                        </div>            
+                        </div>
                     @endforeach
-                </div>                 
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h1 class="text-uppercase center-xs">kiemelt ajánlataink</h1>
                 <div class="row center-xs ingatlan-sor">
-                    @foreach ($properties as $property)                       
-                            <?php 
+                    @foreach ($properties as $property)
+                            <?php
                             $photo_count = $property->photos->count();
                             $photo = $property->photos->where('is_default','1')->first();
                             if ($photo){
@@ -84,14 +84,14 @@ $region= config('property.region.hu');
                             }
 
                             ?>
-                            
+
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
                                             <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_hun}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
-                                                    
+
                                                     <?php
                                                     echo ($type_id[$property->type_id]);
                                                     $dt = Carbon::parse($property->updated_at);
@@ -105,11 +105,11 @@ $region= config('property.region.hu');
                                                     <i class="fas fa-camera-retro"></i> {{$photo_count}}
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="col-xs-12 main-photo">
                                             <div class="col-auto prop-header-alul-jobb">
-                                            ID:{{1100 + $property->id}} - {{$type_id[$property->type_id]}} {{$list_type[$property->list_type]}} {{$region[$property->region]}}
+                                            ID:1100{{$property->id}} - {{$list_type[$property->list_type]}} {{$type_id[$property->type_id]}} {{$region[$property->region]}}
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                         </div>
@@ -117,8 +117,8 @@ $region= config('property.region.hu');
 
 
                                     {{--  Adatok  --}}
-                                    
-                                    
+
+
                                     <div class="row center-xs">
                                         <div class="col-xs-12 main-price border">
                                             <span class="money">{{$property->price}}</span>.- Ft
@@ -150,12 +150,12 @@ $region= config('property.region.hu');
                                                     @endif
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                    </div>                                                   
+                                    </div>
                             </div>
                     @endforeach
-                    
+
                 </div>
                 <div class="jumbotron" >
                     <h1>ITT JÓ HELYEN JÁR</h1>
@@ -166,17 +166,17 @@ $region= config('property.region.hu');
                     <section class="col-xs-12 col-sm-4">
                         <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
                         <h3 class="mt-2">Eladná-Kiadná ingatlanát?</h3>
-                        <h4>Ha ránk bízza ingatlana bemutatását, akkor a profi márketinges hadjáratunkkal gyorsan értékesítjük! Hogyan-hol prezentálunk?</h4> 
+                        <h4>Ha ránk bízza ingatlana bemutatását, akkor a profi márketinges hadjáratunkkal gyorsan értékesítjük! Hogyan-hol prezentálunk?</h4>
                         <p class="text-uppercase text-info">
                             2 nyelven<br>
                             3+ országban<br>
                             4+ ingatlanportálokon is<br>
                             az Ön sikere érdekében!</strong>
-                        </p> 
+                        </p>
                         <ul class="">
                             <li>Tanácsadás, ingatlana felmérése</li>
                             <li>Fotózás-videózás-ha kell drón bevetésével</li>
-                            <l1>Többnyelvű Exposé, és Steakholder analízis kérésre</li>
+                            <li>Többnyelvű Exposé, és Steakholder analízis kérésre</li>
                             <li>Aktív ingatlanszemlék, tanácsadás mindkét félnek</li>
                             <li>Külföldi érdeklődőknél tolmácsolunk</li>
                             <li>Földhivatalban, irodákban intézzük a hivatalosakat</li>
@@ -200,15 +200,15 @@ $region= config('property.region.hu');
                             távollétében óvjuk, javítjuk, adminisztráljuk tulajdonát kérésére</li>
                             <li>Projektfox építő brigádunk többéves tapasztalatai
                             megbízásokat vállal akár nagyobb átépítésekre, renoválásokra!</li>
-                        </ul>                  
+                        </ul>
                         <h4>Hitelfelvétel?</h4>
                         <p>
                             Intézkedünk hogy a legjobb ajánlatot
                             kapja! Szakemberünkkel felveszi a
                             kapcsolatot aki kikeresi Önnek is az
                             aktuálisan legjobbat!
-                        </p> 
-                        <h4>CSOK?</h4>   
+                        </p>
+                        <h4>CSOK?</h4>
                         <p>
                             Olyan térségban választ ingatlant
                             ahol a Magyar kormány átvállalja az
@@ -223,23 +223,23 @@ $region= config('property.region.hu');
                                 <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                         </div>
                         <h4 class="mt-2">
-                        Önnek is van információja 
-                        eladandó, 
-                        kiadandó 
+                        Önnek is van információja
+                        eladandó,
+                        kiadandó
                         ingatlanok felől?
                         </h4>
                         <p>
                         akkor egy
                         jövedelmező kereseti
                         lehetőséget biztosíthatunk Önnek is!
-                        
+
                         Legyen Ön is Alkalmi Ügynökünk –
                         Ingatlanfox* Agent
-                        
-                        Jelentkezzen 
-                        az egyedülálló 
+
+                        Jelentkezzen
+                        az egyedülálló
                         lehetőségre
-                        </p> 
+                        </p>
                     </section>
                 </div>
                 <div class="jumbotron  hide visible-lg visible-md" >
@@ -250,18 +250,18 @@ $region= config('property.region.hu');
                     <h3>Hirdetéseink a térképen</h3>
                     <div id="map" class="container"></div>
                 </div>
-            </div> 
+            </div>
             <div class="col d-none d-lg-block center-xs">
                 <div class="card">
                     <h4 class="card-header">Lakáshitel-kalkulátor</h4>
-                    <iframe class="mt-2" id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>            
+                    <iframe class="mt-2" id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>
                 </div>
                 <div class="card">
                     <h4 class="card-header">CSOK településlista</h4>
                     <iframe id="csok-map" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1qH4VJVp5xs6vaKHyEHwmKth3kFMj4AP9&ll=46.19367658681184%2C18.40386481697169&z=10" allowfullscreen ></iframe>
                 </div>
             </div>
-            </div>   
-        </div>    
-    </div> 
+            </div>
+        </div>
+    </div>
 @endsection
