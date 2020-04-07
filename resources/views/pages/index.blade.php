@@ -4,14 +4,14 @@ use Carbon\Carbon;
 $type_id=config('property.type_id.hu');
 $list_type=config('property.list_type.hu');
 $subtype=config('property.subtype.hu');
-$region= config('property.region.hu');                      
+$region= config('property.region.hu');
 $floors=config('property.floors.hu');
 $condition=config('property.condition.hu');
 $heating=config('property.heating.hu');
 $parking=config('property.parking.hu');
 $comfort=config('property.comfort.hu');
 $room_height=config('property.room_height.hu');
-  
+
 @endphp
 @extends('layout.main')
 
@@ -43,21 +43,21 @@ $room_height=config('property.room_height.hu');
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
                 <div class="">
                   <table class="table table-sm table-bordered index-adatok-tabla">
-                    <thead class="thead-dark pt-3">
+                    <thead class="pt-3">
                       <tr>
-                        <th scope="col"> ID:{{1100+$property->id}}</th>
-                        <th  scope="col" colspan="3">{{$property->header_hun}}</th>
+                        <th> ID:{{1100+$property->id}}</th>
+                        <th colspan="3">{{$property->header_hun}}</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr  scope="row">
+                      <tr>
                         <th>Régió</th>
                         <td>{{$region[$property->region]}}</td>
                         <th>Attraktivitás</th>
                         <td class="index-stars">
                           @for ($i = 0; $i < $property->attraktivitas ; $i++)
                             <i class="fas fa-star stars"></i>
-                          @endfor                          
+                          @endfor
                         </td>
                       </tr>
                       <tr>
@@ -67,7 +67,7 @@ $room_height=config('property.room_height.hu');
                         <td class="index-stars">
                           @for ($i = 0; $i < $property->allapot ; $i++)
                             <i class="fas fa-star stars"></i>
-                          @endfor                          
+                          @endfor
                         </td>
                       </tr>
                       <tr>
@@ -82,7 +82,7 @@ $room_height=config('property.room_height.hu');
                         <td class="index-stars">
                           @for ($i = 0; $i < $property->extrak ; $i++)
                             <i class="fas fa-star stars"></i>
-                          @endfor                          
+                          @endfor
                         </td>
 
                       </tr>
@@ -148,10 +148,10 @@ $room_height=config('property.room_height.hu');
                       <tr>
                         <td colspan="4"><span class="index-text"><?php echo $property->text_hun ?></span> </td>
                       </tr>
-                      
+
                     </tbody>
                   </table>
-                </div>  
+                </div>
               </div>
 
                   {{--  Agent oszlop  --}}
@@ -183,11 +183,11 @@ $room_height=config('property.room_height.hu');
                         <iframe
                           frameborder="0" style="border:0; width:100%; height:300px;"
                           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBrdH7bXJbDwNHSyPVwWIoyIeTdiUbWP_c
-                          &q={{$property->city}}%2C%20{{$property->street}}" allowfullscreen > 
+                          &q={{$property->city}}%2C%20{{$property->street}}" allowfullscreen >
                         </iframe>
                       </div>
                     </div>
-                  </div>  
+                  </div>
                   <div class="col-xs-12">
                     <div class="card">
                       <div class="card-header">
@@ -207,7 +207,7 @@ $room_height=config('property.room_height.hu');
                           Gondnoka a távollétében</li>
                           <li>Felújításokat is vállal Projektfox
                           építkező brigádunk</li>
-                        </ul>  
+                        </ul>
                       </div>
                       <div class="card-header">
                           <h4>Hitelfelvétel?</h4>
@@ -218,10 +218,10 @@ $room_height=config('property.room_height.hu');
                           kapja! Szakemberünkkel felveszi a
                           kapcsolatot aki kikeresi Önnek is az
                           aktuálisan legjobbat!
-                        </p> 
+                        </p>
                       </div>
                       <div class="card-header">
-                        <h4>CSOK?</h4>   
+                        <h4>CSOK?</h4>
                       </div>
                       <div class="card-body">
                           <p>
@@ -234,7 +234,7 @@ $room_height=config('property.room_height.hu');
                         </p>
                       </div>
                       </div>
-                    </div>  
+                    </div>
                   </div>
                 </div>
               </div>
@@ -256,7 +256,7 @@ $room_height=config('property.room_height.hu');
 @section('scripts')
   <script>
     var xmlhttp = new XMLHttpRequest();
-    
+
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);

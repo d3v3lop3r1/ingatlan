@@ -8,7 +8,7 @@
 
 body, html {
 	width: 100%;
-	font-family: 'Roboto', sans-serif; 
+	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	margin: 0;
 	padding: 0;
@@ -266,9 +266,9 @@ p {
 	margin-right: 5px;
 	float: left;
 	color: #E63946;
-	background-color: rgba(255, 255, 255, 0.849);	
+	background-color: rgba(255, 255, 255, 0.849);
 }
-	
+
 .prop-header-new a{
 	color: #ffffff;
 }
@@ -413,7 +413,7 @@ p {
 	}
 #tabs li{
 	padding: 0 10px 0 10px;
-}	
+}
 #map{
 	height:400px;
 	width: 100%;
@@ -434,7 +434,7 @@ p {
 	max-height:500px;
 	border: 1px solid black;
 	border-radius: 4px;
-	}	
+	}
 #first_image_box{
 	border:1px solid black;
 	width:100%px;
@@ -521,6 +521,12 @@ p {
 	font-size: small;
 }
 
+.index-adatok-tabla thead{
+    background-color: rgba(50, 85, 120, 1);
+    color: white;
+}
+
+
 .index-adatok-tabla th{
 	text-transform: uppercase;
 	padding-right: 10px;
@@ -561,7 +567,7 @@ p {
 
 
             /*         Footer         */
-	
+
 footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
 .footerleft { margin-top:50px; padding:0 36px; }
 .logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
@@ -583,15 +589,15 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
      -moz-transform: scale(1.1);
      -o-transform: scale(1.1);
  }
- 
- 
 
- 
+
+
+
  .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
  .icon-ul li { line-height:75px; width:100%; float:left;}
  .icon { float:left; margin-right:5px;}
- 
- 
+
+
  .copyright { min-height:40px; background-color:#000000;}
  .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
  .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}

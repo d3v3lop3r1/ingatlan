@@ -6,7 +6,8 @@ use File;
 use Illuminate\Http\Request;
 use App\photo;
 use App\agent;
-
+use Illuminate\Support\Facades\Validator;
+use Intervention\Image\ImageManagerStatic as Image;
 class photoController extends Controller
 {
     /**
@@ -32,7 +33,7 @@ class photoController extends Controller
      */
     public function create(Request $request, $prop_id)
     {
-     
+
         return view('photos.create_photos')->with('prop_id', $prop_id);
     }
 
@@ -46,7 +47,7 @@ class photoController extends Controller
         $agent=agent::where('id', $agent_id)->first();
         return view('photos.agents.create_photos', compact('agent', $agent));
     }
-    
+
 
 
 
@@ -57,7 +58,7 @@ class photoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
+    {
             $propId=$request->input('prop_id');
             $default=photo::where('property_id',$propId)->where('is_default',1)->count();
             if (!$default){
@@ -65,17 +66,33 @@ class photoController extends Controller
             } else {
                 $is_default=0;
             }
-            $file=$request->file('file');
-            $filename= time() . $file->getClientOriginalName();
-            $file->move('./uploads', $filename); 
+            $input= $request->all();
+            $file = $request->file('file');
+            $rules = array(
+		    'file' => 'image|max:3000',
+            );
+            $validation = Validator::make($input, $rules);
+
+            if ($validation->fails())
+            {
+                return Response::make($validation->errors->first(), 400);
+            }
+
+            $extension = $file->extension();
+            $filename = sha1(time().time()).".{$extension}";
+            $directory='./uploads/';
+
+            $img = Image::make($file)->resize(800, 600)->insert('./images/logos/ingatlanfox-watermark.png','center');
+            $img->save($directory . $filename);
+
 
             $photo = new Photo;
             $photo->file1=$filename;
             $photo->property_id=$propId;
             $photo->is_default=$is_default;
-            $photo->save();
- 
+            $save_to_database=$photo->save();
     }
+
 
     /**
      * Store a newly created photos in storage.
@@ -84,12 +101,12 @@ class photoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function updateAgentPhoto(Request $request)
-    { 
-        if ($request->file('file')->isValid()) {    
+    {
+        if ($request->file('file')->isValid()) {
             $file=$request->file('file');
             $url=$request->url;
             $filename= time() . $file->getClientOriginalName();
-            $file->move('./uploads/agents', $filename); 
+            $file->move('./uploads/agents', $filename);
             $agent_id=$request->agent_id;
             $agent= agent::where('id',$agent_id)->first();
             $old_photo=$agent->photo;
@@ -98,12 +115,12 @@ class photoController extends Controller
             $agent->photo=$filename;
             $agent->save();
             //return redirect('agents');
-        }    
- 
+        }
+
     }
 
 
-    
+
 
     /**
      * Display the specified resource.
@@ -152,7 +169,7 @@ class photoController extends Controller
         File::delete($photo_path);
         photo::where('id', $id, 100)->first()->delete();
         return redirect('properties');
-        
+
     }
 
 

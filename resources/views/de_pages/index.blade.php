@@ -4,14 +4,14 @@ use Carbon\Carbon;
 $type_id=config('property.type_id.de');
 $list_type=config('property.list_type.de');
 $subtype=config('property.subtype.de');
-$region= config('property.region.de');                      
+$region= config('property.region.de');
 $floors=config('property.floors.de');
 $condition=config('property.condition.de');
 $heating=config('property.heating.de');
 $parking=config('property.parking.de');
 $comfort=config('property.comfort.de');
 $room_height=config('property.room_height.de');
-  
+
 @endphp
 @extends('de_layouts.main')
 
@@ -42,7 +42,7 @@ $room_height=config('property.room_height.de');
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
                   <table class="table table-sm table-bordered index-adatok-tabla">
-                    <thead class="thead-dark pt-3">
+                    <thead class="pt-3">
                       <tr>
                         <th>ID:{{1100+$property->id}}</th>
                         <th colspan="3">{{$property->header_de}}</th>
@@ -53,20 +53,20 @@ $room_height=config('property.room_height.de');
                         <th>Region</th>
                         <td>{{$region[$property->region]}}</td>
                         <th>Atraktivität</th>
-                        <td >
+                        <td class="index-stars">
                           @for ($i = 0; $i < $property->attraktivitas ; $i++)
                             <i class="fas fa-star stars"></i>
-                          @endfor                          
+                          @endfor
                         </td>
                       </tr>
                       <tr>
                         <th>Stadt</th>
                         <td>{{$property->city}}</td>
                         <th>Zustand</th>
-                        <td>
+                        <td  class="index-stars">
                           @for ($i = 0; $i < $property->allapot ; $i++)
                             <i class="fas fa-star stars"></i>
-                          @endfor                          
+                          @endfor
                         </td>
                       </tr>
                       <tr>
@@ -78,10 +78,10 @@ $room_height=config('property.room_height.de');
                           ?>
                         </td>
                         <th>Extras</th>
-                        <td>
+                        <td class="index-stars">
                           @for ($i = 0; $i < $property->extrak ; $i++)
                             <i class="fas fa-star stars"></i>
-                          @endfor                          
+                          @endfor
                         </td>
 
                       </tr>
@@ -144,7 +144,7 @@ $room_height=config('property.room_height.de');
                       <tr>
                         <td colspan="4"><span class="index-text"><?php echo $property->text_de ?></span> </td>
                       </tr>
-                      
+
                     </tbody>
                   </table>
               </div>
@@ -180,11 +180,11 @@ $room_height=config('property.room_height.de');
                         <iframe
                           frameborder="0" style="border:0; width:100%; height:300px;"
                           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBrdH7bXJbDwNHSyPVwWIoyIeTdiUbWP_c
-                          &q={{$property->city}}%2C%20{{$property->street}}" allowfullscreen > 
+                          &q={{$property->city}}%2C%20{{$property->street}}" allowfullscreen >
                         </iframe>
                       </div>
                     </div>
-                  </div>  
+                  </div>
                   <div class="col-xs-12">
                     <div class="card">
                       <div class="card-header">
@@ -198,7 +198,7 @@ $room_height=config('property.room_height.de');
                           <li>Schreiben eines Vorvertrags, Bescheinigung von Vereinbarungen mit einem Anwalt</li>
                           <li>Wir helfen Ihnen als Hausmeister in Ihrer Abwesenheit auch nach dem Kauf einer Immobilie/li>
                           <li>Unser Projektfox-Bauteam führt ebenfalls Renovierungsarbeiten durch</li>
-                        </ul>  
+                        </ul>
                       </div>
                       <div class="card-header">
                           <h4>Borgen?</h4>
@@ -209,10 +209,10 @@ $room_height=config('property.room_height.de');
                           bekommt! Unser Spezialist holt das ab
                           Kontakt, der auch Sie sucht
                           derzeit das beste!
-                        </p> 
+                        </p>
                       </div>
                       </div>
-                    </div>  
+                    </div>
                   </div>
                 </div>
               </div>
@@ -234,7 +234,7 @@ $room_height=config('property.room_height.de');
 @section('scripts')
   <script>
     var xmlhttp = new XMLHttpRequest();
-    
+
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
