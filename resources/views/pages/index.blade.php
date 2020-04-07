@@ -244,8 +244,11 @@ $room_height=config('property.room_height.hu');
       <div class="container-fluid hide visible-lg visible-md center" >
         <div class="jumbotron" >
               <h1>VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?</h1>
-              <h4>Akkor jó helyen jár.</h4>
-              <p>Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
+              <h4>Akkor jó helyen jár.
+
+                 <?php echo url()->current() . __DIR__;?>
+              </h4>
+        <p>Baranyában, Pécsett, Harkányban, Siklóson is segítségére leszünk!</p>
         </div>
       </div>
       <div class="container" id="map-container">

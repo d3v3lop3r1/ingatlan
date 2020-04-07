@@ -4,7 +4,7 @@ use App\agent;
 $type_id=config('property.type_id.hu');
 $list_type=config('property.list_type.hu');
 $subtype=config('property.subtype.hu');
-$region= config('property.region.hu');                      
+$region= config('property.region.hu');
 $floors=config('property.floors.hu');
 $condition=config('property.condition.hu');
 $heating=config('property.heating.hu');
@@ -33,12 +33,12 @@ $room_height=config('property.room_height.hu');
     </div>
 </div>
 
-{!! Form::open(['url'=>'/properties', 'method'=>'POST','name'=>'lakas_eladas']) !!}
+{!! Form::open(['action'=>'PropertyController@store', 'method'=>'POST','name'=>'hirdetes_feladas']) !!}
 
             <div class="panel-body">
                   <div class="container">
                     <div class="row">
-                    
+
                     <!-- Első oszlop  -->
                       <div class="col-lg-3 col-md-3 col-sm-3">
 
@@ -57,14 +57,14 @@ $room_height=config('property.room_height.hu');
                         </div>
 
                         {{-- Aktív --}}
-                        
+
                         <div class="form-group">
                             {!! Form::label('Aktív',null,['class' => 'control-label']); !!}
                             {!! Form::select('active',[true=>'igen',false=>'nem'],null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Kiemelt --}}
-                        
+
                         <div class="form-group">
                             {!! Form::label('Kiemelt',null,['class' => 'control-label']); !!}
                             {!! Form::select('kiemelt',[true=>'igen',false=>'nem'],null,['class' => 'form-control']); !!}
@@ -74,7 +74,7 @@ $room_height=config('property.room_height.hu');
 
                         <div class="form-group">
                             {!! Form::label('Hirdetés típusa*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('type_id',$type_id,null,['class' => 'form-control']); 
+                            {!! Form::select('type_id',$type_id,null,['class' => 'form-control']);
                             !!}
                         </div>
 
@@ -83,7 +83,7 @@ $room_height=config('property.room_height.hu');
 
                         <div class="form-group">
                             {!! Form::label('Ingatlan típusa*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('list_type',$list_type,null,['class' => 'form-control']); 
+                            {!! Form::select('list_type',$list_type,null,['class' => 'form-control']);
                             !!}
                         </div>
 
@@ -91,7 +91,7 @@ $room_height=config('property.room_height.hu');
 
                         <div class="form-group">
                             {!! Form::label('Ingatlan altípusa*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('subtype',$subtype,null,['class' => 'form-control']); 
+                            {!! Form::select('subtype',$subtype,null,['class' => 'form-control']);
                             !!}
                         </div>
 
@@ -112,7 +112,7 @@ $room_height=config('property.room_height.hu');
 
 
                       </div><!-- elso oszlop -->
-                      
+
                     <!-- Második oszlop  -->
                       <div class="col-lg-3 col-md-3">
 
@@ -167,30 +167,30 @@ $room_height=config('property.room_height.hu');
                             {!! Form::label('Minimum depozit(Ft)*',null,['class' => 'control-label']); !!}
                             {!! Form::number('deposit',null,['class' => 'form-control', 'placeholder'=>'Add meg a minimum árat...']); !!}
                         </div>
-    
+
                         {{-- Attraktivitás --}}
-                        
+
                         <div class="form-group">
                             {!! Form::label('Attraktivitás',null,['class' => 'control-label']); !!}
                             {!! Form::number('attraktivitas',null,['class' => 'form-control', 'placeholder'=>'Attraktivitás értéke (1-5)']); !!}
                         </div>
 
                         {{-- Állapot --}}
-                        
+
                         <div class="form-group">
                             {!! Form::label('Állapot',null,['class' => 'control-label']); !!}
                             {!! Form::number('allapot',null,['class' => 'form-control', 'placeholder'=>'Állapot értéke (1-5)']); !!}
                         </div>
 
                         {{-- Extrák --}}
-                        
+
                         <div class="form-group">
                             {!! Form::label('Extrák',null,['class' => 'control-label']); !!}
                             {!! Form::number('extrak',null,['class' => 'form-control', 'placeholder'=>'Extrák értéke (1-5)']); !!}
                         </div>
 
 
-    
+
                     </div>
                       <!-- Második oszlop vége -->
 
@@ -201,12 +201,12 @@ $room_height=config('property.room_height.hu');
 
                         <div class="form-group">
                                 {!! Form::label('Ha emeleti*',null,['class' => 'control-label']); !!}
-                                {!! Form::select('floors',$floors,null,['class' => 'form-control'] ); !!}                              
-                                    
-                                
+                                {!! Form::select('floors',$floors,null,['class' => 'form-control'] ); !!}
+
+
                             </div>
-    
-    
+
+
                         {{-- Szobák száma --}}
 
                         <div class="form-group">
@@ -215,7 +215,7 @@ $room_height=config('property.room_height.hu');
                         </div>
 
                         {{-- Félszobák száma --}}
-                        
+
                         <div class="form-group">
                             {!! Form::label('Félszobák száma(db)*',null,['class' => 'control-label']); !!}
                             {!! Form::number('halfroom_no',null,['class' => 'form-control', 'placeholder'=>'Add meg a félszobák számát...']); !!}
@@ -239,14 +239,14 @@ $room_height=config('property.room_height.hu');
 
                         <div class="form-group">
                             {!! Form::label('Állapot*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('condition',$condition,null,['class' => 'form-control']); !!}                               
+                            {!! Form::select('condition',$condition,null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Fűtés --}}
 
                         <div class="form-group">
                             {!! Form::label('Fűtés*',null,['class' => 'control-label']); !!}
-                            {!! Form::select('heating',$heating,null,['class' => 'form-control']); !!}                               
+                            {!! Form::select('heating',$heating,null,['class' => 'form-control']); !!}
                         </div>
 
                         {{-- Céges hirdetés --}}
@@ -257,7 +257,7 @@ $room_height=config('property.room_height.hu');
                         </div>
 
                       </div>
-                      
+
                       <!-- Harmadik oszlop vége -->
 
 
@@ -292,9 +292,9 @@ $room_height=config('property.room_height.hu');
             <div class="panel-body">
                     <div class="container">
                       <div class="row">
-                          
+
                         <!-- Első oszlop  -->
-                        
+
                         <div class="col-lg-3 col-md-3">
 
                           {{-- Parkolás --}}
@@ -303,46 +303,46 @@ $room_height=config('property.room_height.hu');
                               {!! Form::label('Parkolás',null,['class' => 'control-label']); !!}
                               {!! Form::select('parking',$parking,null,['class' => 'form-control']); !!}
                           </div>
-  
+
                           {{-- Komfort fokozat --}}
-  
+
                           <div class="form-group">
                               {!! Form::label('Komfort fokozat',null,['class' => 'control-label']); !!}
                               {!! Form::select('comfort',$comfort,null,['class' => 'form-control']); !!}
                           </div>
                         </div><!-- elso oszlop vége -->
-                        
+
                       <!-- Második oszlop  -->
-                      
+
                         <div class="col-lg-3 col-md-3">
-  
-  
+
+
                           {{-- Belmagasság --}}
-  
+
                           <div class="form-group">
                               {!! Form::label('Belmagasság',null,['class' => 'control-label']); !!}
                               {!! Form::select('room_height',$room_height,null,['class' => 'form-control']); !!}
                           </div>
-  
+
                           {{-- Fürdők száma --}}
-  
+
                           <div class="form-group">
                                   {!! Form::label('Fürdők száma(db)*',null,['class' => 'control-label']); !!}
                                   {!! Form::number('bathroom_no',null,['class' => 'form-control']); !!}
-          
+
                           </div>
                           {{-- Wc-k száma --}}
-  
+
                           <div class="form-group">
                                   {!! Form::label('WC-k száma(db)*',null,['class' => 'control-label']); !!}
                                   {!! Form::number('toilet_no',null,['class' => 'form-control']); !!}
-          
+
                           </div>
-                                  
+
                         </div><!-- Második oszlop -->
-  
+
                         <!-- Harmadik oszlop -->
-  
+
                         <div class="col-lg-3 col-md-3">
                           <div align="right" class="form-group form-inline">
                             <div class="col-sm-4">
@@ -382,7 +382,7 @@ $room_height=config('property.room_height.hu');
                     {!! Form::submit('MENTÉS', ['class'=>"btn btn-primary mb-5"]) !!}
                 </div>
 {!! Form::close() !!}
-        
+
 @endsection
 @section('scripts')
     <script>
