@@ -15,8 +15,8 @@
                 <div class="collapse navbar-collapse " id="navbarCollapse">
                       <ul class="navbar-nav text-warning">
                               <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                aria-haspopup="true" aria-expanded="false">Eladó ingatlanok<span class="caret"></span></a> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Eladó<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
                                   <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'mutato' => 'ÖSSZES ELADÓ INGATLAN']); ?>">Összes ingatlan</a></li>
@@ -34,8 +34,8 @@
                                 </ul>
                               </li>
                               <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                aria-haspopup="true" aria-expanded="false">Kiadó ingatlanok<span class="caret"></span></a> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Kiadó<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
                                   <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'mutato' => 'ÖSSZES KIADÓ INGATLAN']); ?>">Összes ingatlan</a></li>
@@ -53,8 +53,8 @@
                                 </ul>
                               </li>
                               <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a> 
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
                                   <li><i class="fas fa-info"></i><a href="/jo-tudni"> Jó tudni</a></li>
@@ -66,12 +66,12 @@
                                   <li><i class="fa fa-question-circle fa-sm"></i><a href="/segitseg-a-haz-korul"> Segítség a ház körül</a></li>
                                 </ul>
                               </li>
-                              
+
                                 @if (Auth::check())
                                   @if (Auth::user()->email=='csernus@foxinfo.hu'||Auth::user()->email=='sztarovics@foxinfo.hu' )
                                     <li class="dropdown">
-                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-                                      aria-haspopup="true" aria-expanded="false">ADMIN<span class="caret"></span></a> 
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                      aria-haspopup="true" aria-expanded="false">ADMIN<span class="caret"></span></a>
                                       <ul class="dropdown-menu">
                                         <li><a href="#"> </a></li>
                                         <li><a href="/properties"> Ingatlan lista</a></li>
@@ -89,7 +89,7 @@
                                     <li class="nav-item">
                                       <a href="/logout" class=""> Kilépés </a>
                                     </li>
-                                @else 
+                                @else
                                     <li class="nav-item">
                                       <a href="/login" class=""> Belépés </a>
                                     </li>
@@ -108,5 +108,4 @@
   {{--  </div>  --}}
 </header>
 
-      
-      
+
