@@ -140,7 +140,7 @@ $room_height=config('property.room_height.hu');
                       <tr class="table-borderless" align="center">
                         <th class="pt-3 justify-content-center" colspan="2">
                           <h4 class="index_mutato">
-                            {{$type_id[$property->type_id]}} - {{$list_type[$property->list_type]}} - {{$property->city}}
+                            {{$list_type[$property->list_type]}} - {{$type_id[$property->type_id]}} - {{$property->city}}
                           </h4>
                         </th>
                         <th colspan="2"></th>
