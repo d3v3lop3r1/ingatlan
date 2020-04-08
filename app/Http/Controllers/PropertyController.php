@@ -19,7 +19,7 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties=property::paginate(10);
+        $properties=property::orderBy('id','desc')->paginate(10);
         return view('properties.index', compact('properties'));
     }
 
