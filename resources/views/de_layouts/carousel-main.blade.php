@@ -13,20 +13,19 @@
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/new/kitchen-1543493_1920x500.jpg" alt="Ingatlanfox megoldások">
               <div class="carousel-caption">
-                <h1>JETZT KRIEGT MAN FÜR EURO</h1>
-            </div>
+                  <h1>TRAUMHÄUSER SUPER GÜNSTIG! </h1>
+                </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x500.jpg" alt="Ingatlanfox megoldások">
-              <div class="carousel-caption">
-                <h1>TRAUMHÄUSER SUPER GÜNSTIG! </h1>
-              </div>
+                <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x500.jpg" alt="Ingatlanfox megoldások">
+                <div class="carousel-caption">
+                    <h1>JETZT KRIEGT MAN FÜR EURO</h1>
+                </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/new/apartment-lounge-3147892_1920x500.jpg" alt="VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?">
               <div class="carousel-caption">
                     <h1>WÜRDEN SIE IN DÉLDUNÁNTÚL EIN EIGENTUM KAUFEN ODER MIETEN?</h1>
-                    <h4>Dann sind Sie hier richtig.</h4>
               </div>
             </div>
             <div class="carousel-item">
