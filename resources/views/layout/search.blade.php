@@ -10,7 +10,7 @@
     $type_id=config('property.type_id.hu');
     $list_type=config('property.list_type.hu');
     $subtype=config('property.subtype.hu');
-    $region= config('property.region.hu');                      
+    $region= config('property.region.hu');
     $floors=config('property.floors.hu');
     $condition=config('property.condition.hu');
     $heating=config('property.heating.hu');
@@ -25,11 +25,11 @@
                 <div class="row center-xs">
                         <div class="col-auto">
                             {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
-                            {!! Form::select('type_id',([null=>'Mind']+$type_id),null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!} 
+                            {!! Form::select('type_id',([null=>'Mind']+$type_id),null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!}
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
-                            {!! Form::select('list_type',([null=>'Mind'])+$list_type,null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!} 
+                            {!! Form::select('list_type',([null=>'Mind'])+$list_type,null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!}
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Hol?',null,['class' => 'search-label', 'for'=>'city']); !!}
@@ -51,7 +51,7 @@
                                 8=>'8+',
                                 9=>'9+',
                                 10=>'10+',
-                                ],null,['class' => 'form-control form-control-sm', 'id'=>'room_no']); 
+                                ],null,['class' => 'form-control form-control-sm', 'id'=>'room_no']);
                             !!}
                         </div>
                 </div>
@@ -71,8 +71,8 @@
                 </div>
                 <div class="row center-xs">
                     <div class="col-auto mt-3">
-                        <button class="btn btn-primary btn-sm mr-1" type="submit" >KERESÉS</button>
-                        <button class="btn btn-primary btn-sm ml-1" type="button" data-toggle="collapse" data-target="#collapseDetailedSearch" aria-expanded="false" aria-controls="collapseDetailedSearch">
+                        <button class="btn btn-sajat btn-sm mr-1" type="submit" >KERESÉS</button>
+                        <button class="btn btn-sajat btn-sm ml-1" type="button" data-toggle="collapse" data-target="#collapseDetailedSearch" aria-expanded="false" aria-controls="collapseDetailedSearch">
                             Részletes keresés
                         </button>
                     </div>

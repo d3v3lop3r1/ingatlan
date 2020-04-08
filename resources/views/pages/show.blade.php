@@ -6,7 +6,7 @@ use App\property;
 $type_id=config('property.type_id.hu');
 $list_type=config('property.list_type.hu');
 $subtype=config('property.subtype.hu');
-$region= config('property.region.hu');                      
+$region= config('property.region.hu');
 
 ?>
 @extends('layout.main')
@@ -27,6 +27,16 @@ $region= config('property.region.hu');
                     <div class="col-xs-12">
                         <h4>{{$mutato}}</h4>
                         <h4>Ajánlatok száma: <span class="badge badge-primary">{{$prop_count}}</span> </h4>
+                        <div>
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Rendezés ár szerint</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Rendezés feltöltési idő szerint</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,8 +44,8 @@ $region= config('property.region.hu');
         <section id="ingatlanok-lista">
             <div class="container-fluid">
                 <div class="row center-xs ingatlan-sor">
-                    @foreach ($properties as $property)                       
-                            <?php 
+                    @foreach ($properties as $property)
+                            <?php
                             $photo_count = $property->photos->count();
                             $photo = $property->photos->where('is_default','1')->first();
                             if ($photo){
@@ -46,7 +56,7 @@ $region= config('property.region.hu');
                             }
 
                             ?>
-                            
+
                             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 ingatlan-box mb-3">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
@@ -66,7 +76,7 @@ $region= config('property.region.hu');
                                                     <i class="fas fa-camera-retro"></i> {{$photo_count}}
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="col-xs-12 main-photo">
                                             <div class="row">
@@ -80,8 +90,8 @@ $region= config('property.region.hu');
 
 
                                     {{--  Adatok  --}}
-                                    
-                                    
+
+
                                     <div class="row center-xs">
                                         <div class="col-xs-12 main-price border">
                                             <span class="money">{{$property->price}}</span>.- Ft
@@ -113,12 +123,12 @@ $region= config('property.region.hu');
                                                     @endif
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                    </div>                                                   
+                                    </div>
                             </div>
                     @endforeach
-                    
+
                 </div>
             </div>
             <div class="container lapozas">

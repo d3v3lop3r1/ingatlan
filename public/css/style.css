@@ -24,6 +24,12 @@ iframe{
 	border: none;
 }
 
+.btn-sajat{
+    background-color: rgb(76, 139, 175);
+    color: white;
+    box-shadow:(1px 1px 1px #384233);
+}
+
 .tinymce-table-class table{
 	display: none;
 	border: none;
