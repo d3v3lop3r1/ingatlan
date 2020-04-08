@@ -82,7 +82,12 @@ iframe{
 }
 
 .carousel-caption{
-	top: 100px;
+    top: 100px;
+}
+.carousel-caption h1{
+    padding: 20px 0;
+    background-color: rgba(50, 85, 120, 0.5);
+
 }
 
 header{
