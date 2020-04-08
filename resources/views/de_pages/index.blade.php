@@ -196,7 +196,7 @@ $room_height=config('property.room_height.de');
                           <li>Eskorte zur Immobilieninspektion, zum Grundbuchamt, zum Exposé usw.</li>
                           <li>Deutsch-ungarischer Dolmetscher für Verkäufer und Verleger in anderen Muttersprachen</li>
                           <li>Schreiben eines Vorvertrags, Bescheinigung von Vereinbarungen mit einem Anwalt</li>
-                          <li>Wir helfen Ihnen als Hausmeister in Ihrer Abwesenheit auch nach dem Kauf einer Immobilie/li>
+                          <li>Wir helfen Ihnen als Hausmeister in Ihrer Abwesenheit auch nach dem Kauf einer Immobilie</li>
                           <li>Unser Projektfox-Bauteam führt ebenfalls Renovierungsarbeiten durch</li>
                         </ul>
                       </div>
@@ -205,10 +205,7 @@ $room_height=config('property.room_height.de');
                       </div>
                       <div class="card-body">
                         <p>
-                          Wir machen das beste Angebot
-                          bekommt! Unser Spezialist holt das ab
-                          Kontakt, der auch Sie sucht
-                          derzeit das beste!
+                          Wir machen das beste Angebot bekommt! Unser Spezialist holt das ab Kontakt, der auch Sie sucht derzeit das beste!
                         </p>
                       </div>
                       </div>
@@ -221,9 +218,11 @@ $room_height=config('property.room_height.de');
       </div>
       <div class="container-fluid hide visible-lg visible-md center" >
         <div class="jumbotron" >
-              <h1>WÜRDEN SIE IN DÉLDUNÁNTÚL EIN EIGENTUM KAUFEN ODER MIETEN?</h1>
-              <h4>Dann sind Sie hier richtig.</h4>
-              <p>Wir helfen Ihnen auch in Baranya, Pécs, Harkány und Siklós!</p>
+            <h1>JETZT IMMOBILIEN KAUFEN IN SÜDUNGARN</h1>
+            <h1>JETZT KRIEGT MAN FÜR EURO</h1>
+            <h1>TRAUMHÄUSER SUPER GÜNSTIG! </h1>
+            <h4>2020 wird das Jahr der Schnäppcheneinkäufe von Traumhäuser.</h4>
+            <p>Wir helfen Ihnen auch in Baranya, Pécs, Harkány und Siklós!</p>
         </div>
       </div>
       <div class="container" id="map-container">
