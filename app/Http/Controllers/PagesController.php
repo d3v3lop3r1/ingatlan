@@ -36,6 +36,15 @@ class PagesController extends Controller
         $new_url=$request->old_url . '&filter=' . $request->filter;
         return redirect($new_url);
     }
+    public function view($view){
+        if($view==2){
+            session(['view'=>'box']);
+        } else{
+            session(['view'=>'rectangle']);
+        }
+
+        return redirect()->back();
+    }
 
     public function search(Request $request)
     {

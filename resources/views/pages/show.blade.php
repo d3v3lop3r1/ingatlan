@@ -34,7 +34,22 @@ $region= config('property.region.hu');
                     <div class="col-xs-6">
                         <div class="row bottom-xs around-xs mb-3 mt-3">
                             <div class="col-xs d-inline">
-                                Nézet: &ensp;<i class="fas fa-th"></i>&ensp;<i class="fas fa-th-list"></i>
+                                @php
+                                    $full_url=url()->full();
+                                @endphp
+                                Nézet: &ensp;
+                                @if (session('view')=='box')
+                                    <i class="fas fa-th text-danger"></i>
+                                @else
+                                <a href="/search/view/2"><i class="fas fa-th"></i></a>
+                                @endif
+                                &ensp;
+                                @if (session('view')=='rectangle')
+                                <i class="fas fa-th-list text-danger"></i>
+                                @else
+                                <a href="/search/view/1"><i class="fas fa-th-list"></i></a>
+                                @endif
+
                             </div>
                             <div class="col-xs d-inline">
                                 {!! Form::open(['action'=>'PagesController@filter', 'method'=>'GET','name'=>'filter', 'class'=>'form-inline']) !!}

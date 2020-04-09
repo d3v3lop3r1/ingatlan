@@ -62,6 +62,7 @@ Route::get('/show', 'PagesController@showing');
 Route::get('/home', 'PagesController@home');
 Route::any('/search', 'PagesController@search');
 Route::any('/filter', 'PagesController@filter');
+Route::any('/search/view/{view} ', 'PagesController@view');
 
 Route::get('/index/{property}', 'PagesController@index');
 
