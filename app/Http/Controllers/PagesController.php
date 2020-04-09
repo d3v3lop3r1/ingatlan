@@ -44,6 +44,9 @@ class PagesController extends Controller
         session(['city'=>$request->city]);
         session(['room_no'=>$request->room_no]);
         session(['filter'=>$request->filter]);
+        if (!$request->session()->has('view')) {
+            session(['view'=>'rectangle']);
+        }
         $filter=$request->filter;
         if(!$filter){
             $filter=1;
@@ -135,7 +138,13 @@ class PagesController extends Controller
 
 
         // $properties=$properties->paginate(9);
-        return view('pages.show_new', compact('properties', 'mutato', 'request'));
+        if(session('view')=='rectangle'){
+            return view('pages.show_new', compact('properties', 'mutato', 'request'));
+        } else {
+            return view('pages.show', compact('properties', 'mutato', 'request'));
+
+        }
+
     }
 
 }
