@@ -140,8 +140,7 @@ $room_height=config('property.room_height.hu');
 
                                                         {{-- Header es short_text --}}
                                         <div class="col-xs-6">
-                                            <div class="container">
-                                                <div class="row">
+                                                <div class="row d-flex flex-column align-self-stretch">
                                                     <div class="col-xs-4 mt-2">
                                                         @php
                                                                 $dt = Carbon::parse($property->updated_at);
@@ -156,9 +155,6 @@ $room_height=config('property.room_height.hu');
                                                             @endif
                                                         </h4>
                                                     </div>
-                                                    <div class="col-xs-4 self-align-end mt-2">
-                                                        <a class="btn btn-info btn-sm show-new-adatok-btn" href="/index/{{$property->id}}">Megtekintem</a>
-                                                    </div>
                                                     <div class="col-xs-12 mt-2 show-new-header">
                                                         <a href="/index/{{$property->id}}"><h4>{{$property->header_hun}}</h4></a>
                                                     </div>
@@ -167,9 +163,11 @@ $room_height=config('property.room_height.hu');
                                                             echo ($property->short_text_hun);
                                                         @endphp
                                                     </div>
-                                                </div>
-                                            </div>
+                                                    <div class="col-xs-22 align-self-end align-items-end mt-auto">
+                                                        <a class="btn btn-info btn-sm show-new-adatok-btn" href="/index/{{$property->id}}">Megtekintem</a>
+                                                    </div>
 
+                                                </div>
                                         </div>
                                     </div>
                             </div>
