@@ -1,0 +1,43 @@
+{
+    <div class="col-xs-3">
+    <div class="row mt-2 show-adat-tabla-row">
+        <div class="col-xs-12">
+            ID:1100{{$property->id}}
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-xs-6">Régió</div>
+            <div class="col-xs-6">{{$region[$property->region]}} </div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-xs-6">Város</div>
+            <div class="col-xs-6">{{$property->city}} </div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-xs-6">Telek méret</div>
+            <div class="col-xs-6">{{$property->land_area}} m2</div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-xs-6">Lakóterőlet</div>
+            <div class="col-xs-6">{{$property->area}} m2</div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-xs-6">Szobák száma</div>
+            <div class="col-xs-6">{{$property->room_no}} db</div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-xs-6">Utolsó frissítés</div>
+            <div class="col-xs-6">
+                @php
+                    $dt = Carbon::parse($property->updated_at);
+                    echo $dt->diffInDays();
+                @endphp
+                napja
+            </div>
+        </div>
+        <div class="row row-cols-2">
+            <div class="col-xs-6"></div>
+            <div class="col-xs-6"></div>
+        </div>
+    </div>
+</div>
+}

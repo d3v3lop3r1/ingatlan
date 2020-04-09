@@ -217,6 +217,11 @@ p {
 
 }
 
+.show-new-adatok-tabla th{
+    text-align: left;
+
+}
+
 .ingatlan-box{
 	width: 320px;
 	margin-right: 5px;
@@ -577,7 +582,7 @@ p {
 	background-color: rgb(194, 204, 212);
 
 }
-}
+
 .index-price td{
 	background-color: rgba(50, 85, 120, 1) ;
 	white-space: nowrap;

@@ -1,0 +1,37 @@
+{
+    <table class="table table-sm show-adatok-tabla  mt-2">
+    <thead class="pt-3">
+        <tr>
+            <th align="center"> ID:1100{{$property->id}}</th>
+            <th align="center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  scope="row">
+            <th>Régió</th>
+            <td>{{$region[$property->region]}}</td>
+        </tr>
+        <tr>
+            <th>Város</th>
+            <td>{{$property->city}}</td>
+        </tr>
+        <tr>
+            <th>Telek méret</th>
+            <td>{{$property->land_area}} m2</td>
+        </tr>
+        <tr>
+            <th>Lakóterőlet</th>
+            <td>{{$property->area}} m2</td>
+        </tr>
+
+        <tr>
+            <th>Szobák száma</th>
+            <td>{{$property->room_no}} db</td>
+        </tr>
+        <tr  class="index-price">
+            <td align="center" colspan="2" class=" pt-3 pr-3"></td>
+        </tr>
+    </tbody>
+</table>
+
+}

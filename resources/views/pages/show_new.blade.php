@@ -75,7 +75,7 @@ $room_height=config('property.room_height.hu');
                             }
 
                             ?>
-
+                                                                {{-- Photo  --}}
                             <div class="col-xs-12 mb-6">
                                     <div class="row border mt-3 shadow">
                                         <div class="col-xs-3">
@@ -88,18 +88,17 @@ $room_height=config('property.room_height.hu');
                                                 </div>
                                             </div>
                                         </div>
-
-
                                         <div class="col-xs-3">
-                                            <table class="table table-sm show-adatok-tabla  mt-2">
+                                            {{-- Adatok --}}
+                                            <table class="table table-borderless table-sm show-new-adatok-tabla  mt-2">
                                                 <thead class="pt-3">
                                                     <tr>
-                                                        <th align="center"> ID:1100{{$property->id}}</th>
-                                                        <th align="center"></th>
+                                                        <td> ID:1100{{$property->id}}</td>
+                                                        <td></td>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr  scope="row">
+                                                    <tr>
                                                         <th>Régió</th>
                                                         <td>{{$region[$property->region]}}</td>
                                                     </tr>
@@ -120,15 +119,27 @@ $room_height=config('property.room_height.hu');
                                                         <th>Szobák száma</th>
                                                         <td>{{$property->room_no}} db</td>
                                                     </tr>
-                                                    <tr  class="index-price">
-                                                        <td align="center" colspan="2" class=" pt-3 pr-3"></td>
-                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
 
+                                                        {{-- Header es short_text --}}
                                         <div class="col-xs-6">
                                             <div class="row">
+                                                <div class="col-xs-12 mt-2">
+                                                    @php
+                                                            $dt = Carbon::parse($property->updated_at);
+                                                            $days=$dt->diffInDays();
+                                                    @endphp
+                                                    <h4>
+                                                        @if ($days < 7)
+                                                            <span class="badge badge-success ml-2">új</span>
+                                                        @endif
+                                                        @if ($property->act_price)
+                                                            <span class="badge badge-danger ml-2">áresés</span>
+                                                        @endif
+                                                    </h4>
+                                                </div>
                                                 <div class="col-xs-12 mt-2 show-new-header">
                                                     <h4>{{$property->header_hun}}</h4>
                                                 </div>
@@ -143,7 +154,7 @@ $room_height=config('property.room_height.hu');
                                     </div>
 
 
-                                    {{--  Adatok  --}}
+
 
 
                             </div>
