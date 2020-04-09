@@ -1,0 +1,10 @@
+{
+@php
+    $dt = Carbon::parse($property->updated_at);
+    $days=$dt->diffInDays();
+    echo $type_id[$property->type_id];
+    if ($days < 14){
+        echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
+    }
+@endphp
+}

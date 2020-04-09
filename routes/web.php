@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/showing', function (Request $request) {
-    return view('show',compact('request'));
-});
 
 Route::get('/', function () {
     return view('nemsokara');
@@ -67,33 +65,33 @@ Route::any('/filter', 'PagesController@filter');
 
 Route::get('/index/{property}', 'PagesController@index');
 
-Route::get('/osszes-elado-ingatlan', 'PagesController@eladoOsszes');
-Route::get('/elado-lakasok', 'PagesController@eladoLakasok');
-Route::get('/elado-hazak', 'PagesController@eladoHazak');
-Route::get('/elado-irodak', 'PagesController@eladoIrodak');
-Route::get('/elado-ipari', 'PagesController@eladoIpari');
-Route::get('/elado-nyaralok', 'PagesController@eladoNyaralok');
-Route::get('/elado-garazsok', 'PagesController@eladoGarazsok');
-Route::get('/elado-raktarak', 'PagesController@eladoRaktarak');
-Route::get('/elado-uzlethelyisegek', 'PagesController@eladoUzlethelyisegek');
-Route::get('/elado-vendeglatas', 'PagesController@eladoVendeglatas');
-Route::get('/elado-telek-fold', 'PagesController@eladoTelekfold');
-Route::get('/elado-egyeb', 'PagesController@eladoEgyeb');
+// Route::get('/osszes-elado-ingatlan', 'PagesController@eladoOsszes');
+// Route::get('/elado-lakasok', 'PagesController@eladoLakasok');
+// Route::get('/elado-hazak', 'PagesController@eladoHazak');
+// Route::get('/elado-irodak', 'PagesController@eladoIrodak');
+// Route::get('/elado-ipari', 'PagesController@eladoIpari');
+// Route::get('/elado-nyaralok', 'PagesController@eladoNyaralok');
+// Route::get('/elado-garazsok', 'PagesController@eladoGarazsok');
+// Route::get('/elado-raktarak', 'PagesController@eladoRaktarak');
+// Route::get('/elado-uzlethelyisegek', 'PagesController@eladoUzlethelyisegek');
+// Route::get('/elado-vendeglatas', 'PagesController@eladoVendeglatas');
+// Route::get('/elado-telek-fold', 'PagesController@eladoTelekfold');
+// Route::get('/elado-egyeb', 'PagesController@eladoEgyeb');
 
 //                     Menü LINKEK
 
-Route::get('/osszes-kiado-ingatlan', 'PagesController@kiadoOsszes');
-Route::get('/kiado-lakasok', 'PagesController@kiadoLakasok');
-Route::get('/kiado-hazak', 'PagesController@kiadoHazak');
-Route::get('/kiado-irodak', 'PagesController@kiadoIrodak');
-Route::get('/kiado-ipari', 'PagesController@kiadoIpari');
-Route::get('/kiado-nyaralok', 'PagesController@kiadoNyaralok');
-Route::get('/kiado-garazsok', 'PagesController@kiadoGarazsok');
-Route::get('/kiado-raktarak', 'PagesController@kiadoRaktarak');
-Route::get('/kiado-uzlethelyisegek', 'PagesController@kiadoUzlethelyisegek');
-Route::get('/kiado-vendeglatas', 'PagesController@kiadoVendeglatas');
-Route::get('/kiado-telek-fold', 'PagesController@kiadoTelekfold');
-Route::get('/kiado-egyeb', 'PagesController@kiadoEgyeb');
+// Route::get('/osszes-kiado-ingatlan', 'PagesController@kiadoOsszes');
+// Route::get('/kiado-lakasok', 'PagesController@kiadoLakasok');
+// Route::get('/kiado-hazak', 'PagesController@kiadoHazak');
+// Route::get('/kiado-irodak', 'PagesController@kiadoIrodak');
+// Route::get('/kiado-ipari', 'PagesController@kiadoIpari');
+// Route::get('/kiado-nyaralok', 'PagesController@kiadoNyaralok');
+// Route::get('/kiado-garazsok', 'PagesController@kiadoGarazsok');
+// Route::get('/kiado-raktarak', 'PagesController@kiadoRaktarak');
+// Route::get('/kiado-uzlethelyisegek', 'PagesController@kiadoUzlethelyisegek');
+// Route::get('/kiado-vendeglatas', 'PagesController@kiadoVendeglatas');
+// Route::get('/kiado-telek-fold', 'PagesController@kiadoTelekfold');
+// Route::get('/kiado-egyeb', 'PagesController@kiadoEgyeb');
 
 //                   ADMIN FELÜLET
 Route::group(['middleware'=>'auth'],function(){

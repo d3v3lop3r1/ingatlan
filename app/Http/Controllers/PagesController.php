@@ -135,7 +135,7 @@ class PagesController extends Controller
 
 
         // $properties=$properties->paginate(9);
-        return view('pages.show', compact('properties', 'mutato', 'request'));
+        return view('pages.show_new', compact('properties', 'mutato', 'request'));
     }
 
 }
