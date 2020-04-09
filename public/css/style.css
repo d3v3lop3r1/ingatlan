@@ -193,7 +193,9 @@ p {
 	margin-bottom: 30px;
 }
 
-
+.show-type-active{
+	color: blue;
+}
 
 .ingatlan-box{
 	width: 320px;

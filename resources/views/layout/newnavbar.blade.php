@@ -19,18 +19,18 @@
                                 aria-haspopup="true" aria-expanded="false">Eladó<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'mutato' => 'ÖSSZES ELADÓ INGATLAN']); ?>">Összes ingatlan</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 1,'mutato' => 'ÖSSZES ELADÓ LAKÁS']); ?>">Lakás</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 2,'mutato' => 'ÖSSZES ELADÓ HÁZ']); ?>">Ház</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 3,'mutato' => 'ÖSSZES ELADÓ NYARALÓ']); ?>">Nyaraló</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 4,'mutato' => 'ÖSSZES ELADÓ GARÁZS']); ?>">Garázs</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 5,'mutato' => 'ÖSSZES ELADÓ IRODA']); ?>">Iroda</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 6,'mutato' => 'ÖSSZES ELADÓ IPARI INGATLAN']); ?>">Ipari Ingatlan</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 7,'mutato' => 'ÖSSZES ELADÓ RAKTÁR']); ?>">Raktár</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 8,'mutato' => 'ÖSSZES ELADÓ ÜZLETHELYISÉG']); ?>">Üzlethelyiség</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 9,'mutato' => 'ÖSSZES ELADÓ TELEK-FÖLD']); ?>">Telek-föld</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 10,'mutato' => 'ÖSSZES ELADÓ VENDÉGLÁTÁS']); ?>">Vendéglátás</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 1,'list_type' => 11,'mutato' => 'ÖSSZES ELADÓ EGYÉB']); ?>">Egyéb</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1]); ?>">Összes ingatlan</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 1]); ?>">Lakás</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 2]); ?>">Ház</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 3]); ?>">Nyaraló</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 4]); ?>">Garázs</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 5]); ?>">Iroda</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 6]); ?>">Ipari Ingatlan</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 7]); ?>">Raktár</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 8]); ?>">Üzlethelyiség</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 9]); ?>">Telek-föld</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 10]); ?>">Vendéglátás</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 1,'list_type' => 11]); ?>">Egyéb</a></li>
                                 </ul>
                               </li>
                               <li class="dropdown">
@@ -38,18 +38,18 @@
                                 aria-haspopup="true" aria-expanded="false">Kiadó<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                   <li><a href="#"> </a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'mutato' => 'ÖSSZES KIADÓ INGATLAN']); ?>">Összes ingatlan</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 1,'mutato' => 'ÖSSZES KIADÓ LAKÁS']); ?>">Lakás</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 2,'mutato' => 'ÖSSZES KIADÓ HÁZ']); ?>">Ház</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 3,'mutato' => 'ÖSSZES KIADÓ NYARALÓ']); ?>">Nyaraló</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 4,'mutato' => 'ÖSSZES KIADÓ GARÁZS']); ?>">Garázs</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 5,'mutato' => 'ÖSSZES KIADÓ IRODA']); ?>">Iroda</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 6,'mutato' => 'ÖSSZES KIADÓ IPARI INGATLAN']); ?>">Ipari Ingatlan</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 7,'mutato' => 'ÖSSZES KIADÓ RAKTÁR']); ?>">Raktár</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 8,'mutato' => 'ÖSSZES KIADÓ ÜZLETHELYISÉG']); ?>">Üzlethelyiség</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 9,'mutato' => 'ÖSSZES KIADÓ TELEK-FÖLD']); ?>">Telek-föld</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 10,'mutato' => 'ÖSSZES KIADÓ VENDÉGLÁTÁS']); ?>">Vendéglátás</a></li>
-                                  <li><a href="<?php echo action('PagesController@showing', ['type_id' => 2,'list_type' => 11,'mutato' => 'ÖSSZES KIADÓ EGYÉB']); ?>">Egyéb</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2]); ?>">Összes ingatlan</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 1]); ?>">Lakás</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 2]); ?>">Ház</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 3]); ?>">Nyaraló</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 4]); ?>">Garázs</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 5]); ?>">Iroda</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 6]); ?>">Ipari Ingatlan</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 7]); ?>">Raktár</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 8]); ?>">Üzlethelyiség</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 9]); ?>">Telek-föld</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 10]); ?>">Vendéglátás</a></li>
+                                  <li><a href="<?php echo action('PagesController@search', ['type_id' => 2,'list_type' => 11]); ?>">Egyéb</a></li>
                                 </ul>
                               </li>
                               <li class="dropdown">

@@ -36,24 +36,26 @@ $room_height=config('property.room_height.hu');
 <br>
 {!! Form::model($property,['method'=>'PATCH','route'=>['properties.update',$property->id]]) !!}
     <div class="container">
-        <div class="row">
-            <div class="col-xs-6">
-                {{-- Ügynök kiválasztása  --}}
 
-                <div class="form-group">
-                    {!! Form::label('Ügynök',null,['class' => 'control-label']); !!}
-                    {!! Form::select('agent_id',agent::pluck('name','id'),null,['placeholder'=>'--Válassz ügynököt--','class' => 'form-control','require']); !!}
-                </div>
-            </div>
-            <div class="col-xs-6">
-                {{-- Kliens kiválasztása  --}}
+        {{-- Ügynök kiválasztása  --}}
 
-                <div class="form-group">
-                    {!! Form::label('Kliens:',null,['class' => 'control-label']); !!}
-                    {{client::where('id',$property->client_id)->first()->name}}
-                    {!! Form::hidden('client_id',$property->client_id)!!}
-                </div>
-            </div>
+        <div class="form-group">
+            {!! Form::label('Ügynök',null,['class' => 'control-label']); !!}
+            {!! Form::select('agent_id',agent::pluck('name','id'),null,['placeholder'=>'--Válassz ügynököt--','class' => 'form-control','require']); !!}
+        </div>
+
+        {{-- <div class="form-group">
+            {!! Form::label('Ügynök:',null,['class' => 'control-label']); !!}
+            {{agent::where('id',$property->agent_id)->first()->name}}
+            {!! Form::hidden('agent_id',$property->agent_id)!!}
+        </div> --}}
+
+        {{-- Kliens kiválasztása  --}}
+
+        <div class="form-group">
+            {!! Form::label('Kliens:',null,['class' => 'control-label']); !!}
+            {{client::where('id',$property->client_id)->first()->name}}
+            {!! Form::hidden('client_id',$property->client_id)!!}
         </div>
 
         @include('properties.forms.adatok')

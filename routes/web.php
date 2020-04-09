@@ -63,6 +63,8 @@ Route::get('/register', function () {
 Route::get('/show', 'PagesController@showing');
 Route::get('/home', 'PagesController@home');
 Route::any('/search', 'PagesController@search');
+Route::any('/filter', 'PagesController@filter');
+
 Route::get('/index/{property}', 'PagesController@index');
 
 Route::get('/osszes-elado-ingatlan', 'PagesController@eladoOsszes');
@@ -113,7 +115,7 @@ Route::prefix('de')->group(function () {
     Route::get('/showing', function (Request $request) {
         return view('de_pages.show',compact('request'));
     });
-    
+
         //              dePagesController
 
     Route::get('/show', 'dePagesController@showing');
@@ -135,6 +137,6 @@ Route::prefix('de')->group(function () {
     Route::get('/fur-kaufer-und-mieter', function () {
         return view('de_info.fur-kaufer-und-mieter');
     });
-    
-    
+
+
 });

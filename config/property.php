@@ -2,8 +2,8 @@
 return [
     'type_id'=>[
         'hu'=>[
-            1=>'Eladó', 
-            2=>'Kiadó' 
+            1=>'Eladó',
+            2=>'Kiadó'
         ],
         'de'=>[
             1=>'Kaufen',
@@ -13,7 +13,7 @@ return [
 
     'list_type'=>[
         'hu'=>[
-            1=>'Lakás',  
+            1=>'Lakás',
             2=>'Ház',
             3=>'Nyaraló',
             4=>'Garázs',
@@ -75,7 +75,7 @@ return [
             13=>'Geteilter-Nutzung',
             14=>'Sonstige'
         ]
-        
+
     ],
 
     'region'=>[
@@ -98,7 +98,7 @@ return [
             16=>'Vas',
             17=>'Veszprém',
             18=>'Zala'
-        ],   
+        ],
         'de'=>[
             1=>'Bács-Kiskun',
             2=>'Baranya',
@@ -119,7 +119,7 @@ return [
             17=>'Veszprém',
             18=>'Zala'
         ]
-    ], 
+    ],
 
     'floors'=>[
         'hu'=>[
@@ -184,7 +184,7 @@ return [
             9=>'aktuell unbewohnbar'
         ]
     ],
-        
+
     'heating'=>[
         'hu'=>[
             0=>'nem releváns',

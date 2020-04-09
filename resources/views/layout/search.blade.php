@@ -21,20 +21,20 @@
 <div class="container">
     <div class="row drop-shadow search-box center-xs">
         <div class="col-auto">
-                {!! Form::open(['action'=>'PagesController@search', 'method'=>'POST', 'class'=>'']); !!}
+                {!! Form::open(['action'=>'PagesController@search', 'method'=>'GET', 'class'=>'']); !!}
                 <div class="row center-xs">
                         <div class="col-auto">
                             {!! Form::label('Eladó/Kiadó',null,['class' => 'search-label', 'for'=>'type_id']); !!}
-                            {!! Form::select('type_id',([null=>'Mind']+$type_id),null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!}
+                            {!! Form::select('type_id',([null=>'Mind']+$type_id),session('type_id'),['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!}
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
-                            {!! Form::select('list_type',([null=>'Mind'])+$list_type,null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!}
+                            {!! Form::select('list_type',([null=>'Mind'])+$list_type,session('list_type'),['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!}
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Hol?',null,['class' => 'search-label', 'for'=>'city']); !!}
-                            {!! Form::select('city',([null=>'Mind']+$cities)
-                                ,null, ['class' => 'form-control form-control-sm', 'id'=>'city']);
+                            {!! Form::select('city',([null=>'Mind']+$cities),session('city'), ['class' => 'form-control form-control-sm', 'id'=>'city']);
+
                             !!}
                         </div>
                         <div class="col-auto">
@@ -51,7 +51,7 @@
                                 8=>'8+',
                                 9=>'9+',
                                 10=>'10+',
-                                ],null,['class' => 'form-control form-control-sm', 'id'=>'room_no']);
+                                ],session('room_no'),['class' => 'form-control form-control-sm', 'id'=>'room_no']);
                             !!}
                         </div>
                 </div>
@@ -78,7 +78,6 @@
                     </div>
                 </div>
             </div>
-
             {!! Form::close() !!}
         </div>
     </div>

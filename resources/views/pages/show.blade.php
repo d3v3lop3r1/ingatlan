@@ -27,15 +27,29 @@ $region= config('property.region.hu');
                     <div class="col-xs-12">
                         <h4>{{$mutato}}</h4>
                         <h4>Ajánlatok száma: <span class="badge badge-primary">{{$prop_count}}</span> </h4>
-                        <div>
-                            <ul class="nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="">Rendezés ár szerint</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="">Rendezés feltöltési idő szerint</a>
-                                </li>
-                            </ul>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row center-xs">
+                    <div class="col-xs-6">
+                        <div class="row bottom-xs around-xs mb-3 mt-3">
+                            <div class="col-xs d-inline">
+                                Nézet: &ensp;<i class="fas fa-th"></i>&ensp;<i class="fas fa-th-list"></i>
+                            </div>
+                            <div class="col-xs d-inline">
+                                {!! Form::open(['action'=>'PagesController@filter', 'method'=>'GET','name'=>'filter', 'class'=>'form-inline']) !!}
+                                        {!! Form::label('Rendezés:',null,['class' => 'control-label']); !!}&ensp;
+                                        {!! Form::select('filter',[
+                                            '1'=>'Dátum szerint legfrissebb',
+                                            '2'=>'Dátum szerint legrégebbi',
+                                            '3'=>'Ár szerint legdrágább',
+                                            '4'=>'Ár szerint legolcsóbb',
+                                            '5'=>'Méret szerint legnagyobb',
+                                            '6'=>'Méret szerint legkisebb'
+                                            ],session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
+                                            {!! Form::hidden('old_url', url()->full()) !!}
+                                {!! Form::close() !!}
+                            </div>
                         </div>
                     </div>
                 </div>

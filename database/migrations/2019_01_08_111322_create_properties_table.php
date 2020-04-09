@@ -25,6 +25,9 @@ class CreatePropertiesTable extends Migration
             $table->string('header_hun')->nullable();
             $table->string('header_de')->nullable();
             $table->string('header_en')->nullable();
+            $table->text('short_text_hun')->nullable();
+            $table->text('short_text_de')->nullable();
+            $table->text('short_text_en')->nullable();
             $table->text('text_hun')->nullable();
             $table->text('text_de')->nullable();
             $table->text('text_en')->nullable();
