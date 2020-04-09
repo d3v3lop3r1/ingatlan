@@ -41,9 +41,9 @@ $room_height=config('property.room_height.hu');
                             <div class="col-xs d-inline">
                                 Nézet: &ensp;
                                 @if (session('view')=='box')
-                                    <i class="fas fa-th"></i>
-                                @else
                                     <i class="fas fa-th text-danger"></i>
+                                @else
+                                    <i class="fas fa-th"></i>
                                 @endif
 
                                 &ensp;
