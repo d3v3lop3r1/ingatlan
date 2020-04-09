@@ -92,7 +92,7 @@ $room_height=config('property.room_height.hu');
                                                                 {{-- Photo  --}}
                             <div class="col-xs-12 mb-6">
                                     <div class="row border mt-3 shadow">
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-md-3">
                                             <div class="row center-xs">
                                                 <div class="col-xs-12 mt-2">
                                                     <img class="img-thumbnail" src="{{$photo_file}}" alt="">
@@ -102,7 +102,7 @@ $room_height=config('property.room_height.hu');
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-3">
+                                        <div class="col-xs-12 col-md-3">
                                             <div class="row">
                                                 <div class="col-xs-12">
                                                     <table class="table table-borderless table-sm show-new-adatok-tabla  mt-2">
@@ -153,7 +153,7 @@ $room_height=config('property.room_height.hu');
                                         </div>
 
                                                         {{-- Header es short_text --}}
-                                        <div class="col-xs-6">
+                                        <div class="col-xs-12 col-md-6">
                                                 <div class="row d-flex flex-column align-self-stretch">
                                                     <div class="col-xs-4 mt-2">
                                                         @php
