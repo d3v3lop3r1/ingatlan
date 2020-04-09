@@ -89,75 +89,112 @@ $room_height=config('property.room_height.hu');
                                             </div>
                                         </div>
                                         <div class="col-xs-3">
-                                            {{-- Adatok --}}
-                                            <table class="table table-borderless table-sm show-new-adatok-tabla  mt-2">
-                                                <thead class="pt-3">
-                                                    <tr>
-                                                        <td> ID:1100{{$property->id}}</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>Régió</th>
-                                                        <td>{{$region[$property->region]}}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Város</th>
-                                                        <td>{{$property->city}}</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Telek méret</th>
-                                                        <td>{{$property->land_area}} m2</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Lakóterőlet</th>
-                                                        <td>{{$property->area}} m2</td>
-                                                    </tr>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <table class="table table-borderless table-sm show-new-adatok-tabla  mt-2">
+                                                        <thead class="pt-3">
+                                                            <tr>
+                                                                <td> ID:1100{{$property->id}}</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>Régió</th>
+                                                                <td>{{$region[$property->region]}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Város</th>
+                                                                <td>{{$property->city}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Telek méret</th>
+                                                                <td>{{$property->land_area}} m2</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Lakóterőlet</th>
+                                                                <td>{{$property->area}} m2</td>
+                                                            </tr>
 
-                                                    <tr>
-                                                        <th>Szobák száma</th>
-                                                        <td>{{$property->room_no}} db</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                            <tr>
+                                                                <th>Szobák száma</th>
+                                                                <td>{{$property->room_no}} db</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                            <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="img-thumbnail mr-1 ml-1" alt="{{$property->agents->name}}">
+                                                        </div>
+                                                        <div class="col-xs-8">
+                                                            <h5><span class="text-md">{{$property->agents->name}}</span></h5>
+                                                            <p class="small">Vezető értékesítő</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{-- Adatok --}}
                                         </div>
 
                                                         {{-- Header es short_text --}}
                                         <div class="col-xs-6">
-                                            <div class="row">
-                                                <div class="col-xs-12 mt-2">
-                                                    @php
-                                                            $dt = Carbon::parse($property->updated_at);
-                                                            $days=$dt->diffInDays();
-                                                    @endphp
-                                                    <h4>
-                                                        @if ($days < 7)
-                                                            <span class="badge badge-success ml-2">új</span>
-                                                        @endif
-                                                        @if ($property->act_price)
-                                                            <span class="badge badge-danger ml-2">áresés</span>
-                                                        @endif
-                                                    </h4>
-                                                </div>
-                                                <div class="col-xs-12 mt-2 show-new-header">
-                                                    <h4>{{$property->header_hun}}</h4>
-                                                </div>
-                                                <div class="col-xs-12 show-new-short-text">
-                                                    @php
-                                                        echo ($property->short_text_hun);
-                                                    @endphp
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-xs-4 mt-2">
+                                                        @php
+                                                                $dt = Carbon::parse($property->updated_at);
+                                                                $days=$dt->diffInDays();
+                                                        @endphp
+                                                        <h4>
+                                                            @if ($days < 7)
+                                                                <span class="badge badge-success ml-2">új</span>
+                                                            @endif
+                                                            @if ($property->act_price)
+                                                                <span class="badge badge-danger ml-2">áresés</span>
+                                                            @endif
+                                                        </h4>
+                                                    </div>
+                                                    <div class="col-xs-4 self-align-end mt-2">
+                                                        <a class="btn btn-info btn-sm show-new-adatok-btn" href="/index/{{$property->id}}">Megtekintem</a>
+                                                    </div>
+                                                    <div class="col-xs-12 mt-2 show-new-header">
+                                                        <a href="/index/{{$property->id}}"><h4>{{$property->header_hun}}</h4></a>
+                                                    </div>
+                                                    <div class="col-xs-12 show-new-short-text">
+                                                        @php
+                                                            echo ($property->short_text_hun);
+                                                        @endphp
+                                                    </div>
                                                 </div>
                                             </div>
 
                                         </div>
                                     </div>
-
-
-
-
-
                             </div>
+
+                            <!-- Modal -->
+                            {{-- <div class="modal fade" id="agentModalCenter" tabindex="-1" role="dialog" aria-labelledby="agentModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="agentModalCenterTitle">{{$property->agents->name}}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezárom</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div> --}}
+
+
                     @endforeach
 
                 </div>

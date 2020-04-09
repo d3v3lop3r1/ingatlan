@@ -217,9 +217,20 @@ p {
 
 }
 
+.show-new-adatok-tabla{
+    line-height: 15px;
+}
 .show-new-adatok-tabla th{
     text-align: left;
+}
 
+.show-new-adatok-btn{
+    background-color:rgba(50, 85, 120, 1) ;
+    color: white;
+}
+.show-new-adatok-btn :hover{
+    background-color:rgb(112, 144, 177) ;
+    color: white;
 }
 
 .ingatlan-box{

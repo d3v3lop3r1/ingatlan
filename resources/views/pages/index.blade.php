@@ -169,6 +169,7 @@ $room_height=config('property.room_height.hu');
                     <div class="card">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item"><small><strong><i class="fas fa-phone"></i> Telefon</strong> {{$property->agents->tel}}</small></li>
+                        <li class="list-group-item"><small><strong><i class="fas fa-phone"></i> Telefon2</strong> {{$property->agents->tel2}}</small></li>
                         <li class="list-group-item"><small><strong><i class="far fa-envelope"></i> Email</strong> {{$property->agents->email}}</small></li>
                         <li class="list-group-item"><small><strong><i class="fas fa-globe"></i> Nyelvek</strong> {{$property->agents->languages}}</small></li>
                       </ul>
