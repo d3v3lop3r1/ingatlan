@@ -52,17 +52,18 @@ Route::get('/koltozes-szervezese', function () {
 
 Route::get('/logout','HomeController@logout');
 
-Route::get('/register', function () {
-    return view('auth.register');
-});
+// Route::get('/register', function () {
+//     return view('auth.register');
+// });
 
 //                  PageController
 
 Route::get('/show', 'PagesController@showing');
 Route::get('/home', 'PagesController@home');
 Route::any('/search', 'PagesController@search');
-Route::any('/filter', 'PagesController@filter');
 Route::any('/search/view/{view} ', 'PagesController@view');
+Route::any('/search/save-favorite/{id} ', 'PagesController@saveFavorite');
+Route::any('/filter', 'PagesController@filter');
 
 Route::get('/index/{property}', 'PagesController@index');
 

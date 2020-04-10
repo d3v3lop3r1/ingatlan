@@ -167,6 +167,7 @@ $room_height=config('property.room_height.hu');
                                                             @if ($property->act_price)
                                                                 <span class="badge badge-danger ml-2">áresés</span>
                                                             @endif
+                                                            <a href="/search/save-favorite/"><i class="far fa-heart text-danger"></i></a>
                                                         </h4>
                                                     </div>
                                                     <div class="col-xs-12 mt-2 show-new-header">
