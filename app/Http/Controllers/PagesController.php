@@ -36,6 +36,10 @@ class PagesController extends Controller
         $new_url=$request->old_url . '&filter=' . $request->filter;
         return redirect($new_url);
     }
+    public function saveFavorite($id){
+
+        return redirect()->back();
+    }
     public function view($view){
         if($view==2){
             session(['view'=>'box']);
