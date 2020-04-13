@@ -24,10 +24,16 @@ class storePropertyRequest extends FormRequest
     public function rules()
     {
         return [
-            'client_id'=>'required',
+            'client_id'=>'required|gte:1',
             'agent_id'=>'required',
+            'aktiv'=>'boolean',
+            'kiemelt'=>'boolean',
             'list_type'=>'required',
             'type_id'=>'required',
+            'price'=>'integer|min:1000|max:1000000000',
+            'min_price'=>'integer|min:1000|max:1000000000|lt:price',
+            'act_price'=>'',
+            'deposit'=>'',
             'header_hun'=>'required',
             'short_text_hun'=>'required',
             'text_hun'=>'required',
