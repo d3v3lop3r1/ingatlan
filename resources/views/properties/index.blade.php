@@ -55,7 +55,7 @@ $list_type=config('property.list_type.hu');
                             <td>{{$list_type[$property->list_type]}}</td>
                             <td><a href="/properties/{{$property->id}}/edit">{{$property->header_hun}}</a></td>
                             <td>{{agent::where('id',$property->agent_id)->firstOrFail()->name}}</td>
-                            <td>{{client::where('id',$property->client_id)->first()->name}}</td>
+                            <td>{{client::where('id',$property->client_id)->firstOrFail()->name}}</td>
                             <td>{{$property->city}}</td>
                             <td>{{$property->area}}</td>
                             <td>{{$property->price}}</td>
