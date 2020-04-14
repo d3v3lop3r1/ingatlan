@@ -41,13 +41,13 @@ $region= config('property.region.hu');
                                 @if (session('view')=='box')
                                     <i class="fas fa-th text-danger"></i>
                                 @else
-                                <a href="/search/view/2"><i class="fas fa-th"></i></a>
+                                <a href="/search/view/2"><i class="fas fa-th text-secondary"></i></a>
                                 @endif
                                 &ensp;
                                 @if (session('view')=='rectangle')
                                 <i class="fas fa-th-list text-danger"></i>
                                 @else
-                                <a href="/search/view/1"><i class="fas fa-th-list"></i></a>
+                                <a href="/search/view/1"><i class="fas fa-th-list text-secondary"></i></a>
                                 @endif
 
                             </div>

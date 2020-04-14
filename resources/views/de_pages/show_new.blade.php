@@ -46,13 +46,13 @@ $room_height=config('property.room_height.de');
                                 @if (session('view')=='box')
                                     <i class="fas fa-th text-danger"></i>
                                 @else
-                                <a href="/search/view/2"><i class="fas fa-th"></i></a>
+                                <a href="/search/view/2"><i class="fas fa-th text-secondary"></i></a>
                                 @endif
                                 &ensp;
                                 @if (session('view')=='rectangle')
                                 <i class="fas fa-th-list text-danger"></i>
                                 @else
-                                <a href="/search/view/1"><i class="fas fa-th-list"></i></a>
+                                <a href="/search/view/1"><i class="fas fa-th-list text-secondary"></i></a>
                                 @endif
                             </div>
                             <div class="col-xs d-inline">
@@ -155,7 +155,7 @@ $room_height=config('property.room_height.de');
                                                         {{-- Header es short_text --}}
                                         <div class="col-xs-12 col-md-6">
                                                 <div class="row d-flex flex-column align-self-stretch">
-                                                    <div class="col-xs-4 mt-2">
+                                                    <div class="col-xs-5 mt-2">
                                                         @php
                                                                 $dt = Carbon::parse($property->updated_at);
                                                                 $days=$dt->diffInDays();
