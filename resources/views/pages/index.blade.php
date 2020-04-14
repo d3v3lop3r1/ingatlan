@@ -94,10 +94,10 @@ $room_height=config('property.room_height.hu');
                       </tr>
 
                       <tr>
-                        <th>Szobák száma</th>
-                        <td>{{$property->room_no}} db</td>
-                        <th>Fürdők száma</th>
-                        <td>{{$property->bathroom_no}} db</td>
+                        <th>Szobák</th>
+                        <td>{{$property->room_no}}</td>
+                        <th>Fürdők</th>
+                        <td>{{$property->bathroom_no}}</td>
                       </tr>
                       <tr>
                         <th>Állapot</th>
@@ -133,7 +133,15 @@ $room_height=config('property.room_height.hu');
                       <tr  class="table-borderless index-price">
                         <td align="right" class=" pt-3"><h5 class="text-white" >Ár</h5></td>
                         <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
-                        <td class=" pt-3 pr-3"><h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
+                        <td class=" pt-3 pr-3">
+
+
+                                    @if ($property->act_price)
+                                        <h5 class="text-white"><i class="fas fa-caret-down"></i><span class="money"> {{$property->act_price}}</span>.-Ft</h5></td>
+                                    @else
+                                        <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
+                                    @endif
+
                         <td class=" pt-3 pr-3"></th>
                       </tr>
 
