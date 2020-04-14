@@ -232,10 +232,37 @@ p {
     margin-bottom: 10px;
     margin-top: auto;
 }
-.show-new-adatok-btn :hover{
+.show-new-save-favourite-btn{
+    background-color: white;
+    border-color: rgba(50, 85, 120, 1);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: auto;
+
+}
+.show-new-save-favourite-btn:hover{
+    background-color:rgb(112, 144, 177) ;
+
+}
+
+
+.show-new-adatok-btn:hover{
     background-color:rgb(112, 144, 177) ;
     color: white;
 }
+
+.show_act_price{
+    position: absolute;
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0.589);
+    font-size: x-large;
+    text-decoration-line: line-through blink;
+    -moz-text-decoration-line: line-through;
+    top: 20px;
+    left: 0;
+    transform: rotate(-25deg) ;
+}
+
 
 .ingatlan-box{
 	width: 320px;

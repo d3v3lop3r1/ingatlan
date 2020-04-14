@@ -90,9 +90,19 @@ $filter= config('property.filter.hu')
                                             <div class="row center-xs">
                                                 <div class="col-xs-12 mt-2">
                                                     <img class="img-thumbnail" src="{{$photo_file}}" alt="">
+                                                    @if ($property->act_price)
+                                                        <div class="show_act_price"><span class="money">{{$property->price}}</span>.-Ft </div>
+                                                    @endif
                                                 </div>
                                                 <div class="col-xs-12 show-new-price">
-                                                    <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5>
+                                                    <h5 class="text-white">
+                                                        @if ($property->act_price)
+                                                            <span class="money">{{$property->act_price}}</span>.-Ft
+
+                                                        @else
+                                                            <span class="money">{{$property->price}}</span>.-Ft
+                                                        @endif
+                                                    </h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -161,7 +171,7 @@ $filter= config('property.filter.hu')
                                                             @if ($property->act_price)
                                                                 <span class="badge badge-danger ml-2">áresés</span>
                                                             @endif
-                                                            <a href="/search/save-favorite/{{$property->id}} "><i class="far fa-heart text-danger"></i></a>
+
                                                         </h4>
                                                     </div>
                                                     <div class="col-xs-12 mt-2 show-new-header">
@@ -174,6 +184,7 @@ $filter= config('property.filter.hu')
                                                     </div>
                                                     <div class="col-xs-22 align-self-end align-items-end mt-auto">
                                                         <a class="btn btn-info btn-sm show-new-adatok-btn" href="/index/{{$property->id}}">Megtekintem</a>
+                                                        <a class="btn btn-info btn-sm show-new-save-favourite-btn" href="/search/save-favorite/{{$property->id}} "><i class="far fa-heart text-danger"></i></a>
                                                     </div>
 
                                                 </div>
