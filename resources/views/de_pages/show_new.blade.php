@@ -13,6 +13,7 @@ $heating=config('property.heating.de');
 $parking=config('property.parking.de');
 $comfort=config('property.comfort.de');
 $room_height=config('property.room_height.de');
+$filter= config('property.filter.de')
 
 ?>
 @extends('de_layouts.main')
@@ -57,15 +58,8 @@ $room_height=config('property.room_height.de');
                             </div>
                             <div class="col-xs d-inline">
                                 {!! Form::open(['action'=>'PagesController@filter', 'method'=>'GET','name'=>'filter', 'class'=>'form-inline']) !!}
-                                        {!! Form::label('Rendezés:',null,['class' => 'control-label']); !!}&ensp;
-                                        {!! Form::select('filter',[
-                                            '1'=>'Dátum szerint legfrissebb',
-                                            '2'=>'Dátum szerint legrégebbi',
-                                            '3'=>'Ár szerint legdrágább',
-                                            '4'=>'Ár szerint legolcsóbb',
-                                            '5'=>'Méret szerint legnagyobb',
-                                            '6'=>'Méret szerint legkisebb'
-                                            ],session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
+                                        {!! Form::label('Sortieren nach:',null,['class' => 'control-label']); !!}&ensp;
+                                        {!! Form::select('filter',$filter,session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
                                             {!! Form::hidden('old_url', url()->full()) !!}
                                 {!! Form::close() !!}
                             </div>

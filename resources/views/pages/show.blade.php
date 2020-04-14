@@ -7,6 +7,7 @@ $type_id=config('property.type_id.hu');
 $list_type=config('property.list_type.hu');
 $subtype=config('property.subtype.hu');
 $region= config('property.region.hu');
+$filter= config('property.filter.hu')
 
 ?>
 @extends('layout.main')
@@ -54,14 +55,7 @@ $region= config('property.region.hu');
                             <div class="col-xs d-inline">
                                 {!! Form::open(['action'=>'PagesController@filter', 'method'=>'GET','name'=>'filter', 'class'=>'form-inline']) !!}
                                         {!! Form::label('Rendezés:',null,['class' => 'control-label']); !!}&ensp;
-                                        {!! Form::select('filter',[
-                                            '1'=>'Dátum szerint legfrissebb',
-                                            '2'=>'Dátum szerint legrégebbi',
-                                            '3'=>'Ár szerint legdrágább',
-                                            '4'=>'Ár szerint legolcsóbb',
-                                            '5'=>'Méret szerint legnagyobb',
-                                            '6'=>'Méret szerint legkisebb'
-                                            ],session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
+                                        {!! Form::select('filter',$filter,session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
                                             {!! Form::hidden('old_url', url()->full()) !!}
                                 {!! Form::close() !!}
                             </div>

@@ -13,6 +13,7 @@ $heating=config('property.heating.hu');
 $parking=config('property.parking.hu');
 $comfort=config('property.comfort.hu');
 $room_height=config('property.room_height.hu');
+$filter= config('property.filter.hu')
 
 ?>
 @extends('layout.main')
@@ -58,14 +59,7 @@ $room_height=config('property.room_height.hu');
                             <div class="col-xs d-inline">
                                 {!! Form::open(['action'=>'PagesController@filter', 'method'=>'GET','name'=>'filter', 'class'=>'form-inline']) !!}
                                         {!! Form::label('Rendezés:',null,['class' => 'control-label']); !!}&ensp;
-                                        {!! Form::select('filter',[
-                                            '1'=>'Dátum szerint legfrissebb',
-                                            '2'=>'Dátum szerint legrégebbi',
-                                            '3'=>'Ár szerint legdrágább',
-                                            '4'=>'Ár szerint legolcsóbb',
-                                            '5'=>'Méret szerint legnagyobb',
-                                            '6'=>'Méret szerint legkisebb'
-                                            ],session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
+                                        {!! Form::select('filter',$filter,session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
                                             {!! Form::hidden('old_url', url()->full()) !!}
                                 {!! Form::close() !!}
                             </div>
@@ -167,7 +161,7 @@ $room_height=config('property.room_height.hu');
                                                             @if ($property->act_price)
                                                                 <span class="badge badge-danger ml-2">áresés</span>
                                                             @endif
-                                                            <a href="/search/save-favorite/"><i class="far fa-heart text-danger"></i></a>
+                                                            <a href="/search/save-favorite/{{$property->id}} "><i class="far fa-heart text-danger"></i></a>
                                                         </h4>
                                                     </div>
                                                     <div class="col-xs-12 mt-2 show-new-header">

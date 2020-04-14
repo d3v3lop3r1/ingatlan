@@ -281,6 +281,24 @@ return [
             1=>'bis 3m Deckenhöhe',
             2=>'über 3m Deckenhöhe'
         ]
+    ],
+    'filter'=>[
+        'hu'=>[
+            1=>'Dátum szerint legfrissebb',
+            2=>'Dátum szerint legrégebbi',
+            3=>'Ár szerint legdrágább',
+            4=>'Ár szerint legolcsóbb',
+            5=>'Méret szerint legnagyobb',
+            6=>'Méret szerint legkisebb'
+        ],
+        'de'=>[
+            1=>'Neueste Inserat zuerst',
+            2=>'Älteste Inserat zuerst',
+            3=>'Preise aufsteigend',
+            4=>'Preise absteigend',
+            5=>'Ab größte Wohnfläche',
+            6=>'Ab kleinste Wohnfläche'
+        ]
     ]
 ]
 ?>
