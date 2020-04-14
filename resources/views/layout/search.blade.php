@@ -28,7 +28,7 @@
                             {!! Form::select('type_id',([null=>'Mind']+$type_id),session('type_id'),['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!}
                         </div>
                         <div class="col-auto">
-                            {!! Form::label('Ingatlan típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
+                            {!! Form::label('Típus',null,['class' => 'search-label', 'for'=>'list_type']); !!}
                             {!! Form::select('list_type',([null=>'Mind'])+$list_type,session('list_type'),['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!}
                         </div>
                         <div class="col-auto">

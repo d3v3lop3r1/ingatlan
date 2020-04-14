@@ -25,8 +25,8 @@ class dePagesController extends Controller
         ->where('type_id',$request->type_id)
         ->when($list_type, function($query, $list_type){
             return $query->where('list_type', $list_type);
-        })
-        ;
+        });
+
         $mutato=$request->zeiger;
         return view('de_pages.show', compact('properties', 'mutato'));
     }
@@ -71,7 +71,7 @@ class dePagesController extends Controller
 
         $room_no = $request->room_no;
         if ($room_no){
-            $mutato .= 'Zahl der Zimmer min.:' . $room_no . '-';
+            $mutato .= 'Zimmer min.:' . $room_no . '-';
         }
 
         $area = $request->area;

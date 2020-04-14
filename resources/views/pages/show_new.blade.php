@@ -126,13 +126,13 @@ $room_height=config('property.room_height.hu');
                                                                 <td>{{$property->land_area}} m2</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Lakóterőlet</th>
+                                                                <th>Lakóterület</th>
                                                                 <td>{{$property->area}} m2</td>
                                                             </tr>
 
                                                             <tr>
-                                                                <th>Szobák száma</th>
-                                                                <td>{{$property->room_no}} db</td>
+                                                                <th>Szobák</th>
+                                                                <td>{{$property->room_no}}</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,7 +96,6 @@ Route::prefix('de')->group(function () {
     Route::get('/home', 'dePagesController@home');
     Route::any('/search', 'dePagesController@search');
     Route::any('/search/view/{view} ', 'dePagesController@view');
-
     Route::get('/index/{property}', 'dePagesController@index');
     Route::any('/filter', 'dePagesController@filter');
 

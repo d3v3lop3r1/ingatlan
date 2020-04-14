@@ -122,17 +122,17 @@ $room_height=config('property.room_height.de');
                                                                 <td>{{$property->city}}</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Größe der Grundstück</th>
+                                                                <th>Grundstück</th>
                                                                 <td>{{$property->land_area}} m2</td>
                                                             </tr>
                                                             <tr>
-                                                                <th>Größe des Wohnfläche</th>
+                                                                <th>Wohnfläche</th>
                                                                 <td>{{$property->area}} m2</td>
                                                             </tr>
 
                                                             <tr>
-                                                                <th>Zahl der Zimmer</th>
-                                                                <td>{{$property->room_no}} db</td>
+                                                                <th>Zimmer</th>
+                                                                <td>{{$property->room_no}}</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
