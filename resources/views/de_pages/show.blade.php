@@ -4,6 +4,10 @@ use Carbon\Carbon;
 use Intervention\Image\ImageManager;
 use App\property;
 $type_id=config('property.type_id.de');
+$list_type=config('property.list_type.de');
+$subtype=config('property.subtype.de');
+$region= config('property.region.de');
+
 ?>
 @extends('de_layouts.main')
 @section('tartalom')
@@ -21,9 +25,47 @@ $type_id=config('property.type_id.de');
             <div class="container-fluid">
                 <div class="row center-xs">
                     <div class="col-xs-12">
-                        <h4>{{$mutato}}</h4> 
-                        <h4>Anzahl der Angebote:</h4> 
-                        <h4><span class="badge badge-primary">{{$prop_count}}</span>{{$prop_count}}</h4> 
+                        <h4>{{$mutato}}</h4>
+                        <h4>Anzahl der Angebote: <span class="badge badge-primary">{{$prop_count}}</span> </h4>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row center-xs">
+                    <div class="col-xs-6">
+                        <div class="row bottom-xs around-xs mb-3 mt-3">
+                            <div class="col-xs d-inline">
+                                @php
+                                    $full_url=url()->full();
+                                @endphp
+                                Ansicht: &ensp;
+                                @if (session('view')=='box')
+                                    <i class="fas fa-th text-danger"></i>
+                                @else
+                                <a href="/search/view/2"><i class="fas fa-th"></i></a>
+                                @endif
+                                &ensp;
+                                @if (session('view')=='rectangle')
+                                <i class="fas fa-th-list text-danger"></i>
+                                @else
+                                <a href="/search/view/1"><i class="fas fa-th-list"></i></a>
+                                @endif
+
+                            </div>
+                            <div class="col-xs d-inline">
+                                {!! Form::open(['action'=>'dePagesController@filter', 'method'=>'GET','name'=>'filter', 'class'=>'form-inline']) !!}
+                                        {!! Form::label('Rendezés:',null,['class' => 'control-label']); !!}&ensp;
+                                        {!! Form::select('filter',[
+                                            '1'=>'Dátum szerint legfrissebb',
+                                            '2'=>'Dátum szerint legrégebbi',
+                                            '3'=>'Ár szerint legdrágább',
+                                            '4'=>'Ár szerint legolcsóbb',
+                                            '5'=>'Méret szerint legnagyobb',
+                                            '6'=>'Méret szerint legkisebb'
+                                            ],session('filter'),['class' => 'form-control-sm','onchange'=>'this.form.submit()']); !!}
+                                            {!! Form::hidden('old_url', url()->full()) !!}
+                                {!! Form::close() !!}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -31,8 +73,8 @@ $type_id=config('property.type_id.de');
         <section id="ingatlanok-lista">
             <div class="container-fluid">
                 <div class="row center-xs ingatlan-sor">
-                    @foreach ($properties as $property)                       
-                            <?php 
+                    @foreach ($properties as $property)
+                            <?php
                             $photo_count = $property->photos->count();
                             $photo = $property->photos->where('is_default','1')->first();
                             if ($photo){
@@ -43,11 +85,11 @@ $type_id=config('property.type_id.de');
                             }
 
                             ?>
-                            
+
                             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 ingatlan-box mb-3">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="/de/index/{{$property->id}}">{{$property->header_de}}</a></h5>
+                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_de}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php
@@ -63,12 +105,12 @@ $type_id=config('property.type_id.de');
                                                     <i class="fas fa-camera-retro"></i> {{$photo_count}}
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="col-xs-12 main-photo">
                                             <div class="row">
                                                 <div class="col-auto prop-header-alul-jobb">
-                                                    ID:{{1100 + $property->id}}
+                                                ID:{{1100 + $property->id}} - {{$type_id[$property->type_id]}} {{$list_type[$property->list_type]}} {{$region[$property->region]}}
                                                 </div>
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
@@ -77,8 +119,8 @@ $type_id=config('property.type_id.de');
 
 
                                     {{--  Adatok  --}}
-                                    
-                                    
+
+
                                     <div class="row center-xs">
                                         <div class="col-xs-12 main-price border">
                                             <span class="money">{{$property->price}}</span>.- Ft
@@ -110,12 +152,12 @@ $type_id=config('property.type_id.de');
                                                     @endif
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                    </div>                                                   
+                                    </div>
                             </div>
                     @endforeach
-                    
+
                 </div>
             </div>
             <div class="container lapozas">

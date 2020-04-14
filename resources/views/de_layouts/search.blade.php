@@ -21,20 +21,20 @@
 <div class="container">
     <div class="row drop-shadow search-box center-xs">
         <div class="col-auto">
-                {!! Form::open(['action'=>'dePagesController@search', 'method'=>'POST', 'class'=>'']); !!}
+                {!! Form::open(['action'=>'dePagesController@search', 'method'=>'GET', 'class'=>'']); !!}
                 <div class="row center-xs">
                         <div class="col-auto">
                             {!! Form::label('Kaufen/Mieten',null,['class' => 'search-label', 'for'=>'type_id']); !!}
-                            {!! Form::select('type_id',([null=>'Alle']+$type_id),null,['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!}
+                            {!! Form::select('type_id',([null=>'Alle']+$type_id),session('type_id'),['class' => 'form-control form-control-sm', 'id'=>'type_id']); !!}
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Art der Immobilie',null,['class' => 'search-label', 'for'=>'list_type']); !!}
-                            {!! Form::select('list_type',([null=>'Alle']+$list_type),null,['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!}
+                            {!! Form::select('list_type',([null=>'Alle']+$list_type),session('list_type'),['class' => 'form-control form-control-sm', 'id'=>'list_type']); !!}
                         </div>
                         <div class="col-auto">
                             {!! Form::label('Wo?',null,['class' => 'search-label', 'for'=>'city']); !!}
                             {!! Form::select('city',([null=>'Alle']+$cities)
-                                ,null, ['class' => 'form-control form-control-sm', 'id'=>'city']);
+                                ,session('city'), ['class' => 'form-control form-control-sm', 'id'=>'city']);
                             !!}
                         </div>
                         <div class="col-auto">

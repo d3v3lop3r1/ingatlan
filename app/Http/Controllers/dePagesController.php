@@ -23,20 +23,37 @@ class dePagesController extends Controller
         $list_type=$request->list_type;
         $properties=property::where('active','1')
         ->where('type_id',$request->type_id)
-        ->when($list_type, function($query, $list_type){ 
+        ->when($list_type, function($query, $list_type){
             return $query->where('list_type', $list_type);
         })
         ;
         $mutato=$request->zeiger;
         return view('de_pages.show', compact('properties', 'mutato'));
     }
+    public function filter(Request $request){
 
+        $new_url=$request->old_url . '&filter=' . $request->filter;
+        return redirect($new_url);
+    }
     public function search(Request $request)
     {
+        session(['type_id'=>$request->type_id]);
+        session(['list_type'=>$request->list_type]);
+        session(['city'=>$request->city]);
+        session(['room_no'=>$request->room_no]);
+        session(['filter'=>$request->filter]);
+        if (!$request->session()->has('view')) {
+            session(['view'=>'rectangle']);
+        }
+        $filter=$request->filter;
+        if(!$filter){
+            $filter=1;
+        }
         $mutato='';
 
         $type_ids=config('property.type_id.de');
         $type_id = $request->type_id;
+
         if ($type_id) {
             $mutato .= $type_ids[$type_id] . '-';
         }
@@ -46,6 +63,7 @@ class dePagesController extends Controller
         if ($list_type) {
             $mutato .= $list_types[$list_type] . '-';
         }
+
         $city = $request->city;
         if ($city){
             $mutato .= $city . '-';
@@ -53,7 +71,7 @@ class dePagesController extends Controller
 
         $room_no = $request->room_no;
         if ($room_no){
-            $mutato .= 'anzahl der Zimmer min.:' . $room_no . '-';
+            $mutato .= 'Zahl der Zimmer min.:' . $room_no . '-';
         }
 
         $area = $request->area;
@@ -62,190 +80,68 @@ class dePagesController extends Controller
         $price_max = $request->price_max;
 
         $properties = property::where('active','1')
-        ->when($type_id, function($query, $type_id){ 
+        ->when($type_id, function($query, $type_id){
             return $query->where('type_id', $type_id);
         })
-
-        ->when($list_type, function($query, $list_type){ 
+        ->when($list_type, function($query, $list_type){
             return $query->where('list_type', $list_type);
         })
 
-        ->when($city, function($query, $city){ 
+        ->when($city, function($query, $city){
             return $query->where('city', $city);
         })
 
-        ->when($room_no, function($query, $room_no){ 
+        ->when($room_no, function($query, $room_no){
             return $query->where('room_no','>',$room_no);
         })
 
-        ->when($area, function($query, $area){ 
+        ->when($area, function($query, $area){
             return $query->where('area','>',$area);
         })
 
-        ->when($land_area, function($query, $land_area){ 
+        ->when($land_area, function($query, $land_area){
             return $query->where('land_area','>',$land_area);
         })
 
 
-        ->when($price_max, function($query, $price_max){ 
+        ->when($price_max, function($query, $price_max){
             return $query->where('price','<',$price_max);
+        })
+
+        ->when($filter, function($query, $filter){
+            switch ($filter) {
+                case "1":
+                    return $query->orderBy('updated_at','desc');
+                    break;
+                case "2":
+                    return $query->orderBy('updated_at','asc');
+                    break;
+                case "3":
+                    return $query->orderBy('price','desc');
+                    break;
+                case "4":
+                    return $query->orderBy('price','asc');
+                    break;
+                case "5":
+                    return $query->orderBy('area','desc');
+                    break;
+                case "6":
+                    return $query->orderBy('area','asc');
+                    break;
+                default:
+                return $query->orderBy('updated_at','desc');
+            };
+
         });
 
 
         // $properties=$properties->paginate(9);
-        return view('de_pages.show', compact('properties', 'mutato'));
+        if(session('view')=='rectangle'){
+            return view('de_pages.show_new', compact('properties', 'mutato', 'request'));
+        } else {
+            return view('de_pages.show', compact('properties', 'mutato', 'request'));
+
+        }
+
     }
-
-    // public function eladoOsszes()
-    // {
-    //     $properties=property::elado();
-    //     $mutato="Immobilien zu verkaufen";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-
-    // public function eladoHazak()
-    // {
-    //     $properties=property::hazak()->elado();
-    //     $mutato="Häuser zum Verkauf";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoLakasok()
-    // {
-    //     $properties=property::lakasok()->elado();
-    //     $mutato="Eladó lakások";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoIrodak()
-    // {
-    //     $properties=property::irodak()->elado();
-    //     $mutato="Büros zum Verkauf";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoIpari()
-    // {
-    //     $properties=property::ipari()->elado();
-    //     $mutato="Gewerbeimmobilien zu verkaufen";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoNyaralok()
-    // {
-    //     $properties=property::nyaralok()->elado();
-    //     $mutato="Ferienhäuser zu verkaufen";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoGarazsok()
-    // {
-    //     $properties=property::Garazsok()->elado();
-    //     $mutato="Garagen zu verkaufen";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoRaktarak()
-    // {
-    //     $properties=property::Raktarak()->elado();
-    //     $mutato="Lager zum Verkauf";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-
-    // public function eladoUzlethelyisegek()
-    // {
-    //     $properties=property::Uzlethelyisegek()->elado();
-    //     $mutato="Räumlichkeiten zum Verkauf";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-
-    // public function eladoTelekfold()
-    // {
-    //     $properties=property::Telekfold()->elado();
-    //     $mutato="Land zum Verkauf";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoVendeglatas()
-    // {
-    //     $properties=property::Vendeglatas()->elado();
-    //     $mutato="Gastronomie, HOTEL zu verkauf";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function eladoEgyeb()
-    // {
-    //     $properties=property::Egyeb()->elado();
-    //     $mutato="Sonstiges zu verkaufen";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-
-
-
-    // public function kiadoOsszes()
-    // {
-    //     $properties=property::kiado();
-    //     $mutato="Kiadó ingatlanok";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoHazak()
-    // {
-    //     $properties=property::hazak()->kiado();
-    //     $mutato="Kiadó házak";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoLakasok()
-    // {
-    //     $properties=property::lakasok()->kiado();
-    //     $mutato="Kiadó lakások";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoIrodak()
-    // {
-    //     $properties=property::irodak()->kiado();
-    //     $mutato="Kiadó irodák";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoIpari()
-    // {
-    //     $properties=property::ipari()->kiado();
-    //     $mutato="Kiadó ipari ingatlanok";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoNyaralok()
-    // {
-    //     $properties=property::nyaralok()->kiado();
-    //     $mutato="Kiadó nyaralók";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoGarazsok()
-    // {
-    //     $properties=property::Garazsok()->kiado();
-    //     $mutato="Kiadó garázsok";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoRaktarak()
-    // {
-    //     $properties=property::Raktarak()->kiado();
-    //     $mutato="Kiadó raktárak";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-
-    // public function kiadoUzlethelyisegek()
-    // {
-    //     $properties=property::Uzlethelyisegek()->kiado();
-    //     $mutato="Kiadó üzlethelyiségek";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-
-    // public function kiadoTelekfold()
-    // {
-    //     $properties=property::Telekfold()->kiado();
-    //     $mutato="Kiadó telek-föld";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoVendeglatas()
-    // {
-    //     $properties=property::Vendeglatas()->kiado();
-    //     $mutato="Kiadó vendéglátás";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
-    // public function kiadoEgyeb()
-    // {
-    //     $properties=property::Egyeb()->kiado();
-    //     $mutato="Kiadó egyéb";
-    //     return view('de_pages.show', compact('properties', 'mutato'));
-    // }
 }
