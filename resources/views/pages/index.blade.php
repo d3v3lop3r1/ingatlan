@@ -134,24 +134,19 @@ $room_height=config('property.room_height.hu');
                         <td align="right" class=" pt-3"><h5 class="text-white" >Ár</h5></td>
                         <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
                         <td class=" pt-3 pr-3">
-
-
-                                    @if ($property->act_price)
-                                        <h5 class="text-white"><i class="fas fa-caret-down"></i><span class="money"> {{$property->act_price}}</span>.-Ft</h5></td>
-                                    @else
-                                        <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
-                                    @endif
-
+                          @if ($property->act_price)
+                              <h5 class="text-white"><i class="fas fa-caret-down"></i><span class="money"> {{$property->act_price}}</span>.-Ft</h5></td>
+                          @else
+                              <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
+                          @endif
                         <td class=" pt-3 pr-3"></th>
                       </tr>
-
-                      <tr class="table-borderless" align="center">
-                        <th class="pt-3 justify-content-center" colspan="2">
+                      <tr class="table-borderless index-header-sor">
+                        <th class="pt-3" colspan="4">
                           <h4 class="index_mutato">
                             {{$list_type[$property->list_type]}} - {{$type_id[$property->type_id]}} - {{$property->city}}
                           </h4>
                         </th>
-                        <th colspan="2"></th>
                       </tr>
                       <tr>
                         <td colspan="4"><span class="index-text"><?php echo $property->text_hun ?></span> </td>

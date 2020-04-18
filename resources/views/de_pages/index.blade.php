@@ -141,13 +141,12 @@ $room_height=config('property.room_height.de');
                         <td class=" pt-3 pr-3"></th>
                       </tr>
 
-                      <tr class="table-borderless" align="center">
-                        <th class="pt-3 justify-content-center" colspan="2">
+                      <tr class="table-borderless index-header-sor">
+                        <th class="pt-3" colspan="4">
                           <h4 class="index_mutato">
                             {{$list_type[$property->list_type]}} - {{$type_id[$property->type_id]}} - {{$property->city}}
                           </h4>
                         </th>
-                        <th colspan="2"></th>
                       </tr>
                       <tr>
                         <td colspan="4"><span class="index-text"><?php echo $property->text_de ?></span> </td>

@@ -643,6 +643,9 @@ p {
 	white-space: nowrap;
 	color: tomato !important;
 }
+.index-header-sor th{
+	text-align: center !important;
+}
 .index_mutato{
 	white-space: nowrap;
 }
