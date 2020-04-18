@@ -99,7 +99,8 @@
                 </div> {{-- navbar collapse --}}
                 <?php 
                   $url=url()->full() ;
-                  $new_url = Str::after($url, url('/'));
+                  $root_url=url('/') . '/de';
+                  $new_url = Str::after($url, $root_url);
                 ?>
 
                 <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/hungary-flag-icon-32.png" alt=""></a>
