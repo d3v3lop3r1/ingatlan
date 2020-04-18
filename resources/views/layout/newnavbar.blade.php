@@ -95,7 +95,13 @@
                                     </li>
                                 @endif
                                 <li class="nav-item">
-                                  <a  href="/de/home" class="ml-2"><img src="/icons/Flags/germany-flag-icon-32.png" alt=""></a>
+                                  <?php 
+                                    $url=url()->full() ;
+                                    $slice = Str::after($url, 'https://ingatlanfox.hu');
+                                    $new_url='/de' . $slice
+                                  ?>
+                
+                                  <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/germany-flag-icon-32.png" alt=""></a>
                                 </li>
 
                             </ul>

@@ -92,15 +92,21 @@
                                     <a href="/login" class="button">Login</a>
                                   </li>
                               @endif
-                                  <li class="nav-item">
+                                  {{-- <li class="nav-item">
                                     <a  href="/home" class="ml-2"><img src="/icons/Flags/hungary-flag-icon-32.png" alt=""></a>
-                                  </li>
+                                  </li> --}}
                             </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
+                </div> {{-- navbar collapse --}}
+                <?php 
+                  $url=url()->full() ;
+                  $new_url = Str::after($url, 'https://ingatlanfox.hu/de');
+                ?>
+
+                <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/hungary-flag-icon-32.png" alt=""></a>
+              </nav>
+            </div>  
+          </div> {{-- row --}}
+        </div>{{--  navbar --}}
     </div>
   {{--  </div>  --}}
 </header>
