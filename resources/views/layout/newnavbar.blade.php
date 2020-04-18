@@ -97,7 +97,7 @@
                                 <li class="nav-item">
                                   <?php 
                                     $url=url()->full() ;
-                                    $slice = Str::after($url, 'https://ingatlanfox.hu');
+                                    $slice = Str::after($url, url('/'));
                                     $new_url='/de' . $slice
                                   ?>
                 

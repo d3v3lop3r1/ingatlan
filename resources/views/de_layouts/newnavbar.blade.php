@@ -99,7 +99,7 @@
                 </div> {{-- navbar collapse --}}
                 <?php 
                   $url=url()->full() ;
-                  $new_url = Str::after($url, 'https://ingatlanfox.hu/de');
+                  $new_url = Str::after($url, url('/'));
                 ?>
 
                 <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/hungary-flag-icon-32.png" alt=""></a>
