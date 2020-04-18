@@ -83,7 +83,7 @@ $filter= config('property.filter.de')
                             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 ingatlan-box mb-3">
                                     <div class="row">
                                         <div class="col-xs-12 prop-header">
-                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_de}}</a></h5>
+                                            <h5><a class="stretched-link" href="/de/index/{{$property->id}}">{{$property->header_de}}</a></h5>
                                             <div class="row justify-content-between">
                                                 <div class="col-auto prop-header-alatt-bal start-xs ">
                                                     <?php
@@ -104,7 +104,7 @@ $filter= config('property.filter.de')
                                         <div class="col-xs-12 main-photo">
                                             <div class="row">
                                                 <div class="col-auto prop-header-alul-jobb">
-                                                ID:{{1100 + $property->id}} - {{$type_id[$property->type_id]}} {{$list_type[$property->list_type]}} {{$region[$property->region]}}
+                                                ID:1100{{$property->id}} - {{$type_id[$property->type_id]}} {{$list_type[$property->list_type]}} {{$region[$property->region]}}
                                                 </div>
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
