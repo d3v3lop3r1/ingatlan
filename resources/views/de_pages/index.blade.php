@@ -31,7 +31,7 @@ $room_height=config('property.room_height.de');
                 <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
                 <div class="row">
                   @foreach ($photos as $photo)
-                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3  mt-1">
                       <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
                     </div>
                   @endforeach
@@ -41,6 +41,7 @@ $room_height=config('property.room_height.de');
               {{--  Adatok oszlop   --}}
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
+                <div>
                   <table class="table table-sm table-bordered index-adatok-tabla">
                     <thead class="pt-3">
                       <tr>
@@ -115,21 +116,28 @@ $room_height=config('property.room_height.de');
                             <img class="pl-3" src="/images/extras_icons/air-conditioner.png" height="50" alt="">
                           @endif
                           @if ($property->balcony)
-                            <img class="pl-3" src="/images/extras_icons/balcony-icon.png" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/balcony-icon-new.png" height="50" alt="">
                           @endif
                           @if ($property->disabled)
                             <img class="pl-3" src="/images/extras_icons/icon-disabled.png" height="50" alt="">
                           @endif
                           @if ($property->garden)
-                            <img class="pl-3" src="/images/extras_icons/garden-icon.png" height="50" alt="">
+                            <img class="pl-3" src="/images/extras_icons/garden-icon-new.png" height="50" alt="">
                           @endif
-
+                          @if ($property->terrace)
+                            <img class="pl-3" src="/images/extras_icons/terrace-icon.png" data-toggle="tooltip" data-placement="top" data-html="true" title="" height="50" alt="">
+                          @endif
                         </td>
                       </tr>
                       <tr  class="table-borderless index-price">
                         <td align="right" class=" pt-3"><h5 class="text-white" >Preis</h5></td>
                         <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
-                        <td class=" pt-3 pr-3"><h5 class="text-white money">{{$property->price}} Ft</h5></td>
+                        <td class=" pt-3 pr-3">
+                          @if ($property->act_price)
+                              <h5 class="text-white"><i class="fas fa-caret-down"></i><span class="money"> {{$property->act_price}}</span>.-Ft</h5></td>
+                          @else
+                              <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
+                          @endif
                         <td class=" pt-3 pr-3"></th>
                       </tr>
 
@@ -147,6 +155,7 @@ $room_height=config('property.room_height.de');
 
                     </tbody>
                   </table>
+                </div>
               </div>
 
                   {{--  Agent oszlop  --}}
@@ -166,8 +175,9 @@ $room_height=config('property.room_height.de');
                     <div class="card">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item"><small><strong><i class="fas fa-phone"></i> Telefon</strong> {{$property->agents->tel}}</small></li>
+                        <li class="list-group-item"><small><strong><i class="fas fa-phone"></i> Telefon2</strong> {{$property->agents->tel2}}</small></li>
                         <li class="list-group-item"><small><strong><i class="far fa-envelope"></i> Email</strong> {{$property->agents->email}}</small></li>
-                        <li class="list-group-item"><small><strong><i class="fas fa-globe"></i> Nyelvek</strong> {{$property->agents->languages}}</small></li>
+                        <li class="list-group-item"><small><strong><i class="fas fa-globe"></i> Sprache</strong> {{$property->agents->languages}}</small></li>
                       </ul>
                     </div>
                   </div>
