@@ -165,7 +165,7 @@ $filter= config('property.filter.de')
                                                         </h4>
                                                     </div>
                                                     <div class="col-xs-12 mt-2 show-new-header">
-                                                        <a href="/index/de/{{$property->id}}"><h4>{{$property->header_de}}</h4></a>
+                                                        <a href="/de/index/{{$property->id}}"><h4>{{$property->header_de}}</h4></a>
                                                     </div>
                                                     <div class="col-xs-12 show-new-short-text">
                                                         @php
