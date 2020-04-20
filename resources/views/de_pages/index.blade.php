@@ -53,7 +53,7 @@ $room_height=config('property.room_height.de');
                       <tr>
                         <th>Region</th>
                         <td>{{$region[$property->region]}}</td>
-                        <th>Atraktivität</th>
+                        <th>Attraktivität</th>
                         <td class="index-stars">
                           @for ($i = 0; $i < $property->attraktivitas ; $i++)
                             <i class="fas fa-star stars"></i>
