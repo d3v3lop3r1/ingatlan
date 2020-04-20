@@ -3,18 +3,9 @@
 @section('tartalom')
     <div class="container">
         @php
-            $path=request()->path();
-            $query=Request::query();
-            echo($path);
-            echo($query);
- //           $url=str_replace(, '',);
+            $consent_status=Cookie::get('cookieconsent_status'); 
+            dd($consent_status) ;           
         @endphp
-        <br>
-        {{ url()->full()}}
-        <br>
-        {{ request()->path()}}
-        <br>
-        {{-- {{ request()->query()}} --}}
 
     </div>
 @endsection

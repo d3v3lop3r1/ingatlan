@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\property;
 use App\photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class PagesController extends Controller
 {
@@ -36,9 +37,15 @@ class PagesController extends Controller
         $new_url=$request->old_url . '&filter=' . $request->filter;
         return redirect($new_url);
     }
-    public function saveFavorite($id){
-
-        return redirect()->back();
+    public function saveFavourite($id){
+        $consent_status=Cookie::get('cookieconsent_status');
+        
+        if($consent_status===null){
+            return response('Mentve', 200);    
+        } else {
+            return response('Nincs mentve', 200);
+        }
+        
     }
     public function view($view){
         if($view==2){

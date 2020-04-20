@@ -63,7 +63,7 @@ Route::get('/show', 'PagesController@showing');
 Route::get('/home', 'PagesController@home');
 Route::any('/search', 'PagesController@search');
 Route::any('/search/view/{view} ', 'PagesController@view');
-Route::any('/search/save-favorite/{id} ', 'PagesController@saveFavorite');
+Route::any('/save-favourite/{id} ', 'PagesController@saveFavourite');
 Route::any('/filter', 'PagesController@filter');
 
 Route::get('/index/{property}', 'PagesController@index');

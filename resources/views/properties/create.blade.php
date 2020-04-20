@@ -75,10 +75,6 @@ $room_height=config('property.room_height.hu');
                     url: '/clients/get/'+agentId,
                     type:"GET",
                     dataType:"json",
-/*                     beforeSend: function(){
-                        $('#loader').css("visibility", "visible");
-                    },
- */
                     success:function(data) {
 
                         $('select[name="client_id"]').empty();
@@ -89,10 +85,7 @@ $room_height=config('property.room_height.hu');
 
                         });
                     },
-/*                     complete: function(){
-                        $('#loader').css("visibility", "hidden");
-                    }
- */                });
+                });
             } else {
                 $('select[name="client_id"]').empty();
             }

@@ -28,6 +28,9 @@ $filter= config('property.filter.hu')
     @php
         $properties=$properties->paginate(9);
     @endphp
+    <div class="d-none alert alert-success" role="alert" id="alertSuccess">
+        Az ingatlant sikeresen mentette a kedvencek közé!
+    </div>
     <section id="ingatlanok-header">
             <div class="container-fluid">
                 <div class="row center-xs">
@@ -184,7 +187,7 @@ $filter= config('property.filter.hu')
                                                     </div>
                                                     <div class="col-xs-22 align-self-end align-items-end mt-auto">
                                                         <a class="btn btn-info btn-sm show-new-adatok-btn" href="/index/{{$property->id}}">Megtekintem</a>
-                                                        <a class="btn btn-info btn-sm show-new-save-favourite-btn" href="/search/save-favorite/{{$property->id}} "><i class="far fa-heart text-danger"></i></a>
+                                                        <button class="btn btn-info btn-sm show-new-save-favourite-btn" id="favourite"><i class="far fa-heart text-danger"></i></button>
                                                     </div>
 
                                                 </div>
@@ -215,4 +218,22 @@ $filter= config('property.filter.hu')
             </div>
         </div>
     @endif
+@endsection
+@section('scripts')
+<script src="/js/jquery-3.2.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#favourite').click(function(){
+            var propertyId = {{$property->id}};
+            if(propertyId) {
+                $.get("/save-favourite/"+propertyId, function(data, status, xhr){
+                    alert("Data: " + data + "\nStatus: " + status + "\nXhr: " + xhr);
+                });
+            } else {
+                alert("hiba");
+            };
+        });
+    });
+</script>
+
 @endsection
