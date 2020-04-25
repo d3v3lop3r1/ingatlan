@@ -38,9 +38,8 @@ class PagesController extends Controller
         return redirect($new_url);
     }
     public function saveFavourite($id){
-        $consent_status=Cookie::get('cookieconsent_status');
         
-        if($consent_status===null){
+        if(isset($_COOKIE['cookieconsent_status'])){
             return response('Mentve', 200);    
         } else {
             return response('Nincs mentve', 200);

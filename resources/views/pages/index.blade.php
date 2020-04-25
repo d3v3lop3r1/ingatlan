@@ -135,7 +135,7 @@ $room_height=config('property.room_height.hu');
                         <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
                         <td class=" pt-3 pr-3">
                           @if ($property->act_price)
-                              <h5 class="text-white"><i class="fas fa-caret-down"></i><span class="money"> {{$property->act_price}}</span>.-Ft</h5></td>
+                              <h5 class="text-white"><i class="fas fa-caret-down"></i><span class="money">{{$property->act_price}}</span>.-Ft</h5></td>
                           @else
                               <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
                           @endif
