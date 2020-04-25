@@ -25,7 +25,7 @@ $list_type=config('property.list_type.hu');
 </div>
 
 <div class="container-fluid">
-    <table class="table">
+    <table class="table small">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
