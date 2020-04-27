@@ -17,24 +17,34 @@ $room_height=config('property.room_height.hu');
 
 @section('tartalom')
       @php
-        $photo_default = $property->photos->where('is_default','1')->first();
-        $photos = $property->photos->where('is_default',null)->all();
-        $photo_default_file = $photo_default->file1;
-        $photo_default_file = "/uploads/" . $photo_default_file;
-      @endphp
+        if($property->photos->where('is_default','1')->count()>0){
+            $photo_default = $property->photos->where('is_default','1')->first();
+            $photo_default_file = $photo_default->file1;
+            $photo_default_file = "/uploads/" . $photo_default_file;
+        } else {
+            $photo_default_file = "/uploads/placeholder.png";
+        }
+        @endphp
       <div class="container-fluid" id="first-main">
           <div class="row">
 
               {{--  Fenykep oszlop  --}}
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" >
-                <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
-                <div class="row">
-                  @foreach ($photos as $photo)
-                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 mt-1">
-                      <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
-                    </div>
-                  @endforeach
+                  <a href="{{$photo_default_file}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="{{$photo_default_file}}" alt=""></a>
+                  <div class="row">
+                      <?php
+                        if($property->photos->where('is_default',null)->count()>0){
+                            $photos = $property->photos->where('is_default',null)->all();
+                            foreach ($photos as $photo){
+                    ?>
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 mt-1">
+                        <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
+                        </div>
+                    <?php
+                            }
+                        }
+                    ?>
                 </div>
               </div>
 
