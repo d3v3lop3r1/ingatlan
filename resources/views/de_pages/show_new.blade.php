@@ -159,7 +159,7 @@ $filter= config('property.filter.de')
                                                                 <span class="badge badge-success ml-2">Neu</span>
                                                             @endif
                                                             @if ($property->act_price)
-                                                                <span class="badge badge-danger ml-2">áresés</span>
+                                                                <span class="badge badge-danger ml-2">Preissenkung</span>
                                                             @endif
                                                             <a href="/search/save-favorite/"><i class="far fa-heart text-danger"></i></a>
                                                         </h4>
