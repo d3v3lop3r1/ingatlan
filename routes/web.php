@@ -23,7 +23,7 @@ Route::get('/', function () {
 //Route::get('/home', 'PagesController@show');
 
 Route::get('/demo', function (Request $request) {
-    return view('info.temp');
+    return view('demo');
 });
 
 
@@ -75,6 +75,8 @@ Route::group(['middleware'=>'auth'],function(){
     Route::resource('/agents', 'AgentController');
     Route::resource('/clients', 'ClientController');
     Route::resource('/photos', 'photoController');
+
+    Route::patch('/photos/set-default/{id}', 'photoController@setDefault');
     Route::get('/photos/agents/create/{id}', 'photoController@createAgentPhoto');
     Route::patch('/photos/agents/update', 'photoController@updateAgentPhoto');
     Route::get('/clients/get/{id}', 'AgentController@getClient');

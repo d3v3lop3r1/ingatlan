@@ -16,32 +16,40 @@ use App\photo;
     <br><br><br><br>
     <?php
     $photos = Photo::where('property_id', $prop_id)->get();
+    $default_photo_count=$photos->where('is_default',1)->count();
+    if ($default_photo_count>0){
+        $default_photo= $photos->where('is_default',1)->first()->id;
+    } else {
+        $default_photo=null;
+    }
     ?>
     <h5 class="">Jelenlegi képek</h5>
     <div class="container fotosorozat">
        <div class="row border">
             @if($photos)
                     @foreach($photos as $photo)
-                        <div class="col photok_kijelzese"> 
+                        <div class="col photok_kijelzese">
                             <div class="row">
                                     <a href="#"><img class="rounded" src="/uploads/{{$photo->file1}}" alt="{{$photo->file1}}" width="80"></a>
                                     <div class="form_delete">
                                         {!! Form::open(['action'=>['photoController@destroy', $photo->id],'method'=>'DELETE']) !!}
-                                            {!! Form::submit('x', ['class'=>'btn btn-danger']) !!}                                    
+                                            {!! Form::submit('x', ['class'=>'btn btn-danger']) !!}
                                         {!! Form::close() !!}
                                     </div>
                                     <div class="form_default">
-                                    @if ($photo->is_default)
-                                        <i class="fa fa-check text-success"></i>
-                                    @endif
+                                        @if ($photo->is_default)
+                                            <i class="fa fa-check text-success"></i>
+                                        @else
+                                        {!! Form::open(['action'=>['photoController@setDefault' , $photo->id],'method'=>'POST']) !!}
+                                            @method('PATCH')
+                                            {!! Form::hidden('default_photo', $default_photo) !!}
+                                            {!! Form::submit('A', ['class'=>'btn btn-warning btn-sm btn-set-default']) !!}
+                                        {!! Form::close() !!}
+                                        @endif
                                     </div>
-                                    
-
-                            </div>                               
-
+                            </div>
                        </div>
-
-                    @endforeach   
+                    @endforeach
             @endif
         </div>
     </div>

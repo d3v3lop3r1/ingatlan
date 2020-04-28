@@ -546,6 +546,13 @@ p {
    right: 0px;
    cursor:pointer;
 }
+
+.btn-set-default{
+    position: absolute;
+    padding: 0 2px;
+    top: 0px;
+}
+
 .upl_image{
 	width:80px;
 	height:80px;

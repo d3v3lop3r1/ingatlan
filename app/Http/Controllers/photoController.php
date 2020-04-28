@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use File;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\photo;
 use App\agent;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\ImageManagerStatic as Image;
 class photoController extends Controller
@@ -23,6 +25,21 @@ class photoController extends Controller
     public function is_default()
     {
         return "hello";
+    }
+
+
+    public function setDefault(Request $request)
+    {
+        $old_default_photo=Photo::where('id',$request->default_photo)->first();
+        $old_default_photo_count=Photo::where('id',$request->default_photo)->count();
+        if ($old_default_photo_count > 0){
+            $old_default_photo->is_default=0;
+            $old_default_photo->save();
+        }
+        $new_default_photo=Photo::where('id', $request->id)->first();
+        $new_default_photo->is_default=1;
+        $new_default_photo->save();
+        return back();
     }
 
 
@@ -168,7 +185,7 @@ class photoController extends Controller
         $photo_path='/uploads/' . $photo_to_delete->file1;
         File::delete($photo_path);
         photo::where('id', $id, 100)->first()->delete();
-        return redirect('properties');
+        return back();
 
     }
 
