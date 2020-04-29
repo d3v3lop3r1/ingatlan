@@ -99,7 +99,7 @@ class photoController extends Controller
             $filename = sha1(time().time()).".{$extension}";
             $directory='./uploads/';
 
-            $img = Image::make($file)->resize(800, 600)->insert('./images/logos/ingatlanfox-watermark.png','center');
+            $img = Image::make($file)->fit(800, 600)->insert('./images/logos/ingatlanfox-watermark.png','center');
             $img->save($directory . $filename);
 
 
