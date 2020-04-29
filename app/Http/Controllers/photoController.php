@@ -86,7 +86,7 @@ class photoController extends Controller
             $input= $request->all();
             $file = $request->file('file');
             $rules = array(
-		    'file' => 'image|max:10000',
+		    'file' => 'image',
             );
             $validation = Validator::make($input, $rules);
 
