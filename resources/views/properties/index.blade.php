@@ -58,8 +58,8 @@ $list_type=config('property.list_type.hu');
                             <td>{{client::where('id',$property->client_id)->firstOrFail()->name}}</td>
                             <td>{{$property->city}}</td>
                             <td>{{$property->area}}</td>
-                            <td>{{$property->price}}</td>
-                            <td>{{$property->min_price}}</td>
+                            <td class="money">{{$property->price}}</td>
+                            <td class="money">{{$property->min_price}}</td>
                             <td>{{$property->ad_type?'igen':'nem'}}</td>
                             <td>
                                 <?php
