@@ -576,21 +576,25 @@ p {
 .photok_kijelzese{
 	margin: 5px;
 }
+
+.photok-kijelzese-col{
+	width: auto;
+
+}
 .form_delete{
 	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-.form_delete .btn{
-	font-size: 10px;
-	margin: 0;
-	padding: 0 5px;
+	bottom:0;
+	left: 15px;
 }
 
 .form_default{
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 15px;
+}
+
+.btn-delete{
+	padding: 0 2px;
 }
 
 .lapozas li{

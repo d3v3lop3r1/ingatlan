@@ -30,10 +30,12 @@ use App\photo;
                     @foreach($photos as $photo)
                         <div class="col photok_kijelzese">
                             <div class="row">
+                                <div class="col photok-kijelzese-col">
+
                                     <a href="#"><img class="rounded" src="/uploads/{{$photo->file1}}" alt="{{$photo->file1}}" width="80"></a>
                                     <div class="form_delete">
                                         {!! Form::open(['action'=>['photoController@destroy', $photo->id],'method'=>'DELETE']) !!}
-                                            {!! Form::submit('x', ['class'=>'btn btn-danger']) !!}
+                                            {!! Form::submit('x', ['class'=>'btn btn-danger btn-sm btn-delete']) !!}
                                         {!! Form::close() !!}
                                     </div>
                                     <div class="form_default">
@@ -47,6 +49,7 @@ use App\photo;
                                         {!! Form::close() !!}
                                         @endif
                                     </div>
+                                </div>
                             </div>
                        </div>
                     @endforeach
