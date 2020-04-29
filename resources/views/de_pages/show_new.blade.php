@@ -161,7 +161,6 @@ $filter= config('property.filter.de')
                                                             @if ($property->act_price)
                                                                 <span class="badge badge-danger ml-2">Preissenkung</span>
                                                             @endif
-                                                            <a href="/search/save-favorite/"><i class="far fa-heart text-danger"></i></a>
                                                         </h4>
                                                     </div>
                                                     <div class="col-xs-12 mt-2 show-new-header">
@@ -174,8 +173,8 @@ $filter= config('property.filter.de')
                                                     </div>
                                                     <div class="col-xs-22 align-self-end align-items-end mt-auto">
                                                         <a class="btn btn-info btn-sm show-new-adatok-btn" href="/de/index/{{$property->id}}">Anzeigen</a>
+                                                        <button class="btn btn-info btn-sm show-new-save-favourite-btn" id="favourite"><i class="far fa-heart text-danger"></i></button>
                                                     </div>
-
                                                 </div>
                                         </div>
                                     </div>
