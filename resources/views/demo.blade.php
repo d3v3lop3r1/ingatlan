@@ -11,9 +11,21 @@
   <body>
     <div>
         @php
-            $photo_path='app/public/uploads/5a2c2058cd6808f1e7900a54c60fbcf085b457aa.jpeg';
-            Storage::delete($photo_path);
+            //$images = preg_grep('/\.(jpg|jpeg|png|gif)(?:[\?\#].*)?$/i', $files);
 
+            if ($handle = opendir('../public/uploads')) {
+
+                while (false !== ($entry = readdir($handle))) {
+                    $files[] = $entry;
+                }
+                $images = preg_grep('/\.jpg$/i', $files);
+
+                foreach($images as $image)
+                {
+                echo $image.'<br/>'; // List all Images
+                }
+                closedir($handle);
+            }
         @endphp
     </div>
   </body>
