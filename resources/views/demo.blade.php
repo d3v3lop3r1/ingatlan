@@ -10,29 +10,11 @@
   </head>
   <body>
     <div>
-      @php
-        $type_id=config('property.type_id.hu');
-        $list_type=config('property.list_type.hu');
-        $subtype=config('property.subtype.hu');
-        $region= config('property.region.hu');
-        $floors=config('property.floors.de');
-        $condition=config('property..hu');
-        $heating=config('property.heating.hu');
-        $parking=config('property.parking.hu');
-        $comfort=config('property.comfort.hu');
-        $room_height=config('property.room_height.hu');
-      @endphp
-      {!! Form::open(['url'=>'/properties', 'method'=>'POST','name'=>'lakas_eladas']) !!}
+        @php
+            $photo_path='app/public/uploads/5a2c2058cd6808f1e7900a54c60fbcf085b457aa.jpeg';
+            Storage::delete($photo_path);
 
-      {!! Form::select('floors', $floors, null, ['class'=>'form-control']) !!}
-
-
-      {!! Form::submit('mehet', ['class'=>'btn btn-submit']) !!}
-
-      <button type="submit"  onclick="return confirm(' biztos törlöd ?');">confirm</button>
-      {!! Form::close() !!}
-
-
+        @endphp
     </div>
   </body>
 </html>
