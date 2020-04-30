@@ -150,6 +150,13 @@ $room_height=config('property.room_height.de');
                       </tr>
                       <tr>
                         <td colspan="4"><span class="index-text"><?php echo $property->text_de ?></span> </td>
+                        
+
+                        <small class="text-muted">
+                          <strong>Daten</strong><br> 
+                          keine Haftung für die Genauigkeiten von aufgelisteten Daten. 
+                          Weitere Informationen werden erst vor Ort in Pécs nach Terminvereinbarung dargelegt.
+                        </small>
                       </tr>
 
                     </tbody>
