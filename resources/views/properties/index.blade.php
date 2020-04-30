@@ -43,6 +43,7 @@ $list_type=config('property.list_type.hu');
                     <th scope="col">Frissítve</th>
                     <th scope="col">Aktív</th>
                     <th scope="col">Kiemelt</th>
+                    <th scope="col">Törlés</th>
                 </tr>
             </thead>
             <tbody>
@@ -69,6 +70,17 @@ $list_type=config('property.list_type.hu');
                             </td>
                             <td>{{$property->active?'igen':'nem'}}</td>
                             <td>{{$property->kiemelt?'igen':'nem'}}</td>
+                            <td>
+                                
+                                {!! Form::open(['action'=>['PropertyController@destroy', $property->id], 'method'=>'DELETE']) !!}
+                                    
+                                    {!! Form::submit('törlés', ['class'=>'btn btn-sm btn-danger pt-0 pb-0','onclick'=>'return confirm("Biztos törlöd?");']) !!}
+                                    
+                                
+                                {!! Form::close() !!}
+                                
+                                
+                            </td>
                         </tr>
                     @endforeach   
                 @endif

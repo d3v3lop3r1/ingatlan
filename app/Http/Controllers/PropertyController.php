@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 use App\property;
 use App\client;
 use App\agent;
+use App\photo;
+use File;
+
+use Illuminate\Support\Facades\Storage;
+
 //use Illuminate\Support\Arr;
 
 use App\Http\Requests\storePropertyRequest;
@@ -109,6 +114,14 @@ class PropertyController extends Controller
      */
     public function destroy(property $property)
     {
-        //
+        $prop_to_delete=property::find($property->id);
+        $photos_to_delete=photo::where('property_id', $property->id)->get();
+        foreach($photos_to_delete as $photo){
+            $photo_path='/uploads/' . $photo->file1;
+            File::delete($photo_path);
+            echo($photo_path . ' deleted <br>');
+            //photo::where('id', $photo->id, 100)->first()->delete();
+        }
+        $prop_to_delete->delete();
     }
 }

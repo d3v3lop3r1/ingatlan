@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use File;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\photo;
 use App\agent;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File; 
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\ImageManagerStatic as Image;
 class photoController extends Controller
@@ -185,7 +185,7 @@ class photoController extends Controller
     public function destroy($id)
     {
         $photo_to_delete = photo::where('id', $id, 100)->first();
-        $photo_path='/uploads/' . $photo_to_delete->file1;
+        $photo_path='public/uploads/' . $photo_to_delete->file1;
         File::delete($photo_path);
         photo::where('id', $id, 100)->first()->delete();
         return back();
