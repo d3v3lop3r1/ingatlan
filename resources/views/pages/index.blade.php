@@ -159,7 +159,16 @@ $room_height=config('property.room_height.hu');
                         </th>
                       </tr>
                       <tr>
-                        <td colspan="4"><span class="index-text"><?php echo $property->text_hun ?></span> </td>
+                        <td colspan="4">
+                          <span class="index-text">
+                            <?php echo $property->text_hun ?>
+                            <small class="text-muted">
+                              <strong>Adatgaranciák</strong><br> 
+                              a felsorolt adatok pontosságáért a hirdető nem vállal felelősséget. 
+                              Az árváltoztatás jogát fenntartja.
+                            </small>
+                          </span> 
+                        </td>
                       </tr>
 
                     </tbody>
