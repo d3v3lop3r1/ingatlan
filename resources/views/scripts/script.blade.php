@@ -32,6 +32,7 @@ $('.money').simpleMoneyFormat();
 tinymce.init({
     selector:'textarea',
     font_formats: 'Roboto, sans-serif',
+    convert_fonts_to_spans : true,
     plugins: "template table lists fullscreen hr link preview print casechange visualblocks",
     menubar: "file insert table ",
     toolbar1: "template | styleselect | fontselect forecolor fontsizeselect | alignleft aligncenter alignright | table bullist",
@@ -48,7 +49,7 @@ tinymce.init({
     "008000", "Green",
     "0000FF", "Blue"
   ],
-    content_css : '/css/style.css',
+    content_css : 'css/myLayoutTynimce.css',
     forced_root_block : 'p',
     language: 'hu_HU',
     language_url : '/tinymce/languages/hu_HU.js',
