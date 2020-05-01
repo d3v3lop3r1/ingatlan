@@ -1,4 +1,25 @@
 * {
     font-family: Roboto, sans-serif;
-    color: rgb(100, 100, 100);
+    font-size: 16px;
+	font-weight: 300;
+	line-height: 1.6em ;
+	color: rgb(0, 0, 0);
+
+}
+
+h1{
+    font-family: Roboto, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: black;
+
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.6em ;
+	color: rgb(0, 0, 0);
+
 }

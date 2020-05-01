@@ -102,7 +102,7 @@ $filter= config('property.filter.de')
                                                     <table class="table table-borderless table-sm show-new-adatok-tabla  mt-2">
                                                         <thead class="pt-3">
                                                             <tr>
-                                                                <td> ID:1100{{$property->id}}</td>
+                                                                <td> ID:{{110000 + $property->id}}</td>
                                                                 <td></td>
                                                             </tr>
                                                         </thead>

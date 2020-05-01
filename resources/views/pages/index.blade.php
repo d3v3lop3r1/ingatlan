@@ -55,7 +55,7 @@ $room_height=config('property.room_height.hu');
                   <table class="table table-sm table-bordered index-adatok-tabla">
                     <thead class="pt-3">
                       <tr>
-                        <th> ID:1100{{$property->id}}</th>
+                        <th> ID:{{110000 + $property->id}}</th>
                         <th colspan="3">{{$property->header_hun}}</th>
                       </tr>
                     </thead>
@@ -159,8 +159,8 @@ $room_height=config('property.room_height.hu');
                         </th>
                       </tr>
                       <tr>
-                        <td colspan="4">
-                          <span class="index-text">
+                        <td colspan="4" class="index-text">
+                          <span>
                             <?php echo $property->text_hun ?>
                             <small class="text-muted">
                               <strong>Adatgaranciák</strong><br> 

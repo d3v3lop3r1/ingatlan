@@ -109,7 +109,7 @@ $region= config('property.region.hu');
                                         </div>
                                         <div class="col-xs-12 main-photo">
                                             <div class="col-auto prop-header-alul-jobb">
-                                            ID:1100{{$property->id}} - {{$list_type[$property->list_type]}} {{$type_id[$property->type_id]}} {{$region[$property->region]}}
+                                            ID:{{110000 + $property->id}} - {{$list_type[$property->list_type]}} {{$type_id[$property->type_id]}} {{$region[$property->region]}}
                                             </div>
                                             <img class="img-thumbnail" src="{{$photo_file}}" alt="">
                                         </div>
