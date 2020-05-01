@@ -203,7 +203,12 @@ class photoController extends Controller
             $cropped_image=Str::after($image,$directory);
             $photo_count=photo::where('file1',$cropped_image)->count();
             if ($photo_count === 0){
-                echo ($image . ' deleted <br>');
+                $deleted_photo=File::delete($image);
+                if($deleted_photo){
+                    echo ($image . ' deleted <br>');
+                } else {
+                    echo ('Valami hiba történt a' . $image . ' törlése közben');
+                }
             }
         }
 
