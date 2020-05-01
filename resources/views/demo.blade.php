@@ -11,20 +11,13 @@
   <body>
     <div>
         @php
-            //$images = preg_grep('/\.(jpg|jpeg|png|gif)(?:[\?\#].*)?$/i', $files);
+            $directory = "uploads/";
+            $images = glob($directory . "/*.jpeg");
 
-            if ($handle = opendir('../public/uploads')) {
-
-                while (false !== ($entry = readdir($handle))) {
-                    $files[] = $entry;
-                }
-                $images = preg_grep('/\.jpg$/i', $files);
-
-                foreach($images as $image)
-                {
-                echo $image.'<br/>'; // List all Images
-                }
-                closedir($handle);
+            foreach($images as $image)
+            {
+            echo $image;
+            $photo_count=
             }
         @endphp
     </div>

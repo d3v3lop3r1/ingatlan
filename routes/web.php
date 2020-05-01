@@ -54,39 +54,42 @@ Route::get('/koltozes-szervezese', function () {
 Route::get('/logout','HomeController@logout');
 
 // Route::get('/register', function () {
-//     return view('auth.register');
-// });
+    //     return view('auth.register');
+    // });
 
-//                  PageController
+    //                  PageController
 
-Route::get('/show', 'PagesController@showing');
-Route::get('/home', 'PagesController@home');
-Route::any('/search', 'PagesController@search');
-Route::any('/search/view/{view} ', 'PagesController@view');
-Route::any('/save-favourite/{id} ', 'PagesController@saveFavourite');
-Route::any('/filter', 'PagesController@filter');
+    Route::get('/show', 'PagesController@showing');
+    Route::get('/home', 'PagesController@home');
+    Route::any('/search', 'PagesController@search');
+    Route::any('/search/view/{view} ', 'PagesController@view');
+    Route::any('/save-favourite/{id} ', 'PagesController@saveFavourite');
+    Route::any('/filter', 'PagesController@filter');
 
-Route::get('/index/{property}', 'PagesController@index');
+    Route::get('/index/{property}', 'PagesController@index');
 
 
-//                   ADMIN FELÜLET
-Route::group(['middleware'=>'auth'],function(){
-    Route::resource('/properties', 'PropertyController');
-    Route::resource('/agents', 'AgentController');
-    Route::resource('/clients', 'ClientController');
-    Route::resource('/photos', 'photoController');
-    
+    //                   ADMIN FELÜLET
+    Route::group(['middleware'=>'auth'],function(){
+        Route::resource('/properties', 'PropertyController');
+        Route::resource('/agents', 'AgentController');
+        Route::resource('/clients', 'ClientController');
+        Route::resource('/photos', 'photoController');
 
-    Route::patch('/photos/set-default/{id}', 'photoController@setDefault');
-    Route::get('/photos/agents/create/{id}', 'photoController@createAgentPhoto');
-    Route::patch('/photos/agents/update', 'photoController@updateAgentPhoto');
-    Route::get('/clients/get/{id}', 'AgentController@getClient');
-    Route::get('/photos/create/{id}', 'photoController@create');
-});
 
-Auth::routes();
+        Route::patch('/photos/set-default/{id}', 'photoController@setDefault');
+        Route::get('/photos/agents/create/{id}', 'photoController@createAgentPhoto');
+        Route::patch('/photos/agents/update', 'photoController@updateAgentPhoto');
+        Route::get('/clients/get/{id}', 'AgentController@getClient');
+        Route::get('/photos/create/{id}', 'photoController@create');
 
-//                   NÉMET OLDALAK
+        //                 MAINTENANCE
+        Route::get('/maintenance','photoController@photoMaintenance');
+    });
+
+    Auth::routes();
+
+    //                   NÉMET OLDALAK
 
 Route::prefix('de')->group(function () {
     Route::get('/showing', function (Request $request) {

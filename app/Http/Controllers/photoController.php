@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 use App\photo;
 use App\agent;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -192,5 +193,19 @@ class photoController extends Controller
 
     }
 
+    public function photoMaintenance()
+    {
+        $directory = "uploads/";
+        $images = glob($directory . "*.jpeg");
 
+        foreach($images as $image)
+        {
+            $cropped_image=Str::after($image,$directory);
+            $photo_count=photo::where('file1',$cropped_image)->count();
+            if ($photo_count === 0){
+                echo ($image . ' deleted <br>');
+            }
+        }
+
+    }
 }
