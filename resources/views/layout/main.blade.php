@@ -2,7 +2,7 @@
     use App\property;
 ?>
 <!DOCTYPE html>
-<html lang="hu">
+<html>
 <head>
     @include('layout.head')
     @yield('styles')

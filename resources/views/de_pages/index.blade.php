@@ -149,8 +149,8 @@ $room_height=config('property.room_height.de');
                         </th>
                       </tr>
                       <tr>
-                        <td colspan="4">
-                          <span class="index-text">
+                        <td colspan="4" class="index-text">
+                          <span >
                             <?php echo $property->text_de ?>
                           </span> 
                           <small class="text-muted">

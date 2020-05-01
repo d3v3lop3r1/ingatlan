@@ -159,8 +159,8 @@ $room_height=config('property.room_height.hu');
                         </th>
                       </tr>
                       <tr>
-                        <td colspan="4">
-                          <span class="index-text">
+                        <td colspan="4" class="index-text">
+                          <span>
                             <?php echo $property->text_hun ?>
                             <small class="text-muted">
                               <strong>Adatgaranciák</strong><br> 
