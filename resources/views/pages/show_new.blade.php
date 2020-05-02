@@ -224,7 +224,7 @@ $filter= config('property.filter.hu')
 <script>
     $(document).ready(function() {
         $('#favourite').click(function(){
-            var propertyId = {{$property->id}};
+            var propertyId = 1;
             if(propertyId) {
                 $.get("/save-favourite/"+propertyId, function(data, status, xhr){
                     alert("Data: " + data + "\nStatus: " + status + "\nXhr: " + xhr);
