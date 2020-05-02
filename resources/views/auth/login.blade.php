@@ -41,7 +41,7 @@
                             <input type="checkbox" value="remember-me" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> Emlékezzen rám
                         </label>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Bejelentkezem</button>
+                    <button class="btn btn-lg  btn-sajat btn-block" type="submit">Bejelentkezem</button>
                     @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}

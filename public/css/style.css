@@ -25,8 +25,9 @@ iframe{
 }
 
 .btn-sajat{
-    background-color: rgb(76, 139, 175);
-    color: white;
+    background-color: #d1a254;
+	color: white;
+	border: 1px solid white;
     box-shadow:(1px 1px 1px #384233);
 }
 
@@ -473,19 +474,25 @@ p {
 
 /*                                                            */
 
-.h-keret{
+/* .h-keret{
 	border:thin solid #999;
 	padding:5px;
 	float:left;
 	width:100%;
 	margin:1px;
-	}
+	} */
+
 .h-media{
 	float:left;
 	}
 .home-media-body{
 	line-height: 20px;
 }
+
+.home-place-left{
+	font-weight: 700;
+}
+
 .h-text{
 	float:left;
 	padding:5px 20px;
