@@ -12,7 +12,7 @@
     @include('de_layouts.carousel-main')
     @include('de_layouts.search')
     @yield('tartalom')
-    @include('layout.footer')
+    @include('de_layouts.footer')
 </body>
     @yield('scripts')
     @include('scripts.script')

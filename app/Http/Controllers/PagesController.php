@@ -37,15 +37,8 @@ class PagesController extends Controller
         $new_url=$request->old_url . '&filter=' . $request->filter;
         return redirect($new_url);
     }
-    public function saveFavourite($id){
-        
-        if(isset($_COOKIE['cookieconsent_status'])){
-            return response('Mentve', 200);    
-        } else {
-            return response('Nincs mentve', 200);
-        }
-        
-    }
+
+    
     public function view($view){
         if($view==2){
             session(['view'=>'box']);

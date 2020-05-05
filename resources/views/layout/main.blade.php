@@ -15,8 +15,8 @@
     @include('layout.search')
     @yield('tartalom')
     @include('layout.footer')
-</body>
     @yield('scripts')
     @include('scripts.script')
+</body>
 
 </html>

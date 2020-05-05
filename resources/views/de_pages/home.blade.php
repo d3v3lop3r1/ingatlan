@@ -32,7 +32,7 @@ $region= config('property.region.de');
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="fotó" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
-                                    <span class="badge badge-info">{{$prop->city}}</span><br>
+                                    <span class="home-place-left">{{$prop->city}}</span><br>
                                     {{$prop->header_de}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
@@ -58,7 +58,7 @@ $region= config('property.region.de');
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="{{$prop->header_de}}" width="50" height="50">
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
-                                    <span class="badge badge-info">{{$prop->city}}</span><br>
+                                    <span class="home-place-left">{{$prop->city}}</span><br>
                                     {{$prop->header_de}}<br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
@@ -159,8 +159,19 @@ $region= config('property.region.de');
 
                 </div>
                 <div class="jumbotron" >
-                    <h1>Hier sind Sie richtig wenn</h1>
-                    <h4>Sie suchen auch ein schönes Heim in Südungarn, oder wollen Ihr Eigenheim verkaufen-vermieten?</h4>
+                    <h2>Lernen Sie unser schönes Baranya kennen!</h1>
+                    <h4>Eine deutschsprachige Region in der EU</h4>
+                    <h4>
+                        Mediterran Klima jenseits der Donau,
+                        wo viele deutschstämmige Einwanderer
+                        bereits Ihr Wunschimmobilien besitzen.
+                    </h4>
+                    <h2>mit ingatlanfox*</h2>
+                    <h1>FINDEN SIE IHR TRAUMHAUS</h1>
+                    <h4>
+                        und wir kümmern uns um Ihren Anwesen
+                        auch während Ihrer Abwesenheit!
+                    </h4>
                     <p>Lassen Sie uns helfen die passenden Immobilie zu finden in unserem herrlichen Mediterran Ecke in Südwesten von Ungarn.</p>
                 </div>
                 <div class="row">
@@ -202,22 +213,6 @@ $region= config('property.region.de');
                             <li>Unsere Projekftox Division baut, renoviert, repariert, und ist in der Lage
                             nach jahrelangen Erfahrungen auch größere Umbauten zu übernehmen</li>
                         </ul>
-                        <h4>Kaufen mit Kreditaufnahme in Ungarn?</h4>
-                        <p>
-                            Ja, es ist möglich.
-                            Dafür haben wir auch einen kompetenten Fachmann
-                            der Sie hilft günstigeres Angebot zu finden,
-                            und geht mit bei der Behördengangen in Pécser-Raum
-                        </p>
-                        <h4>CSOK? Falusi CSOK?</h4>
-                        <p>
-                            Diese supergünstige Kreditaufnahmen
-                            können nur ungarische Mitbürger in Anspruch nehmen.
-                            Die sogennannte "Falusi CSOK" sogar nur für junge Familie
-                            mit x Kinder die bereit sind langfristig in den
-                            s.g. verlassene Dörfer auch wohnen. Die Staat übernimmt 100% vom Kaufpreis.
-                            Für Sie als Verkäufer könnte das auch hilfreich sein...
-                        </p>
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -241,6 +236,22 @@ $region= config('property.region.de');
                         Ruefen Sie an 0049-1578-400 1214
                         Herr Sztarovics oder Frau Speck
                         </p>
+                        <h4>Kaufen mit Kreditaufnahme in Ungarn?</h4>
+                        <p>
+                            Ja, es ist möglich.
+                            Dafür haben wir auch einen kompetenten Fachmann
+                            der Sie hilft günstigeres Angebot zu finden,
+                            und geht mit bei der Behördengangen in Pécser-Raum
+                        </p>
+                        <h4>CSOK? Falusi CSOK?</h4>
+                        <p>
+                            Diese supergünstige Kreditaufnahmen
+                            können nur ungarische Mitbürger in Anspruch nehmen.
+                            Die sogennannte "Falusi CSOK" sogar nur für junge Familie
+                            mit x Kinder die bereit sind langfristig in den
+                            s.g. verlassene Dörfer auch wohnen. Die Staat übernimmt 100% vom Kaufpreis.
+                            Für Sie als Verkäufer könnte das auch hilfreich sein...
+                        </p>
                     </section>
                 </div>
                 <div class="jumbotron  hide visible-lg visible-md" >
@@ -252,15 +263,71 @@ $region= config('property.region.de');
                     <div id="map" class="container"></div>
                 </div>
             </div>
-            <div class="col d-none d-lg-block center-xs">
-                <div class="card">
-                    <h4 class="card-header">Kalkulator Finanzierung</h4>
-                    <iframe class="mt-2" id="hitel-kalk" src="https://www.hitel.hu/api/embed/?token=xpuV2fWKMnMMpZt9MTSTwofHdmZ8b6KkZV9vJYfj&amp;data=%2FWzKN2C9%2BbveE5mHLGFQvbr327%2FyFX2MqOelQvXtop7hDkqGG6hzkPngsE%2FLiyHf9Nz5jnEXOtuuDCN8o4wXwHL416FnexrxeDf7Q7Wv85qtd6nJGpCxNRnh5yx1nv4CduFjEaWvXnqKTvrNshGy6DvNYegHwYo9u1Ef6TgeF%2F7o8MR2ho4dbgV0Zl2EBSv1jy0411eh7AVjViF7A4MhDeojiZvsN2c61C05qrna8awH2wpC96lYy6Owkano42DPVQ3lQt%2BEHCT4AzQ2klbfyQ%3D%3D"></iframe>
-
-                    <h4>CSOK-Liste</h4>
-                    <iframe id="csok-map" frameborder="0" src="https://www.google.com/maps/d/u/0/embed?mid=1qH4VJVp5xs6vaKHyEHwmKth3kFMj4AP9&ll=46.19367658681184%2C18.40386481697169&z=10" allowfullscreen ></iframe>
+            <div class="col d-none d-lg-block end-xs">
+                <div class="card mb-2">
+                    <img src="/images/harkany/harkanyi-gyogyfurdo-legi.jpg" class="card-img-top" alt="Harkany">  
+                    <div class="card-body">
+                        <h4>
+                            Auswandern? <br>
+                            Harkány-Siklós-Pécs Umgebung 
+                            in den Südwesten von Ungarn 
+                            wirdimmer beliebter 
+                            als Alternativer Wohnsitz
+                        </h4>
+                        <p>
+                            Neben günstigen Immobilienpreisen
+                            locken vor allem vergleichsweise 
+                            niedrigen Lebensunterhaltungskosten.
+                            Zudem profitieren aktuell Euro-Inhaber 
+                            vom mehr als guten Wechselkurs 
+                            zum Forint, um bis zu 20% Rabatt!
+                        </p>
+                    </div>                  
                 </div>
-
+                <div class="card mb-2">
+                    <img src="/images/harkany/harkany_tabor_edzotabor_10.jpg" class="card-img-top" alt="Harkany">  
+                    <div class="card-body">
+                        <p>
+                            Herliche Erholung, Aktivurlaub 
+                            in Harkány, Südwestungarn, 
+                            wo wir zu Hause sind <br>
+                            <a href="http://turizmus.harkany.hu/userfiles/kirandulas_nemet.pdf">Link</a>
+                        </p>
+                    </div>                  
+                </div>
+                <div class="card mb-2">
+                    <img src="/images/harkany/hotel.jpg" class="card-img-top" alt="Harkany Hotel"> 
+                    <div class="card-body">
+                        <h4>
+                            Hotels in Harkány 
+                            für Alle Ansprüche
+                        </h4>
+                        <p><a href="https://www.thermalhotelharkany.eu/de">Thermal Hotel Harkány</a></p>                   
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <img src="/images/harkany/borut.jpg" class="card-img-top" alt="Harkany Weinstrasse"> 
+                    <div class="card-body">
+                        <h4>
+                            Berühmte Weinstrasse Villány
+                        </h4>
+                        <p><a href="https://villanyiborvidek.hu/de">Link</a></p>                   
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <img src="/images/harkany/borut_all.jpg" class="card-img-top" alt="Villány-Siklós-Szekszárd Weinstrasse"> 
+                    <div class="card-body">
+                        <h4>
+                            Berühmte Weinstrasse Ungarns <br> Villány-Siklós-Szekszárd
+                        </h4>
+                        <p><a href="https://www.ungarisches-weingefuehl.de/villany-siklos-und-szekszard">Link</a></p>    
+                        <hr>
+                        <p>
+                            Merkblatt zum Aufenthalt Deutscher in Ungarn <br>
+                            <a href="https://budapest.diplo.de/blob/1642226/8e927e2dde0b72127fc55abd41bed50e/mb-aufenthalt-in-ungarn-data.pdf">Link</a>
+                        </p>               
+                    </div>
+                </div>
             </div>
             </div>
         </div>
