@@ -4,34 +4,28 @@
       <div class="row">
         <div class="col-md-4 col-sm-4 footerleft">
           <div class="logofooter"> Foxinfo Service Kft</div>
-            <p>Ezekben a nehéz Corona-időkben is hasznos információkkal, fair szolgáltatásokkal, jeleskedünk ingatlanok 
-              adás-vételénél, ingatlanrenoválásnál, Gondnoki ügyelettel, és külföldi kapcsolatok felépítésével. 
-              Magyar munkavállalókat segítünk német-osztrák-holland-svájci munkaadókhoz való profi pályáztatásukkal. 
-              A német és magyar nyelvű weboldalaink segítségével sikeresen kiszélesítettük az Ön lehetőségeit 
-              külföldiekkel való kapcsolatteremtésre.</p>
-            <p><i class="fa fa-map-pin"></i> 7815 Harkány, Damjanich tér 8.</p>
-            <p><i class="fa fa-phone"></i> Központi telefon (Magyarország) : +36 20 777 2000</p>
-            <p><i class="fa fa-phone"></i> Projektfox-építkezési ágazat : +36 20 422 0000</p>
+            <p>Wir bemühen uns in dieser schweren Zeiten mit hilfsreiche Informationen und faire Dienstleistungen in 
+                Sachen Immobilienvermittlung/Hausrenovierung/Hausverwaltung sowie bei Niederlassungen in Südwestungarn. 
+                Im weiteren verhelfen wir ungarische Arbeitnehmer sich auf die deutsche und österreichische Arbeitmarkt 
+                zu bewerben. Wir sind zuversichtlich das gute, freundliche  Beziehungen zu entsprechenden Erfolg führen.</p>
+            <p><i class="fa fa-map-pin"></i> Damjanich tér 8, HU-7815 Harkány, Ungarn</p>
+            <p><i class="fa fa-phone"></i>  Zentrale : +36 20 777 2000,<br> deutsch-espanol +49 1578 400 1214</p>
+            <p><i class="fa fa-phone"></i> Projektfox-Bauunternehmen : +36 20 422 0000 (englisch-ungarisch)</p>
             <p><i class="fa fa-envelope"></i> E-mail : info@ingatlanfox.hu</p>
         </div>
         <div class="col-md-2 col-sm-4 paddingtop-bottom">
           <h6 class="heading7">LINKEK</h6>
           <ul class="footer-ul">
-            <li><a href="#"> Karrier</a></li>
-            <li><a href="#"> Adatvédelmi szabályzat</a></li>
-            <li><a href="#"> Felhasználási feltételek</a></li>
-            <li><a href="#"> Ügyfélkapu</a></li>
-            <li><a href="#"> Rangsor</a></li>
-            <li><a href="#"> Esettanulmányok</a></li>
-            <li><a href="#"> Gyakran ismételt kérdések</a></li>
-            <li><a href="https://anycoindirect.eu/en/buy/bitcoins?discref=c86ed318-65dc-43f8-8a0a-2868018b907e"> Ethereum, Bitcoin pénzváltás</a></li>
+            <li><a href="#"> Datenschutzerklärung</a></li>
+            <li><a href="#"> Nutzungsbedingungen</a></li>
+            <li><a href="#"> Häufig gestellte Fragen</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
-          <h6 class="heading7">UTOLSÓ HOZÁSSZÓLÁSOK</h6>
+          <h6 class="heading7">Immobilien zum Verkauf und zur Miete</h6>
           <div class="post">
-            <p>facebook hozzászólás <span>2019 január 15.</span></p>
-            <p>facebook hozzászólás <span>2019 január 15.</span></p>
+            <a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'zeiger' => 'Alle']); ?>">Immobilien zum Verkauf</a><br>
+            <a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'zeiger' => 'Alle']); ?>">Immobilien zu vermieten</a>
           </div>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">

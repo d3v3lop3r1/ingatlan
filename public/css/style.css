@@ -233,18 +233,7 @@ p {
     margin-bottom: 10px;
     margin-top: auto;
 }
-.show-new-save-favourite-btn{
-    background-color: white;
-    border-color: rgba(50, 85, 120, 1);
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: auto;
 
-}
-.show-new-save-favourite-btn:hover{
-    background-color:rgb(112, 144, 177) ;
-
-}
 
 
 .show-new-adatok-btn:hover{
@@ -559,6 +548,20 @@ p {
     padding: 0 2px;
     top: 0px;
 }
+
+.show-new-save-favourite-btn{
+    background-color: white;
+    border-color: rgba(50, 85, 120, 1);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: auto;
+    transition: 0.5s;
+
+}
+.show-new-save-favourite-btn:hover{
+    transform: scale(1.1);
+}
+
 
 .upl_image{
 	width:80px;

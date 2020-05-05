@@ -72,7 +72,7 @@ $filter= config('property.filter.hu')
             </div>
         </section>
         <section id="ingatlanok-lista">
-            <div class="container">
+            <div class="container"  id="app">
                 <div class="row ingatlan-sor">
                     @foreach ($properties as $property)
                             <?php
@@ -187,7 +187,7 @@ $filter= config('property.filter.hu')
                                                     </div>
                                                     <div class="col-xs-22 align-self-end align-items-end mt-auto">
                                                         <a class="btn btn-info btn-sm show-new-adatok-btn" href="/index/{{$property->id}}">Megtekintem</a>
-                                                        <button class="btn btn-info btn-sm show-new-save-favourite-btn" id="favourite"><i class="far fa-heart text-danger"></i></button>
+                                                        <save-favourite :property-id="'{!! json_encode($property->id) !!}'"></save-favourite>
                                                     </div>
 
                                                 </div>
@@ -218,22 +218,4 @@ $filter= config('property.filter.hu')
             </div>
         </div>
     @endif
-@endsection
-@section('scripts')
-<script src="/js/jquery-3.2.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#favourite').click(function(){
-            var propertyId = 1;
-            if(propertyId) {
-                $.get("/save-favourite/"+propertyId, function(data, status, xhr){
-                    alert("Data: " + data + "\nStatus: " + status + "\nXhr: " + xhr);
-                });
-            } else {
-                alert("hiba");
-            };
-        });
-    });
-</script>
-
 @endsection

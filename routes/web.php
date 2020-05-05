@@ -48,6 +48,12 @@ Route::get('/koltozes-szervezese', function () {
     return view('info.koltozes-szervezese');
 });
 
+                  //CooikeController
+
+Route::post('/save-favourite/', 'CookieController@saveFavourite');
+
+
+
 
 //                 ADMIN BELÉPÉS-KILÉPÉS
 
@@ -63,7 +69,6 @@ Route::get('/logout','HomeController@logout');
     Route::get('/home', 'PagesController@home');
     Route::any('/search', 'PagesController@search');
     Route::any('/search/view/{view} ', 'PagesController@view');
-    Route::any('/save-favourite/{id} ', 'PagesController@saveFavourite');
     Route::any('/filter', 'PagesController@filter');
 
     Route::get('/index/{property}', 'PagesController@index');
