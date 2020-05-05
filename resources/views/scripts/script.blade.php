@@ -1,9 +1,6 @@
-<script src="https://cdn.tiny.cloud/1/p6m8lhexspx7dmy6l8rqm29mvnlrn9xabxoswnh5uu7l3nfk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.js"></script>
-<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="/js/simple.money.format.js"></script>
 <script src="/js/lightbox.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -32,34 +29,4 @@ window.cookieconsent.initialise({
 <script>
 {{--  Money format  --}}
 $('.money').simpleMoneyFormat();
-
-tinymce.init({
-    selector:'textarea',
-    font_formats: 'Roboto, sans-serif',
-    convert_fonts_to_spans : true,
-    plugins: "template table lists fullscreen hr link preview print visualblocks",
-    menubar: "file insert table ",
-    toolbar1: "template | styleselect | fontselect forecolor fontsizeselect | alignleft aligncenter alignright | table bullist",
-    toolbar2: "undo redo | bold italic underline strikethrough | fullscreen preview hr| h1 h2 h3 h4 | link print visualblocks",
-    fontsize_formats: '10px 12px 14px 16px 18px 20px 22px 24px',
-    block_formats: 'Paragraph=p; Header 1=h1; Header 2=h2; Header 3=h3; Header 4=h4',
-    color_map: [
-    "000000", "Black",
-    "808080", "Gray",
-    "FFFFFF", "White",
-    "FF0000", "Red",
-    "FFFF00", "Yellow",
-    "008000", "Green",
-    "0000FF", "Blue"
-  ],
-    content_css : '/css/myLayoutTynimce.css',
-    forced_root_block : 'p',
-    language: 'hu_HU',
-    language_url : '/tinymce/languages/hu_HU.js',
-    height: 300,
-    templates: "/templates/templates.php",
-
-
-});
-
 </script>

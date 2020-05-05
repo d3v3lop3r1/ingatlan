@@ -65,33 +65,64 @@ $room_height=config('property.room_height.hu');
 
 @endsection
 @section('scripts')
-    <script>
-        $(document).ready(function() {
+<script src="https://cdn.tiny.cloud/1/p6m8lhexspx7dmy6l8rqm29mvnlrn9xabxoswnh5uu7l3nfk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-        $('select[name="agent_id"]').on('change', function(){
-            var agentId = $(this).val();
-            if(agentId) {
-                $.ajax({
-                    url: '/clients/get/'+agentId,
-                    type:"GET",
-                    dataType:"json",
-                    success:function(data) {
+<script>
+    tinymce.init({
+        selector:'textarea',
+        font_formats: 'Roboto, sans-serif',
+        convert_fonts_to_spans : true,
+        plugins: "template table lists fullscreen hr link preview print visualblocks",
+        menubar: "file insert table ",
+        toolbar1: "template | styleselect | fontselect forecolor fontsizeselect | alignleft aligncenter alignright | table bullist",
+        toolbar2: "undo redo | bold italic underline strikethrough | fullscreen preview hr| h1 h2 h3 h4 | link print visualblocks",
+        fontsize_formats: '10px 12px 14px 16px 18px 20px 22px 24px',
+        block_formats: 'Paragraph=p; Header 1=h1; Header 2=h2; Header 3=h3; Header 4=h4',
+        color_map: [
+        "000000", "Black",
+        "808080", "Gray",
+        "FFFFFF", "White",
+        "FF0000", "Red",
+        "FFFF00", "Yellow",
+        "008000", "Green",
+        "0000FF", "Blue"
+      ],
+        content_css : '/css/myLayoutTynimce.css',
+        forced_root_block : 'p',
+        language: 'hu_HU',
+        language_url : '/tinymce/languages/hu_HU.js',
+        height: 300,
+        templates: "/templates/templates.php",
+    
+    
+    });
+    
+    $(document).ready(function() {
 
-                        $('select[name="client_id"]').empty();
+    $('select[name="agent_id"]').on('change', function(){
+        var agentId = $(this).val();
+        if(agentId) {
+            $.ajax({
+                url: '/clients/get/'+agentId,
+                type:"GET",
+                dataType:"json",
+                success:function(data) {
 
-                        $.each(data, function(key, value){
+                    $('select[name="client_id"]').empty();
 
-                            $('select[name="client_id"]').append('<option value="'+ key +'">' + value + '</option>');
+                    $.each(data, function(key, value){
 
-                        });
-                    },
-                });
-            } else {
-                $('select[name="client_id"]').empty();
-            }
+                        $('select[name="client_id"]').append('<option value="'+ key +'">' + value + '</option>');
 
-        });
+                    });
+                },
+            });
+        } else {
+            $('select[name="client_id"]').empty();
+        }
 
-        });
-    </script>
+    });
+
+    });
+</script>
 @endsection
