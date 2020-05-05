@@ -72,7 +72,7 @@ $filter= config('property.filter.hu')
             </div>
         </section>
         <section id="ingatlanok-lista">
-            <div class="container   id="app"">
+            <div class="container" id="app">
                 <div class="row ingatlan-sor">
                     @foreach ($properties as $property)
                             <?php
