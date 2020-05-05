@@ -14,7 +14,7 @@ $region= config('property.region.de');
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col d-none d-lg-block">
+            <div class="d-none col-lg-2 d-lg-block">
                 <div class="card">
                     <h4 class="center-xs card-header">Bezahlbare Wohnungen für Alle</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
@@ -259,7 +259,7 @@ $region= config('property.region.de');
                     <p class="lead"> Unser Hausverwaltung Komplett-Service erledigt in Baranya für Sie Alle arbeiten wie Sie im Auftrag erteilen.</p>
                 </div>
             </div>
-            <div class="col d-none d-lg-block end-xs">
+            <div class="d-none col-lg-2 d-lg-block end-xs">
                 <div class="card mb-2">
                     <img src="/images/harkany/harkanyi-gyogyfurdo-legi.jpg" class="card-img-top" alt="Harkany">  
                     <div class="card-body">
@@ -324,7 +324,6 @@ $region= config('property.region.de');
                         </p>               
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
