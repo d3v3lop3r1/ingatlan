@@ -201,22 +201,6 @@ $region= config('property.region.hu');
                             <li>Projektfox építő brigádunk többéves tapasztalatai
                             megbízásokat vállal akár nagyobb átépítésekre, renoválásokra!</li>
                         </ul>
-                        <h4>Hitelfelvétel?</h4>
-                        <p>
-                            Intézkedünk hogy a legjobb ajánlatot
-                            kapja! Szakemberünkkel felveszi a
-                            kapcsolatot aki kikeresi Önnek is az
-                            aktuálisan legjobbat!
-                        </p>
-                        <h4>CSOK?</h4>
-                        <p>
-                            Olyan térségban választ ingatlant
-                            ahol a Magyar kormány átvállalja az
-                            ingatlan teljes költségét? Kérdezzen
-                            bennünket, szakemberünk akkor is
-                            fog tud segíteni ha a listánkban nem
-                            talált megfelelőt!
-                        </p>
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -239,6 +223,22 @@ $region= config('property.region.hu');
                         Jelentkezzen
                         az egyedülálló
                         lehetőségre
+                        </p>
+                        <h4>Hitelfelvétel?</h4>
+                        <p>
+                            Intézkedünk hogy a legjobb ajánlatot
+                            kapja! Szakemberünkkel felveszi a
+                            kapcsolatot aki kikeresi Önnek is az
+                            aktuálisan legjobbat!
+                        </p>
+                        <h4>CSOK?</h4>
+                        <p>
+                            Olyan térségban választ ingatlant
+                            ahol a Magyar kormány átvállalja az
+                            ingatlan teljes költségét? Kérdezzen
+                            bennünket, szakemberünk akkor is
+                            fog tud segíteni ha a listánkban nem
+                            talált megfelelőt!
                         </p>
                     </section>
                 </div>
