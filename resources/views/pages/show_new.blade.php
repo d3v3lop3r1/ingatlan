@@ -219,7 +219,7 @@ $filter= config('property.filter.hu')
         </div>
     @endif
 @endsection
-@section('script')
+@section('scripts')
 <script src="/js/app.js"></script>
 
 @endsection
