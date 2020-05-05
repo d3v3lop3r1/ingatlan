@@ -258,10 +258,6 @@ $region= config('property.region.de');
                     <h1>KEINER DER SICH UM IHR HAUS KÜMMERT? VERTRAUENSVOLLER HAUSVERWALTER?</h1>
                     <p class="lead"> Unser Hausverwaltung Komplett-Service erledigt in Baranya für Sie Alle arbeiten wie Sie im Auftrag erteilen.</p>
                 </div>
-                <div class="container" id="map-container">
-                    <h3>Anzeigen auf Landkarte</h3>
-                    <div id="map" class="container"></div>
-                </div>
             </div>
             <div class="col d-none d-lg-block end-xs">
                 <div class="card mb-2">

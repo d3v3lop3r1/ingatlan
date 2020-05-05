@@ -246,10 +246,6 @@ $region= config('property.region.hu');
                     <h1>NINCS AKI VIGYÁZNA INGATLANÁRA? KÜLFÖLDÖN VAN?</h1>
                     <p class="lead"> Baranyában gondoki ügyeletet vállalunk, megóvjuk, javítgatjuk ha kell, a történésekről informáljuk.</p>
                 </div>
-                <div class="container" id="map-container">
-                    <h3>Hirdetéseink a térképen</h3>
-                    <div id="map" class="container"></div>
-                </div>
             </div>
             <div class="col d-none d-lg-block center-xs">
                 <div class="card">
