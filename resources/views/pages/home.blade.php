@@ -13,7 +13,7 @@ $region= config('property.region.hu');
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col d-none d-lg-block">
+            <div class="d-none col-lg-2  d-lg-block">
                 <div class="card">
                     <h4 class="center-xs card-header">Olcsóbb lakások</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
@@ -247,7 +247,7 @@ $region= config('property.region.hu');
                     <p class="lead"> Baranyában gondoki ügyeletet vállalunk, megóvjuk, javítgatjuk ha kell, a történésekről informáljuk.</p>
                 </div>
             </div>
-            <div class="col d-none d-lg-block end-xs">
+            <div class="d-none col-lg-2  d-lg-block end-xs">
                 <div class="card mb-2">
                     <img src="/images/harkany/harkanyi-gyogyfurdo-legi.jpg" class="card-img-top" alt="Harkany">  
                     <div class="card-body">
@@ -313,7 +313,6 @@ $region= config('property.region.hu');
                     </div>
                 </div>
 
-            </div>
             </div>
         </div>
     </div>
