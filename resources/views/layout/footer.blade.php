@@ -17,14 +17,9 @@
         <div class="col-md-2 col-sm-4 paddingtop-bottom">
           <h6 class="heading7">LINKEK</h6>
           <ul class="footer-ul">
-            <li><a href="#"> Karrier</a></li>
             <li><a href="#"> Adatvédelmi szabályzat</a></li>
             <li><a href="#"> Felhasználási feltételek</a></li>
-            <li><a href="#"> Ügyfélkapu</a></li>
-            <li><a href="#"> Rangsor</a></li>
-            <li><a href="#"> Esettanulmányok</a></li>
             <li><a href="#"> Gyakran ismételt kérdések</a></li>
-            <li><a href="https://anycoindirect.eu/en/buy/bitcoins?discref=c86ed318-65dc-43f8-8a0a-2868018b907e"> Ethereum, Bitcoin pénzváltás</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
@@ -47,16 +42,6 @@
     <div class="container">
       <div class="col-md-6">
         <p>© 2017 - All Rights Ingatlanfox</p>
-      </div>
-      <div class="col-md-6">
-        <ul class="bottom_ul">
-          <li><a href="#">foxinfo.hu</a></li>
-          <li><a href="#">Rólunk</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">GYIK</a></li>
-          <li><a href="#">Kapcsolat</a></li>
-          <li><a href="#">Oldaltérkép</a></li>
-        </ul>
       </div>
     </div>
   </div>

@@ -66,6 +66,35 @@ $room_height=config('property.room_height.hu');
 @endsection
 @section('scripts')
 <script src="https://cdn.tiny.cloud/1/p6m8lhexspx7dmy6l8rqm29mvnlrn9xabxoswnh5uu7l3nfk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    $(document).ready(function() {
+
+    $('select[name="agent_id"]').on('change', function(){
+        var agentId = $(this).val();
+        if(agentId) {
+            $.ajax({
+                url: '/clients/get/'+agentId,
+                type:"GET",
+                dataType:"json",
+                success:function(data) {
+
+                    $('select[name="client_id"]').empty();
+
+                    $.each(data, function(key, value){
+
+                        $('select[name="client_id"]').append('<option value="'+ key +'">' + value + '</option>');
+
+                    });
+                },
+            });
+        } else {
+            $('select[name="client_id"]').empty();
+        }
+
+    });
+
+    });
+</script>
 
 <script>
     tinymce.init({
@@ -97,32 +126,5 @@ $room_height=config('property.room_height.hu');
     
     });
     
-    $(document).ready(function() {
-
-    $('select[name="agent_id"]').on('change', function(){
-        var agentId = $(this).val();
-        if(agentId) {
-            $.ajax({
-                url: '/clients/get/'+agentId,
-                type:"GET",
-                dataType:"json",
-                success:function(data) {
-
-                    $('select[name="client_id"]').empty();
-
-                    $.each(data, function(key, value){
-
-                        $('select[name="client_id"]').append('<option value="'+ key +'">' + value + '</option>');
-
-                    });
-                },
-            });
-        } else {
-            $('select[name="client_id"]').empty();
-        }
-
-    });
-
-    });
 </script>
 @endsection

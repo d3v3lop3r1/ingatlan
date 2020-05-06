@@ -22,10 +22,11 @@
           </ul>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
-          <h6 class="heading7">Immobilien zum Verkauf und zur Miete</h6>
+          <h6 class="heading7">Immobilien in Südungarn
+            jetzt günstig erwerben</h6>
           <div class="post">
-            <a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'zeiger' => 'Alle']); ?>">Immobilien zum Verkauf</a><br>
-            <a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'zeiger' => 'Alle']); ?>">Immobilien zu vermieten</a>
+            <a href="<?php echo action('dePagesController@showing', ['type_id' => 1,'zeiger' => 'Alle']); ?>">unsere Kaufobjekte</a><br>
+            <a href="<?php echo action('dePagesController@showing', ['type_id' => 2,'zeiger' => 'Alle']); ?>">unsere Mietobjekte</a>
           </div>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
@@ -41,16 +42,6 @@
     <div class="container">
       <div class="col-md-6">
         <p>© 2017 - All Rights Ingatlanfox</p>
-      </div>
-      <div class="col-md-6">
-        <ul class="bottom_ul">
-          <li><a href="#">foxinfo.hu</a></li>
-          <li><a href="#">Rólunk</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">GYIK</a></li>
-          <li><a href="#">Kapcsolat</a></li>
-          <li><a href="#">Oldaltérkép</a></li>
-        </ul>
       </div>
     </div>
   </div>
