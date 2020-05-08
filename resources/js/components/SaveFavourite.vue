@@ -7,19 +7,15 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     props:['propertyId'],
-    mounted(){
-        console.log(this.propertyId)
-    },
     methods:{
         saveFavourite(){
-            this.$http.post('/save-favourite/', this.propertyId )
-                .then(response=>{
-                    console.log(response);
-                }, error=>{
-                    console.log(error);
-                });
+            console.log(this.propertyId)
+            axios.post('/save-favourite/', this.propertyId )
+                .then(res=>console.log(res))
+                .catch(error=>console.log(error))
         }
     }
 }

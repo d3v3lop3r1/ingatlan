@@ -14,7 +14,7 @@ class PagesController extends Controller
     }
     public function home()
     {
-        $properties=property::Aktiv()->Kiemelt()->inRandomOrder()->limit(6)->get();
+        $properties=property::Aktiv()->Kiemelt()->orderBy('updated_at','desc')->limit(6)->get();
         $prop_elado_lakasok_cheap=property::select(['id','header_hun','price','region','city','updated_at'])->Aktiv()->Elado()->Lakasok()->Cheap()->limit(5)->get();
         $prop_elado_hazak_cheap=property::select(['id','header_hun','price','region','city','updated_at'])->Aktiv()->Elado()->Hazak()->Cheap()->limit(5)->get();
         return view('pages.home',compact('properties','prop_elado_lakasok_cheap','prop_elado_hazak_cheap'));
