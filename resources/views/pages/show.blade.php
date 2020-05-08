@@ -117,7 +117,11 @@ $filter= config('property.filter.hu')
 
                                     <div class="row center-xs">
                                         <div class="col-xs-12 main-price border">
-                                            <span class="money">{{$property->price}}</span>.- Ft
+                                            @if ($property->act_price)
+                                            <i class="fas fa-caret-down text-success"></i><span class="money">{{$property->act_price}}</span>.-Ft
+                                            @else
+                                                <span class="money">{{$property->price}}</span>.-Ft
+                                            @endif
                                         </div>
                                         <div class="col-xs-12 main-details">
                                             <div class="row kiskockak center-xs border">
