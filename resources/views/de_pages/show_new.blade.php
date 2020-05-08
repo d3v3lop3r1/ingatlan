@@ -90,9 +90,19 @@ $filter= config('property.filter.de')
                                             <div class="row center-xs">
                                                 <div class="col-xs-12 mt-2">
                                                     <img class="img-thumbnail" src="{{$photo_file}}" alt="">
+                                                    @if ($property->act_price)
+                                                        <div class="show_act_price"><span class="money">{{$property->price}}</span>.-Ft </div>
+                                                    @endif
                                                 </div>
                                                 <div class="col-xs-12 show-new-price">
-                                                    <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5>
+                                                    <h5 class="text-white">
+                                                        @if ($property->act_price)
+                                                            <span class="money">{{$property->act_price}}</span>.-Ft
+
+                                                        @else
+                                                            <span class="money">{{$property->price}}</span>.-Ft
+                                                        @endif
+                                                    </h5>
                                                 </div>
                                             </div>
                                         </div>
