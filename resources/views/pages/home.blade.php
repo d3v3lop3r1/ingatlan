@@ -72,7 +72,7 @@ $region= config('property.region.hu');
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h1 class="text-uppercase center-xs">kiemelt ajánlataink</h1>
                 <div class="row center-xs ingatlan-sor">
-                    @foreach ($properties as $property)
+                    @foreach ($properties_kiemeltek as $property)
                             <?php
                             $photo_count = $property->photos->count();
                             $photo = $property->photos->where('is_default','1')->first();
@@ -162,6 +162,118 @@ $region= config('property.region.hu');
 
                 </div>
                 <div class="jumbotron" >
+                    <h1>Ismerje meg a mi csodálatos Baranyánkat!</h1>
+                    <p>Többnemzetiségű barátságos EU-régió, ahol a napfény is otthonra talál nap mint nap.</p>
+                    <p>
+                        A Duna- és Dráva folyóink találkozásánál az életerőt adó mediterrán éghajlatú Baranyánkról 
+                        nem csak a nagyvárosainkban regélnek, hanem külföldön is. Nyaralókat, vagy a letelepedéshez 
+                        hangulatos házakat vásárolnak, aztán alakítgatják át, szeretgetik nagyvárosi honfitársaink – 
+                        ha tehetik. Osztrák-Német-Holland-Horvát érdeklődőink is felfedezték már ezt a remek vidéket, 
+                        és vásárolgatnak is szorgalmasan
+                    </p>
+                </div>
+                <h1 class="text-uppercase center-xs">Vigyázat, áresés!</h1>
+                <div class="row center-xs ingatlan-sor">
+                    @foreach ($properties_areses as $property)
+                            <?php
+                            $photo_count = $property->photos->count();
+                            $photo = $property->photos->where('is_default','1')->first();
+                            if ($photo){
+                                $photo_file = $photo->file1;
+                                $photo_file = "/uploads/" . $photo_file;
+                            } else {
+                                $photo_file = "/uploads/placeholder.png";
+                            }
+
+                            ?>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="row">
+                                        <div class="col-xs-12 prop-header">
+                                            <h5><a class="stretched-link" href="/index/{{$property->id}}">{{$property->header_hun}}</a></h5>
+                                            <div class="row justify-content-between">
+                                                <div class="col-auto prop-header-alatt-bal start-xs ">
+
+                                                    <?php
+                                                    echo ($type_id[$property->type_id]);
+                                                    $dt = Carbon::parse($property->updated_at);
+                                                    $days=$dt->diffInDays();
+                                                    if ($days < 14){
+                                                        echo "<span class='badge badge-secondary badge-danger ml-2'>Új</span>";
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <div class="col-xs-2 col-md-2 prop-header-alatt-jobb">
+                                                    <i class="fas fa-camera-retro"></i> {{$photo_count}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-xs-12 main-photo">
+                                            <div class="col-auto prop-header-alul-jobb">
+                                            ID:{{110000 + $property->id}} - {{$list_type[$property->list_type]}} {{$type_id[$property->type_id]}} {{$region[$property->region]}}
+                                            </div>
+                                            <img class="img-thumbnail" src="{{$photo_file}}" alt="">
+                                        </div>
+                                    </div>
+
+
+                                    {{--  Adatok  --}}
+
+
+                                    <div class="row center-xs">
+                                        <div class="col-xs-12 main-price border">
+                                            @if ($property->act_price)
+                                            <i class="fas fa-caret-down text-success"></i><span class="money">{{$property->act_price}}</span>.-Ft
+                                            @else
+                                                <span class="money">{{$property->price}}</span>.-Ft
+                                            @endif
+                                        </div>
+                                        <div class="col-xs-12 main-details">
+                                            <div class="row kiskockak center-xs border">
+                                                <div class="col xs-4">
+                                                    <i class="fa fa-ruler fa-xl"></i><span> Terület:</span><br>
+                                                    @if ($property->land_area)
+                                                        {{$property->land_area}}m2
+                                                    @else
+                                                        -
+                                                    @endif
+                                                </div>
+                                                <div class="col xs-4">
+                                                    <i class="fas fa-expand-alt fa-xl"></i><span> Lakótér:</span><br>
+                                                    @if ($property->area)
+                                                        {{$property->area}}m2
+                                                    @else
+                                                        -
+                                                    @endif
+                                                </div>
+                                                <div class="col xs-4">
+                                                    <i class="fas fa-th-large fa-xl"></i><span> Szobák:</span><br>
+                                                    @if ($property->room_no)
+                                                        {{$property->room_no}}
+                                                    @else
+                                                        -
+                                                    @endif
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                            </div>
+                    @endforeach
+
+                </div>
+
+                <div class="jumbotron">
+                    <h4>Most az ingatlanfox* segítségével</h4>
+                    <h1>ÖN  IS  MEGTALÁLJA  ÁLOMINGATLANÁT</h1>
+                    <p>Gondnoki Megbízása révén gondoskodunk ingatlana felől távollétében is! Nem hagyjuk magára sem 
+                        Önt sem ingatlanát.</p>
+                    <h4>Árulja el nekünk hol-milyen ingatlant szeretne, 
+                        és mi utánajárunk, megtaláljuk azt!
+                    </h4>
+                </div>
+                <div class="jumbotron">
                     <h1>ITT JÓ HELYEN JÁR</h1>
                     <h4>ha ingatlant keres, vagy eladná-bérbeadná ingatlanát a napfényes Baranyánkban.</h4>
                     <p>Mi itthon vagyunk itt, segítünk, közbenjárunk, kapcsolatot teremtünk a határon túlról érkezettekkel is a siker érdekében.</p>
