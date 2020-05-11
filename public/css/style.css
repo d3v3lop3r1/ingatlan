@@ -370,7 +370,7 @@ p {
 
 .prop-header-alul-jobb{
 	position: absolute;
-	bottom: 100px;
+	bottom: 120px;
 	left: 5px;
 	padding: 5px;
 	font-weight: 700;
@@ -379,6 +379,7 @@ p {
 	color: #FFF;
 	background-color: rgba(25, 85, 110, 0.7);
 	overflow: hidden;
+	word-wrap: none;
 }
 
 

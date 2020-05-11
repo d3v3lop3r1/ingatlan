@@ -104,7 +104,7 @@ $region= config('property.region.hu');
                                                     ?>
                                                 </div>
                                                 <div class="col-xs-2 col-md-2 prop-header-alatt-jobb">
-                                                    <i class="fas fa-camera-retro"></i> {{$photo_count}}
+                                                    <i class="fas fa-camera-retro">&nbsp{{$photo_count}}</i>
                                                 </div>
                                             </div>
 
