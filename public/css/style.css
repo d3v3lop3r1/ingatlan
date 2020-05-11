@@ -476,6 +476,9 @@ p {
 	}
 .home-media-body{
 	line-height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
 }
 
 .home-place-left{

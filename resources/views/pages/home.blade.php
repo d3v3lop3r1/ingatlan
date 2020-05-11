@@ -29,11 +29,13 @@ $region= config('property.region.hu');
                                 }
                             @endphp
                             <img src="{{$photo_file}}" class="img-thumbnail mr-3" alt="fotó" width="50" height="50">
-                            <div class="media-body home-media-body">
+                            <div class="media-body home-media-body
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
-                                    <span class="home-place-left">{{$region[$prop->region]}} - {{$prop->city}}</span><br>
-                                    {{$prop->header_hun}}<br>
-                                    <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                    <div class="home-text body">
+                                        <span class="home-place-left">{{$region[$prop->region]}} - {{$prop->city}}</span><br>
+                                        {{$prop->header_hun}}<br>
+                                        <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                    </div>
                                 </a>
 
                             </div>
