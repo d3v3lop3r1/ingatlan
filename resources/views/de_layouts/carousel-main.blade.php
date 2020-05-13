@@ -25,7 +25,7 @@
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/new/apartment-lounge-3147892_1920x500.jpg" alt="VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?">
               <div class="carousel-caption">
-                    <h1>WUNSCHIMMOBILIEN IN SÜDUNGARN MIT INGATLANFOX/h1>
+                    <h1>WUNSCHIMMOBILIEN IN SÜDUNGARN MIT INGATLANFOX</h1>
               </div>
             </div>
             <div class="carousel-item">
