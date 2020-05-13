@@ -124,6 +124,10 @@ Route::prefix('de')->group(function () {
     Route::get('/fur-kaufer-und-mieter', function () {
         return view('de_info.fur-kaufer-und-mieter');
     });
+    Route::get('/hausverwaltung', function () {
+        return view('de_info.hausverwaltung');
+    });
+
 
 
 });

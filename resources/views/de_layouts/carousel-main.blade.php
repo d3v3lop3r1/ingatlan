@@ -13,19 +13,19 @@
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/new/kitchen-1543493_1920x500.jpg" alt="Ingatlanfox megoldások">
               <div class="carousel-caption">
-                  <h1>TRAUMHÄUSER SUPER GÜNSTIG! </h1>
+                  <h1>TRAUMHäUSER  GÜNSTIG IN HARKÁNY</h1>
                 </div>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x500.jpg" alt="Ingatlanfox megoldások">
                 <div class="carousel-caption">
-                    <h1>JETZT KRIEGT MAN FÜR EURO</h1>
+                    <h1>JETZT KRIEGT MAN MEHR FÜR EURO</h1>
                 </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/new/apartment-lounge-3147892_1920x500.jpg" alt="VÁSÁROLNA VAGY BÉRELNE INGATLANT A DÉLDUNÁNTÚLON?">
               <div class="carousel-caption">
-                    <h1>WÜRDEN SIE IN DÉLDUNÁNTÚL EIN EIGENTUM KAUFEN ODER MIETEN?</h1>
+                    <h1>WUNSCHIMMOBILIEN IN SÜDUNGARN MIT INGATLANFOX/h1>
               </div>
             </div>
             <div class="carousel-item">
@@ -37,7 +37,7 @@
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/new/orchard-2372731_1920x500.jpg" alt="Transzparens eladások">
               <div class="carousel-caption">
-                <h1>JETZT KRIEGT MAN FÜR EURO</h1>
+                <h1>JETZT KRIEGT MAN MEHR FÜR EURO</h1>
               </div>
             </div>
           </div>
