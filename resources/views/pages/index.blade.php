@@ -163,11 +163,11 @@ $room_height=config('property.room_height.hu');
                           <span>
                             <?php echo $property->text_hun ?>
                             <small class="text-muted">
-                              <strong>Adatgaranciák</strong><br> 
-                              a felsorolt adatok pontosságáért a hirdető nem vállal felelősséget. 
+                              <strong>Adatgaranciák</strong><br>
+                              a felsorolt adatok pontosságáért a hirdető nem vállal felelősséget.
                               Az árváltoztatás jogát fenntartja.
                             </small>
-                          </span> 
+                          </span>
                         </td>
                       </tr>
 

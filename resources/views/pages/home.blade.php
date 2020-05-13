@@ -167,14 +167,14 @@ $region= config('property.region.hu');
                     <h1>Ismerje meg a mi csodálatos Baranyánkat!</h1>
                     <p>Többnemzetiségű barátságos EU-régió, ahol a napfény is otthonra talál nap mint nap.</p>
                     <p>
-                        A Duna- és Dráva folyóink találkozásánál az életerőt adó mediterrán éghajlatú Baranyánkról 
-                        nem csak a nagyvárosainkban regélnek, hanem külföldön is. Nyaralókat, vagy a letelepedéshez 
-                        hangulatos házakat vásárolnak, aztán alakítgatják át, szeretgetik nagyvárosi honfitársaink – 
-                        ha tehetik. Osztrák-Német-Holland-Horvát érdeklődőink is felfedezték már ezt a remek vidéket, 
+                        A Duna- és Dráva folyóink találkozásánál az életerőt adó mediterrán éghajlatú Baranyánkról
+                        nem csak a nagyvárosainkban regélnek, hanem külföldön is. Nyaralókat, vagy a letelepedéshez
+                        hangulatos házakat vásárolnak, aztán alakítgatják át, szeretgetik nagyvárosi honfitársaink –
+                        ha tehetik. Osztrák-Német-Holland-Horvát érdeklődőink is felfedezték már ezt a remek vidéket,
                         és vásárolgatnak is szorgalmasan
                     </p>
                 </div>
-                <h1 class="text-uppercase center-xs">Vigyázat, áresés!</h1>
+                <h1 class="text-uppercase center-xs">HURRÁ, MOST OLCSÓBB LETT!</h1>
                 <div class="row center-xs ingatlan-sor">
                     @foreach ($properties_areses as $property)
                             <?php
@@ -269,9 +269,9 @@ $region= config('property.region.hu');
                 <div class="jumbotron">
                     <h4>Most az ingatlanfox* segítségével</h4>
                     <h1>ÖN  IS  MEGTALÁLJA  ÁLOMINGATLANÁT</h1>
-                    <p>Gondnoki Megbízása révén gondoskodunk ingatlana felől távollétében is! Nem hagyjuk magára sem 
+                    <p>Gondnoki Megbízása révén gondoskodunk ingatlana felől távollétében is! Nem hagyjuk magára sem
                         Önt sem ingatlanát.</p>
-                    <h4>Árulja el nekünk hol-milyen ingatlant szeretne, 
+                    <h4>Árulja el nekünk hol-milyen ingatlant szeretne,
                         és mi utánajárunk, megtaláljuk azt!
                     </h4>
                 </div>
@@ -366,71 +366,7 @@ $region= config('property.region.hu');
                 </div>
             </div>
             <div class="d-none col-lg-2  d-lg-block end-xs">
-                <div class="card mb-2">
-                    <img src="/images/harkany/harkanyi-gyogyfurdo-legi.jpg" class="card-img-top" alt="Harkany">  
-                    <div class="card-body">
-                        <h4>
-                            Auswandern? <br>
-                            Harkány-Siklós-Pécs Umgebung 
-                            in den Südwesten von Ungarn 
-                            wirdimmer beliebter 
-                            als Alternativer Wohnsitz
-                        </h4>
-                        <p>
-                            Neben günstigen Immobilienpreisen
-                            locken vor allem vergleichsweise 
-                            niedrigen Lebensunterhaltungskosten.
-                            Zudem profitieren aktuell Euro-Inhaber 
-                            vom mehr als guten Wechselkurs 
-                            zum Forint, um bis zu 20% Rabatt!
-                        </p>
-                    </div>                  
-                </div>
-                <div class="card mb-2">
-                    <img src="/images/harkany/harkany_tabor_edzotabor_10.jpg" class="card-img-top" alt="Harkany">  
-                    <div class="card-body">
-                        <p>
-                            Herliche Erholung, Aktivurlaub 
-                            in Harkány, Südwestungarn, 
-                            wo wir zu Hause sind <br>
-                            <a href="http://turizmus.harkany.hu/userfiles/kirandulas_nemet.pdf">Link</a>
-                        </p>
-                    </div>                  
-                </div>
-                <div class="card mb-2">
-                    <img src="/images/harkany/hotel.jpg" class="card-img-top" alt="Harkany Hotel"> 
-                    <div class="card-body">
-                        <h4>
-                            Hotels in Harkány 
-                            für Alle Ansprüche
-                        </h4>
-                        <p><a href="https://www.thermalhotelharkany.eu/de">Thermal Hotel Harkány</a></p>                   
-                    </div>
-                </div>
-                <div class="card mb-2">
-                    <img src="/images/harkany/borut.jpg" class="card-img-top" alt="Harkany Weinstrasse"> 
-                    <div class="card-body">
-                        <h4>
-                            Berühmte Weinstrasse Villány
-                        </h4>
-                        <p><a href="https://villanyiborvidek.hu/de">Link</a></p>                   
-                    </div>
-                </div>
-                <div class="card mb-2">
-                    <img src="/images/harkany/borut_all.jpg" class="card-img-top" alt="Villány-Siklós-Szekszárd Weinstrasse"> 
-                    <div class="card-body">
-                        <h4>
-                            Berühmte Weinstrasse Ungarns <br> Villány-Siklós-Szekszárd
-                        </h4>
-                        <p><a href="https://www.ungarisches-weingefuehl.de/villany-siklos-und-szekszard">Link</a></p>    
-                        <hr>
-                        <p>
-                            Merkblatt zum Aufenthalt Deutscher in Ungarn <br>
-                            <a href="https://budapest.diplo.de/blob/1642226/8e927e2dde0b72127fc55abd41bed50e/mb-aufenthalt-in-ungarn-data.pdf">Link</a>
-                        </p>               
-                    </div>
-                </div>
-
+                @include('/de_pages/reklamok')
             </div>
         </div>
     </div>

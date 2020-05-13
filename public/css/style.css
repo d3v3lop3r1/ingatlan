@@ -267,6 +267,18 @@ p {
 .box{
 	flex-basis: 100%;
 }
+
+.reklamok-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.reklamok-container .card{
+    display: flex;
+    display: block;
+    min-width: 200px;
+    max-width: 350px;
+}
 			/* Bemutato kockak fejlece */
 .prop-header{
 	position: absolute;
