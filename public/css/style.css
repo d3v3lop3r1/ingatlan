@@ -144,6 +144,15 @@ p {
 	box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
 }
 
+/*
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    z-index: 10000;
+}
+*/
+
 .search-container{
 	flex-direction: row;
 	position: relative;
@@ -496,6 +505,10 @@ p {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
+}
+
+.home-media-text{
+    font-size: small;
 }
 
 .home-place-left{

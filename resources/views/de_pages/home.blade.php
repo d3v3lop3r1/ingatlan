@@ -33,7 +33,7 @@ $region= config('property.region.de');
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="home-place-left">{{$prop->city}}</span><br>
-                                    {{$prop->header_de}}<br>
+                                    <span class="home-media-text">{{$prop->header_de}}</span><br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
 
@@ -59,7 +59,7 @@ $region= config('property.region.de');
                             <div class="media-body">
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="home-place-left">{{$prop->city}}</span><br>
-                                    {{$prop->header_de}}<br>
+                                    <span class="home-media-text">{{$prop->header_de}}</span><br>
                                     <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
                                 </a>
 

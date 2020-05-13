@@ -18,7 +18,7 @@
     $comfort=config('property.comfort.hu');
     $room_height=config('property.room_height.hu');
     @endphp
-<div class="container">
+<div class="container sticky">
     <div class="row drop-shadow search-box center-xs">
         <div class="col-auto">
                 {!! Form::open(['action'=>'PagesController@search', 'method'=>'GET', 'class'=>'']); !!}
