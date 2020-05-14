@@ -22,9 +22,11 @@ Route::get('/', function () {
 
 //Route::get('/home', 'PagesController@show');
 
-Route::get('/demo', function (Request $request) {
-    return view('demo');
-});
+Route::get('/demo', 'PagesController@demo');
+
+//   Email
+
+Route::post('/guest-message', 'PagesController@guest_message');
 
 
 //                INFO OLDALAK
