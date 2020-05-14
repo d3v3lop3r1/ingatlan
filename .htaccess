@@ -1,0 +1,12 @@
+# Do not remove this line, otherwise mod_rewrite rules will stop working
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
