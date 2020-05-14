@@ -717,9 +717,17 @@ div.sticky {
 	white-space: nowrap;
 }
 
-.message-container{
+#messenger-header{
+    background-color: #335578;
+    color: white;
+}
+
+#messenger-header .close{
+    color: white;
+}
+
+#messenger-body{
     background-color: rgb(125, 147, 169);
-    border-radius: 5px;
     padding: 10px;
     color: white;
 }
@@ -749,7 +757,6 @@ div.sticky {
 
 .message-btn{
     background-color: rgba(50, 85, 120, 1);
-    border: 1px solid white;
     color: white;
 
 }

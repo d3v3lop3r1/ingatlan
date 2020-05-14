@@ -50,35 +50,7 @@ $room_height=config('property.room_height.hu');
                             }
                         ?>
                     </div>
-                    <div class="row p-3">
-                        <div class="col-xs-12">
-                            <div class="container message-container shadow text-center">
-                                <h4 class="text-center uppercase"><i class="far fa-envelope"></i> &nbsp Küldjön üzenetet</h4>
-                                <p>Amennyiben nem talált megfelelő ingatlant, mi segítünk önnek megtalálni.</p>
-                                {!! Form::open(['action'=>'PagesController@guest_message', 'method'=>'POST','name'=>'uzenet_kuldese']) !!}
-                                    <div class="form-row message-container-form">
-                                        <div class="col-md-4 mb-3">
-                                            {!! Form::text('name',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Név']); !!}
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            {!! Form::email('email',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Email']); !!}
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            {!! Form::text('tel',null,['class' => 'form-control form-control-sm', 'placeholder'=>'Telefon']); !!}
-                                        </div>
-                                        <div class="col-md-12 mb-3">
-                                            {!! Form::textarea('message',null,['class' => 'form-control form-control-sm','rows'=>'5','required', 'placeholder'=>'Üzenet']); !!}
-                                        </div>
-                                        <div class="col">
-                                            {!! Form::submit('Üzenet küldése', ['class'=>"btn message-btn btn-sm"]) !!}
-                                        </div>
-                                    </div>
-                                {!! Form::close() !!}
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
                 {{--  Adatok oszlop   --}}
 
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
@@ -211,7 +183,7 @@ $room_height=config('property.room_height.hu');
 
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 index-agent">
                     <div class="row">
-                    <div class="col-xs-12">
+                        <div class="col-xs-12">
                         <div class="media  mt-1 pt-1 drop-shadow">
                         <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                         <div class="media-body">
@@ -227,6 +199,11 @@ $room_height=config('property.room_height.hu');
                             <li class="list-group-item"><small><strong><i class="fas fa-globe"></i> Nyelvek</strong> {{$property->agents->languages}}</small></li>
                         </ul>
                         </div>
+                    </div>
+                    <div class="col-xs-12 mt-1">
+                        <button type="button" class="btn btn-sajat btn-block" data-toggle="modal" data-target="#messengerModal">
+                            <i class="far fa-envelope"></i> &nbsp Küldjön üzenetet nekünk!
+                        </button>
                     </div>
                     <div class="col-xs-12 pt-3">
                         <div class="card w3-padding w3-margin-bottom w3-small">

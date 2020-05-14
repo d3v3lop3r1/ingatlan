@@ -7,7 +7,7 @@
     @include('layout.head')
 
     @yield('styles')
-    
+
 </head>
 <body>
     @include('layout.newnavbar')
@@ -15,6 +15,8 @@
     @include('layout.carousel-main')
 
     @include('layout.search')
+
+    @include('layout.modals.messenger')
 
     @yield('tartalom')
 
