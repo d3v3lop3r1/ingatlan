@@ -51,31 +51,29 @@ $room_height=config('property.room_height.hu');
                         ?>
                     </div>
                     <div class="row p-3">
-                        <div class="col-xs-8">
-                            <div class="container message-container shadow">
-                                <div class="message-container-form">
-                                    <h4 class="text-center uppercase"><i class="far fa-envelope"></i> &nbsp Küldjön üzenetet</h4>
-                                    <p class="p-3">Amennyiben nem talált megfelelő ingatlant, mi segítünk önnek megtalálni.</p>
-                                    {!! Form::open(['action'=>'PagesController@guest_message', 'method'=>'POST','name'=>'uzenet_kuldese']) !!}
-                                        <div class="form-group">
-                                            {!! Form::label('Név',null,['class' => 'control-label']); !!}
-                                            {!! Form::text('name',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Kérem adja meg a nevét...']); !!}
+                        <div class="col-xs-12">
+                            <div class="container message-container shadow text-center">
+                                <h4 class="text-center uppercase"><i class="far fa-envelope"></i> &nbsp Küldjön üzenetet</h4>
+                                <p>Amennyiben nem talált megfelelő ingatlant, mi segítünk önnek megtalálni.</p>
+                                {!! Form::open(['action'=>'PagesController@guest_message', 'method'=>'POST','name'=>'uzenet_kuldese']) !!}
+                                    <div class="form-row message-container-form">
+                                        <div class="col-md-4 mb-3">
+                                            {!! Form::text('name',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Név']); !!}
                                         </div>
-                                        <div class="form-group">
-                                            {!! Form::label('Email cím',null,['class' => 'control-label']); !!}
-                                            {!! Form::email('email',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Kérem adja meg email címét...']); !!}
+                                        <div class="col-md-4 mb-3">
+                                            {!! Form::email('email',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Email']); !!}
                                         </div>
-                                        <div class="form-group">
-                                            {!! Form::label('Telefon',null,['class' => 'control-label']); !!}
-                                            {!! Form::text('tel',null,['class' => 'form-control form-control-sm', 'placeholder'=>'Kérem adja meg a telefonszámát...']); !!}
+                                        <div class="col-md-4 mb-3">
+                                            {!! Form::text('tel',null,['class' => 'form-control form-control-sm', 'placeholder'=>'Telefon']); !!}
                                         </div>
-                                        <div class="form-group">
-                                            {!! Form::label('Üzenet',null,['class' => 'control-label']); !!}
-                                            {!! Form::textarea('message',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Kérem írja le üzenetét...']); !!}
+                                        <div class="col-md-12 mb-3">
+                                            {!! Form::textarea('message',null,['class' => 'form-control form-control-sm','rows'=>'5','required', 'placeholder'=>'Üzenet']); !!}
                                         </div>
-                                        {!! Form::submit('Üzenet küldése', ['class'=>"btn message-btn btn-sm mb-5"]) !!}
-                                    {!! Form::close() !!}
-                                </div>
+                                        <div class="col">
+                                            {!! Form::submit('Üzenet küldése', ['class'=>"btn message-btn btn-sm"]) !!}
+                                        </div>
+                                    </div>
+                                {!! Form::close() !!}
                             </div>
                         </div>
                     </div>
