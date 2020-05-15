@@ -54,129 +54,129 @@ $room_height=config('property.room_height.hu');
                 {{--  Adatok oszlop   --}}
 
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
-                    <div class="">
                     <table class="table table-sm table-bordered index-adatok-tabla">
                         <thead class="pt-3">
-                        <tr>
-                            <th> ID:{{110000 + $property->id}}</th>
-                            <th colspan="3">{{$property->header_hun}}</th>
-                        </tr>
+                            <tr>
+                                <th> ID:{{110000 + $property->id}}</th>
+                                <th colspan="3">{{$property->header_hun}}</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th>Régió</th>
-                            <td>{{$region[$property->region]}}</td>
-                            <th>Attraktivitás</th>
-                            <td class="index-stars">
-                            @for ($i = 0; $i < $property->attraktivitas ; $i++)
-                                <i class="fas fa-star stars"></i>
-                            @endfor
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Város</th>
-                            <td>{{$property->city}}</td>
-                            <th>Állapot</th>
-                            <td class="index-stars">
-                            @for ($i = 0; $i < $property->allapot ; $i++)
-                                <i class="fas fa-star stars"></i>
-                            @endfor
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Frissítve</th>
-                            <td>
-                            <?php
-                                $dt = Carbon::parse($property->updated_at);
-                                echo $dt->diffInDays()." napja";
-                            ?>
-                            </td>
-                            <th>Extrák</th>
-                            <td class="index-stars">
-                            @for ($i = 0; $i < $property->extrak ; $i++)
-                                <i class="fas fa-star stars"></i>
-                            @endfor
-                            </td>
+                            <tr>
+                                <th>Régió</th>
+                                <td>{{$region[$property->region]}}</td>
+                                <th>Attraktivitás</th>
+                                <td class="index-stars">
+                                @for ($i = 0; $i < $property->attraktivitas ; $i++)
+                                    <i class="fas fa-star stars"></i>
+                                @endfor
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Város</th>
+                                <td>{{$property->city}}</td>
+                                <th>Állapot</th>
+                                <td class="index-stars">
+                                    @for ($i = 0; $i < $property->allapot ; $i++)
+                                        <i class="fas fa-star stars"></i>
+                                    @endfor
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Frissítve</th>
+                                <td>
+                                    <?php
+                                        $dt = Carbon::parse($property->updated_at);
+                                        echo $dt->diffInDays()." napja";
+                                    ?>
+                                </td>
+                                <th>Extrák</th>
+                                <td class="index-stars">
+                                    @for ($i = 0; $i < $property->extrak ; $i++)
+                                        <i class="fas fa-star stars"></i>
+                                    @endfor
+                                </td>
 
-                        </tr>
-                        <tr>
-                            <th>Telek méret</th>
-                            <td>{{$property->land_area}} m2</td>
-                            <th>Lakóterület</th>
-                            <td>{{$property->area}} m2</td>
-                        </tr>
+                            </tr>
+                            <tr>
+                                <th>Telek méret</th>
+                                <td>{{$property->land_area}} m2</td>
+                                <th>Lakóterület</th>
+                                <td>{{$property->area}} m2</td>
+                            </tr>
 
-                        <tr>
-                            <th>Szobák</th>
-                            <td>{{$property->room_no}}</td>
-                            <th>Fürdők</th>
-                            <td>{{$property->bathroom_no}}</td>
-                        </tr>
-                        <tr>
-                            <th>Állapot</th>
-                            <td>{{$condition[$property->condition]}}</td>
-                            <th>Fűtés</th>
-                            <td>{{$heating[$property->heating]}}</td>
-                        </tr>
+                            <tr>
+                                <th>Szobák</th>
+                                <td>{{$property->room_no}}</td>
+                                <th>Fürdők</th>
+                                <td>{{$property->bathroom_no}}</td>
+                            </tr>
+                            <tr>
+                                <th>Állapot</th>
+                                <td>{{$condition[$property->condition]}}</td>
+                                <th>Fűtés</th>
+                                <td>{{$heating[$property->heating]}}</td>
+                            </tr>
 
-                        <tr>
-                            <th>Extrák</th>
-                            <td colspan="3">
-                            @if ($property->lift)
-                                <img class="pl-3" src="/images/extras_icons/Elevator_icon.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban lift található" height="50" alt="">
-                            @endif
-                            @if ($property->aircondition)
-                                <img class="pl-3" src="/images/extras_icons/air-conditioner.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban légkondícionáló található" height="50" alt="">
-                            @endif
-                            @if ($property->balcony)
-                                <img class="pl-3" src="/images/extras_icons/balcony-icon-new.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban erkély található" height="50" alt="">
-                            @endif
-                            @if ($property->disabled)
-                                <img class="pl-3" src="/images/extras_icons/icon-disabled.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlan akadálymentesített" height="50" alt="">
-                            @endif
-                            @if ($property->garden)
-                                <img class="pl-3" src="/images/extras_icons/garden-icon-new.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanhoz kert tartozik" height="50" alt="">
-                            @endif
-                            @if ($property->terrace)
-                                <img class="pl-3" src="/images/extras_icons/terrace-icon.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanhoz terasz tartozik" height="50" alt="">
-                            @endif
-
-                            </td>
-                        </tr>
-                        <tr  class="table-borderless index-price">
-                            <td align="right" class=" pt-3"><h5 class="text-white" >Ár</h5></td>
-                            <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
-                            <td class=" pt-3 pr-3">
-                            @if ($property->act_price)
-                                <h5 class="text-white"><i class="fas fa-caret-down text-success"></i><span class="money">{{$property->act_price}}</span>.-Ft</h5></td>
-                            @else
-                                <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
-                            @endif
-                            <td class=" pt-3 pr-3"></th>
-                        </tr>
-                        <tr class="table-borderless index-header-sor">
-                            <th class="pt-3" colspan="4">
-                            <h4 class="index_mutato">
-                                {{$list_type[$property->list_type]}} - {{$type_id[$property->type_id]}} - {{$property->city}}
-                            </h4>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="index-text">
-                            <span>
-                                <?php echo $property->text_hun ?>
-                                <small class="text-muted">
-                                <strong>Adatgaranciák</strong><br>
-                                a felsorolt adatok pontosságáért a hirdető nem vállal felelősséget.
-                                Az árváltoztatás jogát fenntartja.
-                                </small>
-                            </span>
-                            </td>
-                        </tr>
-
+                            <tr>
+                                <th>Extrák</th>
+                                <td colspan="3">
+                                    @if ($property->lift)
+                                        <img class="pl-3" src="/images/extras_icons/Elevator_icon.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban lift található" height="50" alt="">
+                                    @endif
+                                    @if ($property->aircondition)
+                                        <img class="pl-3" src="/images/extras_icons/air-conditioner.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban légkondícionáló található" height="50" alt="">
+                                    @endif
+                                    @if ($property->balcony)
+                                        <img class="pl-3" src="/images/extras_icons/balcony-icon-new.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanban erkély található" height="50" alt="">
+                                    @endif
+                                    @if ($property->disabled)
+                                        <img class="pl-3" src="/images/extras_icons/icon-disabled.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlan akadálymentesített" height="50" alt="">
+                                    @endif
+                                    @if ($property->garden)
+                                        <img class="pl-3" src="/images/extras_icons/garden-icon-new.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanhoz kert tartozik" height="50" alt="">
+                                    @endif
+                                    @if ($property->terrace)
+                                        <img class="pl-3" src="/images/extras_icons/terrace-icon.png" data-toggle="tooltip" data-placement="top" data-html="true" title="Az ingatlanhoz terasz tartozik" height="50" alt="">
+                                    @endif
+                                </td>
+                            </tr>
+                            <tr  class="table-borderless index-price">
+                                <td class=" pt-3" colspan="4">
+                                    <h5 class="text-white">
+                                        ÁR &emsp;
+                                        @if ($property->act_price)
+                                        <i class="fas fa-caret-down text-success"></i>
+                                        <span class="money">{{$property->act_price}}</span>.-Ft
+                                        @else
+                                        <span class="money">{{$property->price}}</span>.-Ft
+                                        @endif
+                                        &emsp;
+                                        <span class="text-white" id="eur"></span>
+                                    </h5>
+                                </td>
+                            </tr>
+                            <tr class="table-borderless index-header-sor">
+                                <th class="pt-3" colspan="4">
+                                    <h4 class="index_mutato">
+                                        {{$list_type[$property->list_type]}} - {{$type_id[$property->type_id]}} - {{$property->city}}
+                                    </h4>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="index-text">
+                                    <span>
+                                        <?php echo $property->text_hun ?>
+                                        <small class="text-muted">
+                                        <strong>Adatgaranciák</strong><br>
+                                        a felsorolt adatok pontosságáért a hirdető nem vállal felelősséget.
+                                        Az árváltoztatás jogát fenntartja.
+                                        </small>
+                                    </span>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
-                    </div>
                 </div>
 
                     {{--  Agent oszlop  --}}

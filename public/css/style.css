@@ -62,8 +62,8 @@ iframe{
 	margin: 10px 0;
 }
 .navbar{
+	display: block;
 	float: right;
-	margin-right: 60px;
 }
 .navbar-user-name{
 	white-space: nowrap;
@@ -115,11 +115,13 @@ p {
 	font-family: 'Roboto', sans-serif;
 	}
 .dropdown{
-	padding-right: 30px;
+	width: auto;
+	margin-right: 10px;
 }
 
 
 .dropdown-menu li{
+	width: auto;
 	white-space:nowrap;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -665,6 +667,8 @@ div.sticky {
 .index-adatok-tabla th{
 	text-transform: uppercase;
 	padding-right: 10px;
+	padding-left: 5px;
+	max-width: 100px;;
 }
 
 .index-adatok-tabla td{
@@ -677,6 +681,10 @@ div.sticky {
 	text-align: end;
 	background-color: rgb(194, 204, 212);
 
+}
+
+.index-price{
+	text-align: center;
 }
 
 .index-price td{
