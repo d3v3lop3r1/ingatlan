@@ -659,6 +659,7 @@ div.sticky {
 	text-align: center;
 }
 
+
 .index-price td{
 	background-color: rgba(50, 85, 120, 1) ;
 	white-space: nowrap;
@@ -690,10 +691,13 @@ div.sticky {
 	white-space: nowrap;
 	color: tomato !important;
 }
+
+
 .index-header-sor th{
 	text-align: center !important;
 }
 .index_mutato{
+	font-size: medium;
 	white-space: nowrap;
 }
 
