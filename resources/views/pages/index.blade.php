@@ -43,7 +43,7 @@ $room_height=config('property.room_height.hu');
                                 foreach ($photos as $photo){
                         ?>
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 mt-1">
-                            <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
+                                <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
                             </div>
                         <?php
                                 }
@@ -146,13 +146,13 @@ $room_height=config('property.room_height.hu');
                                     <h5 class="text-white">
                                         ÁR &emsp;
                                         @if ($property->act_price)
-                                        <i class="fas fa-caret-down text-success"></i>
-                                        <span class="money">{{$property->act_price}}</span>.-Ft
+                                            <i class="fas fa-caret-down text-success"></i>
+                                            <span class="money">{{$property->act_price}}</span>.-Ft
                                         @else
-                                        <span class="money">{{$property->price}}</span>.-Ft
+                                            <span class="money">{{$property->price}}</span>.-Ft
                                         @endif
-                                        &emsp;
-                                        <span class="text-white" id="eur"></span>
+                                            &emsp;
+                                            <span class="text-white" id="eur"></span>
                                     </h5>
                                 </td>
                             </tr>
@@ -184,13 +184,13 @@ $room_height=config('property.room_height.hu');
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 index-agent">
                     <div class="row">
                         <div class="col-xs-12">
-                        <div class="media  mt-1 pt-1 drop-shadow">
-                        <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
-                        <div class="media-body">
-                            <h5 class="mt-0"><strong>{{$property->agents->name}}</strong></h5>
-                            <p class="pl-1 pr-1"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
-                        </div>
-                        </div>
+                            <div class="media  mt-1 pt-1 drop-shadow">
+                                <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
+                                <div class="media-body">
+                                    <h5 class="mt-0"><strong>{{$property->agents->name}}</strong></h5>
+                                    <p class="pl-1 pr-1"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
+                                </div>
+                            </div>
                         <div class="card">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><small><strong><i class="fas fa-phone"></i> Telefon</strong> {{$property->agents->tel}}</small></li>

@@ -16,6 +16,10 @@ $room_height=config('property.room_height.de');
 @extends('de_layouts.main')
 
 @section('tartalom')
+@if (session('mail_message'))
+<div class="alert alert-success text-center">{{session('mail_message')}}</div>
+@endif
+
 @php
 if($property->photos->where('is_default','1')->count()>0){
     $photo_default = $property->photos->where('is_default','1')->first();
@@ -37,9 +41,9 @@ if($property->photos->where('is_default','1')->count()>0){
                       if($property->photos->where('is_default',null)->count()>0){
                           $photos = $property->photos->where('is_default',null)->all();
                           foreach ($photos as $photo){
-                  ?>
+                    ?>
                       <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 mt-1">
-                      <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
+                        <a href="/uploads/{{$photo->file1}}" data-lightbox="roadtrip"><img class="img-thumbnail" src="/uploads/{{$photo->file1}}" height="50" alt=""></a>
                       </div>
                   <?php
                           }
@@ -47,11 +51,9 @@ if($property->photos->where('is_default','1')->count()>0){
                   ?>
               </div>
             </div>
-
               {{--  Adatok oszlop   --}}
 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
-                <div>
                   <table class="table table-sm table-bordered index-adatok-tabla">
                     <thead class="pt-3">
                       <tr>
@@ -140,17 +142,20 @@ if($property->photos->where('is_default','1')->count()>0){
                         </td>
                       </tr>
                       <tr  class="table-borderless index-price">
-                        <td align="right" class=" pt-3"><h5 class="text-white" >Preis</h5></td>
-                        <td class=" pt-3 pr-3"><h5 class="text-white" id="eur"></h5></td>
-                        <td class=" pt-3 pr-3">
-                          @if ($property->act_price)
-                              <h5 class="text-white"><i class="fas fa-caret-down"></i><span class="money"> {{$property->act_price}}</span>.-Ft</h5></td>
-                          @else
-                              <h5 class="text-white"><span class="money">{{$property->price}}</span>.-Ft</h5></td>
-                          @endif
-                        <td class=" pt-3 pr-3"></th>
+                        <td class=" pt-3" colspan="4">
+                          <h5 class="text-white" >
+                            Preis &emsp;
+                            @if ($property->act_price)
+                              <i class="fas fa-caret-down"></i>
+                              <span class="money"> {{$property->act_price}}</span>.-Ft
+                            @else
+                                <span class="money">{{$property->price}}</span>.-Ft
+                            @endif
+                            &emsp;
+                            <span class="text-white" id="eur"></span>
+                          </h5>
+                        </td>
                       </tr>
-
                       <tr class="table-borderless index-header-sor">
                         <th class="pt-3" colspan="4">
                           <h4 class="index_mutato">
@@ -162,20 +167,16 @@ if($property->photos->where('is_default','1')->count()>0){
                         <td colspan="4" class="index-text">
                           <span >
                             <?php echo $property->text_de ?>
+                            <small class="text-muted">
+                              <strong>Daten</strong><br> 
+                              keine Haftung für die Genauigkeiten von aufgelisteten Daten. 
+                              Weitere Informationen werden erst vor Ort in Pécs nach Terminvereinbarung dargelegt.
+                            </small>
                           </span> 
-                          <small class="text-muted">
-                            <strong>Daten</strong><br> 
-                            keine Haftung für die Genauigkeiten von aufgelisteten Daten. 
-                            Weitere Informationen werden erst vor Ort in Pécs nach Terminvereinbarung dargelegt.
-                          </small>
                         </td>
-                        
-
                       </tr>
-
                     </tbody>
                   </table>
-                </div>
               </div>
 
                   {{--  Agent oszlop  --}}
@@ -200,6 +201,11 @@ if($property->photos->where('is_default','1')->count()>0){
                         <li class="list-group-item"><small><strong><i class="fas fa-globe"></i> Sprache</strong> {{$property->agents->languages}}</small></li>
                       </ul>
                     </div>
+                  </div>
+                  <div class="col-xs-12 mt-1">
+                    <button type="button" class="btn btn-sajat btn-block" data-toggle="modal" data-target="#messengerModal">
+                        <i class="far fa-envelope"></i> &nbsp Küldjön üzenetet nekünk!
+                    </button>
                   </div>
                   <div class="col-xs-12 pt-3">
                     <div class="card w3-padding w3-margin-bottom w3-small">
