@@ -66,6 +66,11 @@ iframe{
 	color:#1D3557;
 }
 
+.navbar-collapse{
+	position: relative;
+	bottom: -7px;
+}
+
 .carousel img{
 	flex-basis: 100%;
 }
