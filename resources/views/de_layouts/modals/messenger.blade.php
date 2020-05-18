@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header" id="messenger-header">
-            <h4 class="text-center"><i class="far fa-envelope"></i> &nbsp Küldjön üzenetet</h4>
+            <h4 class="text-center"><i class="far fa-envelope"></i> &nbsp Kontakt aufnehmen</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -14,7 +14,7 @@
                     {!! Form::open(['action'=>'PagesController@guest_message', 'method'=>'POST','name'=>'uzenet_kuldese']) !!}
                         <div class="message-container-form">
                             <div class="form-group mb-3">
-                                {!! Form::text('name',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Név']); !!}
+                                {!! Form::text('name',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Name']); !!}
                             </div>
                             <div class="form-group mb-3">
                                 {!! Form::email('email',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Email']); !!}
@@ -23,10 +23,10 @@
                                 {!! Form::text('tel',null,['class' => 'form-control form-control-sm', 'placeholder'=>'Telefon']); !!}
                             </div>
                             <div class="form-group mb-3">
-                                {!! Form::textarea('message',null,['class' => 'form-control form-control-sm','rows'=>'5','required', 'placeholder'=>'Üzenet']); !!}
+                                {!! Form::textarea('message',null,['class' => 'form-control form-control-sm','rows'=>'5','required', 'placeholder'=>'Ihre Nachricht']); !!}
                             </div>
                             <div class="col">
-                                {!! Form::submit('Üzenet küldése', ['class'=>"btn message-btn btn-sm"]) !!}
+                                {!! Form::submit('Nachricht absenden', ['class'=>"btn message-btn btn-sm"]) !!}
                             </div>
                         </div>
                     {!! Form::close() !!}

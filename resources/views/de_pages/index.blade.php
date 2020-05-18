@@ -204,7 +204,7 @@ if($property->photos->where('is_default','1')->count()>0){
                   </div>
                   <div class="col-xs-12 mt-1">
                     <button type="button" class="btn btn-sajat btn-block" data-toggle="modal" data-target="#messengerModal">
-                        <i class="far fa-envelope"></i> &nbsp Küldjön üzenetet nekünk!
+                        <i class="far fa-envelope"></i> &nbsp Nachricht absenden
                     </button>
                   </div>
                   <div class="col-xs-12 pt-3">
