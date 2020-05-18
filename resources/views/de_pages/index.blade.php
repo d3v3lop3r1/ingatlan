@@ -224,24 +224,24 @@ if($property->photos->where('is_default','1')->count()>0){
                   <div class="col-xs-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4>Würden Sie eine Immobilie kaufen?<br> Würden Sie eine Immobilie mieten?</h4>
+                        <h4>Unsere Dienstleistungen sind erfogsversprechend, dabei fair und freundlich</h4>
                       </div>
                       <div class="card-body">
                         <ul>
-                          <li>Persönlicher Kontakt, freundliche Beratung zu Ihrem Vorteil</li>
-                          <li>Eskorte zur Immobilieninspektion, zum Grundbuchamt, zum Exposé usw.</li>
-                          <li>Deutsch-ungarischer Dolmetscher für Verkäufer und Verleger in anderen Muttersprachen</li>
-                          <li>Schreiben eines Vorvertrags, Bescheinigung von Vereinbarungen mit einem Anwalt</li>
-                          <li>Wir helfen Ihnen als Hausmeister in Ihrer Abwesenheit auch nach dem Kauf einer Immobilie</li>
-                          <li>Unser Projektfox-Bauteam führt ebenfalls Renovierungsarbeiten durch</li>
+                          <li>Na klar, es geht um eine Wunschimmobilie, trotzdem steht bei und der Mensch im Mittelpunkt</li>
+                          <li>Unsere Repräsentanten raten, beraten und abraten faire Weise in Ihrer Interesse</li>
+                          <li>Deutsch-ungarisch sprechende Dolmetscher steht Ihnen mit Rat und Tat auf der Stelle</li>
+                          <li>Begleitservice bei Besichtigungen hilft Ihnen mit Auswertungen, Analysen</li>
+                          <li>Wir empfehlen Ihnen auch für Ihre rechtliche Angelegenheiten deutsch-ungarisch sprchende Anwälte in Südwestungarn</li>
+                          <li>Wir kümmern un sum Ihr Anwesen während Ihrer Abwesenheit Renovierungsarbeiten durch</li>
                         </ul>
                       </div>
                       <div class="card-header">
-                          <h4>Borgen?</h4>
+                          <h4>Und wenn Sie spezielle Wünsche haben</h4>
                       </div>
                       <div class="card-body">
                         <p>
-                          Wir machen das beste Angebot bekommt! Unser Spezialist holt das ab Kontakt, der auch Sie sucht derzeit das beste!
+                          Wir recherchieren nach, finden Ihr Wunschimmobilie
                         </p>
                       </div>
                       </div>
