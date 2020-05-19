@@ -208,7 +208,7 @@ $filter= config('property.filter.de')
         <div class="container-fluid">
             <div class="row center-xs">
                 <div class="col-xs-12">
-                    <h3 class="text-danger">ENTSCHULDIGUNG KEIN IMMOBILIEN FÜR DIE SUCHE!</h3>
+                    <h3 class="text-danger">Leider können wir zur Zeit keine passende Angebote präsentieren</h3>
                 </div>
             </div>
         </div>
