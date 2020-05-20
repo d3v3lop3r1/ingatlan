@@ -51,7 +51,7 @@ class PagesController extends Controller
 
     public function guest_message(Request $request){
         $guest=$request;
-        Mail::to('csernus@foxinfo.hu')->send(new MailGuestMessage($guest));
+        Mail::to('info@ingatlanfox.hu')->send(new MailGuestMessage($guest));
         return back()->with('mail_message','Az üzenetet sikeresen elküldte!');
     }
 
