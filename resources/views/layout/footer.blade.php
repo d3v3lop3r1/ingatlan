@@ -19,7 +19,7 @@
           <ul class="footer-ul">
             <li><a href="#"> Adatvédelmi szabályzat</a></li>
             <li><a href="#"> Felhasználási feltételek</a></li>
-            <li><a href="./hun_docs/gyakran-ismetelt-kerdesek.pdf"> Gyakran ismételt kérdések</a></li>
+            <li><a href="../hun_docs/gyakran-ismetelt-kerdesek.pdf"> Gyakran ismételt kérdések</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
