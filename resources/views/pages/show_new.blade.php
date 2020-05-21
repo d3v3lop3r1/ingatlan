@@ -92,7 +92,7 @@ $filter= config('property.filter.hu')
                                         <div class="col-xs-12 col-md-3">
                                             <div class="row center-xs">
                                                 <div class="col-xs-12 mt-2">
-                                                    <img class="img-thumbnail" src="{{$photo_file}}" alt="">
+                                                    <a href="/index/{{$property->id}}"><img class="img-thumbnail" src="{{$photo_file}}" alt=""></a>
                                                     @if ($property->act_price)
                                                         <div class="show_act_price"><span class="money">{{$property->price}}</span>.-Ft </div>
                                                     @endif
