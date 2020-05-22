@@ -16,7 +16,7 @@
         <div class="col-md-2 col-sm-4 paddingtop-bottom">
           <h6 class="heading7">LINKEK</h6>
           <ul class="footer-ul">
-            <li><a href="#"> Datenschutzerklärung</a></li>
+            <li><a href="../de_docs/datenschutz-und-cookies.pdf"> Datenschutzerklärung</a></li>
             <li><a href="#"> Nutzungsbedingungen</a></li>
             <li><a href="../de_docs/haufig-gestellte-fragen.pdf"> Häufig gestellte Fragen</a></li>
           </ul>
