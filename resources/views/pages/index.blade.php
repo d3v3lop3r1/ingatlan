@@ -11,7 +11,12 @@ $heating=config('property.heating.hu');
 $parking=config('property.parking.hu');
 $comfort=config('property.comfort.hu');
 $room_height=config('property.room_height.hu');
-
+if ($property->act_price){
+    $price = $property->act_price;
+  } else {
+    $price = $property->price;
+  }
+  
 @endphp
 @extends('layout.main')
 
@@ -147,10 +152,8 @@ $room_height=config('property.room_height.hu');
                                         ÁR &emsp;
                                         @if ($property->act_price)
                                             <i class="fas fa-caret-down text-success"></i>
-                                            <span class="money">{{$property->act_price}}</span>.-Ft
-                                        @else
-                                            <span class="money">{{$property->price}}</span>.-Ft
                                         @endif
+                                            <span class="money">{{$price}}</span>.-Ft
                                             &emsp;
                                             <span class="text-white" id="eur"></span>
                                     </h5>
@@ -284,22 +287,5 @@ $room_height=config('property.room_height.hu');
         </div>
 @endsection
 @section('scripts')
-  <script>
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        var myHuf = myArr.rates.HUF;
-        var myEur = Math.floor(<?php echo $property->price ?> / myHuf);
-        var formatter = new Intl.NumberFormat('de-DE', {
-          style: 'currency',
-          currency: 'EUR',
-        });
-        document.getElementById("eur").innerHTML = formatter.format(myEur) ;
-      }
-    };
-    xmlhttp.open("GET", "https://api.openrates.io/latest", true);
-    xmlhttp.send();
-  </script>
+  @include('../scripts/get_eur')
 @endsection
