@@ -17,7 +17,7 @@
         <div class="col-md-2 col-sm-4 paddingtop-bottom">
           <h6 class="heading7">LINKEK</h6>
           <ul class="footer-ul">
-            <li><a href="#"> Adatvédelmi szabályzat</a></li>
+            <li><a href="../hun_docs/adatvedelmi-szabalyzat.pdf"> Adatvédelmi szabályzat</a></li>
             <li><a href="#"> Felhasználási feltételek</a></li>
             <li><a href="../hun_docs/gyakran-ismetelt-kerdesek.pdf"> Gyakran ismételt kérdések</a></li>
           </ul>

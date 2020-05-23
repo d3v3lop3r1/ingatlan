@@ -17,5 +17,6 @@
 </body>
     @yield('scripts')
     @include('scripts.script')
+    @include('scripts.cookie-consent-script-de')
 
 </html>

@@ -7,26 +7,6 @@
 <script src="/js/simple.money.format.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-<script>
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#252e39"
-    },
-    "button": {
-      "background": "transparent",
-      "text": "#14a7d0",
-      "border": "#14a7d0"
-    }
-  },
-  "content": {
-    "message": "A weboldalon cookie-kat használunk, hogy biztonságos böngészés mellett a legjobb felhasználói élményt nyújthassunk.",
-    "dismiss": "Elfogadom",
-    "link": "Részletes leírás",
-    "href": "../hun_docs/adatvedelmi-szabalyzat.pdf",
-  }
-});
-</script>
 
 <script>
 {{--  Money format  --}}

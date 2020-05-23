@@ -210,6 +210,10 @@ div.sticky {
 
 }
 
+.show-state-text{
+	display: inline;
+}
+
 .show-new-adatok-tabla{
     line-height: 15px;
 }

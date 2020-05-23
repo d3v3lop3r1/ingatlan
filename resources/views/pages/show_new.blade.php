@@ -151,7 +151,10 @@ $filter= config('property.filter.hu')
                                                         </div>
                                                         <div class="col-xs-8">
                                                             <h5><span class="text-md">{{$property->agents->name}}</span></h5>
-                                                            <p class="small">Vezető értékesítő</p>
+                                                            <p class="small">
+                                                                Vezető értékesítő<br>
+                                                                {{$property->agents->tel}}
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -162,20 +165,38 @@ $filter= config('property.filter.hu')
                                                         {{-- Header es short_text --}}
                                         <div class="col-xs-12 col-md-6">
                                                 <div class="row d-flex flex-column align-self-stretch">
-                                                    <div class="col-xs-5 mt-2">
+                                                    <div class="col-xs-12 mt-2">
                                                         @php
                                                                 $dt = Carbon::parse($property->updated_at);
                                                                 $days=$dt->diffInDays();
                                                         @endphp
-                                                        <h4>
+                                                        <div class="show-state-text">
                                                             @if ($days < 7)
                                                                 <span class="badge badge-success ml-2">új</span>
                                                             @endif
                                                             @if ($property->act_price)
                                                                 <span class="badge badge-danger ml-2">áresés</span>
                                                             @endif
+                                                        </div>
+                                                        @if ($property->lift)
+                                                            <img class="pl-3" src="/images/extras_icons/Elevator_icon.png" height="40" alt="">
+                                                        @endif
+                                                        @if ($property->aircondition)
+                                                            <img class="pl-3" src="/images/extras_icons/air-conditioner.png" height="40" alt="">
+                                                        @endif
+                                                        @if ($property->balcony)
+                                                            <img class="pl-3" src="/images/extras_icons/balcony-icon-new.png" height="40" alt="">
+                                                        @endif
+                                                        @if ($property->disabled)
+                                                            <img class="pl-3" src="/images/extras_icons/icon-disabled.png" height="40" alt="">
+                                                        @endif
+                                                        @if ($property->garden)
+                                                            <img class="pl-3" src="/images/extras_icons/garden-icon-new.png" height="40" alt="">
+                                                        @endif
+                                                        @if ($property->terrace)
+                                                            <img class="pl-3" src="/images/extras_icons/terrace-icon.png"  height="40" alt="">
+                                                        @endif
 
-                                                        </h4>
                                                     </div>
                                                     <div class="col-xs-12 mt-2 show-new-header">
                                                         <a href="/index/{{$property->id}}"><h4>{{$property->header_hun}}</h4></a>
