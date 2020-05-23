@@ -20,10 +20,10 @@ window.cookieconsent.initialise({
     }
   },
   "content": {
-    "message": "A weboldalon cookie-kat használunk, hogy biztonságos böngészés mellett a legjobb felhasználói élményt nyújthassunk.<br>",
+    "message": "A weboldalon cookie-kat használunk, hogy biztonságos böngészés mellett a legjobb felhasználói élményt nyújthassunk.",
     "dismiss": "Elfogadom",
     "link": "Részletes leírás",
-    "href": "../de_docs/datenschutz-und-cookies.pdf",
+    "href": "../hun_docs/adatvedelmi-szabalyzat.pdf",
   }
 });
 </script>
