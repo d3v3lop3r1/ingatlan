@@ -169,7 +169,7 @@ $filter= config('property.filter.de')
                                                         @endphp
                                                         <div class="show-state-text">
                                                             @if ($days < 7)
-                                                            <h4><span class="badge badge-success ml-2">Neu</span></h4>
+                                                            <span class="badge badge-success ml-2">Neu</span>
                                                             @endif
                                                             @if ($property->act_price)
                                                             <span class="badge badge-danger ml-2">Preissenkung</span>
