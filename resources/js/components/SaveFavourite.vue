@@ -26,7 +26,10 @@ export default {
               this.isSave='far'
             }
           })
-          .catch(error=>console.log(error))
+          .catch(error=>{
+            console.log(error)
+            this.isSave='far'
+          })
 
         },
         setCookie(){

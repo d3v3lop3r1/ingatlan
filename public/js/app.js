@@ -1939,7 +1939,8 @@ __webpack_require__.r(__webpack_exports__);
           _this.isSave = 'far';
         }
       })["catch"](function (error) {
-        return console.log(error);
+        console.log(error);
+        _this.isSave = 'far';
       });
     },
     setCookie: function setCookie() {
