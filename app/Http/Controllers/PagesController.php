@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Mail;
-use App\Mail\GuestMessage;
 use App\property;
 use App\photo;
 use Illuminate\Http\Request;
-use App\Http\Requests\guestMessageRequest;
-use App\Mail\GuestMessage as MailGuestMessage;
 use Illuminate\Support\Facades\Cookie;
 
 class PagesController extends Controller
@@ -44,16 +40,12 @@ class PagesController extends Controller
         return redirect($new_url);
     }
 
+
     public function demo(){
         $properties = property::all();
         return view('demo', compact('properties'));
     }
 
-    public function guest_message(Request $request){
-        $guest=$request;
-        Mail::to('info@ingatlanfox.hu')->send(new MailGuestMessage($guest));
-        return back()->with('mail_message','Az üzenetet sikeresen elküldte!');
-    }
 
     public function view($view){
         if($view==2){

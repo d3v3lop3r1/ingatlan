@@ -24,9 +24,9 @@ Route::get('/', function () {
 
 Route::get('/demo', 'PagesController@demo');
 
-//   Email
+//   MailController
 
-Route::post('/guest-message', 'PagesController@guest_message');
+Route::post('/guest-message', 'MailController@guest_message');
 
 
 //                INFO OLDALAK
@@ -53,6 +53,9 @@ Route::get('/koltozes-szervezese', function () {
                   //CooikeController
 
 Route::post('/save-favourite/', 'CookieController@saveFavourite');
+Route::get('/cookie-set/{id}', 'CookieController@cookieSet');
+Route::get('/cookie-check/{id}', 'CookieController@cookieCheck');
+Route::get('/cookie-get', 'CookieController@getCookie');
 
 
 

@@ -11,7 +11,7 @@
         <div class="modal-body" id="messenger-body">
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    {!! Form::open(['action'=>'PagesController@guest_message', 'method'=>'POST','name'=>'uzenet_kuldese']) !!}
+                    {!! Form::open(['action'=>'MailController@guest_message', 'method'=>'POST','name'=>'uzenet_kuldese']) !!}
                         <div class="message-container-form">
                             <div class="form-group mb-3">
                                 {!! Form::text('name',null,['class' => 'form-control form-control-sm','required', 'placeholder'=>'Name']); !!}

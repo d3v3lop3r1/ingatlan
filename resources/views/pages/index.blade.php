@@ -21,10 +21,6 @@ if ($property->act_price){
 @extends('layout.main')
 
 @section('tartalom')
-    @if (session('mail_message'))
-        <div class="alert alert-success text-center">{{session('mail_message')}}</div>
-    @endif
-
       @php
         if($property->photos->where('is_default','1')->count()>0){
             $photo_default = $property->photos->where('is_default','1')->first();

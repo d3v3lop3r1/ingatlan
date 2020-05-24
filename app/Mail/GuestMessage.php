@@ -28,6 +28,6 @@ class GuestMessage extends Mailable
      */
     public function build()
     {
-        return $this->from('guest-message@foxinfo.hu')->view('emails.guest-message');
+        return $this->from('info@ingatlanfox.hu')->view('emails.guest-message');
     }
 }

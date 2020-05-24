@@ -123,6 +123,8 @@ p {
 	box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
 }
 
+
+
 /*
 div.sticky {
     position: -webkit-sticky;
@@ -576,6 +578,10 @@ div.sticky {
 }
 .show-new-save-favourite-btn:hover{
     transform: scale(1.1);
+}
+
+.save-favourite-container{
+	display: inline-block;
 }
 
 

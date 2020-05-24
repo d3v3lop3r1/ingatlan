@@ -18,6 +18,8 @@
 
     @include('layout.modals.messenger')
 
+    @include('layout.alerts')
+
     @yield('tartalom')
 
     @include('layout.footer')

@@ -1921,15 +1921,52 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['propertyId'],
+  data: function data() {
+    return {
+      isSave: ''
+    };
+  },
   methods: {
-    saveFavourite: function saveFavourite() {
+    checkCookie: function checkCookie() {
+      var _this = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/cookie-check/' + this.propertyId).then(function (res) {
+        var saved = res.data;
+
+        if (saved) {
+          _this.isSave = 'fas';
+        } else {
+          _this.isSave = 'far';
+        }
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
+    setCookie: function setCookie() {
+      var _this2 = this;
+
       console.log(this.propertyId);
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/save-favourite/', this.propertyId).then(function (res) {
-        return console.log(res);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/cookie-set/' + this.propertyId).then(function (res) {
+        _this2.checkCookie();
       })["catch"](function (error) {
         return console.log(error);
       });
     }
+  },
+  created: function created() {
+    var _this3 = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/cookie-check/' + this.propertyId).then(function (res) {
+      var saved = res.data;
+
+      if (saved) {
+        _this3.isSave = 'fas';
+      } else {
+        _this3.isSave = 'far';
+      }
+    })["catch"](function (error) {
+      return console.log(error);
+    });
   }
 });
 
@@ -37579,14 +37616,14 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "save-favourite-container" }, [
     _c(
       "button",
       {
         staticClass: "btn btn-sm show-new-save-favourite-btn",
-        on: { click: _vm.saveFavourite }
+        on: { click: _vm.setCookie }
       },
-      [_c("i", { staticClass: "far fa-heart text-danger" })]
+      [_c("i", { staticClass: "fa-heart text-danger", class: _vm.isSave })]
     )
   ])
 }
@@ -49825,15 +49862,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*!***************************************************!*\
   !*** ./resources/js/components/SaveFavourite.vue ***!
   \***************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SaveFavourite_vue_vue_type_template_id_5febc151___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SaveFavourite.vue?vue&type=template&id=5febc151& */ "./resources/js/components/SaveFavourite.vue?vue&type=template&id=5febc151&");
 /* harmony import */ var _SaveFavourite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SaveFavourite.vue?vue&type=script&lang=js& */ "./resources/js/components/SaveFavourite.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _SaveFavourite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _SaveFavourite_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -49863,7 +49899,7 @@ component.options.__file = "resources/js/components/SaveFavourite.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/SaveFavourite.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

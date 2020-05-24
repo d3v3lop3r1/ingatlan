@@ -3,16 +3,48 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Cookie;
+
 
 class CookieController extends Controller
 {
-    public function saveFavourite(Request $request){
-        dd($request);
-        if(isset($_COOKIE['cookieconsent_status'])){
-            return response("ok",200);    
-        } else {
-            return response("ok",200);
-        }
+    
+    public function cookieSet($id){
         
+        if(cookie('cookieconsent_status')){
+            $cookie=Cookie::get('ingatlanfox_saved_properties');
+            if(!$cookie){
+                $property_added = json_encode([$id=>time()]);
+            } else {
+                $saved_properties = json_decode($cookie, true);
+                if (Arr::exists($saved_properties, $id)){
+                    $modded_properties = json_encode(Arr::except($saved_properties, [$id]));
+                    return response("ok", 200)->withCookie('ingatlanfox_saved_properties', $modded_properties, 1000);
+                } else {
+                    $property_added = json_encode(Arr::add($saved_properties, $id, time()));
+                }
+            }
+                
+            return response("ok", 200)->withCookie('ingatlanfox_saved_properties', $property_added, 1000);
+        } else {
+                return response("error", 500)
+                ->with('cookie_status','A cookiek használatát el kell fogadni először!');
+            }
+        }
+
+        public function getCookie(){
+            $cookie=Cookie::get('ingatlanfox_saved_properties');
+            $saved_properties = json_decode($cookie, true);
+            return $saved_properties;
+        }
+        public function cookieCheck($id){
+            $cookie=Cookie::get('ingatlanfox_saved_properties');
+            $saved_properties = json_decode($cookie, true);
+            if(Arr::exists($saved_properties, $id)){
+                return 1;
+            } else {
+                return 0;
+            }
+        }
     }
-}
