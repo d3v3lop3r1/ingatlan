@@ -69,7 +69,7 @@ $filter= config('property.filter.de')
             </div>
         </section>
         <section id="ingatlanok-lista">
-            <div class="container">
+            <div class="container" id="app">
                 <div class="row ingatlan-sor">
                     @foreach ($properties as $property)
                             <?php
@@ -205,7 +205,7 @@ $filter= config('property.filter.de')
                                                     </div>
                                                     <div class="col-xs-22 align-self-end align-items-end mt-auto">
                                                         <a class="btn btn-info btn-sm show-new-adatok-btn" href="/de/index/{{$property->id}}">Anzeigen</a>
-                                                        <button class="btn btn-info btn-sm show-new-save-favourite-btn" id="favourite"><i class="far fa-heart text-danger"></i></button>
+                                                        <save-favourite :property-id="'{!! json_encode($property->id) !!}'"></save-favourite>
                                                     </div>
                                                 </div>
                                         </div>
@@ -235,4 +235,8 @@ $filter= config('property.filter.de')
             </div>
         </div>
     @endif
+@endsection
+@section('scripts')
+    <script src="../js/app.js"></script>
+
 @endsection

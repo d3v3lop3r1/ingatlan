@@ -241,6 +241,6 @@ $filter= config('property.filter.hu')
     @endif
 @endsection
 @section('scripts')
-<script src="/js/app.js"></script>
+    <script src="/js/app.js"></script>
 
 @endsection

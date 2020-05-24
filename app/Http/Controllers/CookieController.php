@@ -20,13 +20,13 @@ class CookieController extends Controller
                 $saved_properties = json_decode($cookie, true);
                 if (Arr::exists($saved_properties, $id)){
                     $modded_properties = json_encode(Arr::except($saved_properties, [$id]));
-                    return response("ok", 200)->withCookie('ingatlanfox_saved_properties', $modded_properties, 1000);
+                    return response("ok", 200)->withCookie('ingatlanfox_saved_properties', $modded_properties, 43200);
                 } else {
                     $property_added = json_encode(Arr::add($saved_properties, $id, time()));
                 }
             }
                 
-            return response("ok", 200)->withCookie('ingatlanfox_saved_properties', $property_added, 1000);
+            return response("ok", 200)->withCookie('ingatlanfox_saved_properties', $property_added, 43200);
         } else {
                 return response("error", 500)
                 ->with('cookie_status','A cookiek használatát el kell fogadni először!');
