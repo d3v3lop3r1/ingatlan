@@ -1923,7 +1923,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['propertyId'],
   data: function data() {
     return {
-      isSave: ''
+      isSave: 'far'
     };
   },
   methods: {

@@ -12,7 +12,7 @@ export default {
     props:['propertyId'],
     data:function(){
       return{
-        isSave:''
+        isSave:'far'
       }
     },
     methods:{
