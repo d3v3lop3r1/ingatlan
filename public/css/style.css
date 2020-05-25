@@ -71,6 +71,10 @@ iframe{
 	bottom: -7px;
 }
 
+.navbar-favourites{
+	font-size: large;
+}
+
 .carousel img{
 	flex-basis: 100%;
 }

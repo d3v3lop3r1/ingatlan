@@ -236,7 +236,3 @@ $filter= config('property.filter.de')
         </div>
     @endif
 @endsection
-@section('scripts')
-    <script src="../js/app.js"></script>
-
-@endsection

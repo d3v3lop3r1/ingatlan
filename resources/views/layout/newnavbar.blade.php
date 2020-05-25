@@ -1,11 +1,11 @@
 <header class="fixed-top drop-shadow">
-  <nav class="navbar navbar-expand-lg navbar-light " >
+  <nav class="navbar navbar-expand-lg navbar-light ">
     <a href="/home" class="navbar-brand mr-4"><img src="/images/logos/ingatlanfox-logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " id="navbarCollapse">
-      <ul class="navbar-nav mt-4">
+      <ul class="navbar-nav mt-4 mr-5">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
           aria-haspopup="true" aria-expanded="false">Eladó<span class="caret"></span></a>
@@ -93,6 +93,20 @@
             $new_url='/de' . $slice
           ?>
           <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/germany-flag-icon-32.png" alt=""></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mt-4">
+        <li class="dropdown">
+          <a href="#" class="navbar-favourites" data-toggle="dropdown" role="button"
+          aria-haspopup="true" aria-expanded="false"><i class="far fa-eye"></i></a>
+          <ul class="dropdown-menu">
+            <div id="app2">
+
+            </div>
+            <li><a href="#">első hirdetés</a></li>
+            <li><a href="#">második hirdetés</a></li>
+            <li><a href="#">harmadik hirdetés</a></li>
+          </ul>
         </li>
       </ul>
     </div>

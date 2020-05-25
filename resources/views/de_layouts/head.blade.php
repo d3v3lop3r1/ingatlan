@@ -12,5 +12,5 @@
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="/css/flexboxgrid.css">
 <link rel="stylesheet" type="text/css" href="/css/all.css">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
 <link rel="stylesheet" type="text/css" href="/css/lightbox.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
