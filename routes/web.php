@@ -56,6 +56,7 @@ Route::post('/save-favourite/', 'CookieController@saveFavourite');
 Route::get('/cookie-set/{id}', 'CookieController@cookieSet');
 Route::get('/cookie-check/{id}', 'CookieController@cookieCheck');
 Route::get('/cookie-get', 'CookieController@getCookie');
+Route::get('/cookie-properties-get', 'CookieController@getCookieProperties');
 
 
 

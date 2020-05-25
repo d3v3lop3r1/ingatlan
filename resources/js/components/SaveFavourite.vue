@@ -25,6 +25,7 @@ export default {
             } else {
               this.isSave='far'
             }
+            //app2.$el.getProperties()
           })
           .catch(error=>{
             console.log(error)
@@ -40,8 +41,12 @@ export default {
                 })
                 .catch(error=>console.log(error))
         }
-    },
-    
+        
+      },
+      created:function(){
+          this.checkCookie()
+        
+      }
 }
 </script>
 

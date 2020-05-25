@@ -1,4 +1,4 @@
-<header class="fixed-top drop-shadow">
+<header class="fixed-top drop-shadow" id="app2">
   <nav class="navbar navbar-expand-lg navbar-light ">
     <a href="/home" class="navbar-brand mr-4"><img src="/images/logos/ingatlanfox-logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,20 +95,12 @@
           <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/germany-flag-icon-32.png" alt=""></a>
         </li>
       </ul>
-      <ul class="navbar-nav mt-4">
-        <li class="dropdown">
-          <a href="#" class="navbar-favourites" data-toggle="dropdown" role="button"
-          aria-haspopup="true" aria-expanded="false"><i class="far fa-eye"></i></a>
-          <ul class="dropdown-menu">
-            <div id="app2">
-
-            </div>
-            <li><a href="#">első hirdetés</a></li>
-            <li><a href="#">második hirdetés</a></li>
-            <li><a href="#">harmadik hirdetés</a></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="navbar-nav mt-4" id="app2">
+        <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-eye"></i></a>
+        <div class="dropdown-menu dropdown-menu-xs-left navbar-favourites-container">
+          <show-favourites></show-favourites>
+        </div>
+      </div>
     </div>
   </nav>
 </header>

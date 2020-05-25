@@ -12,11 +12,10 @@ window.Vue = require('vue');
 Vue.component('save-favourite', require('./components/SaveFavourite.vue').default);
 Vue.component('show-favourites', require('./components/ShowFavourites.vue').default);
 
-
 const app = new Vue({
     el: '#app',
 });
 
-// const app2 = new Vue({
-//     el: '#app2',
-// });
+const app2 = new Vue({
+    el: '#app2',
+});

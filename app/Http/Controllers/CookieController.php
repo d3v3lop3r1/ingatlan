@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cookie;
+use App\property;
+
 
 
 class CookieController extends Controller
@@ -36,8 +38,20 @@ class CookieController extends Controller
         public function getCookie(){
             $cookie=Cookie::get('ingatlanfox_saved_properties');
             $saved_properties = json_decode($cookie, true);
-            return $saved_properties;
+            return $cookie;
         }
+
+        
+        public function getCookieProperties(){
+            $cookie=Cookie::get('ingatlanfox_saved_properties');
+            $saved_properties = json_decode($cookie, true);
+            $prop_keys=array_keys($saved_properties);
+            $properties=property::select('id','header_hun','short_text_hun')->findMany($prop_keys);
+            return $properties;
+        }
+
+
+        
         public function cookieCheck($id){
             $cookie=Cookie::get('ingatlanfox_saved_properties');
             $saved_properties = json_decode($cookie, true);

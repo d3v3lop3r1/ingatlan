@@ -71,9 +71,22 @@ iframe{
 	bottom: -7px;
 }
 
-.navbar-favourites{
-	font-size: large;
+.navbar-favourites-container img{
+	width: 44px;
+	height: 44px;
 }
+
+.navbar-favourites-container{
+	text-transform: none;
+	max-width: 70vw;
+	font-size: x-small;
+}
+
+.navbar-favourites-container .media{
+	padding: 0 10px;
+}
+
+
 
 .carousel img{
 	flex-basis: 100%;
