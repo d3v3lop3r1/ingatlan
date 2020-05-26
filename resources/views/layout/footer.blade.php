@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-md-4 col-sm-4 footerleft">
           <div class="logofooter"> Foxinfo Service Kft</div>
-            <p>Ezekben a nehéz Corona-időkben is hasznos információkkal, fair szolgáltatásokkal, jeleskedünk ingatlanok 
-              adás-vételénél, ingatlanrenoválásnál, Gondnoki ügyelettel, és külföldi kapcsolatok felépítésével. 
-              Magyar munkavállalókat segítünk német-osztrák-holland-svájci munkaadókhoz való profi pályáztatásukkal. 
-              A német és magyar nyelvű weboldalaink segítségével sikeresen kiszélesítettük az Ön lehetőségeit 
+            <p>Ezekben a nehéz Corona-időkben is hasznos információkkal, fair szolgáltatásokkal, jeleskedünk ingatlanok
+              adás-vételénél, ingatlanrenoválásnál, Gondnoki ügyelettel, és külföldi kapcsolatok felépítésével.
+              Magyar munkavállalókat segítünk német-osztrák-holland-svájci munkaadókhoz való profi pályáztatásukkal.
+              A német és magyar nyelvű weboldalaink segítségével sikeresen kiszélesítettük az Ön lehetőségeit
               külföldiekkel való kapcsolatteremtésre.</p>
             <p><i class="fa fa-map-pin"></i> 7815 Harkány, Damjanich tér 8.</p>
             <p><i class="fa fa-phone"></i> Központi telefon (Magyarország) : +36 20 777 2000</p>
@@ -20,6 +20,7 @@
             <li><a href="../hun_docs/adatvedelmi-szabalyzat.pdf"> Adatvédelmi szabályzat</a></li>
             <li><a href="#"> Felhasználási feltételek</a></li>
             <li><a href="../hun_docs/gyakran-ismetelt-kerdesek.pdf"> Gyakran ismételt kérdések</a></li>
+            <li><a href="../hun_docs/szolgaltatasaink.pdf"> Gyakran ismételt kérdések</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
@@ -47,4 +48,4 @@
   </div>
   </footer>
   <!--footer start from here-->
-  
+
