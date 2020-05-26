@@ -86,6 +86,9 @@ iframe{
 	padding: 0 10px;
 }
 
+.navbar-favourites-container p{
+	margin: 0;
+}
 
 
 .carousel img{
