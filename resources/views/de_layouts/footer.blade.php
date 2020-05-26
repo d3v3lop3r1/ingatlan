@@ -19,7 +19,7 @@
             <li><a href="../de_docs/datenschutz-und-cookies.pdf"> Datenschutzerklärung</a></li>
             <li><a href="#"> Nutzungsbedingungen</a></li>
             <li><a href="../de_docs/haufig-gestellte-fragen.pdf"> Häufig gestellte Fragen</a></li>
-            <li><a href="../unsere-dienstleistungen.pdf"> Unsere Dienstleistungen</a></li>
+            <li><a href="../de_docs/unsere-dienstleistungen.pdf"> Unsere Dienstleistungen</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
