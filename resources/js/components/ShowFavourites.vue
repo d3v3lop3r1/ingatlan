@@ -1,10 +1,17 @@
 <template>
 <div>
-    <div v-for="(property, index) in properties" v-bind:key="index" class="media">
-        <a :href="'/index/'+property.id"><img :src="imgLink" class="mr-3" alt="..."></a>
-        <div class="media-body">
-            <a :href="'/index/'+property.id"><h6 class="mt-0">{{110000+property.id}} {{property.header_hun}}</h6></a>
-            <p v-html="property.short_text_hun"></p>  
+    <div>
+        <div v-if="!error">
+            <div v-for="(property, index) in properties" v-bind:key="index" class="media">
+                <a :href="'/index/'+property.id"><img :src="imgLink" class="mr-3" alt="..."></a>
+                <div class="media-body">
+                    <a :href="'/index/'+property.id"><h6 class="mt-0">{{110000+property.id}} {{property.header_hun}}</h6></a>
+                    <p v-html="property.short_text_hun"></p>  
+                </div>
+            </div>
+        </div>
+        <div v-else>
+            <h6 class="ml-2 mr-2 text-danger">Nincs Még mentett ingatlan</h6>
         </div>
     </div>
 </div>
@@ -16,7 +23,8 @@ export default {
     data: function(){
         return{
             imgLink:'/uploads/placeholder.png',
-            properties:[]
+            properties:[],
+            error:0
         }
     },
     methods:{
@@ -33,10 +41,12 @@ export default {
         getProperties(){
             axios.get('/cookie-properties-get')
             .then(res=>{
+                this.error=0
                 this.properties = res.data               
             })
             .catch(error=>{
                 console.log(error)
+                this.error=1
             })
         }
     },

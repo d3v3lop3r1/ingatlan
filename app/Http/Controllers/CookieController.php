@@ -44,6 +44,9 @@ class CookieController extends Controller
         
         public function getCookieProperties(){
             $cookie=Cookie::get('ingatlanfox_saved_properties');
+            if (!$cookie){
+                return response('Nincs még mentett ingatlan',500);
+            }
             $saved_properties = json_decode($cookie, true);
             $prop_keys=array_keys($saved_properties);
             $properties=property::select('id','header_hun','short_text_hun')->findMany($prop_keys);

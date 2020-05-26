@@ -95,12 +95,22 @@
           <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/germany-flag-icon-32.png" alt=""></a>
         </li>
       </ul>
-      <div class="navbar-nav mt-4" id="app2">
-        <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-eye"></i></a>
-        <div class="dropdown-menu dropdown-menu-xs-left navbar-favourites-container">
-          <show-favourites></show-favourites>
-        </div>
+      <div class="navbar-nav d-none d-lg-block mt-4 mr-2" id="app2">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-eye"></i></a>
+          <div class="dropdown-menu navbar-favourites-container">
+            <show-favourites></show-favourites>
+          </div>
       </div>
+      <ul class="navbar-nav mt-4">
+        <li class="dropdown">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-envelope"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"> </a></li>
+            <li><a href="#" data-toggle="modal" data-target="#messengerModal"> Üzenjen nekünk</a></li>
+          </ul>
+
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
