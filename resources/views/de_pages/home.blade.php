@@ -34,7 +34,11 @@ $region= config('property.region.de');
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="home-place-left">{{$prop->city}}</span><br>
                                     <span class="home-media-text">{{$prop->header_de}}</span><br>
-                                    <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                    @if ($prop->act_price)
+                                    <i class="fas fa-caret-down text-success"></i><span class="money">{{$prop->act_price}}</span>.-Ft
+                                    @else
+                                        <span class="money">{{$prop->price}}</span>.-Ft
+                                    @endif
                                 </a>
 
                             </div>
@@ -60,7 +64,11 @@ $region= config('property.region.de');
                                 <a href="/index/{{$prop->id}}" class="list-group-item-action">
                                     <span class="home-place-left">{{$prop->city}}</span><br>
                                     <span class="home-media-text">{{$prop->header_de}}</span><br>
-                                    <span class="badge badge-danger money">{{$prop->price}}-Ft</span>
+                                    @if ($prop->act_price)
+                                    <i class="fas fa-caret-down text-success"></i><span class="money">{{$prop->act_price}}</span>.-Ft
+                                    @else
+                                        <span class="money">{{$prop->price}}</span>.-Ft
+                                    @endif
                                 </a>
 
                             </div>
