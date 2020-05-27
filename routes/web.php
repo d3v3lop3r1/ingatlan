@@ -71,7 +71,9 @@ Route::get('/logout','HomeController@logout');
 
     //                  PageController
 
-    Route::get('/', 'PagesController@home');
+    Route::get('/', function () {
+        return redirect('home');
+    });
     Route::get('/show', 'PagesController@showing');
     Route::get('/home', 'PagesController@home');
     Route::any('/search', 'PagesController@search');
