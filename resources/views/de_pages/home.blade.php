@@ -237,9 +237,8 @@ $region= config('property.region.de');
                         kaufen oder mieten?
                         </h4>
                         <p>
-                        Wenn Sie wissen, bitte anrufen!
-                        Angenommen, Sie sind um etwas
-                        Zuverdienst nicht abgeneigt?
+                        mit ingatlanfox* FINDEN SIE IHR TRAUMHAUS
+                        und wir kümmern uns um Ihren Anwesen auch während Ihrer Abwesenheit!
 
                         Gerne notieren wir Sie auch bald
                         als Info-Agent unseres Teams!
