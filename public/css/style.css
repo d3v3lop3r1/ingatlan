@@ -855,10 +855,21 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
         justify-content: center;
     }
 
+
+}
+@media screen and (min-width: 1375px ) {
+    .prop-header-alul-jobb{
+        top: 200px;
+    }
+}
+@media screen and (min-width: 1675px ) {
+    .prop-header-alul-jobb{
+        top: 250px;
+    }
+}
+
 @media screen and (max-width: 575px ) {
     .prop-header-alul-jobb{
         top: 300px;
     }
-}
-
 }
