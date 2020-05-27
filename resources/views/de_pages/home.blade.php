@@ -13,7 +13,7 @@ $region= config('property.region.de');
 @section('tartalom')
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row home-container-row">
             <div class="d-none col-lg-2 d-lg-block">
                 <div class="card">
                     <h4 class="center-xs card-header">Bezahlbare Wohnungen für Alle</h4>
@@ -269,36 +269,36 @@ $region= config('property.region.de');
                 <div class="row">
                     <div class="col">
                         <hr>
-                        <h2>In Ungarn sind Sie</h2> 
+                        <h2>In Ungarn sind Sie</h2>
                         <h1>WILLKOMMEN!</h1>
-                        
+
                         <h4>Wohnen im Alter in Ungarn! <br>
                         Leben Sie dort, wo andere Urlaub machen</h4>
-                        
-                        <p>Haben sie sich vorgenommen im Ruhestand nochmal eine große Herausforderung zu bewältigen? Pflegehotels, 
-                        Seniorenresidenzen, betreutes Wohnen, oder eher das einege Heim? Ja, mit uns finden Sie jetzt sehr günstig 
-                        Ihr Traumimmobilien, die Lösung preiswerter aber nievauvoller zu Wohnen. Ob nur ein Sommerresidenz im 
-                        indyllischen Naturlandschaft bei Bad Harkány, Ferienhäuse auf dem Weinberg,  bis zu traumhafte Landhäuser 
-                        in den mediterranen Südwestungarn, wir finden für Sie auch was Sie nur wünschen.</p> 
+
+                        <p>Haben sie sich vorgenommen im Ruhestand nochmal eine große Herausforderung zu bewältigen? Pflegehotels,
+                        Seniorenresidenzen, betreutes Wohnen, oder eher das einege Heim? Ja, mit uns finden Sie jetzt sehr günstig
+                        Ihr Traumimmobilien, die Lösung preiswerter aber nievauvoller zu Wohnen. Ob nur ein Sommerresidenz im
+                        indyllischen Naturlandschaft bei Bad Harkány, Ferienhäuse auf dem Weinberg,  bis zu traumhafte Landhäuser
+                        in den mediterranen Südwestungarn, wir finden für Sie auch was Sie nur wünschen.</p>
 
                         <h4>Auswandern im Alter ist Trend</h4>
 
-                        <p>Auf jedem Fall es lohnt sich jetzt in Ungarn ein zweites Domizil, oder sogar dauerhaft zu wohnen. 
-                        Dann kommt man mit den sonst oft biederer Rente locker aus. Zehntausende deutsche und österreicher 
-                        Leben bereits in Ungarn dauerhaft, klar überwiegend Rentner, Rentnerehepaare. Nach der 20%-igen Absturz 
-                        von ungarischen Währung Forint im Frühling vom 202, Sie kriegen für Ihre Euro jetzt mehr!  Wir helfen Ihnen 
-                        Ihr Wunschimmobilien im herrlichen Südwesten zu finden!</p> 
+                        <p>Auf jedem Fall es lohnt sich jetzt in Ungarn ein zweites Domizil, oder sogar dauerhaft zu wohnen.
+                        Dann kommt man mit den sonst oft biederer Rente locker aus. Zehntausende deutsche und österreicher
+                        Leben bereits in Ungarn dauerhaft, klar überwiegend Rentner, Rentnerehepaare. Nach der 20%-igen Absturz
+                        von ungarischen Währung Forint im Frühling vom 202, Sie kriegen für Ihre Euro jetzt mehr!  Wir helfen Ihnen
+                        Ihr Wunschimmobilien im herrlichen Südwesten zu finden!</p>
 
                         <h4>Rentenbezug im Ausland</h4>
 
-                        <p>Als deutscher Staatsbürger gilt der gesetzliche Rentenanspruch unabhängig vom Wohnort. 
-                        Auch im Ausland erhalten Rentner, so lange sie die deutsche Staatsbürgerschaft behalten, die volle 
+                        <p>Als deutscher Staatsbürger gilt der gesetzliche Rentenanspruch unabhängig vom Wohnort.
+                        Auch im Ausland erhalten Rentner, so lange sie die deutsche Staatsbürgerschaft behalten, die volle
                         gesetzliche Rente
                         Steuervorteile im Ausland
-                        Das Auswandern in europäische Länder ist für Rentner rechtlich kein Problem. In jedem Land der 
-                        europäischen Union können Rentner mit einer Krankenversicherung und einem gesicherten Einkommen ohne 
-                        Auflagen ihren Lebensabend verbringen.</p> 
-                        
+                        Das Auswandern in europäische Länder ist für Rentner rechtlich kein Problem. In jedem Land der
+                        europäischen Union können Rentner mit einer Krankenversicherung und einem gesicherten Einkommen ohne
+                        Auflagen ihren Lebensabend verbringen.</p>
+
                         <h2>
                             In Ungarn heißen Sie <br>
                             WILLKOMMEN!

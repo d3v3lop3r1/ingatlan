@@ -6,10 +6,12 @@
 }
 
 
+
 body, html {
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
+    font-weight: 300;
+    font-size: 14px;
 	margin: 0;
 	padding: 0;
 }
@@ -66,6 +68,14 @@ iframe{
 	color:#1D3557;
 }
 
+.cookie-show-eye{
+    font-size: 20px;
+}
+
+.message-select-envelope{
+    font-size: 20px;
+}
+
 .navbar-collapse{
 	position: relative;
 	bottom: -7px;
@@ -87,7 +97,8 @@ iframe{
 }
 
 .navbar-favourites-container p{
-	margin: 0;
+    margin: 0;
+    font-size: 10px;
 }
 
 
@@ -122,7 +133,7 @@ p {
 	white-space:nowrap;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: small;
+	font-size: 10px;
 	color: #8e9687;
 }
 
@@ -174,12 +185,12 @@ div.sticky {
 }
 
 .search-box label{
-	font-size: small;
+	font-size: 12px;
 	color: rgb(255, 255, 255);
 }
 
 .search-box #area, #land_area, #price_min, #price_max{
-	font-size: small;
+	font-size: 10px;
 	width: 80px;
 }
 
@@ -306,7 +317,7 @@ div.sticky {
 }
 .prop-header h5{
 	text-transform: uppercase;
-	font-size: 15px;
+	font-size: 12px;
 	font-weight: 700;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -377,11 +388,12 @@ div.sticky {
 	margin-left: 20px;
 	padding: 5px 15px;
 	font-weight: 700;
-	font-size: small;
+	font-size: x-small;
 	text-transform: uppercase;
 	color: #FFF;
 	background-color: #E63946;
-	overflow: hidden;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
@@ -390,26 +402,26 @@ div.sticky {
 	margin-right: 20px;
 	padding: 5px 15px;
 	font-weight: 700;
-	font-size: small;
+	font-size: x-small;
 	text-transform: uppercase;
 	justify-content: right;
 	color: #FFF;
 	background-color: #E63946;
-	overflow: hidden;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .prop-header-alul-jobb{
 	position: absolute;
-	bottom: 120px;
+	top: 155px;
 	left: 5px;
 	padding: 5px;
 	font-weight: 700;
-	font-size: small;
+	font-size: x-small;
 	text-transform: uppercase;
 	color: #FFF;
 	background-color: rgba(25, 85, 110, 0.7);
 	overflow: hidden;
-	word-wrap: none;
 }
 
 
@@ -519,6 +531,7 @@ div.sticky {
 .home-place-left{
 	font-weight: 700;
 }
+
 
 .h-text{
 	float:left;
@@ -826,3 +839,26 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
  .bottom_ul li { float:left; line-height:40px;}
  .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
  .bottom_ul li a { color:#FFF;  font-size:12px;}
+
+
+ @media screen and (max-width: 992px) {
+     body{
+         padding-top: 100px;
+     }
+
+    .search-box{
+        bottom: 0px;
+        margin-bottom: 20px;
+    }
+
+    .home-container-row{
+        justify-content: center;
+    }
+
+@media screen and (max-width: 575px ) {
+    .prop-header-alul-jobb{
+        top: -130px;
+    }
+}
+
+}

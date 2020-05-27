@@ -12,7 +12,7 @@ $region= config('property.region.hu');
 @section('tartalom')
 
     <div class="container-fluid">
-        <div class="row">
+        <div class="row  home-container-row">
             <div class="d-none col-lg-2  d-lg-block">
                 <div class="card">
                     <h4 class="center-xs card-header">Olcsóbb lakások</h4>

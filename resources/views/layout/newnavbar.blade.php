@@ -1,8 +1,8 @@
 <header class="fixed-top drop-shadow" id="app2">
-  <nav class="navbar navbar-expand-lg navbar-light ">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a href="/home" class="navbar-brand mr-4"><img src="/images/logos/ingatlanfox-logo.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " id="navbarCollapse">
       <ul class="navbar-nav mt-4 mr-5">
@@ -54,11 +54,10 @@
             <li><i class="fas fa-money-bill-wave"></i><a href="/vevoknek-berloknek"> Vevőknek-Bérlőknek</a></li>
             <li><i class="fas fa-tools"></i><a href="/ingatlanfox-a-gondnok"> Ingatlanfox a Gondnok</a></li>
             <li><i class="fas fa-hammer"></i><a href="/felujitasok-atepitesek-kivitelezese"> Felújítások-Átépítések</a></li>
-            {{--  <li><i class="fa fa-truck fa-sm"></i><a href="/koltozes-szervezese"> Költözés szervezése</a></li>  --}}
             <li><i class="fa fa-question-circle fa-sm"></i><a href="/segitseg-a-haz-korul"> Segítség a ház körül</a></li>
           </ul>
         </li>
-
+                    {{-- Admin blokk --}}
         @if (Auth::check())
           @if (Auth::user()->email=='csernus@foxinfo.hu'||Auth::user()->email=='sztarovics@foxinfo.hu' )
             <li class="dropdown">
@@ -87,23 +86,23 @@
             </li>
         @endif
         <li class="nav-item">
-          <?php 
+          <?php
             $url=url()->full() ;
             $slice = Str::after($url, url('/'));
             $new_url='/de' . $slice
           ?>
-          <a  href="{{$new_url}}" class="ml-2"><img src="/icons/Flags/germany-flag-icon-32.png" alt=""></a>
+          <a  href="{{$new_url}}" class="ml-4 pb-0"><img class="pb-1" src="/icons/Flags/germany-flag-icon-32.png" alt="German flag" width="22"></a>
         </li>
       </ul>
-      <div class="navbar-nav d-none d-lg-block mt-4 mr-2" id="app2">
-          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-eye"></i></a>
+      <div class="navbar-nav d-none d-lg-block mt-4 mr-4">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="cookie-show-eye"><i class="far fa-eye"></i></span></a>
           <div class="dropdown-menu navbar-favourites-container">
             <show-favourites></show-favourites>
           </div>
       </div>
       <ul class="navbar-nav mt-4">
         <li class="dropdown">
-          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-envelope"></i></a>
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="message-select-envelope"><i class="far fa-envelope"></i></span></a>
           <ul class="dropdown-menu">
             <li><a href="#"> </a></li>
             <li><a href="#" data-toggle="modal" data-target="#messengerModal"> Üzenjen nekünk</a></li>
