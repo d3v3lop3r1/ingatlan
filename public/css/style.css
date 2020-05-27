@@ -857,7 +857,7 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
 
 @media screen and (max-width: 575px ) {
     .prop-header-alul-jobb{
-        top: -130px;
+        top: 300px;
     }
 }
 
