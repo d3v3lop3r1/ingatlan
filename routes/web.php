@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('nemsokara');
-});
+// Route::get('/', function () {
+//     return view('nemsokara');
+// });
 
 
 //Route::get('/home', 'PagesController@show');
@@ -71,6 +71,7 @@ Route::get('/logout','HomeController@logout');
 
     //                  PageController
 
+    Route::get('/', 'PagesController@home');
     Route::get('/show', 'PagesController@showing');
     Route::get('/home', 'PagesController@home');
     Route::any('/search', 'PagesController@search');
