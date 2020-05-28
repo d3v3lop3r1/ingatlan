@@ -688,7 +688,8 @@ div.sticky {
 	text-transform: uppercase;
 	padding-right: 10px;
 	padding-left: 5px;
-	max-width: 100px;;
+	max-width: 100px;
+	font-size: 12px;
 }
 
 .index-adatok-tabla td{
