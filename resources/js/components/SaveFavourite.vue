@@ -9,7 +9,10 @@
 <script>
 import axios from 'axios';
 export default {
-    props:['propertyId'],
+    props:[
+      'propertyId',
+      'properties'
+      ],
     data:function(){
       return{
         isSave:'far'
@@ -25,7 +28,6 @@ export default {
             } else {
               this.isSave='far'
             }
-            //app2.$el.getProperties()
           })
           .catch(error=>{
             console.log(error)
@@ -44,6 +46,7 @@ export default {
         
       },
       created:function(){
+          console.log(this.properties)
           this.checkCookie()
         
       }

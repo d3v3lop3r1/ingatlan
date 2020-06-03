@@ -12,6 +12,8 @@ window.Vue = require('vue');
 Vue.component('save-favourite', require('./components/SaveFavourite.vue').default);
 Vue.component('show-favourites', require('./components/ShowFavourites.vue').default);
 
+var properties=[];
+
 const app = new Vue({
     el: '#app',
 });

@@ -11,6 +11,9 @@ class PagesController extends Controller
 {
     public function index(Property $property)
     {
+        if (!$property->active){
+            return response('A hirdetés nem aktív',500);
+        }
         return view('pages.index', compact('property'));
     }
     public function home()
