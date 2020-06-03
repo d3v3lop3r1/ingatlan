@@ -12,7 +12,7 @@ class PagesController extends Controller
     public function index(Property $property)
     {
         if (!$property->active){
-            return response('A hirdetés nem aktív',500);
+            abort(404, 'A hirdetés nem aktív.');
         }
         return view('pages.index', compact('property'));
     }
