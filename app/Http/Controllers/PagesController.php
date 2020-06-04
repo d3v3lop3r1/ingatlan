@@ -6,12 +6,14 @@ use App\property;
 use App\photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Auth;
+
 
 class PagesController extends Controller
 {
     public function index(Property $property)
     {
-        if (!$property->active){
+        if (!$property->active && !Auth::check()){
             abort(404, 'A hirdetés nem aktív.');
         }
         return view('pages.index', compact('property'));

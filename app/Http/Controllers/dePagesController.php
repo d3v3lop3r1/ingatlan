@@ -9,7 +9,7 @@ class dePagesController extends Controller
 {
     public function index(Property $property)
     {
-        if (!$property->active){
+        if (!$property->active  && !Auth::check()){
             abort(404, 'A hirdetés nem aktív.');
         }
         return view('de_pages.index', compact('property'));
