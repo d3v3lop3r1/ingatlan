@@ -16,7 +16,7 @@ if ($property->act_price){
   } else {
     $price = $property->price;
   }
-  
+
 @endphp
 @extends('layout.main')
 
@@ -54,12 +54,17 @@ if ($property->act_price){
                 </div>
                 {{--  Adatok oszlop   --}}
 
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 mt-1" id="app">
                     <table class="table table-sm table-bordered index-adatok-tabla">
                         <thead class="pt-3">
                             <tr>
-                                <th> ID:{{110000 + $property->id}}</th>
-                                <th colspan="3">{{$property->header_hun}}</th>
+                                <th class="align-middle text-center">
+                                    ID:{{110000 + $property->id}}
+                                </th>
+                                <th colspan="3">
+                                    {{$property->header_hun}}
+                                    <save-favourite :property-id="'{!! json_encode($property->id) !!}'"></save-favourite>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -157,7 +162,7 @@ if ($property->act_price){
                             </tr>
                             <tr class="table-borderless index-header-sor">
                                 <th class="pt-3" colspan="4">
-                                    <h4 class="index_mutato">
+                                    <h4 class="index_mutato ">
                                         {{$list_type[$property->list_type]}} - {{$type_id[$property->type_id]}} - {{$property->city}}
                                     </h4>
                                 </th>

@@ -601,11 +601,7 @@ div.sticky {
 }
 
 .show-new-save-favourite-btn{
-    background-color: white;
-    border-color: rgba(50, 85, 120, 1);
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: auto;
+    font-size: x-large;
     transition: 0.5s;
 
 }
