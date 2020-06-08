@@ -206,7 +206,7 @@ $filter= config('property.filter.hu')
                                                             echo ($property->short_text_hun);
                                                         @endphp
                                                     </div>
-                                                    <div class="col-xs-22 ml-auto">
+                                                    <div class="col-xs-22 ml-auto align-middle">
                                                         <a class="btn btn-info btn-sm show-new-adatok-btn" href="/index/{{$property->id}}">Megtekintem</a>
                                                         <save-favourite :property-id="'{!! json_encode($property->id) !!}'"></save-favourite>
                                                     </div>
