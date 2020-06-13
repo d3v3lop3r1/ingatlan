@@ -51,6 +51,10 @@ if ($property->act_price){
                             }
                         ?>
                     </div>
+                    <div class="embed-responsive">
+                        <iframe class="embed-responsive-item" scroll="no" src="https://hitel.pannonsafe.hu/iframehitelkalkulator?s=ew913RtGH323wrWE42&osszeg=10000000" frameborder="0"></iframe>
+                    </div>
+
                 </div>
                 {{--  Adatok oszlop   --}}
 
@@ -182,6 +186,7 @@ if ($property->act_price){
                         </tbody>
                     </table>
                 </div>
+
 
                     {{--  Agent oszlop  --}}
 

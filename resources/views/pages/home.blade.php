@@ -376,3 +376,4 @@ $region= config('property.region.hu');
     </div>
 @endsection
 
+
