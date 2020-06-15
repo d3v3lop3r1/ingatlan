@@ -94,7 +94,7 @@
           <a  href="{{$new_url}}" class="ml-4 pb-0"><img class="pb-1" src="/icons/Flags/germany-flag-icon-32.png" alt="German flag" width="22"></a>
         </li>
       </ul>
-      <div class="navbar-nav d-none d-lg-block mt-4 mr-4">
+      <div class="navbar-nav mt-4 mr-4">
           <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="cookie-show-eye"><i class="far fa-eye"></i></span></a>
           <div class="dropdown-menu navbar-favourites-container">
             <show-favourites></show-favourites>
