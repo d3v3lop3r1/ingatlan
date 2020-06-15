@@ -100,7 +100,7 @@
             <show-favourites></show-favourites>
           </div>
       </div>
-      <ul class="navbar-nav mt-4">
+      <ul class="navbar-nav mt-4  mr-4">
         <li class="nav-item">
             <a href="#" data-toggle="modal" data-target="#messengerModal">
                 <span class="message-select-envelope"><i class="far fa-envelope"></i></span>
