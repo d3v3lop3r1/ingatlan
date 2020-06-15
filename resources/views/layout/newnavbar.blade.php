@@ -101,18 +101,20 @@
           </div>
       </div>
       <ul class="navbar-nav mt-4">
-        <li class="dropdown">
-          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="message-select-envelope"><i class="far fa-envelope"></i></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#"> </a></li>
-            <li><a href="#" data-toggle="modal" data-target="#messengerModal"> Üzenjen nekünk</a></li>
-          </ul>
-        </li>
         <li class="nav-item">
-            <a class="navbar-loan ml-2" href="#" data-toggle="modal" data-target="#calculatorModal">
-                <i class="fas fa-hand-holding-usd"></i>
+            <a href="#" data-toggle="modal" data-target="#messengerModal">
+                <span class="message-select-envelope"><i class="far fa-envelope"></i></span>
             </a>
         </li>
+      </ul>
+      <ul class="navbar-nav mt-4 ">
+        <li class="nav-item">
+            <a href="#" data-toggle="modal" data-target="#calculatorModal">
+                <span class="navbar-loan"><i class="fas fa-hand-holding-usd"></i></span>
+            </a>
+        </li>
+      </ul>
+
       </ul>
 
   </div>
