@@ -74,6 +74,13 @@ $region= config('property.region.hu');
                         </div>
                     @endforeach
                 </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-sajat btn-block text-uppercase" data-toggle="modal" data-target="#calculatorModal">
+                            <i class="fas fa-hand-holding-usd"></i> &nbsp Hitelkalkulátor!
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <h1 class="text-uppercase center-xs">kiemelt ajánlataink</h1>

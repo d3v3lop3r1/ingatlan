@@ -9,6 +9,11 @@
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 
 <script>
-{{--  Money format  --}}
-$('.money').simpleMoneyFormat();
+    {{--  Money format  --}}
+    $('.money').simpleMoneyFormat();
+
+    window.setTimeout(function(){
+        $("#container").contents().find(".calculator-box").css("border-color","blue");
+    }, 1000);
 </script>
+

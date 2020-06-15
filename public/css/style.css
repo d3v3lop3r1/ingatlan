@@ -30,6 +30,7 @@ iframe{
 	border: none;
 }
 
+
 .btn-sajat{
     background-color: #d1a254;
 	color: white;
@@ -69,6 +70,10 @@ iframe{
 }
 
 .cookie-show-eye{
+    font-size: 20px;
+}
+
+.navbar-loan{
     font-size: 20px;
 }
 
@@ -681,6 +686,8 @@ div.sticky {
 			/*      Index oldal       */
 
 
+
+
 .index-adatok-tabla{
 	font-size: small;
 }
@@ -769,6 +776,15 @@ div.sticky {
 #messenger-body{
     background-color: rgb(125, 147, 169);
     padding: 10px;
+    color: white;
+}
+
+#calculator-header{
+    background-color:rgba(3, 84, 88, 0.73);
+    color: white;
+}
+#calculator-body{
+    background-color: rgb(255, 255, 255);
     color: white;
 }
 

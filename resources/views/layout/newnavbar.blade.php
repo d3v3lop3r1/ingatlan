@@ -82,7 +82,7 @@
           </li>
         @else
             <li class="nav-item">
-              <a href="/login" class=""> Belépés </a>
+              <a href="/login"> Belépés </a>
             </li>
         @endif
         <li class="nav-item">
@@ -107,10 +107,15 @@
             <li><a href="#"> </a></li>
             <li><a href="#" data-toggle="modal" data-target="#messengerModal"> Üzenjen nekünk</a></li>
           </ul>
-
+        </li>
+        <li class="nav-item">
+            <a class="navbar-loan ml-2" href="#" data-toggle="modal" data-target="#calculatorModal">
+                <i class="fas fa-hand-holding-usd"></i>
+            </a>
         </li>
       </ul>
-    </div>
+
+  </div>
   </nav>
 </header>
 

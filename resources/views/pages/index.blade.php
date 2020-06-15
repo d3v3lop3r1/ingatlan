@@ -214,6 +214,12 @@ if ($property->act_price){
                             <i class="far fa-envelope"></i> &nbsp Küldjön üzenetet nekünk!
                         </button>
                     </div>
+                    <div class="col-xs-12 mt-1">
+                        <button type="button" class="btn btn-sajat btn-block text-uppercase" data-toggle="modal" data-target="#calculatorModal">
+                            <i class="fas fa-hand-holding-usd"></i> &nbsp Hitelkalkulátor!
+                        </button>
+                    </div>
+
                     <div class="col-xs-12 pt-3">
                         <div class="card w3-padding w3-margin-bottom w3-small">
                         <div class="card-header">
