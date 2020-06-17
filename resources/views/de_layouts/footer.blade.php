@@ -4,9 +4,9 @@
       <div class="row">
         <div class="col-md-4 col-sm-4 footerleft">
           <div class="logofooter"> Foxinfo Service Kft</div>
-            <p>Wir bemühen uns in dieser schweren Zeiten mit hilfsreiche Informationen und faire Dienstleistungen in 
-                Sachen Immobilienvermittlung/Hausrenovierung/Hausverwaltung sowie bei Niederlassungen in Südwestungarn. 
-                Im weiteren verhelfen wir ungarische Arbeitnehmer sich auf die deutsche und österreichische Arbeitmarkt 
+            <p>Wir bemühen uns in dieser schweren Zeiten mit hilfsreiche Informationen und faire Dienstleistungen in
+                Sachen Immobilienvermittlung/Hausrenovierung/Hausverwaltung sowie bei Niederlassungen in Südwestungarn.
+                Im weiteren verhelfen wir ungarische Arbeitnehmer sich auf die deutsche und österreichische Arbeitmarkt
                 zu bewerben. Wir sind zuversichtlich das gute, freundliche  Beziehungen zu entsprechenden Erfolg führen.</p>
             <p><i class="fa fa-map-pin"></i> Damjanich tér 8, HU-7815 Harkány, Ungarn</p>
             <p><i class="fa fa-phone"></i>  Zentrale : +36 20 777 2000,<br> deutsch-espanol +49 1578 400 1214</p>
@@ -31,9 +31,9 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
-          <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-page" data-href="https://www.facebook.com/ingatlanfox" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <div class="fb-xfbml-parse-ignore">
-              <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+              <blockquote cite="https://www.facebook.com/ingatlanfox"><a href="https://www.facebook.com/ingatlanfox">Facebook</a></blockquote>
             </div>
           </div>
         </div>
@@ -48,4 +48,4 @@
   </div>
   </footer>
   <!--footer start from here-->
-  
+

@@ -31,9 +31,9 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-4 paddingtop-bottom">
-          <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div class="fb-page" data-href="https://www.facebook.com/ingatlanfox" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <div class="fb-xfbml-parse-ignore">
-              <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+              <blockquote cite="https://www.facebook.com/ingatlanfox"><a href="https://www.facebook.com/ingatlanfox">Facebook</a></blockquote>
             </div>
           </div>
         </div>
