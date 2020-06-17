@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 class FacebookController extends Controller
 {
     public function messenger_verify(Request $request){
-        $appsecret = 'EAADomyz9SzoBAFzyt5SNe2EWGZCYwiZASDkOyyXO8ZBZCOYRBZCFPCITvzvrgw8XUwrePrWxvroIi2Ov5a84EG14hReckZCgUzxmT2x5FF5VWPZAq1X1VIzWgru82i7ZCZCLhrDhZCl0ZCqZCeBCteqACy1sxhjZAUjqoGOR44Vtq1WA8l43c92tLAgJqlYwQB2ZA3GnMZD';
+        $local_verify_token=env('WEBHOOK_VERIFY_TOKEN');
+        $hub_verfify_token= $request->input('hub_verify_token');
+        if ($local_verify_token == $hub_verfify_token){
+            return $request->input('hub_vchalange');
 
-
-        return response('ok',200);
+        } else {
+            return "rossz token";
+        }
     }
-
-
 }
