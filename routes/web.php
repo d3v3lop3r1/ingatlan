@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
 // });
 
 
-Route::post('/messenger-verify', 'FacebookController@messenger_verify');
+Route::get('/messenger-verify', 'FacebookController@messenger_verify');
 
 Route::get('/demo', 'PagesController@demo');
 
