@@ -10,7 +10,7 @@ class FacebookController extends Controller
         $local_verify_token=env('WEBHOOK_VERIFY_TOKEN');
         $hub_verfify_token= $request->input('hub_verify_token');
         if ($local_verify_token == $hub_verfify_token){
-            return $request->input('hub_vchalange');
+            return $request->input('hub_challenge');
 
         } else {
             return "rossz token";
