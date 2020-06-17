@@ -10,10 +10,8 @@ class FacebookController extends Controller
         $appsecret = 'EAADomyz9SzoBAFzyt5SNe2EWGZCYwiZASDkOyyXO8ZBZCOYRBZCFPCITvzvrgw8XUwrePrWxvroIi2Ov5a84EG14hReckZCgUzxmT2x5FF5VWPZAq1X1VIzWgru82i7ZCZCLhrDhZCl0ZCqZCeBCteqACy1sxhjZAUjqoGOR44Vtq1WA8l43c92tLAgJqlYwQB2ZA3GnMZD';
 
 
-        if (hash_equals($request->hub->verify_token, $appsecret)) {
-        echo('SIGNATURE_VERIFIED');
         return response('ok',200);
-}
-
     }
+
+
 }
