@@ -99,7 +99,8 @@ Route::get('/logout','HomeController@logout');
         Route::get('/photos/create/{id}', 'photoController@create');
 
         //                 MAINTENANCE
-        Route::get('/maintenance', 'photoController@photoMaintenance');
+
+        Route::get('/maintenance', 'MaintenanceController@photoMaintenance');
         
         Route::get('/map-lat-long', 'MaintenanceController@mapLatLong');
         

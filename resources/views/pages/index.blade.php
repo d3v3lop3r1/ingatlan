@@ -214,10 +214,13 @@ if ($property->act_price){
                             <i class="far fa-envelope"></i> &nbsp Küldjön üzenetet nekünk!
                         </button>
                     </div>
-                    <div class="col-xs-12 mt-1">
+                    <div class="col-xs-12 mt-1 w-100">
                         <button type="button" class="btn btn-sajat btn-block text-uppercase" data-toggle="modal" data-target="#calculatorModal">
                             <i class="fas fa-hand-holding-usd"></i> &nbsp Hitelkalkulátor!
                         </button>
+                        <div class="d-flex">
+                            <img class="mx-auto" id="pannon-safe-logo" src="/images/logos/pslogo_20ev.png" alt="Pannon Safe Logo">
+                        </div>
                     </div>
 
                     <div class="col-xs-12 pt-3">

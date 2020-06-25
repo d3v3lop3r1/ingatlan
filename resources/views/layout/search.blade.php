@@ -73,7 +73,7 @@
                     <div class="col-auto mt-3">
                         <button class="btn btn-sajat btn-sm mr-1" type="submit" >KERESÉS</button>
                         <button class="btn btn-sajat btn-sm ml-1" type="button" data-toggle="collapse" data-target="#collapseDetailedSearch" aria-expanded="false" aria-controls="collapseDetailedSearch">
-                            Részletes keresés
+                            RÉSZLETES KERESÉS
                         </button>
                     </div>
                 </div>

@@ -26,4 +26,25 @@ class MaintenanceController extends Controller
             $prop->update(['map_lat'=>$latlong->lat, 'map_long'=>$latlong->lng]);
         }
     }
+
+    public function photoMaintenance()
+    {
+        $directory = "uploads/";
+        $images = glob($directory . "*.jpeg");
+
+        foreach($images as $image)
+        {
+            $cropped_image=Str::after($image,$directory);
+            $photo_count=photo::where('file1',$cropped_image)->count();
+            if ($photo_count === 0){
+                $deleted_photo=File::delete($image);
+                if($deleted_photo){
+                    echo ($image . ' deleted <br>');
+                } else {
+                    echo ('Valami hiba történt a' . $image . ' törlése közben');
+                }
+            }
+        }
+
+    }
 }

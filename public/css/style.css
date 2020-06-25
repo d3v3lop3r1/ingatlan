@@ -32,10 +32,16 @@ iframe{
 
 
 .btn-sajat{
-    background-color: #d1a254;
+    background-color: #274768;
 	color: white;
 	border: 1px solid white;
-    box-shadow:(1px 1px 1px #384233);
+	box-shadow: 2px 2px 5px 0px grey;
+	transition-duration: 500ms;
+	padding: 10px;
+}
+.btn-sajat:hover{
+	color: white;
+	transform: scale(1.05);
 }
 
 .tinymce-table-class table{
@@ -531,6 +537,10 @@ div.sticky {
 
 .home-place-left{
 	font-weight: 700;
+}
+
+#pannon-safe-logo{
+padding: 10px;
 }
 
 .resp-container {

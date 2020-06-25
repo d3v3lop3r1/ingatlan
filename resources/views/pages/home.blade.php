@@ -98,6 +98,9 @@ $region= config('property.region.hu');
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
+                        <div class="d-flex">
+                            <img class="img-fluid mx-auto" id="pannon-safe-logo" src="/images/logos/pslogo_20ev.png" alt="Pannon Safe Logo">
+                        </div>
                         <button type="button" class="btn btn-sajat btn-block text-uppercase" data-toggle="modal" data-target="#calculatorModal">
                             <i class="fas fa-hand-holding-usd"></i> &nbsp Hitelkalkulátor!
                         </button>
