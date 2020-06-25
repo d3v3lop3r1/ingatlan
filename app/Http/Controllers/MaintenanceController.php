@@ -19,7 +19,7 @@ class MaintenanceController extends Controller
             $rawresult = json_encode($response->json());
 
             $result=json_decode($rawresult);
-
+            dd($result);
             $latlong = $result->results[0]->geometry->location;
             echo ($address->id . ' hirdetés lat:' . $latlong->lat . ' long:' . $latlong->lng);
             $prop = property::where('id', $address->id);
