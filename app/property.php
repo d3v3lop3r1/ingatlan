@@ -54,7 +54,9 @@ class property extends Model
         'text_de',
         'header_en',
         'short_text_en',
-        'text_en'
+        'text_en',
+        'map_lat',
+        'map_long'
         
        ];
     public function photos(){

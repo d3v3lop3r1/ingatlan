@@ -8,6 +8,8 @@ use App\photo;
 
 use Illuminate\Support\Facades\Storage;
 use File;
+use Illuminate\Support\Facades\Http;
+
 
 //use Illuminate\Support\Arr;
 
@@ -62,7 +64,22 @@ class PropertyController extends Controller
        // $prop_id=$request->id;
        //return view('admin.photos.create_photos')->with('prop_id');
        $input=$request->all();
-       property::create($input);
+
+       $formatted_address = $request->street_number . ' ' . $request->street . ',' . $request->city . ',' . 'Hungary';
+       $encoded_address = urlencode($formatted_address);
+       $httpaddress = 'https://maps.googleapis.com/maps/api/geocode/json?key=' . env('GOOGLE_API_KEY') . '&address=' . $encoded_address;
+       $response = Http::get($httpaddress);
+
+       $rawresult = json_encode($response->json());
+
+       $result=json_decode($rawresult);
+
+       $latlong = $result->results[0]->geometry->location;
+       echo ($request->id . ' hirdetés lat:' . $latlong->lat . ' long:' . $latlong->lng);
+       $prop_to_create = property::create(['map_lat'=>$latlong->lat, 'map_long'=>$latlong->lng]+$input);
+       
+
+       
        return redirect('properties');
 
     }
@@ -104,8 +121,20 @@ class PropertyController extends Controller
     {
         $input=$request->except(['_token', '_method']);
         //$output = Arr::except($input, ['_token', '_method']);
-        property::where('id', $property->id)
-        ->update($input);
+        $formatted_address = $request->street_number . ' ' . $request->street . ',' . $request->city . ',' . 'Hungary';
+        $encoded_address = urlencode($formatted_address);
+        $httpaddress = 'https://maps.googleapis.com/maps/api/geocode/json?key=' . env('GOOGLE_API_KEY') . '&address=' . $encoded_address;
+        $response = Http::get($httpaddress);
+
+        $rawresult = json_encode($response->json());
+
+        $result=json_decode($rawresult);
+
+        $latlong = $result->results[0]->geometry->location;
+        echo ($request->id . ' hirdetés lat:' . $latlong->lat . ' long:' . $latlong->lng);
+        $prop_to_update = property::where('id', $property->id);
+        $prop_to_update->update(['map_lat'=>$latlong->lat, 'map_long'=>$latlong->lng]+$input);
+
         return redirect('properties');
     }
 
