@@ -11,12 +11,19 @@ use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
+    public function getAddresses() {
+        $addresses = property::Aktiv()->select('map_lat','map_long')->get();
+        return $addresses;
+
+    }
+
     public function index(Property $property)
     {
         if (!$property->active && !Auth::check()){
             abort(404, 'A hirdetés nem aktív.');
         }
-        return view('pages.index', compact('property'));
+        $addresses = property::Aktiv()->select('map_lat','map_long')->get();
+        return view('pages.index', compact('property','addresses'));
     }
     public function home()
     {

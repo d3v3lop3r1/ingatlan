@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/messenger-verify', 'FacebookController@messenger_verify');
 
 Route::get('/demo', 'PagesController@demo');
+Route::get('/get-addresses', 'PagesController@getAddresses');
 
 //   MailController
 
@@ -98,7 +99,10 @@ Route::get('/logout','HomeController@logout');
         Route::get('/photos/create/{id}', 'photoController@create');
 
         //                 MAINTENANCE
-        Route::get('/maintenance','photoController@photoMaintenance');
+        Route::get('/maintenance', 'photoController@photoMaintenance');
+        
+        Route::get('/map-lat-long', 'MaintenanceController@mapLatLong');
+        
     });
 
     Auth::routes();

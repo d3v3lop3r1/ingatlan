@@ -297,7 +297,16 @@ if ($property->act_price){
             <h3>Hirdetéseink a térképen</h3>
             <div id="map" class="container"></div>
         </div>
+        @php
+            echo "<script> var addresses = " . json_encode($addresses) . "</script>";
+            
+        @endphp
 @endsection
 @section('scripts')
-  @include('../scripts/get_eur')
+    @include('../scripts/get_eur')
+    <script src="/js/map.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKV7YR9Rs30s1PfDlXiJ8ybbdS3iYMPTo&callback=initMap">
+    </script>
+
 @endsection
