@@ -19,7 +19,7 @@
             <div class="carousel-item">
                 <img class="d-block w-100" src="/images/backgrounds/new/cellar-1676562_1920x500.jpg" alt="Ingatlanfox megoldások">
                 <div class="carousel-caption">
-                    <h1>JETZT KRIEGT MAN MEHR FÜR EURO</h1>
+                    <h1>JETZT MEHR FÜR DEN EURO</h1>
                 </div>
             </div>
             <div class="carousel-item">
@@ -37,7 +37,7 @@
             <div class="carousel-item">
               <img class="d-block w-100" src="/images/backgrounds/new/orchard-2372731_1920x500.jpg" alt="Transzparens eladások">
               <div class="carousel-caption">
-                <h1>JETZT KRIEGT MAN MEHR FÜR EURO</h1>
+                <h1>JETZT MEHR FÜR DEN EURO</h1>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@
 
 @section('tartalom')
     <div class="container">
-        <h3>Warum reparieren wenn zum Verkauf steht?</h3>
+        <h3>Warum reparieren wenn vor dem Anbieten?</h3>
         <h4>weil gepflegte Immobilie sich besser varkaufen lässt</h4>
         <p>
             DER GROSSE PUTZ UND DIE OPTISCHE FEHLER ZU REPARIEREN ist undedingt Empfehlenswert!

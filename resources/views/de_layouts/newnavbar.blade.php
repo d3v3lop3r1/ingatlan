@@ -49,7 +49,7 @@
                     aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"> </a></li>
-                        <li><i class="fas fa-info"></i><a href="/de/wissenwertes"> Wissenwertes</a></li>
+                        <li><i class="fas fa-info"></i><a href="/de/wissenswertes"> Wissenwertes</a></li>
                         <li><i class="fas fa-home"></i><a href="/de/fur-eigentumer"> Für Eigentümer</a></li>
                         <li><i class="fas fa-money-bill-wave"></i><a href="/de/fur-kaufer-und-mieter"> Für Kaufer-Mieter</a></li>
                         <li><i class="fas fa-tools"></i><a href="/de/hausverwaltung"> Hausverwaltung</a></li>

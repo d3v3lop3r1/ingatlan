@@ -15,7 +15,7 @@
                 niedrigen Lebensunterhaltungskosten.
                 Zudem profitieren aktuell Euro-Inhaber
                 vom mehr als guten Wechselkurs
-                zum Forint, um bis zu 20% Rabatt!
+                zum Forint!
             </p>
         </div>
     </div>

@@ -16,7 +16,7 @@ $region= config('property.region.de');
         <div class="row home-container-row">
             <div class="d-none col-lg-2 d-lg-block">
                 <div class="card">
-                    <h4 class="center-xs card-header">Bezahlbare Wohnungen für Alle</h4>
+                    <h4 class="center-xs card-header">bezahlbare Wohnungen für alle</h4>
                     @foreach ($prop_elado_lakasok_cheap as $prop)
                         <div class="media shadow-sm p-1 mt-1">
                             @php
@@ -174,33 +174,34 @@ $region= config('property.region.de');
                     <h2>Lernen Sie unser schönes Baranya kennen!</h1>
                     <h4>Eine deutschsprachige Region in der EU</h4>
                     <h4>
-                        Mediterran Klima jenseits der Donau,
+                        Mediterranes Klima jenseits der Donau,
                         wo viele deutschstämmige Einwanderer
-                        bereits Ihr Wunschimmobilien besitzen.
+                        bereits Ihre Wunschimmobilie gefunden haben.
                     </h4>
-                    <h2>mit ingatlanfox*</h2>
                     <h1>FINDEN SIE IHR TRAUMHAUS</h1>
-                    <h4>
-                        und wir kümmern uns um Ihren Anwesen
-                        auch während Ihrer Abwesenheit!
-                    </h4>
-                    <p>Lassen Sie uns helfen die passenden Immobilie zu finden in unserem herrlichen Mediterran Ecke in Südwesten von Ungarn.</p>
+                    <ul>
+                        <li>Wir helfen Ihnen die passende Immobilie zu finden</li>
+                        <li>Wir erledigen alle Behördengängen für Sie</li>
+                        <li>Wir überwinden alle Sprachbarrieren</li>
+                    </ul>
                 </div>
                 <div class="row">
                     <section class="col-xs-12 col-sm-4">
                         <img class="img-responsive  center-block img-thumbnail" src="/images/sample-house/homes-for-sale-hoboken-nj-1316365_640.jpg" alt="Ház Eladó">
-                        <h3 class="mt-2">Haben Sie in Ungarn Immobilie?</h3>
-                        <h4>Wenn Sie verkaufen oder vermieten wollen, überlassen Sie es uns, denn unsere vorgemerkten Interessenten, sowie grenüberschreitenden Inserate sprechen für sich</h4>
+                        <h3 class="mt-2">Haben Sie eine Immobilie in Ungarn?</h3>
+                        <h4>Wenn Sie verkaufen oder vermieten wollen, überlassen Sie es uns, denn unsere vorgemerkten Interessenten, 
+                            sowie grenzüberschreitenden Inserate sprechen für sich</h4>
                         <p class="text-uppercase text-info">
+                            <strong>Wir inserieren</strong> <br>
                             in 2 Sprachen<br>
-                            in 3+ Länder<br>
+                            in 3+ Ländern<br>
                             in 4+ Immobilienportalen<br>
                             für die erfolgreiche Vermarktung</strong>
                         </p>
                         <ul class="">
                             <li>Beratung, Vermessung Ihrer Immobilie</li>
                             <li>Ablichtungen, Videoaufnahmen mit Drohnen</li>
-                            <li>Zweisprachige Exposé, Steakholder Analyse bei Bedarf</li>
+                            <li>Zweisprachige Exposé, Staekholder Analyse bei Bedarf</li>
                             <li>Helfer bei Immobilienbesichtigungen, Ratgeber</li>
                             <li>Wir überwinden alle Sprachbarriere, Dolmetschen</li>
                             <li>Für Sie erledigen wir alle Behördengänge</li>
@@ -214,16 +215,15 @@ $region= config('property.region.de');
                         <ul class="">
                             <li>Mit Rat- und Tat vermessen wir Ihr Bedarf,
                             begleiten wir bei Besichtigungen, Dolmetschen wenn nötig</li>
-                            <li>Bei Miet- oder Kaufverträge verfassen wir Vorvertrage in 2 Sprachen auch
-                            un helfen mit Analysen und Rat bei Ihrer Entscheidung</li>
+                            <li>Bei Miet- oder Kaufverträge verfassen wir den Vorvertrage in 2 Sprachen auch
+                            und helfen mit Analysen und Rat bei Ihrer Entscheidung</li>
                             <li>Sollten Sie anderweitig die passende Immobilie gefunden haben, fragen Sie uns denn
                             wir helfen gern als Schirmherr, als Dolmetscher und Verteidiger Ihrer Interesse!</li>
                             <li>Behördengänge erledigen wir auch für Sie,
                             deutsch-ungarisch sprechenden Notar/Anwälte kennen wir auch hier</li>
                             <li>Beauftragen Sie uns eventuell als Ihr vertraunswürdige Hausverwalter
                             der während Ihrer Abwesenheit um Alles kümmert, administriert</li>
-                            <li>Unsere Projekftox Division baut, renoviert, repariert, und ist in der Lage
-                            nach jahrelangen Erfahrungen auch größere Umbauten zu übernehmen</li>
+                            <li>Unsere Projekftox Division baut, renoviert, repariert.</li>
                         </ul>
                     </section>
                     <section class="col-xs-12 col-sm-4 ">
@@ -237,15 +237,9 @@ $region= config('property.region.de');
                         kaufen oder mieten?
                         </h4>
                         <p>
-                        mit ingatlanfox* FINDEN SIE IHR TRAUMHAUS
-                        und wir kümmern uns um Ihren Anwesen auch während Ihrer Abwesenheit!
-
-                        Gerne notieren wir Sie auch bald
-                        als Info-Agent unseres Teams!
-
-
-                        Ruefen Sie an 0049-1578-400 1214
-                        Herr Sztarovics oder Frau Speck
+                            dann nehmen Sie den Kontakt 
+                            mit Herr Sztarovics auf
+                            0049-1578-400 1214
                         </p>
                         <h4>Kaufen mit Kreditaufnahme in Ungarn?</h4>
                         <p>
@@ -253,15 +247,6 @@ $region= config('property.region.de');
                             Dafür haben wir auch einen kompetenten Fachmann
                             der Sie hilft günstigeres Angebot zu finden,
                             und geht mit bei der Behördengangen in Pécser-Raum
-                        </p>
-                        <h4>CSOK? Falusi CSOK?</h4>
-                        <p>
-                            Diese supergünstige Kreditaufnahmen
-                            können nur ungarische Mitbürger in Anspruch nehmen.
-                            Die sogennannte "Falusi CSOK" sogar nur für junge Familie
-                            mit x Kinder die bereit sind langfristig in den
-                            s.g. verlassene Dörfer auch wohnen. Die Staat übernimmt 100% vom Kaufpreis.
-                            Für Sie als Verkäufer könnte das auch hilfreich sein...
                         </p>
                     </section>
                 </div>
@@ -306,7 +291,7 @@ $region= config('property.region.de');
                 </div>
                 <div class="jumbotron  hide visible-lg visible-md" >
                     <h1>KEINER DER SICH UM IHR HAUS KÜMMERT? VERTRAUENSVOLLER HAUSVERWALTER?</h1>
-                    <p class="lead"> Unser Hausverwaltung Komplett-Service erledigt in Baranya für Sie Alle arbeiten wie Sie im Auftrag erteilen.</p>
+                    <p class="lead"> Unser Hausverwaltung Komplett-Service erledigt in Baranya für Sie alle arbeiten wie Sie im Auftrag erteilen.</p>
                 </div>
             </div>
             <div class="d-none col-lg-2 d-lg-block end-xs">
