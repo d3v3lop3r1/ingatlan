@@ -5,24 +5,36 @@
     <h2>FÜR EIGENTÜMER</h2>
     <h3>Wie kann ich am schnellsten meine Immobilie in Ungarn verkaufen?</h3>
     <h4>
-        Also allein wird es schwerig. Wenn Sie kein ungarisch sprechen, mit fehlenden Fach- und Lokalkenntnisse, wie mann sagt leider, "es wird schon schiefgehen".
+        Wenn Sie kein ungarisch sprechen, mit fehlenden Fach- und Lokalkenntnissen, helfen wir Ihnen gerne mit unseren Kompetenz weiter.
     </h4>
     <p>
-        Markwert, Verkehrswert in Südungarn, den Zustand der Immobilie müssen Sie hineinbeziehen
-        wenn Sie lokale Informationen vergleichen einen optimalen Verkaufspreis zu ermitteln.
-        Bei Fehlberechnungen laufen Sie die Gefahr Ihr Preisangebot zu billeg oder zu teuer zu setzen.
-        Wegen mangelnde Sprachkenntnisse zwischen Ihnen und Ihrem Käufer entstehen Konflikte.
-        Bis Sie Ihr Anwesen verkauft haben könnten Sie 10-20 oder mehr Besichtigungen auch anhalten.
-        Ersparen Sie sich All diese lästige Unannähmlichkeiten.
+        Markwert, Verkehrswert in Südungarn, den Zustand der Immobilie all das müssen Sie hineinbeziehen, wenn Sie lokale 
+        Informationen vergleichen, um einen optimalen Verkaufspreis zu ermitteln. Bei Fehlern Ihre Berechnungen laufen Sie Gefahr, 
+        dem Preis für Ihre Immobilie zu niedrig oder zu hoch anzusetzen.  
+    </p>
+    <p>Auf Grund von Sprachschwerigkeiten können Konflikte entstehen. </p>
+    <p>
+        Auch können, bis Sie Ihr Anwesen verkauft haben, 20 oder mehr Besichtigungen auf Sie zukommen. Ersparen Sie sich doch einfach 
+        all diese lästigen Unannämlichkeiten.
+    </p>
+    <p>
+        <strong>WIR VEKAUFEN SCHNELL IHRE IMMOBILIE!</strong>
+    </p>
+    <p>
+        Käufer zahlen in Ungarn – laut Gesetz – keine Vermittlungsgebühr.
+        Alle Vermittlungskosten und die Maklerprovision zahlt der Verkäufer nach Erfolgreichen Verkauf. 
+        Weitere Informationen erhalten Sie bei der Kontaktaufnahme.
 
     </p>
     <p>
-        WIR VEKAUFEN SCHNELL IHRE IMMOBILIEN!
-
-    </p>
-    <p>
-        In Ungarn - laut Gesetz - Käufer zahlen kein Vermittlungsgebühr
-        Alle Vermittlungskosten, Maklerprovision zahlt der Verkäufer nach Erfolgreichen Verkauf. Weitere Informationen erfahren bei der Kontaktaufnahme.
+        Wie kann ich gratis Annoncieren <br>
+        Wenn Sie Ingatlanfox beauftragen! <br>
+        Wann müsste ich Erfolgsprovision zahlen? <br>
+        Erst nach erfolgreichem Verkauf oder Vermietung Ihrer Immobilie
+        Könnte ich den Repräsentanten von Ingatlanfox selber auswählen? <br>
+        Ja, allerdings nicht alle Repräsentanten sprechen ausreichend deutsch. <br>
+        wählen Sie am Anfang entweder <br>
+        0049-1578-4001214, Mobil in Ungarn 0036-20-7772000 Frau Speck oder Herr Sztarovics informieren Sie gern.
     </p>
     <h4>Wie kann ich gratis Annoncieren auf 4-5 Portalen, in mehreren Sprachen, in 3 Länder?</h4>
     <p>

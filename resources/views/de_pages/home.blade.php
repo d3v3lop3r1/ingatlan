@@ -213,8 +213,8 @@ $region= config('property.region.de');
                         <h4 class="mt-2">Haus kaufen in Südungarn?<br>
                         Wohnung mieten in Südungarn?</h4>
                         <ul class="">
-                            <li>Mit Rat- und Tat vermessen wir Ihr Bedarf,
-                            begleiten wir bei Besichtigungen, Dolmetschen wenn nötig</li>
+                            <li>Mit Rat- und Tat ermitteln wir Ihr Bedarf, und
+                            begleiten wir bei Besichtigungen. Wir dolmetschen wenn nötig seien sollte.</li>
                             <li>Bei Miet- oder Kaufverträge verfassen wir den Vorvertrage in 2 Sprachen auch
                             und helfen mit Analysen und Rat bei Ihrer Entscheidung</li>
                             <li>Sollten Sie anderweitig die passende Immobilie gefunden haben, fragen Sie uns denn
@@ -231,63 +231,63 @@ $region= config('property.region.de');
                                 <video class="embed-responsive-item thumbnail" src="/images/sample-house/Water-3967.mp4" loop autoplay muted></video>
                         </div>
                         <h4 class="mt-2">
-                        Haben Sie auch Informationen
-                        wer-wo will in Südungarn
-                        verkaufen oder vermieten,
-                        kaufen oder mieten?
+                            Haben Sie 
+                            Informationen wer
+                            etwas in Südungarn 
+                            verkaufen oder 
+                            vermieten möchte?
                         </h4>
                         <p>
-                            dann nehmen Sie den Kontakt 
-                            mit Herr Sztarovics auf
-                            0049-1578-400 1214
+                            Gerne und vertraulich
+                            notieren wir Sie 
+                            als den freundlichen Informant
+                            mit Aussicht auf fairen Provision
+                            Rufen Sie uns an 0049-1578-400 1214
+                            Ansprechspartner  Edit und Janos
+
                         </p>
-                        <h4>Kaufen mit Kreditaufnahme in Ungarn?</h4>
+                        <h4>Kaufen mit 
+                            Kreditaufnahme 
+                            in Ungarn ist möglich
+                            </h4>
                         <p>
-                            Ja, es ist möglich.
-                            Dafür haben wir auch einen kompetenten Fachmann
-                            der Sie hilft günstigeres Angebot zu finden,
-                            und geht mit bei der Behördengangen in Pécser-Raum
+                            Dafür haben wir auch ein kompetenten 
+                            Partner der Ihnen hilft, ein günstige Angebot zu finden, 
+                            und bei Behördengangen in pécser Raum begleitet. 
                         </p>
+                        <h4>CSOK? Falusi CSOK?</h4>
+                        <p>Diese supergünstige Kreditaufnahme kann nur eine junge ungarische 
+                            Familie in Anspruch nehmen. Der Staat übernimmt 100% vom Kaufpreis. 
+                            Das könnte auch als Verkäufer für Sie nützlich sein.</p>
                     </section>
                 </div>
                 <div class="row">
                     <div class="col">
                         <hr>
-                        <h2>In Ungarn sind Sie</h2>
+                        <h2>Ungarn heißt Sie</h2>
                         <h1>WILLKOMMEN!</h1>
 
-                        <h4>Wohnen im Alter in Ungarn! <br>
-                        Leben Sie dort, wo andere Urlaub machen</h4>
+                        <h4>Leben Sie dort, wo andere Urlaub machen</h4>
 
-                        <p>Haben sie sich vorgenommen im Ruhestand nochmal eine große Herausforderung zu bewältigen? Pflegehotels,
-                        Seniorenresidenzen, betreutes Wohnen, oder eher das einege Heim? Ja, mit uns finden Sie jetzt sehr günstig
-                        Ihr Traumimmobilien, die Lösung preiswerter aber nievauvoller zu Wohnen. Ob nur ein Sommerresidenz im
-                        indyllischen Naturlandschaft bei Bad Harkány, Ferienhäuse auf dem Weinberg,  bis zu traumhafte Landhäuser
-                        in den mediterranen Südwestungarn, wir finden für Sie auch was Sie nur wünschen.</p>
+                        <p>Mit uns finden Sie jetzt sehr günstig Ihre Traumimmobilie, eine wundervolle 
+                        Lösung preiswert und niveauvoll zu Wohnen. Ob eine Sommerresidenz in der idyllischen Naturlandschaft bei Bad Harkány, 
+                        ein Ferienhaus auf dem Weinberg, bis hin zu traumhaften Landhäusern im mediterranen Südwestungarn, wir finden für Sie, 
+                        was Ihren Wünschen entspricht.</p>
 
                         <h4>Auswandern im Alter ist Trend</h4>
 
-                        <p>Auf jedem Fall es lohnt sich jetzt in Ungarn ein zweites Domizil, oder sogar dauerhaft zu wohnen.
-                        Dann kommt man mit den sonst oft biederer Rente locker aus. Zehntausende deutsche und österreicher
-                        Leben bereits in Ungarn dauerhaft, klar überwiegend Rentner, Rentnerehepaare. Nach der 20%-igen Absturz
-                        von ungarischen Währung Forint im Frühling vom 202, Sie kriegen für Ihre Euro jetzt mehr!  Wir helfen Ihnen
-                        Ihr Wunschimmobilien im herrlichen Südwesten zu finden!</p>
+                        <p>Auf jeden Fall lohnt es sich jetzt, in Ungarn ein zweistes Domizil zu haben, oder sogar dauerhaften wohnen. 
+                        Zehntausende deutscher und österreichen leben dauerhaft in Ungarn, überwiegend Rentner. 
+                        Durch den günstigen Wechselkurs von Forint zum Euro Ihr Rente hier mehr wert.</p>
 
                         <h4>Rentenbezug im Ausland</h4>
 
-                        <p>Als deutscher Staatsbürger gilt der gesetzliche Rentenanspruch unabhängig vom Wohnort.
-                        Auch im Ausland erhalten Rentner, so lange sie die deutsche Staatsbürgerschaft behalten, die volle
-                        gesetzliche Rente
-                        Steuervorteile im Ausland
-                        Das Auswandern in europäische Länder ist für Rentner rechtlich kein Problem. In jedem Land der
-                        europäischen Union können Rentner mit einer Krankenversicherung und einem gesicherten Einkommen ohne
-                        Auflagen ihren Lebensabend verbringen.</p>
+                        <p>Für deutsche Staatsbürger gilt der gesetzliche Rentenanspruch unabhängig vom Wohnort. Auch im Ausland erhalten Rentner, 
+                            so lange sie die deutsche Staatsbürgerschaft behalten, die volle gesetzliche Rente. Das Auswandern in europäische Länder 
+                            ist für Rentner rechtlich kein Problem. In jedem Land der europäischen Union können Rentner mit einer Krankenversicherung und einem 
+                            gesicherten Einkommen ohne Auflagen ihren Lebensabend verbringen.</p>
 
-                        <h2>
-                            In Ungarn heißen Sie <br>
-                            WILLKOMMEN!
-                        </h2>
-                                            </div>
+                    </div>
                 </div>
                 <div class="jumbotron  hide visible-lg visible-md" >
                     <h1>KEINER DER SICH UM IHR HAUS KÜMMERT? VERTRAUENSVOLLER HAUSVERWALTER?</h1>

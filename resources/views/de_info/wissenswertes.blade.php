@@ -3,6 +3,13 @@
 @section('tartalom')
 <div class="container">
     <h1>Wissenswertes</h1>
+
+    <h4>Wertermittlung</h4>
+    <p>Während der Sachbearbeitung bei Grundpfandrecht, die Banken ermitteln auch in Ungarn mit große 
+        Genauigkeit die Wertermittlung der Immobilie. Sollten Sie damit zu tun haben, überlassen Sie es 
+        die Fachleute.</p>
+    <p>Bei der Kreditsicherung duch die Bank, wird auch in Ungarn mit großer Genauigkeiten der Wert der 
+        Immobilie ermittelt. Auch in diesem Fall vermitteln wir zugelassenen Spezialisten.</p>
     <hr>
 
     <h4>WAS IST DER MARKTWERT?</h4>

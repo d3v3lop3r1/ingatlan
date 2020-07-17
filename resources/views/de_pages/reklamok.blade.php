@@ -5,17 +5,13 @@
             <h4>
                 Auswandern? <br>
                 Harkány-Siklós-Pécs Umgebung
-                in den Südwesten von Ungarn
-                wirdimmer beliebter
-                als Alternativer Wohnsitz
+                im Südwesten von Ungarn
+                wird immer beliebter
+                als Wohnsitz
             </h4>
             <p>
-                Neben günstigen Immobilienpreisen
-                locken vor allem vergleichsweise
-                niedrigen Lebensunterhaltungskosten.
-                Zudem profitieren aktuell Euro-Inhaber
-                vom mehr als guten Wechselkurs
-                zum Forint!
+                Neben günstigen Immobilienpreisen locken die vergleichweise niedrigen Lebensunterhaltskosten. 
+                Zudem profitieren aktuell Euro-Inhaber vom mehr als guten Wechselkurs zum Forint.
             </p>
         </div>
     </div>
@@ -24,8 +20,7 @@
         <div class="card-body">
             <p>
                 Herliche Erholung, Aktivurlaub
-                in Harkány, Südwestungarn,
-                wo wir zu Hause sind <br>
+                in Harkány, Südwestungarn 
                 <a href="http://turizmus.harkany.hu/userfiles/kirandulas_nemet.pdf">Link</a>
             </p>
         </div>
@@ -67,9 +62,9 @@
         <img src="/images/reklamokhoz/ing_vasarlas.jpg" class="card-img-top" alt="Immobilienerwerb in Ungarn">
         <div class="card-body">
             <h4>
-                Immobilienerwerb in Ungarn
+                Immobilienkauf in Ungarn
             </h4>
-            <p>Merkblatt zum Erwerb von Immobilien in Ungarn vo Botschaft der Bundesrepublik Deutschland, Budapest</p>
+            <p>Merkblatt zum Erwerb von Immobilien in Ungarn von der Botschaft der Bundesrepublik Deutschland, Budapest</p>
             <p>
                 <a href="https://budapest.diplo.de/blob/1633804/f1d36227f0e9b94def5e7dc21a9fa729/mb-immobilienerwerb-data.pdf">Link</a>
             </p>
