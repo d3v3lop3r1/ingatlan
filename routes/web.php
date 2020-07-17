@@ -126,8 +126,8 @@ Route::prefix('de')->group(function () {
 
     //              deINFO OLDALAK
 
-    Route::get('/wissenwertes', function () {
-        return view('de_info.wissenwertes');
+    Route::get('/wissenswertes', function () {
+        return view('de_info.wissenswertes');
     });
     Route::get('/renovieren-umbauen', function () {
         return view('de_info.renovieren-umbauen');
