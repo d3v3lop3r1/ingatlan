@@ -97,7 +97,7 @@ class photoController extends Controller
             }
 
             $extension = $file->extension();
-            $filename = sha1(time().time()).".{$extension}";
+            $filename = time().sha1(time()).".{$extension}";
             $directory='./uploads/';
 
             $img = Image::make($file)->orientate()
