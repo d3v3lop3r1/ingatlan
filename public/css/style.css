@@ -112,6 +112,11 @@ iframe{
     font-size: 10px;
 }
 
+#navbarCollapse{
+	margin-left: auto;
+	flex-grow: unset;
+}
+
 
 .carousel img{
 	flex-basis: 100%;
