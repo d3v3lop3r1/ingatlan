@@ -108,7 +108,7 @@
         </li>
       </ul>
       <ul class="navbar-nav mt-4 ">
-        <li class="nav-item">
+        <li class="nav-item mr-3">
             <a href="#" data-toggle="modal" data-target="#calculatorModal">
                 <span class="navbar-loan"><i class="fas fa-hand-holding-usd"></i></span>
             </a>
