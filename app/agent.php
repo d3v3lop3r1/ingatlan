@@ -15,7 +15,9 @@ class agent extends Model
     'tel2',
     'email',
     'provision',
-    'photo'
+    'photo',
+    'about_me_hun',
+    'about_me_de'
    ];
 
 

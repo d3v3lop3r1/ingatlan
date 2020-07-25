@@ -152,7 +152,20 @@ $filter= config('property.filter.hu')
                                                         <div class="col-xs-8">
                                                             <h5><span class="text-md">{{$property->agents->name}}</span></h5>
                                                             <p class="small">
-                                                                Vezető értékesítő<br>
+                                                                @php
+                                                                switch ($property->agents->level) {
+                                                                    case 1:
+                                                                        echo "Vezető értékesítő";
+                                                                        break;
+                                                                    case 2:
+                                                                        echo "Területi értékesítő";
+                                                                        break;
+                                                                    case 3:
+                                                                        echo "Értékesítő";
+                                                                        break;
+                                                                    }                              
+                                                                @endphp
+                                                                <br>
                                                                 {{$property->agents->tel}}
                                                             </p>
                                                         </div>

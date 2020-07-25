@@ -59,6 +59,16 @@
             {!! Form::number('provision','0',['class' => 'form-control']); !!}
         </div>
 
+        {{--  Rólam  --}}
+        <div class="form-group">
+            {!! Form::label('Rólam*(Magyar)',null,['class' => 'control-label']); !!}
+            {!! Form::textarea('about_me_hun',null,['class' => 'form-control', 'placeholder'=>'Írd ide a rövid magyar leírást...']); !!}
+        </div>
+
+        <div class="form-group">
+            {!! Form::label('Rólam*(Német)',null,['class' => 'control-label']); !!}
+            {!! Form::textarea('about_me_de',null,['class' => 'form-control', 'placeholder'=>'Írd ide a rövid német leírást...']); !!}
+        </div>
 
         {!!Form::submit('Mentés',['class'=>'btn btn-primary mt-2']);!!}
     {!! Form::close() !!}

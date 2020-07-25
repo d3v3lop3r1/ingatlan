@@ -197,6 +197,22 @@ if ($property->act_price){
                                 <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                                 <div class="media-body">
                                     <h5 class="mt-0"><strong>{{$property->agents->name}}</strong></h5>
+                                    <h6>
+                                        @php
+                                        switch ($property->agents->level) {
+                                            case 1:
+                                                echo "Vezető értékesítő";
+                                                break;
+                                            case 2:
+                                                echo "Területi értékesítő";
+                                                break;
+                                            case 3:
+                                                echo "Értékesítő";
+                                                break;
+                                            }                              
+                                        @endphp
+        
+                                    </h6>
                                     <p class="pl-1 pr-1"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
                                 </div>
                             </div>

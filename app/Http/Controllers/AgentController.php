@@ -97,5 +97,11 @@ class AgentController extends Controller
 
     }
 
+    public function ertekesitoink(){
+        $agents = agent::all();
+        return view('agents.agents', compact('agents'));
+
+    }
+
 
 }

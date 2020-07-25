@@ -30,6 +30,11 @@ Route::get('/get-addresses', 'PagesController@getAddresses');
 Route::post('/guest-message', 'MailController@guest_message');
 
 
+//  Értékesítőink
+
+Route::get('/ertekesitoink', 'AgentController@ertekesitoink');
+
+
 //                INFO OLDALAK
 
 Route::get('/jo-tudni', function () {
