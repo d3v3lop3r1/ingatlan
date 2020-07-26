@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\agent;
 use App\client;
 use App\Http\Requests\storeAgent;
 use Illuminate\Http\Request;
 
 class AgentController extends Controller
+
 {
     /**
      * Display a listing of the resource.
@@ -105,8 +105,9 @@ class AgentController extends Controller
 
     public function megbizasaim($id){
         $agent = agent::find($id);
+        $level_text = config('agents.level.hu');
         $properties = $agent->properties();
-        $mutato = $agent->name . " megbízásai ";
+        $mutato = $agent->name . " " . $level_text[$agent->level] . " megbízásai ";
         return view('pages.show_new', compact('properties', 'mutato'));
     }
 

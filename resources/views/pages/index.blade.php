@@ -11,6 +11,9 @@ $heating=config('property.heating.hu');
 $parking=config('property.parking.hu');
 $comfort=config('property.comfort.hu');
 $room_height=config('property.room_height.hu');
+
+$level_text = config('agents.level.hu');
+
 if ($property->act_price){
     $price = $property->act_price;
   } else {
@@ -198,20 +201,7 @@ if ($property->act_price){
                                 <div class="media-body">
                                     <h5 class="mt-0"><strong>{{$property->agents->name}}</strong></h5>
                                     <h6>
-                                        @php
-                                        switch ($property->agents->level) {
-                                            case 1:
-                                                echo "Vezető értékesítő";
-                                                break;
-                                            case 2:
-                                                echo "Területi értékesítő";
-                                                break;
-                                            case 3:
-                                                echo "Értékesítő";
-                                                break;
-                                            }                              
-                                        @endphp
-        
+                                        {{$level_text[$property->agents->level]}}
                                     </h6>
                                     <p class="pl-1 pr-1"><small>Ha kérdése lenne az ingatlannal kapcsolatban, kérjük vegye fel a kapcsolatot ügynökünkkel.</small></p>
                                 </div>

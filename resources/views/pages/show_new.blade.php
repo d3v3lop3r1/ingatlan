@@ -13,7 +13,9 @@ $heating=config('property.heating.hu');
 $parking=config('property.parking.hu');
 $comfort=config('property.comfort.hu');
 $room_height=config('property.room_height.hu');
-$filter= config('property.filter.hu')
+$filter= config('property.filter.hu');
+
+$level_text = config('agents.level.hu');
 
 ?>
 @extends('layout.main')
@@ -152,19 +154,7 @@ $filter= config('property.filter.hu')
                                                         <div class="col-xs-8">
                                                             <h5><span class="text-md">{{$property->agents->name}}</span></h5>
                                                             <p class="small">
-                                                                @php
-                                                                switch ($property->agents->level) {
-                                                                    case 1:
-                                                                        echo "Vezető értékesítő";
-                                                                        break;
-                                                                    case 2:
-                                                                        echo "Területi értékesítő";
-                                                                        break;
-                                                                    case 3:
-                                                                        echo "Értékesítő";
-                                                                        break;
-                                                                    }                              
-                                                                @endphp
+                                                                {{$level_text[$property->agents->level]}}
                                                                 <br>
                                                                 {{$property->agents->tel}}
                                                             </p>

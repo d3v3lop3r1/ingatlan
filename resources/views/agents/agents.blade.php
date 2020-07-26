@@ -18,9 +18,7 @@
                         <div class="card-body">
                             <h4 class="card-title"><strong>{{$agent->name}}</strong></h4>
                             <h6>
-                                @php
-                                    echo $level_text[$agent->level];      
-                                @endphp
+                              {{$level_text[$agent->level]}}                                   
                             </h6>
                             <hr>
                             <a href="/megbizasaim/{{$agent->id}}" class="btn btn-info btn-sm btn-block">
