@@ -2,7 +2,7 @@
     use App\property;
     use App\agent;
 @endphp
-@extends('layout.main-simple')
+@extends('layout.main')
 
 @section('tartalom')
     <div class="container">
@@ -59,4 +59,9 @@
             </div>
     </div>
 @endsection
+
+@section('scripts')
+
+@endsection
+
 
