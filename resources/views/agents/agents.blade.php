@@ -1,6 +1,7 @@
 @php
     use App\property;
     use App\agent;
+    $level_text = config('agents.level.hu');
 @endphp
 @extends('layout.main')
 
@@ -18,18 +19,8 @@
                             <h4 class="card-title"><strong>{{$agent->name}}</strong></h4>
                             <h6>
                                 @php
-                                    switch ($agent->level) {
-                                        case 1:
-                                            echo "Vezető értékesítő";
-                                            break;
-                                        case 2:
-                                            echo "Területi értékesítő";
-                                            break;
-                                        case 3:
-                                            echo "Értékesítő";
-                                            break;
-                                        }                              
-                                    @endphp
+                                    echo $level_text[$agent->level];      
+                                @endphp
                             </h6>
                             <hr>
                             <a href="/megbizasaim/{{$agent->id}}" class="btn btn-info btn-sm btn-block">

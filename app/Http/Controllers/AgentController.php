@@ -106,7 +106,7 @@ class AgentController extends Controller
     public function megbizasaim($id){
         $agent = agent::find($id);
         $properties = $agent->properties();
-        $mutato = $agent->name . "megbízásai ";
+        $mutato = $agent->name . " megbízásai ";
         return view('pages.show_new', compact('properties', 'mutato'));
     }
 
