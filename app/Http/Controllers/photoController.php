@@ -128,14 +128,14 @@ class photoController extends Controller
             $url=$request->url;
             $filename= time() . $file->getClientOriginalName();
 
-            // Fit picture to 400x600
+            // Fit picture to 500x600
 
             $img = Image::make($file)->orientate()
             ->fit(500, 600, function ($constraint) {
                 $constraint->upsize();
             })->save('./uploads/agents/' . $filename);
 
-            // Fit thumbnail to 100x150
+            // Fit thumbnail to 125x150
 
             $img_thumbnail = Image::make($file)->orientate()
             ->fit(125, 150, function ($constraint) {

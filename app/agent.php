@@ -24,7 +24,7 @@ class agent extends Model
    public function client(){
       return $this->hasMany('App\client');
    }
-   public function property(){
-      return $this->hasMany('App\properties');
+   public function properties(){
+      return $this->hasMany('App\property');
    }
 }

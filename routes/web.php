@@ -34,6 +34,9 @@ Route::post('/guest-message', 'MailController@guest_message');
 
 Route::get('/ertekesitoink', 'AgentController@ertekesitoink');
 
+Route::get('/megbizasaim/{id}', 'AgentController@megbizasaim');
+
+
 
 //                INFO OLDALAK
 
