@@ -216,7 +216,7 @@ if ($property->act_price){
                         </div>
                     </div>
                     <div class="col-xs-12 mt-1">
-                        <button type="button" class="btn btn-sajat btn-block" data-toggle="modal" data-target="#messengerModal">
+                        <button type="button" class="btn btn-sajat btn-block" value="{{$property->id}}" data-toggle="modal" data-target="#messengerModal" onclick="setHiddenField()">
                             <i class="far fa-envelope"></i> &nbsp Küldjön üzenetet nekünk!
                         </button>
                     </div>
@@ -312,6 +312,13 @@ if ($property->act_price){
         @endphp
 @endsection
 @section('scripts')
+    <script>
+        function setHiddenField(){
+           var property = event.target.value;
+           document.getElementById("property_id").value = property;
+        }
+    </script>
+
     @include('../scripts/get_eur')
     <script src="/js/map.js"></script>
     <script async defer

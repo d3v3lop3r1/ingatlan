@@ -37,7 +37,7 @@
                             </ul>
                             <hr>
                             <div class="d-flex justify-content-around">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#messengerModal"><i class="far fa-envelope"></i> Üzenet küldése</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" value="{{$agent->id}}" data-target="#messengerModal" onclick="setHiddenField()"><i class="far fa-envelope"></i> Üzenet küldése</button>
                                 <button type="button" class="btn btn-info"><i class="fas fa-share-alt"></i> Ajánlom valakinek</button>
                             </div>
 
@@ -50,6 +50,12 @@
 @endsection
 
 @section('scripts')
+    <script>
+        function setHiddenField(){
+           var agent = event.target.value;
+           document.getElementById("agent_id").value = agent;
+        }
+    </script>
 
 @endsection
 

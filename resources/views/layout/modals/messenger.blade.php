@@ -25,6 +25,8 @@
                             <div class="form-group mb-3">
                                 {!! Form::textarea('message',null,['class' => 'form-control form-control-sm','rows'=>'5','required', 'placeholder'=>'Üzenet']); !!}
                             </div>
+                                {!! Form::hidden('agent_id', "0",['id'=>'agent_id']) !!}
+                                {!! Form::hidden('property_id', "0",['id'=>'property_id']) !!}
                             <div class="col">
                                 {!! Form::submit('Üzenet küldése', ['class'=>"btn message-btn btn-sm"]) !!}
                             </div>
