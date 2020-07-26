@@ -127,12 +127,28 @@ class photoController extends Controller
             $file=$request->file('file');
             $url=$request->url;
             $filename= time() . $file->getClientOriginalName();
-            $file->move('./uploads/agents', $filename);
+
+            // Fit picture to 400x600
+
+            $img = Image::make($file)->orientate()
+            ->fit(500, 600, function ($constraint) {
+                $constraint->upsize();
+            })->save('./uploads/agents/' . $filename);
+
+            // Fit thumbnail to 100x150
+
+            $img_thumbnail = Image::make($file)->orientate()
+            ->fit(125, 150, function ($constraint) {
+                $constraint->upsize();
+            })->save('./uploads/agents/thumbnails/' . $filename);
+                        
             $agent_id=$request->agent_id;
             $agent= agent::where('id',$agent_id)->first();
             $old_photo=$agent->photo;
             $photo_path='./uploads/agents/' . $old_photo;
+            $thumbnail_path = './uploads/agents/thumbnails' . $old_photo;
             File::delete($photo_path);
+            File::delete($thumbnail_path);
             $agent->photo=$filename;
             $agent->save();
             //return redirect('agents');

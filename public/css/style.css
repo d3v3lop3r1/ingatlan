@@ -436,6 +436,12 @@ div.sticky {
 	overflow: hidden;
 }
 
+.about-me-card{
+	width: 300px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
 .about-me-text{
 	line-height: 1.4rem;
 }

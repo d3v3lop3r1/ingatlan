@@ -7,9 +7,9 @@
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-3">
             @foreach ($agents as $agent)
-                <div class="col-lg-4">
-                    <div class="card h-100 m-2">
-                        <img src="/uploads/agents/{{$agent->photo}}" class="card-img-top" alt="{{$agent->name}}" height="350">
+                <div class="col  about-me-card">
+                    <div class="card">
+                        <img src="/uploads/agents/{{$agent->photo}}" class="card-img-top" alt="{{$agent->name}}">
                         <div class="card-body">
                           <h4 class="card-title"><strong>{{$agent->name}}</strong></h4>
                           <h6>
@@ -33,10 +33,10 @@
                           <hr>
                           <h5>Kapcsolat</h5>
                           <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong><i class="fas fa-phone"></i> Telefon</strong> {{$agent->tel}}</li>
-                            <li class="list-group-item"><strong><i class="fas fa-phone"></i> Telefon2</strong> {{$agent->tel2}}</li>
-                            <li class="list-group-item"><strong><i class="far fa-envelope"></i> Email</strong> {{$agent->email}}</li>
-                            <li class="list-group-item"><strong><i class="fas fa-globe"></i> Nyelvek</strong> {{$agent->languages}}</li>
+                            <li class="list-group-item"><strong><i class="fas fa-phone"></i> Telefon:</strong> {{$agent->tel}}</li>
+                            <li class="list-group-item"><strong><i class="fas fa-phone"></i> Telefon2:</strong> {{$agent->tel2}}</li>
+                            <li class="list-group-item"><strong><i class="far fa-envelope"></i> Email:</strong> {{$agent->email}}</li>
+                            <li class="list-group-item"><strong><i class="fas fa-globe"></i> Nyelvek:</strong> {{$agent->languages}}</li>
                         </ul>
 
                         </div>

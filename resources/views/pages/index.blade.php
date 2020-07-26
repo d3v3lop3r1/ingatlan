@@ -194,7 +194,7 @@ if ($property->act_price){
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="media  mt-1 pt-1 drop-shadow">
-                                <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
+                                <img src="/uploads/agents/thumbnails/{{$property->agents->photo}}" width="64" class="align-self-start mr-1 ml-1" alt="{{$property->agents->name}}">
                                 <div class="media-body">
                                     <h5 class="mt-0"><strong>{{$property->agents->name}}</strong></h5>
                                     <h6>

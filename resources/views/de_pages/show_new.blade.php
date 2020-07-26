@@ -144,7 +144,7 @@ $filter= config('property.filter.de')
                                                 <div class="col-xs-12">
                                                     <div class="row">
                                                         <div class="col-xs-4">
-                                                            <img src="/uploads/agents/{{$property->agents->photo}}" width="64" class="img-thumbnail mr-1 ml-1" alt="{{$property->agents->name}}">
+                                                            <img src="/uploads/agents/thumbnails/{{$property->agents->photo}}" width="64" class="img-thumbnail mr-1 ml-1" alt="{{$property->agents->name}}">
                                                         </div>
                                                         <div class="col-xs-8">
                                                             <h5><span class="text-md">{{$property->agents->name}}</span></h5>
