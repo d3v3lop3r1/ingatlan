@@ -1,10 +1,10 @@
 <h4>A következő üzenet érkezett!!</h4> <br>
 @php
 if(isset($guest->agent_id)){
-    echo 'Értékesítő id:' . $guest->agent_id;
+    echo 'Értékesítő id:' . $guest->agent_id . '<br>';
 }
 if(isset($guest->property_id)){
-   echo 'Ingatlan id:' . $guest->property_id;
+   echo 'Ingatlan id:' . $guest->property_id . '<br>';
 }
 @endphp
 <strong>Feladó:</strong>  <br>
