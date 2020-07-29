@@ -56,8 +56,11 @@ class CookieController extends Controller
 
         
         public function cookieCheck($id){
-            $cookie=Cookie::get('ingatlanfox_saved_properties');
-            $saved_properties = json_decode($cookie, true);
+            if($cookie=Cookie::get('ingatlanfox_saved_properties')){
+                $saved_properties = json_decode($cookie, true);
+            } else {
+                $saved_properties = [];
+            }
             if(Arr::exists($saved_properties, $id)){
                 return 1;
             } else {
