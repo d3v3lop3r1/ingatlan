@@ -22,7 +22,7 @@ class PagesController extends Controller
         if (!$property->active && !Auth::check()){
             abort(404, 'A hirdetés nem aktív.');
         }
-        $addresses = property::Aktiv()->select('map_lat','map_long')->get();
+        $addresses = property::Aktiv()->select('id','price','map_lat','map_long','header_hun','short_text_hun')->get();
         return view('pages.index', compact('property','addresses'));
     }
     public function home()

@@ -11,9 +11,9 @@ use App\property;
 
 class CookieController extends Controller
 {
-    
+
     public function cookieSet($id){
-        
+
         if(cookie('cookieconsent_status')){
             $cookie=Cookie::get('ingatlanfox_saved_properties');
             if(!$cookie){
@@ -27,7 +27,7 @@ class CookieController extends Controller
                     $property_added = json_encode(Arr::add($saved_properties, $id, time()));
                 }
             }
-                
+
             return response("ok", 200)->withCookie('ingatlanfox_saved_properties', $property_added, 43200);
         } else {
                 return response("error", 500)
@@ -41,11 +41,10 @@ class CookieController extends Controller
             return $cookie;
         }
 
-        
+
         public function getCookieProperties(){
-            $cookie=Cookie::get('ingatlanfox_saved_properties');
-            if (!$cookie){
-                return response('Nincs még mentett ingatlan',500);
+            if (!$cookie=Cookie::get('ingatlanfox_saved_properties')){
+                return response('Nincs még mentett ingatlan',404);
             }
             $saved_properties = json_decode($cookie, true);
             $prop_keys=array_keys($saved_properties);
@@ -54,7 +53,7 @@ class CookieController extends Controller
         }
 
 
-        
+
         public function cookieCheck($id){
             if($cookie=Cookie::get('ingatlanfox_saved_properties')){
                 $saved_properties = json_decode($cookie, true);

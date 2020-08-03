@@ -11,9 +11,5 @@
 <script>
     {{--  Money format  --}}
     $('.money').simpleMoneyFormat();
-
-    window.setTimeout(function(){
-        $("#container").contents().find(".calculator-box").css("border-color","blue");
-    }, 1000);
 </script>
 
