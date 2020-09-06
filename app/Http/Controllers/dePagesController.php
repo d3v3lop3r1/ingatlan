@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\property;
 use App\photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class dePagesController extends Controller
 {
