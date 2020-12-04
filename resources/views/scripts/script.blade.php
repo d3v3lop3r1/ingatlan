@@ -1,5 +1,6 @@
 
 <script src="/js/jquery-3.5.1.min.js" ></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/bootstrap.js"></script>
 
@@ -12,4 +13,9 @@
     {{--  Money format  --}}
     $('.money').simpleMoneyFormat();
 </script>
+<script>
+    function onSubmit(token) {
+      document.getElementById("messenger_id").submit();
+    }
+  </script>
 

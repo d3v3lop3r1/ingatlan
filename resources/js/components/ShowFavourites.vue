@@ -6,7 +6,7 @@
                 <!-- <a :href="'/index/'+property.id"><img :src="imgLink" class="mr-3" alt="..."></a> -->
                 <div class="media-body">
                     <a :href="'/index/'+property.id"><h6 class="mt-0">{{110000+property.id}} {{property.header_hun}}</h6></a>
-                    <p v-html="property.short_text_hun"></p>  
+                    <p v-html="property.short_text_hun"></p>
                 </div>
             </div>
         </div>
@@ -19,6 +19,7 @@
 
 <script>
 import axios from 'axios';
+import Savefavourite from './SaveFavourite';
 export default {
     data: function(){
         return{
@@ -42,7 +43,7 @@ export default {
             axios.get('/cookie-properties-get')
             .then(res=>{
                 this.error=0
-                this.properties = res.data               
+                this.properties = res.data
             })
             .catch(error=>{
                 console.log(error)
@@ -52,7 +53,7 @@ export default {
     },
     created: function () {
         this.getProperties()
-    }    
+    }
 }
 </script>
 <style scoped>

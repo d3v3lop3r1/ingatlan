@@ -10,7 +10,7 @@
         </div>
         <div class="modal-body" id="messenger-body">
             <div class="row">
-                <div class="col-xs-12 text-center">
+                <div class="col-xs-12 text-center" id="messenger_id">
                     {!! Form::open(['action'=>'MailController@guest_message', 'method'=>'POST','name'=>'uzenet_kuldese']) !!}
                         <div class="message-container-form">
                             <div class="form-group mb-3">
@@ -28,7 +28,7 @@
                                 {!! Form::hidden('agent_id', "0",['id'=>'agent_id']) !!}
                                 {!! Form::hidden('property_id', "0",['id'=>'property_id']) !!}
                             <div class="col">
-                                {!! Form::submit('Üzenet küldése', ['class'=>"btn message-btn btn-sm"]) !!}
+                                {!! Form::submit('Üzenet küldése', ['class'=>'btn message-btn btn-sm g-recaptcha','data-sitekey'=>'6LcvlN0ZAAAAANc0OtnBFtnaTLaE17PaxmvOoOC2','data-callback'=>'onSubmit','data-action'=>'submit']) !!}
                             </div>
                         </div>
                     {!! Form::close() !!}
